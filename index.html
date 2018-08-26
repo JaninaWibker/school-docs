@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//unpkg.com/katex/dist/katex.min.css">
+  <style>.sidebar-toggle-button span{width:24px;height:3px;margin-bottom:6px;}
+@keyframes show{0%,50%{opacity:0;}100%{opacity:1;}}@keyframes hide{0%,50%{opacity:1;}100%{opacity:0;}}
+
+.qr-wrapper{float:left;width:24px;height:24px;}
+.qr-wrapper>svg{position:relative;margin-top:8px;right:4px;fill:#34495e;}
+.qr-wrapper:hover>svg{fill:var(--theme-color,#42b983);}
+.qr-wrapper::before{content:'copied';right:100%;transition: all .25s ease 0.25s;margin-top:7px;padding:5px;border-radius:3px;font-size:14px;position:absolute;display:block;background-color:white;border:1px solid rgba(0,0,0,.07);z-index:5;transform: translateX(120%) scale(0);}
+.qr-wrapper.copied:before{transform: translateX(0) scale(1);}
+.qr-wrapper>canvas{position:absolute;left:-64px;margin-top:4px;z-index:4;border:1px solid rgba(0,0,0,.07);}
+.qr-wrapper>.qr-corner{width:14px;height:14px;position:relative;top:-4.5px;z-index:5;transform:rotate(45deg);border-left:1px solid rgba(0,0,0,.07);border-top: 1px solid rgba(0,0,0,.07);background-color:white;}
+.qr-wrapper>canvas,.qr-wrapper>.qr-corner{opacity: 0;display:none;}
+.qr-wrapper:hover>canvas,.qr-wrapper:hover>.qr-corner{display: inline-block;animation: show 1s ease-out forwards;}
+.qr-heading-1 {margin-top:1px}
+.qr-heading-2 {margin-top:0px;}
+.qr-heading-3 {margin-top:-2px;}
+.qr-heading-4 {margin-top:-5px;}.qr-heading-4>svg{transform:scale(0.8);}
+.qr-heading-5 {margin-top:-8px;}.qr-heading-5>svg{transform:scale(0.7);right:2px;}
+.qr-heading-6 {margin-top:-9px;}.qr-heading-6>svg{transform:scale(0.7);}
+
+@media screen and (max-width: 768px) {
+  .qr-wrapper>canvas{left:10px;}
+  .qr-wrapper::before{left:40px;right:unset;transform:translateX(-120%) scale(0);}
+}
+@media print {
+
+  .markdown-section {
+    max-width: 90vw;
+  }
+
+  .content {
+    left: 0;
+    padding-top: 0;
+  }
+
+  .docsify-pagination-container {
+    display: none!important;
+  }
+
+  .qr-wrapper {
+    display: none;
+  }
+
+  .markdown-section code {
+    filter: grayscale(1)
+  }
+}
+</style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+  (() => {
+
+    const qr_codes = {
+
+    }
+
+    const copyToClipboard = str => {
+      const el = document.createElement('textarea')
+      el.value = str
+      el.setAttribute('readonly', '')
+      el.style.position = 'absolute'
+      el.style.left = '-9999px'
+      document.body.appendChild(el)
+      const selected =
+        document.getSelection().rangeCount > 0
+          ? document.getSelection().getRangeAt(0)
+          : false
+      el.select()
+      document.execCommand('copy')
+      document.body.removeChild(el)
+      if (selected) {
+        document.getSelection().removeAllRanges()
+        document.getSelection().addRange(selected)
+      }
+    }
+
+    const decodeHtml = html => {
+      let txt = document.createElement("textarea")
+      txt.innerHTML = html
+      return txt.value
+    }
+
+    window.$docsify = {
+      name: 'Schule',
+      loadSidebar: true,
+      maxLevel: 2,
+      repo: '',
+      qrcode: true,
+      latex: true,
+      alias: {
+        '/db': '/db/db',
+        '/db/': '/db/db',
+        '/netzwerke': '/netzwerke/netzwerke',
+        '/netzwerke/': '/netzwerke/netzwerke',
+        '/microcontroller': '/microcontroller/microcontroller',
+        '/microcontroller/': '/microcontroller/microcontroller',
+        '/mathe': '/mathe/mathe',
+        '/mathe/': '/mathe/mathe',
+      },
+      pagination: {
+        previousText: 'vorherige Seite',
+        nextText: 'nächste Seite'
+      },
+      markdown: {
+        renderer: {
+          heading: (text, level, raw) => {
+            const qrcode = window.$docsify.qrcode !== null ? window.$docsify.qrcode : false
+            const escaped_text = Docsify.slugify(text)
+            const link = window.location.href + '?id=' + escaped_text
+
+            const heading = `
+<h${level} class="heading" id="${escaped_text}">
+  <a class="anchor" data-id="${text}" href="${window.location.hash}?id=${escaped_text}">
+    <span>${text}</span>
+  </a>
+</h${level}>
+`
+            if(qrcode) {
+              QRCode.toCanvas(link, (err, canvas) => {
+                canvas.style.width = '180px'
+                canvas.style.height = '180px'
+                qr_codes[escaped_text] = { el: canvas, link: link }
+              })
+
+              return (
+                `<div>
+                  <div class="qr-wrapper qr-heading-${level}" id="qr-${escaped_text}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+                    </svg>
+                    <span class="qr-corner"></span>
+                  </div>
+                  ${heading}
+                  </div>`
+              )
+            } else {
+              return heading
+            }
+          }
+        }
+      },
+      plugins: [
+        (hook, {config}) => hook.afterEach((content, next) => {
+          if(config.latex) {
+            const doc = new DOMParser().parseFromString(content, 'text/html')
+
+            Array.from(doc.querySelectorAll('p, th, td'))
+              .forEach(x => x.innerHTML = x.innerHTML.replace(/\$\$?([\s\S]*?)\$\$?/g, (all, code) => {
+                code = decodeHtml(code.replace(/<\/?em>/g, '_'))
+                const startsWith = all.startsWith('$$')
+                const endsWith = all.endsWith('$$')
+
+                if((startsWith && endsWith) || (!startsWith && !endsWith)) {
+                  return katex.renderToString(code, {displayMode: startsWith})
+                } else {
+                  console.warn('Error: mismatching dollar signs ($) in math expression, ignoring math expression')
+                  return all
+                }
+              }))
+
+            next(doc.body.innerHTML)
+          } else {
+            next(content)
+          }
+        }),
+        hook => hook.doneEach(() =>
+          Object.keys(qr_codes).forEach(key => {
+            const el = document.querySelector('#qr-' + key)
+            if(!el) return
+            el.firstElementChild.addEventListener('click', ((link) => {
+              copyToClipboard(link)
+              el.classList.toggle('copied')
+              setTimeout(() => el.classList.toggle('copied'), 1500)
+            }).bind(this, qr_codes[key].link))
+            el.appendChild(qr_codes[key].el)
+        }))
+      ]
+    }
+  })()
+  </script>
+  <script src="./qrcode.min.js"></script>
+  <script src="/static/docsify/lib/docsify.min.4.7.0.js"></script>
+  <script src="/static/prismjs/components/prism-php.min.1.15.0.js"></script>
+  <script src="/static/prismjs/components/prism-sql.min.1.15.0.js"></script>
+  <script src="/static/docsify/lib/plugins/emoji.min.4.7.0.js"></script>
+  <script src="/static/docsify/lib/plugins/search.min.4.7.0.js"></script>
+  <script src="/static/docsify/lib/plugins/zoom-image.min.4.7.0.js"></script>
+  <script src="/static/docsify-pagination/dist/docsify-pagination.min.2.3.4.js"></script>
+  <script src="/static/docsify-copy-code.min.2.0.2.js"></script>
+  <script src="/static/katex/dist/katex.min.0.10.0-rc.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Mathe
+
+* [Ableitung](mathe/ableitung.md)
+* [Monotonie](mathe/monotonie.md)
+* [Tangente & Normale](mathe/tangente_normale.md)
+* [Funktionsscharen](mathe/funktionsscharen.md)
+* [Extremwertaufgaben](mathe/extremwertaufgaben.md)
+* [Funktionen aus Bedingungen](mathe/funktionen_aus_bedingungen.md)
+* [kleinster Abstand](mathe/kleinster_abstand.md)
+* [Splines](mathe/splines.md)
+* [Krümmung, Krümmungskreis, ...](mathe/krümmung.md)
+* [numerische Integration](mathe/numerische_integration.md)
+* [Laplace Versuche](mathe/laplace.md)
+* [Pfadregeln](mathe/pfadregeln.md)
+* [empirisches Gesetz der großen Zahlen](mathe/empirisches_gesetz_der_großen_zahlen)
+* [Fakultät](mathe/factorial.md)
+* [Erwartungswertbeweis](mathe/erwartungswertbeweis.md)
+* [Zahlentheorie](mathe/zahlentheorie.md)
