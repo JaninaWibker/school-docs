@@ -6,23 +6,24 @@
 
 ### Select
 
-Die Select Anweisung ist eine der essentiellsten SQL Anweisung da sie dafür verantwortlich ist Werte aus einer Tabelle aus zu lesen.
+Die Select Anweisung ist eine der essentielsten SQL Anweisung, da sie dafür verantwortlich ist Werte aus einer Tabelle aus zu lesen.
 
 ```sql
 SELECT <Spaltenname>
 FROM <Tabellenname>
 ```
 
-Wen mehr als eine Spalte ausgegeben werden soll separiert man diese durch Kommata.
-Durch das Stichwort **as** kann man den angezeigten Name der Spalte ändern.
+Wenn mehr als eine Spalte ausgegeben werden soll, separiert man diese durch Kommata.
+Durch das Stichwort **`as`** kann man den angezeigten Name der Spalte ändern, dieser muss dann später auch z.B. in der `WHERE`-Klausel benutzt werden um auf die Spalte zuzugreifen.
 
 ```sql
 SELECT <Spaltenname> as <Anzeigename>
 FROM <Tabellenname>
 ```
 
-Wen man alle Spalten anzeigen möchte, kann man auch ***** anstatt der Spaltenname schreiben.
-Mit **WHERE** kann man diese Ausgabe dann beschränken.
+Wen man alle Spalten anzeigen möchte, kann man auch **`*`** anstatt der Spaltenname schreiben.
+Mit **`WHERE`** kann man diese Ausgabe dann beschränken / filtern.
+
 ### Create
 
 ```sql
