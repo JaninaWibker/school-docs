@@ -19,3 +19,4 @@
   * [IPv6](/netzwerke/ipv6.md)
 * [Microcontroller](microcontroller/microcontroller)
 * [Mathe](/mathe/mathe)
+* [Französisch](/französisch/französisch)

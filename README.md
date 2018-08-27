@@ -4,3 +4,4 @@
 * [Netzwerke](netzwerke/netzwerke)
 * [Microcontroller](microcontroller/microcontroller)
 * [Mathe](mathe/mathe)
+* [Französisch](/französisch/französisch)

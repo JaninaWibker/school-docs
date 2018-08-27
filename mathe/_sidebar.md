@@ -19,3 +19,4 @@
   * [Fakultät](mathe/factorial.md)
   * [Erwartungswertbeweis](mathe/erwartungswertbeweis.md)
   * [Zahlentheorie](mathe/zahlentheorie.md)
+* [Französisch](/französisch/französisch)
