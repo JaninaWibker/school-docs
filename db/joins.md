@@ -47,3 +47,9 @@ Man kann zusätzlich (wie bei allen *Joins*) auch eine `WHERE`-Condition angeben
 Man kann alle Datensätze von **B** (A) aussortieren, sodass nurnoch Datensätze von **A** (B) vorhanden sind für die die **B** (A) **keine** Datensätze hat indem man `WHERE B.id = NULL` (`A`) hinzufügt. Da in **B** (A) kein passender Datensatz vorhanden ist. hat man `NULL` als `id`, somit werden mit `B.id = NULL` (`A`) alle aussortiert, die Daten haben. 
 
 ## Natural Join
+Ein Natural Join verbindet zwei Tabellen wie auch die anderen Joins, allerdings muss man nicht wie bei den anderen Joins ein Atributpar angeben sondern der Natural Join verbindet automatisch den Primary- der einen mit dem Foreigenkey der anderen Tabelle.
+
+```sql
+SELECT id, ... FROM TableA A
+  NATURAL JOIN TableB B
+```
