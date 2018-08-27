@@ -12,8 +12,38 @@ Ein *impliziter Join* ist eine Art Join, welcher durch die `WHERE`-Klausel imple
 
 ## Inner Join
 
+Beim *Inner Join* werden nur die Datensäzte genommen, die die `JOIN`-Condition unterstützen, also die Datensäzte, die in beiden Tabellen existieren, nicht nur in einem.
+
+```sql
+SELECT id, ... FROM TableA A
+  INNER JOIN TableB B
+  ON A.id = B.id
+```
+
 ## Outer Join
 
+Der *Outer Join* gibt einfach die Datensätze beider Tabellen zurück und falls für 2 Datensätze die `JOIN`-Condition wahr ist, werden die beiden Datensätze der beiden Tabellen zusammengelegt.
+
+```sql
+SELECT id, ... FROM TableA A
+  FULL OUTER JOIN TableB B
+  ON A.id = B.id
+```
+
 ## Left & Right Join
+
+*Left Join* und *Right Join* sind fundamental das gleiche, mit dem einen Unterschied, dass der *Right Join* sozusagen eine gespiegelte Version des *Left Joins* ist. Daher wird jetzt nur der *Left Join* erläutert und die passenden Tabellennamen für den *Right Join* werden in Klammern dazu geschrieben.
+
+Beim *Left Join* werden alle Ergebnisse aus Tabelle **A** (B) genommen und falls es passende Daten aus Tabelle **B** (A) zur jeweiligen Spalte gibt, werden diese zur jeweiligen Spalte hinzugefügt.
+
+```sql
+SELECT id, ... FROM TableA A
+  LEFT JOIN TableB B
+  ON A.id = B.id
+```
+
+Man kann zusätzlich (wie bei allen *Joins*) auch eine `WHERE`-Condition angeben. Hiermit kann man die Datensätze dann noch weiter filtern.
+
+Man kann alle Datensätze von **B** (A) aussortieren, sodass nurnoch Datensätze von **A** (B) vorhanden sind für die die **B** (A) **keine** Datensätze hat indem man `WHERE B.id = NULL` (`A`) hinzufügt. Da in **B** (A) kein passender Datensatz vorhanden ist. hat man `NULL` als `id`, somit werden mit `B.id = NULL` (`A`) alle aussortiert, die Daten haben. 
 
 ## Natural Join
