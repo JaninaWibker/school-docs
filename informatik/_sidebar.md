@@ -3,6 +3,6 @@
 * [Netzwerke](/netzwerke/netzwerke)
 * [Microcontroller](microcontroller/microcontroller)
 * [Informatik](informatik/informatik)
-  * [Bob und Alice](informatik/bob_und_alice.md)
+  * [Alice und Bob](informatik/alice_und_bob.md)
 * [Mathe](/mathe/mathe)
 * [Französisch](/französisch/französisch)
