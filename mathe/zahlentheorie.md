@@ -38,7 +38,7 @@ $\dfrac{a^p}{b^p} = (\dfrac{a}{b})^p$
 
 > Modulo
 
-Will man in der Menge der natürlichen Zahlen eine Zahl **a** durch eine Zahl **m** teilen so erhält man einen Rest **r**. Für diesen Rest gilt $0 \le r \le m-1$. DIe Modulo-Funktion liefert zu gegebenen Zahlen **a** und **m** gerade diesen Rest **r**. Man schreibt auch:
+Will man in der Menge der natürlichen Zahlen eine Zahl **a** durch eine Zahl **m** teilen so erhält man einen Rest **r**. Für diesen Rest gilt $0 \le r \le m-1$. Die Modulo-Funktion liefert zu gegebenen Zahlen **a** und **m** gerade diesen Rest **r**. Man schreibt auch:
 $a \text{ mod } m = r$
 $19 : 4=4 \text{ Rest } 3$ also gilt $19 \text{ mod } 4 = 3$
 
@@ -53,7 +53,7 @@ Die Restklasse ist immer eine Menge von Zahlen, wobei diese Zahlen immer im glei
 
 Das Modul $\mathbb{Z_m}$ sind die Reste, die beim Teilen durch m auftreten können. z.B. $\mathbb{Z_5}=\{0;1;2;3;4\}$. Dabei hat jede ganze Zahl ihren Vertreter, die Restklasse. So ist z.B. die Restklasse der **3** im Modul **5** gleich $\overline{3}=\{...;-7;-2;3;8;13;18;23;...\}$
 
-Im Modul $\mathbb{Z_m}$ kann man auf die übliche Art rechnen. Das Ergebnis wir aber wieder in den $\mathbb{Z_m}$ abgebildet.
+Im Modul $\mathbb{Z_m}$ kann man auf die übliche Art rechnen. Das Ergebnis wird aber wieder in den $\mathbb{Z_m}$ abgebildet.
 Die modulo-Funktion ist strukturerhaltend sie ist ein Homomorphismus
 
 **Beispiel**:
@@ -68,7 +68,7 @@ $678 + 471 \text{ mod } 5 = 3+1 \text{ mod } 5 = 4$
 
 Jede natürliche Zahl kann als Produkt von Primzahlen dargestellt werden.
 
-Hier bei geht man Systematisch die Primzahlen von **2** aufwärts und teilt so oft wie es ohne Rest möglich ist.
+Hier bei geht man systematisch die Primzahlen von **2** aufwärts und teilt so oft wie es ohne Rest möglich ist.
 
 **Beispiel**:
 
@@ -80,7 +80,7 @@ $=2 \cdot 2 \cdot 5 \cdot 11$
 
 ### Größter gemeinsamer Teiler (ggT)
 
-Der ggT kann mithilfe der Primfaktorzerlegung bestimmt werden hier für multipliziert man einfach die Primfaktoren die in beiden Zerlegungen vorkommen.
+Der *ggT* kann mithilfe der Primfaktorzerlegung bestimmt werden, hierfür multipliziert man einfach die Primfaktoren die in **beiden** Primfaktorzerlegungen vorkommen und ignoriert die anderen Primfaktoren, welche nur in einer Zerlegung auftreten.
 
 **Beispiel**:
 
@@ -104,7 +104,7 @@ $ggT(a,b)=ggT(a \text{ mod }b,b)$
 
 ### Kleinstes gemeinsames Vielfaches (kgV)
 
-Das kgV von zwei Zahlen ist die kleinste Zahl, die sich durch die beiden Zahlen teilen lässt.
+Das *kgV* von zwei Zahlen ist die kleinste Zahl, die sich durch die beiden Zahlen teilen lässt.
 
 **Beispiel**:
 
@@ -114,9 +114,10 @@ $16:16;32;48;64;80;...$
 
 $kgV(12,16)=48$
 
-**Satz**:
-Für das kgV und den ggT zweier Zahlen a und b gilt
-$kgV(a,b) \cdot ggT(a,b)=a \cdot b$
+---
 
+**Satz**:
+Für das *kgV* und den *ggT* zweier Zahlen $a$ und $b$ gilt
+$kgV(a,b) \cdot ggT(a,b)=a \cdot b$
 
 - Strategien für Modulo von großen Zahlen berechnen, Primfaktorzerlegung & Primzahlen finden

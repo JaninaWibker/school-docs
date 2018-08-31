@@ -18,5 +18,6 @@
   * [DNS](/netzwerke/dns.md)
   * [IPv6](/netzwerke/ipv6.md)
 * [Microcontroller](microcontroller/microcontroller)
+* [Informatik](informatik/informatik)
 * [Mathe](/mathe/mathe)
 * [Französisch](/französisch/französisch)

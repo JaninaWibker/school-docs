@@ -2,5 +2,6 @@
 * [Datenbanken](/db/db)
 * [Netzwerke](/netzwerke/netzwerke)
 * [Microcontroller](/microcontroller)
+* [Informatik](informatik/informatik)
 * [Mathe](/mathe/mathe)
 * [Französisch](/französisch/französisch)
