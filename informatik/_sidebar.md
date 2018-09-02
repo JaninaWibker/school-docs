@@ -3,6 +3,8 @@
 * [Netzwerke](/netzwerke/netzwerke)
 * [Microcontroller](microcontroller/microcontroller)
 * [Informatik](informatik/informatik)
+  * [Sicherheitsziele](informatik/sicherheitsziele.md)
   * [Alice und Bob](informatik/alice_und_bob.md)
+  * [rot-N cipher](informatik/rot-n.md)
 * [Mathe](/mathe/mathe)
 * [Französisch](/französisch/französisch)

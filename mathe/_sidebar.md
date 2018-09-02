@@ -2,6 +2,7 @@
 * [Datenbanken](/db/db)
 * [Netzwerke](/netzwerke/netzwerke)
 * [Microcontroller](microcontroller/microcontroller)
+* [Informatik](informatik/informatik)
 * [Mathe](/mathe/mathe)
   * [Ableitung](mathe/ableitung.md)
   * [Monotonie](mathe/monotonie.md)
