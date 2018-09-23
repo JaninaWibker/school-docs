@@ -162,10 +162,9 @@
 
             Array.from(doc.querySelectorAll('p, th, td'))
               .forEach(x => x.innerHTML = x.innerHTML.replace(/\$\$?([\s\S]*?)\$\$?/g, (all, code) => {
-                code = decodeHtml(code.replace(/<\/?em>/g, '_'))
+                code = decodeHtml(code.replace(/<\/?em>/g, '*').replace(/<\/?strong>/g, '**'))
                 const startsWith = all.startsWith('$$')
                 const endsWith = all.endsWith('$$')
-
                 if((startsWith && endsWith) || (!startsWith && !endsWith)) {
                   return katex.renderToString(code, {displayMode: startsWith})
                 } else {
