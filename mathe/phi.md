@@ -66,7 +66,7 @@ $p \text{ Primzahl } \implies a^{p-1} \equiv 1 \text{ mod } p$ für alle $a$ mit
 
 
 
-## Potenzieren in $\bold{Z_n^*}$
+## Potenzieren in $Z_n^*$
 
 In den Exponenten rechnet man modulo $\varphi(n)$
 

@@ -1,14 +1,14 @@
 # Square and Multiply
 
-**Square and Multiply** ist eine Efficiente Methode um Potenzen zu Berechen.  Wenn man normal eine Zahl Potenziert benötigt man bei z.B. $a^n$ $n-1$ Multiplikationen. Bei  **Square and Multiply** higegen benötigt man maximal 2 mal die anzahl der Binär stellen der Potenz -2 (meist weniger).
+**Square and Multiply** ist eine effiziente Methode um Potenzen zu berechen. Wenn man normal eine Zahl Potenziert benötigt man bei z.B. $a^n$ $n-1$ Multiplikationen. Bei **Square and Multiply** hingegen benötigt man maximal 2 mal die Anzahl der Binärstellen der Potenz -2 (meist weniger).
 
 **Beispiel**:
 
 $5^{25} \text{ mod 11}$
 
-> **Square and Multiply** funktioniert auch ohne das modolo allerdings werden die Zahlen mit denen man Rechnte wesentlich höher
+> **Square and Multiply** funktioniert auch ohne das Modulo, allerdings werden die Zahlen mit denen man rechnet schnell wesentlich höher
 
-Zuerst muss man die potenz in Binär umwandeln.
+Zuerst muss man die Potenz in Binär umwandeln.
 
 $25=(11001)_2$
 

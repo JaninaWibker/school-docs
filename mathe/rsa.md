@@ -44,14 +44,12 @@ Den private key bilden nun $(d, N)$
 
 Einen Text $T$ kann man nun mit $G=T^e\text{ mod N}$ verschlüsseln.
 
-Um $G$ jetz wieder zu entschlüsseln rechnet man $T=G^d\text{ mod N}$
-
-
+Um $G$ jetzt wieder zu entschlüsseln rechnet man $T=G^d\text{ mod N}$
 
 >  **Beweis für die Entschlüsselung**:
 >
 >  $e\cdot d\text{ mod  } \varphi(N) \equiv 1$ $\implies$ $e\cdot d = r \cdot \varphi(N)+1$
 >
-> $ggT(a,m)=1$$\implies$  $a^{\varphi(N)} \text{ mod m} \equiv 1$ (satz von Euler)
+> $ggT(a,m)=1 \implies a^{\varphi(N)} \text{ mod m} \equiv 1$ (satz von Euler)
 >
 > $(T^e)^d \equiv T^{e \cdot d} \equiv T^{r \cdot \varphi(N)+1} \equiv T^{r \cdot \varphi(N)} \cdot T \equiv (T^{\varphi(N)})^r \cdot T \equiv 1^r \cdot T \equiv T \text{ mod N}$
