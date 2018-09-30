@@ -27,4 +27,5 @@
   * [Euklidscher Algorithmus](mathe/euklidscher_algorithmus.md)
   * [Square and Mulitply](mathe/square_and_multiply.md)
   * [RSA](mathe/rsa.md)
+* [Elektrotechnik](/etk/etk)
 * [Französisch](/französisch/französisch)

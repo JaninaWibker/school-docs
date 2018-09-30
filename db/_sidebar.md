@@ -15,4 +15,5 @@
 * [Microcontroller](microcontroller/microcontroller)
 * [Informatik](informatik/informatik)
 * [Mathe](/mathe/mathe)
+* [Elektrotechnik](/etk/etk)
 * [Französisch](/französisch/französisch)
