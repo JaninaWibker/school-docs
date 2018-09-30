@@ -29,3 +29,17 @@ C'est un *spectacle* **marrant** $\Longrightarrow$ Das ist eine **witzige** *Auf
 C'est un **joli** *sac* $\Longrightarrow$ Das ist eine **hübsche** *Tasche* / ein **hübscher** *Beutel*
 
 C'est une **grande** *ville* $\Longrightarrow$ Das ist eine **große** *Stadt*
+
+
+
+## Ausnahme (Vokal, stummes h)
+
+Es gibt einige Adjektive die gewisse Ausnahmen haben. Dazu gehören auch *nouveau*, *vieux* und *beau*. Diese haben nämlich die Besonderheit, dass sie eine extra **männlich singular** Form haben für den Fall, dass ein **Vokal** bzw. **stummes *h*** und danach Vokal folgt. Diese Form kann es nur bei Adjektiven geben die vor dem Nomen stehen und wird nur im männlichen singular benutzt.
+
+| S / M       | S / M + Vokal | S / F        | P / M        | P / F         |
+| ----------- | ------------- | ------------ | ------------ | ------------- |
+| nouv**eau** | nouve**l**    | nouvel**le** | nouv**eaux** | nouvel**les** |
+| vi**eux**   | viei**l**     | vieil**le**  | vi**eux**    | vieil**les**  |
+| b**eau**    | be**l**       | bel**le**    | b**eaux**    | bel**les**    |
+
+> Das gute hierdran ist, dass diese Ausnahme sich wie viele anderen Ausnahmen garnicht so außerbesonders verhält, sondern eigentlich nur eine sonst auch oft auftretende Regel implementiert.
