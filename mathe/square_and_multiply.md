@@ -21,3 +21,4 @@ $25=(11001)_2$
 ```
 
 > Man braucht für $5^{25}$ also nur 6 Multiplikationen anstat die 24 die man Normalerweise bräuchte
+

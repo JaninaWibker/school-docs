@@ -1,8 +1,8 @@
 # Euklidscher Algorithmus
 
-Mit Hilfe des **euklidischen Algorithmus** lässt sich der ggT zweier Zahlen Berechen. Man stellt immer die gleichung $a = q \cdot b +r$ auf sobald man bei r = 0 angelangt ist, ist das r der darüber liegenden Zeile der ggT.
+Mit Hilfe des **euklidischen Algorithmus** lässt sich der ggT zweier Zahlen Berechen. Man stellt immer die Gleichung $a = q \cdot b +r$ auf und sobald man bei $r = 0$ angelangt ist, ist das r der darüber liegenden Zeile der ggT.
 
-**Beispiel**:$ ggT(77,53)$
+**Beispiel**: $\text{ggT}(77,53)$
 
 ```
  a    q    b     r
@@ -13,15 +13,15 @@ Mit Hilfe des **euklidischen Algorithmus** lässt sich der ggT zweier Zahlen Ber
  4  = 4 *  1  +  0     // Ende weil r = 0
 ```
 
-Nun weiß man das der $ggT(77,53)=1$ ist, sie also kene Teiler Besitzen.
+Nun weiß man das der $\text{ggT}(77,53)=1$ ist, sie also kene Teiler Besitzen.
 
 ## Erweiterter euklidischer Algorithmus
 
-Mit Hilfe des **erweiterter euklidischer Algorithmus** lässt sich eine **diophantische Gleichung** bestimmen. DIese **diophantische Gleichung** bescreibt den ggT dier beiden Zahlen a und b.
+Mit Hilfe des **erweiterter euklidischer Algorithmus** lässt sich eine **diophantische Gleichung** bestimmen. Diese **diophantische Gleichung** beschreibt den ggT der beiden Zahlen $a$ und $b$.
 
-Sie hat immer die Form $ggt(a,b)=x\cdot b + y\cdot a$
+Sie hat immer die Form $\text{ggT}(a,b)=x\cdot b + y\cdot a$
 
-**Beispile**: wie im vorgerigen Beispile also  $ggT(77,53)$
+**Beispiele**: wie im vorherigen Beispiele also  $\text{ggT}(77,53)$
 
 ```
  a    q    b     r
@@ -32,7 +32,7 @@ Sie hat immer die Form $ggt(a,b)=x\cdot b + y\cdot a$
  4  = 4 *  1  +  0
 ```
 
-Nach dem wir den normalen euklidischer Algorithmus beendet haben also $r = 0$ ist fangen wir mit dem  **erweiterter euklidischer Algorithms** an.
+Nach dem wir den normalen euklidischer Algorithmus beendet haben, also $r = 0$ ist, fangen wir mit dem **erweiterter euklidischer Algorithms** an.
 
 ```
 1 =  1 * 5  - 1  * 4					
@@ -48,7 +48,7 @@ ggT(77,53) = 16 * 53 - 11 * 77 = 1
 
 ### Bestimmen des Inversen Elements
 
-Mit hilfe einer **diophantische Gleichung** welche den ggT zweier Zahlen beschreibt kann man durch eine Modolo rechnung die inversen Elemente der Zahlen berechen. Dies gilt aber nur wen der ggT der zahlen 1 beträgt.
+Mit Hilfe einer **diophantische Gleichung** welche den ggT zweier Zahlen beschreibt kann man durch eine Modolo Rechnung die inversen Elemente der Zahlen berechnen. Dies gilt aber nur wen der ggT der Zahlen 1 beträgt.
 
 **Beispiel**:
 

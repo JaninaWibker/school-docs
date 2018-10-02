@@ -47,3 +47,4 @@ Man sollte sich zunächst mit den Fragewörtern vertraut machen
 | Quand et à quelle heure est-ce que c'est?            | Wann und wie spät ist das?             |
 
 >  *se trouve* = *sich befinden*
+
