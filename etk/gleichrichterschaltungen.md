@@ -4,7 +4,7 @@
 
 $U_{di} = 0,45 \cdot U_{v0} = \dfrac{\hat{U}_{di}}{\pi} = \dfrac{\hat{U}_{v0}}{\pi}$
 
-$I_{d} = 0,64 \cdot I_{v} = \dfrac{\hat{I}_{d}}{\pi}$
+$I_{d} = 0,64 \cdot I_{v} = \dfrac{U_{di}}{R_{L}} = \dfrac{\hat{I}_{d}}{\pi}$
 
 $W_{U} = \dfrac{U_{w}}{U_{di}} = 1,21 \implies U_{w} = 1,21 \cdot U_{di}  = 0,5445 \cdot U_{v0}$
 

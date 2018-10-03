@@ -11,9 +11,11 @@
   * [Joins](db/joins.md)
   * [Aggregatfunktionen](db/aggregatfunktionen.md)
   * [in PHP mit einer Datenbank interagieren](db/php_db_interaktionen.md)
+  * [Referentielle Integrität](db/referentielle_integrität.md)
 * [Netzwerke](/netzwerke/netzwerke)
 * [Microcontroller](microcontroller/microcontroller)
 * [Informatik](informatik/informatik)
 * [Mathe](/mathe/mathe)
 * [Elektrotechnik](/etk/etk)
 * [Französisch](/französisch/französisch)
+
