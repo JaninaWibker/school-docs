@@ -22,6 +22,8 @@ Wie man sieht gibt es insgesamt 8 Inputs, davon sind 3 für die Adressierung, ei
 
 > Es kommt oft vor, dass der Dezimalpunkt invertiert ist und somit an ist, wenn er 0V erhält, also muss man ihn eventuell noch invertieren.
 
+## Code
+
 Mit folgendem Code könnte man 7 Segment Anzeigen ansteuern, hierbei sind in `r1` und `r2` jeweils 2 BCD Werte (upper & lower nibble). `P1` ist der Output **P**ort indem die 7 Segment Anzeigen angeschlossen sind (sowie der Adress Decoder und der BCD Decoder).
 
 ```asm6502
