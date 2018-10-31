@@ -36,6 +36,7 @@ output: mov a,r1          ; `r1` hat den gewollten BCD Wert im upper nibble
         
         mov a,r1          ; `r1`hat den gewollten BCD Wert im lower nibble
         anl a,#F0h        ; lower nibble extrahieren
+        swap a            ; swap zu upper nibble, da die Werte im upper nibble erwartet werden
         orl a,#001 0 0000b; Adresse 001 und DP aus
         mov p1,a
         call wait
@@ -49,6 +50,7 @@ output: mov a,r1          ; `r1` hat den gewollten BCD Wert im upper nibble
         
         mov a,r2
         anl a,#F0h        ; lower nibble
+        swap a            ; swap zu upper nibble, da die Werte im upper nibble erwartet werden
         orl a,#011 0 0000b; Adresse 011 und DP aus
         mov p1,a
         call wait

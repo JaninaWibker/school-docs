@@ -12,4 +12,5 @@
 * [Aggregatfunktionen](db/aggregatfunktionen.md)
 * [in PHP mit einer Datenbank interagieren](db/php_db_interaktionen.md)
 * [Referentielle Integrität](db/referentielle_integrität.md)
-
+* [Views](db/views.md)
+* [Permissions](db/permissions.md)

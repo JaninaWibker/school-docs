@@ -24,8 +24,8 @@ Es gibt im *8051* (unser Microcontroller) mehrere Wege einen Timer zu benutzten.
         org 030h              ; Hauptprogramm wird bei Adresse `030` anfangen
 
 init:   mov tmod,#00000001b   ;
-        setb et0              ;
-        clr tf0               ;
+        setb et0              ; `setb` setzt angegebenes Ziel auf 1
+        clr tf0               ; `clr` setzt angegebens Ziel auf 0
         setb tr0              ;
         setb ea               ;
       
