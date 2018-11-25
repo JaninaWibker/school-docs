@@ -96,12 +96,12 @@ $$adj(M) := (\text{Cofactors}(\text{Minors}(M)))^T$$
 
 Damit kann man dann zuletzt alle Oben genannten Schritte anwenden und mit $\dfrac{1}{det(M)} \cdot adj(M)$ das Inverse zu $M$ bilden.
 
-> [Code implementation](mathe/matrix_inverse_code)
+<br />
+<br />
+**Nützliche Links**
 
-Nützliche Links
-
-> [MathIsFun/MatrixInverse](https://www.mathsisfun.com/algebra/matrix-inverse-minors-cofactors-adjugate.html)
+> [eigene Code implementation](mathe/matrix_inverse_code)
 >
-> [MathIsFun/Determinant](https://www.mathsisfun.com/algebra/matrix-determinant.html)
->
+> [MathIsFun/MatrixInverse](https://www.mathsisfun.com/algebra/matrix-inverse-minors-cofactors-adjugate.html)<br />
+> [MathIsFun/Determinant](https://www.mathsisfun.com/algebra/matrix-determinant.html)<br />
 > [Cliffsnotes/LaplaceExpansion](https://www.cliffsnotes.com/study-guides/algebra/linear-algebra/the-determinant/laplace-expansions-for-the-determinant)
