@@ -23,3 +23,8 @@
 * [Euklidscher Algorithmus](mathe/euklidscher_algorithmus.md)
 * [Square and Mulitply](mathe/square_and_multiply.md)
 * [RSA](mathe/rsa.md)
+* [Matrix Multiplikation](mathe/matrix_multiplikation.md)
+* [neutrales Element bei Matrizen](mathe/matrix_neutrales_element.md)
+* [inverse Matrizen](mathe/matrix_inverse.md)
+* [affine Abbildungen](mathe/affine_abbildungen.md)
+
