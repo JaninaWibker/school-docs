@@ -12,7 +12,7 @@ Der Punkt $(0|0)$ (Ursprung) ist bei translationsfreien affinen Abbildungen **im
 
 Die Allgemeine Formel für einen Fixpunkt ist:
 
-$$A \cdot \begin{pmatrix}x\\\\y\end{pmatrix} = \begin{pmatrix}x\\\\y\end{pmatrix}$$
+$$A \cdot \begin{pmatrix}x\\\\y\end{pmatrix} = \begin{pmatrix}x'\\\\y'\end{pmatrix} = \begin{pmatrix}x\\\\y\end{pmatrix}$$
 
 ## Fixgeraden
 
@@ -28,7 +28,23 @@ Fixpunktgeraden beschreiben mithilfe einer Geraden wo Fixpunkte vorhanden sind. 
 
 ## Berechnung
 
-Meistens hat man eine gewisse Abbildungsmatrix $A$ gegeben und muss aus ihr bestimmen, welche Fixpunkte existieren und ob diese ein Muster in Form einer Fixpunktgerade verfolgen. 
+Meistens hat man eine gewisse Abbildungsmatrix $M$ gegeben und muss aus ihr bestimmen, welche Fixpunkte existieren und ob diese ein Muster in Form einer Fixpunktgerade verfolgen. 
+
+Zunächst stellt man aus der Abbildungsmatrix $A$ die 2 einzelnen Gleichungen für $x’$ und $y’$ auf.
+
+$x' = a \cdot x + b \cdot y$
+
+$y' = c \cdot x + d \cdot y$
+
+Nun muss man aus diesen beiden Gleichungen $x$ und $y$ Werte finden wofür gilt, dass $x’ = x$ und $y’ = y$ ist. Also stellt man folgendes Gleichungssystem auf
+
+$x = a \cdot x + b \cdot y$
+
+$y = c \cdot x + d \cdot y$
+
+Dieses Gleichungssystem löst man, erhält dann Werte bzw. Gleichungen für die beiden Komponenten des Punktes. Für translationsfreie Abbildungen sollte immer der Ursprung herauskommen, entweder als einzige Lösung oder enthalten in der Gleichung die man errechnet hat.
+
+Damit hat man den Fixpunkt bzw. die Fixpunkte berechnet für eine Abbildungsmatrix $A$. 
 
 ## Fixpunkte, Fixgeraden und Fixpunktgeraden für bekannte Transformationsmatrizen
 
