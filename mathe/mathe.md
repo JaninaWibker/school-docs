@@ -26,5 +26,6 @@
 * [Matrix Grundlagen](mathe/matrix_grundlagen.md)
 * [neutrales Element bei Matrizen](mathe/matrix_neutrales_element.md)
 * [inverse Matrizen](mathe/matrix_inverse.md)
+* [Matrix Verschlüsselung](mathe/matrix_verschluesselung.md)
 * [affine Abbildungen](mathe/affine_abbildungen.md)
 * [Fixelemente](mathe/fixelemente.md)
