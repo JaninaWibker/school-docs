@@ -33,3 +33,13 @@ $$C = A * b = \begin{pmatrix}A_{11} & A_{12} & \dots\\\\A_{21} & A_{22} & \dots\
 Das Transponieren einer Matrix bedeutet, dass man die Zeilen und Spalten tauscht, also der Wert eines Elementes $a_{ij}$ jetzt in $a_{ji}$ stehen würde. Man tauscht die Adressierung der Elemente. Dies kann entweder genutzt werden um Matrizen schöner darzustellen (Matrizen sehen gerne sperrig in Texten aus und manchmal hilft die Transponierung dabei dies etwas vorzubeugen) oder für wirkliche mathematische Dinge. 
 
 $$A^T \quad | A^T_{ji} = A_{ij}; A^T \in \R^{m_A \times n_A}$$
+
+## Matrixgleichungen
+
+Matrixgleichungen sind Gleichungen in denen Matrizen involviert sind. Das kann z.B. heißen, dass man eine Matrix gegeben hat in der eine Variable auftritt und eine andere Matrix welche für einen bestimmten Wert der Variable der ersten Matrix gleich dieser ist. Man muss dann den Wert finden womit die beiden Matrizen gleich sind. Variationen davon, z.B. mit Matrixmultiplikation und mehreren Matrizen können auch vorkommen. Das vorhen ist dabei aber eigentlich immer das gleiche:
+
+- Gleichung aufstellen
+- Nach Variable aufstellen
+- Ausrechnen
+- Wert als Kontrolle einsetzen
+- Ergebnis angeben

@@ -49,7 +49,7 @@ Die Notation für die Berechnung eines Minors einer Matrix ist $mnr(a_{ij})$.
 
 Die Berechnung der Determinante für eine Matrix $M$ ist eine rekursive Definition. Sobald man an dem Punkt angekommen ist, bei dem man  die Determinante einer $1 \times 1$ Matrix berechnen müsste wird $a_{11}$ stattdessen genommen. Dies ist damit die Abbruchbedingung.
 
-> Anstatt $det(M)​$ schreibt man auch oft $|M|​$.
+> Anstatt $det(M)$ schreibt man auch oft $|M|$.
 
 Die Determinante ist definiert als:
 
@@ -60,7 +60,7 @@ Wie man sieht wird die Determinante berechnet indem man die erste Zeile der Matr
 
 Mit diesem Beispielbild kann man gut erkennen wie man vorgehen muss
 
-![Beispielbild Determinante](../assets/Mahte-diagrams-Matrix-Determinante.svg)
+![Beispielbild Determinante](../assets/Mathe-diagrams-Matrix-Determinante.svg)
 
 #### Matrix of Minors
 
@@ -96,9 +96,23 @@ $$adj(M) := (\text{Cofactors}(\text{Minors}(M)))^T$$
 
 Damit kann man dann zuletzt alle Oben genannten Schritte anwenden und mit $\dfrac{1}{det(M)} \cdot adj(M)$ das Inverse zu $M$ bilden.
 
+
+
+## 2x2 Inverse
+
+Da die Inverse einer $2 \times 2$ Matrix oft vorkommt und man vermutlich lieber einfach die Formel so haben will anstatt den ganzen Algorithmus anzuwenden um auf die Inverse anzuwenden kann ist hier die Formel
+
+$$\begin{pmatrix}a & b\\\\c & d\end{pmatrix}^{-1} = \dfrac{1}{ad - bc} \cdot \begin{pmatrix}d & -b\\\\-c & a \end{pmatrix}$$
+
+Mit dem Algorithmus lässt sich dies schnell herleiten, also hier die Kurzfassung:
+
+- Durch die *Matrix of Minors* tauschen zunächst $a$ und $d$, sowie $b$ und $c$ die Position
+- Durch die *Matrix of Cofactors* werden die Vorzeichen vor $ b$ und $c$ vertauscht
+- Durch das *Transponieren* werden $-b$ und $-c$ wieder zurück getauscht
+- Die *Determinante* ist $ad - bc$, da die Minors von $a$ und $b$ jeweils $d$ und $c$ sind
+
 <br />
-<br />
-**Nützliche Links**
+<br />**Nützliche Links**
 
 > [eigene Code implementation](mathe/matrix_inverse_code)
 >
