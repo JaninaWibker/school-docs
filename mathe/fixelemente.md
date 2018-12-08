@@ -1,6 +1,6 @@
 # Fixelemente
 
-Es gibt 3 verschiedene Arten von Fixelementen, **Fixpunkte**, **Fixgeraden** und **Fixpunktgeraden**.
+Es gibt 3 verschiedene Arten von Fixelementen, **Fixpunkte**, **Fixgeraden** und **Fixpunktgeraden**. Generell geht es darum, dass ein Fixelement immernoch das gleiche Element ist nachdem es abgebildet wurde.
 
 ## Fixpunkte
 
@@ -10,9 +10,11 @@ Der Punkt $(0|0)$ (Ursprung) ist bei translationsfreien affinen Abbildungen **im
 
 > Ein einfacher Beweis dafür ist, dass die $0$ das sogenannte Null Element oder auch absorbierendes Element der Multiplikation in den Reelen Zahlen ist, womit nichts anderes als $0$ herauskommen kann, was dem Ursprung entspricht
 
-Die Allgemeine Formel für einen Fixpunkt ist:
+Die Allgemeine Formel (ohne Translation) für einen Fixpunkt ist:
 
 $$A \cdot \begin{pmatrix}x\\\\y\end{pmatrix} = \begin{pmatrix}x'\\\\y'\end{pmatrix} = \begin{pmatrix}x\\\\y\end{pmatrix}$$
+
+> mit Translation würde ein $+ \begin{pmatrix}v_x\\\\v_y\end{pmatrix}$ zusätzlich enthalten sein.
 
 ## Fixgeraden
 
@@ -52,11 +54,11 @@ Damit hat man den Fixpunkt bzw. die Fixpunkte berechnet für eine Abbildungsmatr
 | -------------------------------------- | -------------------------- | --------------------------------------------------- | --------------- |
 | Spiegelung x-Achse                     | Alle Punkte $P(a \vert 0)$ | x-Achse<br />y-Achse<br />alle Normalen zur x-Achse | x-Achse         |
 | Spiegelung y-Achse                     | Alle Punkte $P(0 \vert a)$ | x-Achse<br />y-Achse<br />alle Normalen zur y-Achse | y-Achse         |
-| Skalierung                             | Ursprung $P(0 \vert 0)$    | Jeder Gerade die durch den Ursprung verläuft        | **/**           |
-| Punktspiegelung am Ursprung            | Ursprung $P(0 \vert 0)$    | Jeder Gerade die durch den Ursprung verläuft        | **/**           |
+| Skalierung                             | Ursprung $P(0 \vert 0)$    | Jede Gerade die durch den Ursprung verläuft         | **/**           |
+| Punktspiegelung am Ursprung            | Ursprung $P(0 \vert 0)$    | Jede Gerade die durch den Ursprung verläuft         | **/**           |
 | Spiegelung an der Diagonalen x=y       | Alle Punkte $P(a \vert a)$ | $f(x) = x$                                          | $f(x) = x$      |
 | Drehung um Winkel $\alpha$ um Ursprung | Ursprung $P(0 \vert 0)$    | **/**                                               | **/**           |
-| Scherung x-Achse                       | Alle Punkte $P(a \vert 0)$ | x-Achse                                             | x-Achse         |
-| Scherung y-Achse                       | Alle Punkte $P(0 \vert a)$ | y-Achse                                             | y-Achse         |
+| Scherung x-Achse                       | Alle Punkte $P(a \vert 0)$ | alle Normalen zur y-Achse<br />(damit auch x-Achse) | x-Achse         |
+| Scherung y-Achse                       | Alle Punkte $P(0 \vert a)$ | alle Normalen zur x-Achse<br />(damit auch y-Achse) | y-Achse         |
 | Identische Abbildung                   | **Alle**                   | **Alle**                                            | **Alle**        |
 
