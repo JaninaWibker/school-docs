@@ -21,7 +21,7 @@ Dieses Gleichungssystem muss nun nach $a, b, c, d, v_x$ und $v_y$ gelöst werden
 
 $$\alpha: \begin{pmatrix}x\\\\y\end{pmatrix} = \begin{pmatrix}a & b\\\\c & d\end{pmatrix} \cdot \begin{pmatrix}x\\\\y\end{pmatrix} + \begin{pmatrix}v_x\\\\v_y\end{pmatrix}$$
 
-Einem fällt vielleicht schnell auf, dass es für bestimmte gegebene Punkte nicht nötig ist ein Gleichungssystem aufzustellen oder dieses über etwas kürzere Formeln verfügt. Soetwas kann immer der Fall sein, wenn man eine $0​$ in den Koordinaten eines Punktes hat. Dadurch vereinfacht sich die Formel und manchmal fallen dadurch schnell schon Translationsvektoren weg oder es einige Parameter können direkt abgelesen werden. Hier können die sogenannten Einheitsvektoren ins Spiel kommen.
+Einem fällt vielleicht schnell auf, dass es für bestimmte gegebene Punkte nicht nötig ist ein Gleichungssystem aufzustellen oder dieses über etwas kürzere Formeln verfügt. Soetwas kann immer der Fall sein, wenn man eine $0$ in den Koordinaten eines Punktes hat. Dadurch vereinfacht sich die Formel und manchmal fallen dadurch schnell schon Translationsvektoren weg oder es einige Parameter können direkt abgelesen werden. Hier können die sogenannten Einheitsvektoren ins Spiel kommen.
 
 ## Einheitsvektoren
 
@@ -33,20 +33,22 @@ $Q(0 \vert 1) \implies Q'(Q_x \vert Q_y)$
 
 Aus diesen Punkten folgt
 
-$E_1=\begin{pmatrix}1\\\\0\end{pmatrix} \implies E'_1=\begin{pmatrix}P_x\\\\P_y\end{pmatrix}$ 
+$E_1=\begin{pmatrix}1\\\\0\end{pmatrix} \implies E'_1=\begin{pmatrix}P'_x\\\\P'_y\end{pmatrix}$ 
 
-$E_2=\begin{pmatrix}0\\\\1\end{pmatrix} \implies E'_2=\begin{pmatrix}Q_x\\\\Q_y\end{pmatrix}$
+$E_2=\begin{pmatrix}0\\\\1\end{pmatrix} \implies E'_2=\begin{pmatrix}Q'_x\\\\Q'_y\end{pmatrix}$
 
 Daraus kann man schließen, dass die Abbildungsmatrix $A$ folgendes ist
 
-$A = \begin{pmatrix}P_x & Q_x\\\\P_y & Q_y\end{pmatrix}$
+$A = \begin{pmatrix}P'_x & Q'_x\\\\P'_y & Q'_y\end{pmatrix}$
 
 Man kann sich also merken, dass der erste Punkt $P$ die erste Spalte der Abbildungsmatrix $A$ ist und der zweite Punkt $Q$ die zweite Spalte der Abbildungsmatrix ist. 
 
 >  Wenn man $E’_1$ und $E’_2$ als Vektoren aufschreibt sieht man, dass jeder Vektor eine Spalte von $A$ repräsentiert. 
 
-Falls ein Translationsvektor vorhanden ist und man zusätzlich einen Punkt $S(0 \vert 0)$ gegeben hat muss man kein Gleichungssystem aufstellen, wenn man einen anderen Punkt $S$ gegeben hat schon.
+Falls ein Translationsvektor vorhanden ist und man zusätzlich einen Punkt $S(0 \vert 0)$ gegeben hat muss man kein Gleichungssystem aufstellen, wenn man einen anderen Punkt $S$ gegeben hat, dann schon.
 
 Mit dem Punkt $S$ erhält man sofort den Translationsvektor, also muss man ihn nurnoch überall rausrechnen.
 
-$A = \begin{pmatrix}P_x-v_x & Q_x-v_x\\\\P_y-v_y & Q_y-v_y\end{pmatrix}$
+$A = \begin{pmatrix}P'_x-v_x & Q'_x-v_x\\\\P'_y-v_y & Q'_y-v_y\end{pmatrix}$
+
+> Hierbei sind die Werte des Bildpunktes von $S$ der Translationsvektor
