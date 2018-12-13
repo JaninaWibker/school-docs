@@ -1,6 +1,6 @@
 # Euklidscher Algorithmus
 
-Mit Hilfe des **euklidischen Algorithmus** lässt sich der ggT zweier Zahlen Berechen. Man stellt immer die Gleichung $a = q \cdot b +r$ auf und sobald man bei $r = 0$ angelangt ist, ist das r der darüber liegenden Zeile der ggT.
+Mit Hilfe des **euklidischen Algorithmus** lässt sich der ggT zweier Zahlen berechnen. Man stellt immer die Gleichung $a = q \cdot b +r$ auf und sobald man bei $r = 0$ angelangt ist, ist das r der darüber liegenden Zeile der ggT.
 
 **Beispiel**: $\text{ggT}(77,53)$
 

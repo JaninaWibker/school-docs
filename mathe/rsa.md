@@ -20,13 +20,13 @@ $N = q\cdot p$
 
 ### Schritt 3
 
-Jetzt muss man $\varphi(N)$ bestimmen dies ist einfach da $p$ und $q$ Primzahlen sind.
+Jetzt muss man $\varphi(N)$ bestimmen, dies ist einfach da $p$ und $q$ Primzahlen sind.
 
 $\varphi(N)= \varphi(p\cdot q) = \varphi(p) \cdot \varphi(q) = (p-1)\cdot (q-1)$
 
 ### Schritt 4
 
-Jetzt bilded man den public key, hierfür wählt man eine Zahl $e$, für $e$ muss gelten  $1 < e < \varphi(N)$ und $ggT(e, \varphi(N)) = 1$
+Jetzt bildet man den public key, hierfür wählt man eine Zahl $e$, für $e$ muss gelten  $1 < e < \varphi(N)$ und $ggT(e, \varphi(N)) = 1$
 
 Den public key bilden nun $(e, N)$
 
@@ -34,9 +34,10 @@ Den public key bilden nun $(e, N)$
 
 Zu letzt berechnen wir $d$ um den private key zu bilden.
 
-$d$ ist das Inverse zu $e$ im Modul $\varphi(N)$.  $e \cdot d \text{ mod} \varphi(N) \equiv 1$
+$d$ ist das Inverse zu $e$ im Modul $\varphi(N)$. 
+$e \cdot d \text{ mod} \varphi(N) \equiv 1$
 
-Man berechnet nun $d$ mit dem erweiterten euklidischer Algorithmus von $e$ und $\varphi(N)$
+Man berechnet nun $d$ mit dem erweiterten euklidischen Algorithmus von $e$ und $\varphi(N)$
 
 Den private key bilden nun $(d, N)$     
 

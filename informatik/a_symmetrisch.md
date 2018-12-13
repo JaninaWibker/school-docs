@@ -32,3 +32,4 @@ Bei einem **asymmetrischen** Verschlüsselungsverfahren haben alle Parteien unte
 - Langsamer (Beruht auf komplexeren mathematischen Gegebenheiten / Beweisen, welche es auch Ressourcenaufwendiger machen)
 - Große Schlüssellängen (Sicherheit beruht darauf, dass es nicht in annehmbarer Zeit möglich ist durch Brute-Force die Schlüssel zu erhalten, daher müssen große Schlüssel genommen werden um dies zu garantieren (Brute-Force ist die effizienteste Methode die Schlüssel zu erhalten))
 - *(Wo)*man-in-the-middle attack (#equality)
+- Man benötigt eine Certification Authority (**CA**) um die Integrität eines Nutzers und seines public keys zu verifizieren. Die *CA* belegt einem, dass man der wirkliche Besitzer eines public keys ist. 

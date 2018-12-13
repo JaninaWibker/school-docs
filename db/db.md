@@ -14,3 +14,5 @@
 * [Referentielle Integrität](db/referentielle_integrität.md)
 * [Views](db/views.md)
 * [Permissions](db/permissions.md)
+* [Subselects](db/subselects.md)
+* [Mengenoperatoren](db/mengenoperatoren.md)
