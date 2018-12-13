@@ -10,7 +10,7 @@ Man nimmt an, dass 2 Personen **Alice** und **Bob** einen gemeinsamen gleichen S
 
 Alice und Bob wählen jeweils eine geheime Zahl, $a$ und $b$. 
 
-$g^{a} \text{mod } p$ ($A$) wird von Alice berechnet und an Bob geschickt,
+$g^{a} \text{mod } p$ ($A$) wird von Alice berechnet und an Bob geschickt,
 
 $g^{b} \text{mod } p$ ($B$) wird von Bob berechnet und an Alice geschickt. 
 
@@ -28,9 +28,9 @@ Bob tut das gleiche mit $A$ und rechnet $A^b \text{mod } p$.
 
 $g = 7,\quad p = 5,\quad a = 3, \quad b=11$
 
-$A = g^a \text{mod } p$
+$A = g^{a} \text{mod } p$
 
-$B = g^b \text{mod } p$
+$B = g^{b} \text{mod } p$
 
 
 
