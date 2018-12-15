@@ -19,3 +19,12 @@ Etwas muss folgende Kriterien unterstützen um als Projekt bezeichnet werden zu 
 Ein Netzplandiagramm ist ein Weg den Ablauf eines Projektes abzubilden.
 
 ![Netzplantechnik](../assets/LTI-diagrams-Netzplan.svg)
+
+Zur Berechnung der Werte muss man für jedes Ereignis wissen:
+
+- Wie es heißt
+- Welche ID es hat
+- Welche Dauer es hat
+- Wovon es abhängig ist
+
+Aus der ID, dem Namen und der Abhängigkeit lässt sich zunächst die Struktur herleiten. Die Dauer jedes Ereignisses kann auch schon eingetragen werden. Dann muss man nurnoch **FAZ**, **FEZ**, **SAZ** und **SEZ** berechnen. Hierfür braucht man aber noch etwas namens “ kritischer Pfad”. Der **kritischer Pfad ** 
