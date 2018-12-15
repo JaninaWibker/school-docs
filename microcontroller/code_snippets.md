@@ -2,7 +2,7 @@
 
 ## Ansteuerung der 8x7-Segment-Anzeige
 
-```C
+```c
 unsigned char Pos[4]={0x20,0x59,0x09,0x99};
 for (int i = 0;i < 8;i++){	// loop i={0;1;2;3;4;5;6;7}
   unsigned char tmp;
@@ -18,7 +18,7 @@ for (int i = 0;i < 8;i++){	// loop i={0;1;2;3;4;5;6;7}
 
 ## Implementation des Decimal Adjust Assemblerbefehls
 
-```C
+```c
 unsigned int result da(unsigned char value){
   unsigned char cy=CY, ac=AC, low, high, hun=0;
   low = value & 0x0F;
