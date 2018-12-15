@@ -24,7 +24,7 @@
   * [Primfaktorzerlegung, ggT, kgV](mathe/primfaktorzerlegung_ggt_kgv.md)
   * [Multiplikationstabellen](mathe/multiplikationstabellen.md)
   * [Eulersche Phi-Funktion](mathe/phi.md)
-  * [Euklidscher Algorithmus](mathe/euklidscher_algorithmus.md)
+  * [Euklidischer Algorithmus](mathe/euklidischer_algorithmus.md)
   * [Square and Mulitply](mathe/square_and_multiply.md)
   * [RSA](mathe/rsa.md)
   * [Matrix Grundlagen](mathe/matrix_grundlagen.md)
