@@ -15,18 +15,18 @@ Mithilfe der seriellen Schnittstelle (Das Kabel der seriellen Schnittstelle ähn
 | SM2      | Multi-Prozessor Datenübertragung in allen Modi verschieden<br>weitere Konfigurationen |
 | REN      | Erlaubt das empfangen von Daten                              |
 | TB8      | 9. Daten bit in Mode 2 und 3  senden                         |
-| RB8      | 9. Daten bit in Mode 2 und 3 empfangen \| Stoppbit wenn Mode 1 und SM2=0 |
-| TI       | Datenübertragung beendet                                    |
+| RB8      | 9. Daten bit in Mode 2 und 3 empfangen $\vert$ Stoppbit wenn Mode 1 und SM2=0 |
+| TI       | Datenübertragung beendet                                     |
 | RI       | Datenempfang beendet<br>Ist `SM2` in den Betriebsarten 2 und 3 auf Eins gesetzt (`SM2=1`), so wird `RI` nicht aktiviert, wenn das empfangene 9. Bit den Wert Null hat (`RB8=0`).<br>Ist SM2 in den Betriebsart 1 auf Eins gesetzt (`SM2=1`), so wird `RI` nicht aktiviert, wenn kein gültiges Stoppbit empfangen wurde.<br>In der Betriebsart 0 sollte `SM2 = 0` sein. |
 
 ### Modes
 
 | Mode | SM0  | SM1  | Beschreibung          | Übertragungsraten                                            |
 | ---- | ---- | ---- | --------------------- | ------------------------------------------------------------ |
-| 0    | 0    | 0    | 8-Bit Schieberegister | $\frac{Osz.}{12}$ \| half duplex                             |
-| 1    | 0    | 1    | 8-Bit UART            | Timer1 \| full Duplex \| 10bit                               |
-| 2    | 1    | 0    | 9-Bit UART            | ($\frac{Osz.}{12}$) oder $\frac{Osz.}{64}$ \| full duplex \| 11bit |
-| 3    | 1    | 1    | 9-BIT UART            | Timer1 \| wie Mode 2                                         |
+| 0    | 0    | 0    | 8-Bit Schieberegister | $\frac{Osz.}{12}$ $\vert$ half duplex                        |
+| 1    | 0    | 1    | 8-Bit UART            | Timer1 $\vert$ full Duplex $\vert$ 10bit                     |
+| 2    | 1    | 0    | 9-Bit UART            | ($\frac{Osz.}{12}$) oder $\frac{Osz.}{64}$ $\vert$ full duplex $\vert$ 11bit |
+| 3    | 1    | 1    | 9-BIT UART            | Timer1 $\vert$ wie Mode 2                                    |
 
 >  Die Übertragungsrate bei Mode 1 und 3 wird über den Timer1 geregelt.
 

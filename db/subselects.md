@@ -17,7 +17,7 @@ Man kann einige Operatoren auf Tabellen und somit auch Subselects anwenden, dies
 
 ### ALL
 
-Mit `ANY` sagt man, dass der Vergleich bei mindestens einem Element im darauffolgendem Table / Subselect wahr sein muss. 
+Mit ``ALL`` sagt man, dass der Vergleich bei allen Elementen im darauffolgendem Table / Subselect wahr sein muss. 
 
 ```sql
 SELECT id, amount FROM A
@@ -27,6 +27,8 @@ WHERE amount >= ALL (SELECT amount FROM A)
 Diese Abfrage hätte man auch ganz einfach mit der Aggregatfunktion `MAX` realisieren können, aber es gibt manchmal syntaktische Gründe oder auch funktionsbedinge Gründe die dafür sprechen `ALL` zu nutzen. Man kann nämlich nicht unbedingt jede Abfrage mit einem `MAX` oder einem `MIN` abbilden die ein `ALL` produzieren kann. 
 
 ### ANY
+
+Mit `ANY` sagt man, dass der Vergleich bei mindestens einem Element im darauffolgendem Table / Subselect wahr sein muss. 
 
 ```sql
 SELECT name FROM Products
@@ -65,7 +67,7 @@ Mit `EXISTS` kann kontrolliert werden ob ein Datensatz in einem Subselect vorhan
 
 ```sql
 SELECT id, amount FROM A
-WHERE EXISTS (SELECT id FROM B WHERE A.id == B.id)
+WHERE EXISTS (SELECT * FROM B WHERE A.id == B.id)
 ```
 
 Es werden alle Datensätze aus `A` angegeben von denen die `id` auch in einem Datensatz von `B` unter dem Attribut `id` vorkommt. 

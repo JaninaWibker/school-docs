@@ -10,6 +10,7 @@ In **SQL** gibt es verschiedene mögliche Handlungen die Ausgeführt werden kön
 
 - **`Cascade`**: bei Löschen von Datensätzen werden alle damit verknüpften Datensätze auch gelöscht, also alle Datensätze die *foreign keys* haben, welche zu den zu löschenden Datensätzen zeigen. Dies kann auch bei Veränderung der *primary keys* passieren, dabei werden dann alle *foreign keys* von damit verknüpften Datensätzen geupdated.
 - **`No Action`**: Es dürfen keine Datensätze gelöscht bzw. verändert werden, wenn sie in anderen Datensätzen als *foreign keys* referiert werden. 
+- **``Restrict``**: Es wird jegliche Veränderung verweigert. In MySQL ist Restrict exakt das gleiche wie No Action, in anderen Datenbanken ist dies eventuell nicht exakt so.
 - **`Set Null`**: Die *foreign keys* der Datensätze, welche nach dem Löschen bzw. Verändern auf nichtmehr vorhandene Datensätze zeigen werden auf `NULL` gesetzt.
 - **`Set Default`**: Ähnlich wie **Set Null**, aber mit der Abweichung, dass die *foreign keys* nicht auf `NULL` gesetzt werden, sondern auf ihren `DEFAULT`-Wert.
 
@@ -17,7 +18,7 @@ In **SQL** gibt es verschiedene mögliche Handlungen die Ausgeführt werden kön
 
 ## Anwendung in SQL
 
-Was genau passiert (`Cascade`, `No Action`, `Set Null` oder `Set Default`) wird als **Foreign Key Constraint** definiert. Wenn nun ein `DELETE` oder `UPDATE` durchgeführt für einen Datensatz auf den dieser aktuelle Table verweist, dann wird die angegebene Operation (`ON DELETE` / `ON UPDATE`) in diesem Table für betroffene Datensätze ausgeführt. Es kann also jeder Table selber definieren was mit ihm passiert anstatt das ein anderer Table definiert was mit verknüpften Tables passiert.
+Was genau passiert (`Cascade`, `Restrict`, `No Action`, `Set Null` oder `Set Default`) wird als **Foreign Key Constraint** definiert. Wenn nun ein `DELETE` oder `UPDATE` durchgeführt für einen Datensatz auf den dieser aktuelle Table verweist, dann wird die angegebene Operation (`ON DELETE` / `ON UPDATE`) in diesem Table für betroffene Datensätze ausgeführt. Es kann also jeder Table selber definieren was mit ihm passiert anstatt das ein anderer Table definiert was mit verknüpften Tables passiert.
 
 ```sql
 CREATE TABLE <TableName> (
