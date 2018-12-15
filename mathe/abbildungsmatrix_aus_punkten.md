@@ -19,9 +19,9 @@ c \cdot S_x + d \cdot S_y + v_y = S'_y
 
 Dieses Gleichungssystem muss nun nach $a, b, c, d, v_x$ und $v_y$ gelöst werden. Sobald man diese Werte hat kann man eine affine Abbildungsgleichung aufstellen.
 
-$$\alpha: \begin{pmatrix}x\\\\y\end{pmatrix} = \begin{pmatrix}a & b\\\\c & d\end{pmatrix} \cdot \begin{pmatrix}x\\\\y\end{pmatrix} + \begin{pmatrix}v_x\\\\v_y\end{pmatrix}$$
+$$\alpha: \begin{pmatrix}x'\\\\y'\end{pmatrix} = \begin{pmatrix}a & b\\\\c & d\end{pmatrix} \cdot \begin{pmatrix}x\\\\y\end{pmatrix} + \begin{pmatrix}v_x\\\\v_y\end{pmatrix}$$
 
-Einem fällt vielleicht schnell auf, dass es für bestimmte gegebene Punkte nicht nötig ist ein Gleichungssystem aufzustellen oder dieses über etwas kürzere Formeln verfügt. Soetwas kann immer der Fall sein, wenn man eine $0$ in den Koordinaten eines Punktes hat. Dadurch vereinfacht sich die Formel und manchmal fallen dadurch schnell schon Translationsvektoren weg oder es einige Parameter können direkt abgelesen werden. Hier können die sogenannten Einheitsvektoren ins Spiel kommen.
+Einem fällt vielleicht schnell auf, dass es für bestimmte gegebene Punkte nicht nötig ist ein Gleichungssystem aufzustellen oder dieses über etwas kürzere Formeln verfügt. Soetwas kann immer der Fall sein, wenn man eine $0$ in den Koordinaten eines Punktes hat. Dadurch vereinfacht sich die Formel und manchmal fallen dadurch schnell schon Translationsvektoren oder Parameter weg. Hier können die sogenannten Einheitsvektoren ins Spiel kommen.
 
 ## Einheitsvektoren
 

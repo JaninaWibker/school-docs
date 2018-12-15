@@ -16,6 +16,7 @@
   * [Permissions](db/permissions.md)
   * [Subselects](db/subselects.md)
   * [Mengenoperatoren](db/mengenoperatoren.md)
+  * [Projektmanagement](db/projektmanagement.md)
 * [Netzwerke](/netzwerke/netzwerke)
 * [Microcontroller](microcontroller/microcontroller)
 * [Informatik](informatik/informatik)
