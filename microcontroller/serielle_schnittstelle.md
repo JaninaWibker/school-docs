@@ -1,6 +1,6 @@
 # Serielle Schnittstelle
 
-Mithilfe der seriellen Schnittstelle (Das Kabel der seriellen Schnittstelle ähnelt einem VGA Kabel) lassen sich Daten sowohl synchron als auch asynchron an einen Computer oder ähnliches Gerät mit einem seriellen Anschluss übertragen.
+Mithilfe der seriellen Schnittstelle (das Kabel der seriellen Schnittstelle ähnelt einem VGA Kabel) lassen sich Daten sowohl synchron als auch asynchron an einen Computer oder ähnliches Gerät mit einem seriellen Anschluss übertragen.
 
 ### SCON
 
@@ -42,9 +42,9 @@ Um die Zeit für die Übertragung einer gegebenen Anzahl von Bytes zu berechnen 
 
 ### Konfiguration
 
-Die ersten vier Bit des SCON Registers dienen zur Konfiguration. Man muss sich also für einen Modus entscheiden (`SM0`, `SM1`) und zusätzlich noch ob man auch empfangen oder nur senden will (`REN`). `SM0` ist aktuell zu kompliziert und wird nicht benötigt.
+Die ersten vier Bit des SCON Registers dienen zur Konfiguration. Man muss sich also für einen Modus entscheiden (`SM0`, `SM1`) und zusätzlich noch ob man auch empfangen oder nur senden will (`REN`). `SM2` ist aktuell zu kompliziert und wird nicht benötigt.
 
-Wenn man eine feste Übertragungsrate will nutzt man Mode 0 oder 2. Wenn man eine variable Bit/Baud-rate will muss man Mode 1 oder 3 nutzen und Timer1 konfigurieren.
+Wenn man eine feste Übertragugsnrate braucht, muss man Mode 0 oder Mode 2 nutzen. Wenn man eine variable Bit/Baud-rate braucht, muss man Mode 1 oder 3 nutzen und Timer1 entsprechend konfigurieren.
 
 Es ist zu empfehlen Timer1 in Mode 2 zu setzen, da dort ein auto-reload stattfindet.
 
@@ -56,19 +56,18 @@ Wenn wir `PCON.7 SMOD=1` (was auch immer das zu bedeuten hat) verdoppelt sich di
 
 ### Verwendung in C
 
-```C
-//Senden
-void ser_senden(char a){ 
-  	while(TI==0){}		 // nach der laufenden Übertragung TI=1
+```c
+// Senden
+void ser_senden(char a) { 
+	while(TI==0){}		// warten bis Übertragung abgeschlossen ist (TI==1)
   
-	TI=0;
-  	SBUF=a;				 // Schreiben nach SBUF und Start der seriellen Übertragung
+	TI=0;							// Übertragungsbit setzen (TI==0); Übertragung starten
+  SBUF=a;						// Wert nach SBUF schreiben der gesendet werden soll
 }
 
-//verwenden
+// Verwendung
 char aus = 0x01;
-ser_senden(aus+48);		// +48 weil bei 48 in ASCII das "0" steht
-						//Zeilenumbruch
-ser_senden(13);			// "\n"
-ser_senden(10);			// "\r"
+ser_senden(aus+48);	// ASCII Offset: 48 + (0-9) => '0'-'9'
+ser_senden(13);			// '\n'
+ser_senden(10);			// '\r'
 ```

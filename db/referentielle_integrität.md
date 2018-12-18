@@ -6,7 +6,7 @@ Um die **referentielle Integrität** garantieren zu können muss man überprüfe
 
 ## Referentielle Integrität in SQL
 
-In **SQL** gibt es verschiedene mögliche Handlungen die Ausgeführt werden können, wenn eine Operation (also entweder `UPDATE` oder `DELETE`) die referentielle Integrität beeinträchtigt:
+In **SQL** gibt es verschiedene mögliche Handlungen die ausgeführt werden können, wenn eine Operation (also entweder `UPDATE` oder `DELETE`) die referentielle Integrität beeinträchtigt:
 
 - **`Cascade`**: bei Löschen von Datensätzen werden alle damit verknüpften Datensätze auch gelöscht, also alle Datensätze die *foreign keys* haben, welche zu den zu löschenden Datensätzen zeigen. Dies kann auch bei Veränderung der *primary keys* passieren, dabei werden dann alle *foreign keys* von damit verknüpften Datensätzen geupdated.
 - **`No Action`**: Es dürfen keine Datensätze gelöscht bzw. verändert werden, wenn sie in anderen Datensätzen als *foreign keys* referiert werden. 

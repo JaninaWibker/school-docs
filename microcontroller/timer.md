@@ -38,7 +38,7 @@ MOV TMOD, #0001 0001b
 
 Das High- und Low-Byte der beiden Timer lässt sich jederzeit beschreiben und auslesen.
 
-| Bezwichnung       | Register |
+| Bezeichnung       | Register |
 | ----------------- | -------- |
 | Timer 0 Low-Byte  | TL0      |
 | Timer 0 High-Byte | TH0      |
@@ -48,7 +48,7 @@ Das High- und Low-Byte der beiden Timer lässt sich jederzeit beschreiben und au
 Wenn man also einen Startwert im High-Byte von Timer 0 haben möchte, kann man ihn dorthin schreiben.
 
 ```assembly
-MOV THL, #220d
+MOV TH0 #220d
 ```
 
 Es existiert ein weiteres Konfigurationsregister: das **TCON** Register
@@ -123,8 +123,8 @@ Mit dieser Tabelle kann man sich die richtige ID heraussuchen für den gewollten
 | ID   | Interrupt  |
 | ---- | ---------- |
 | 0    | External 0 |
-| 1    | TImer 0    |
+| 1    | Timer 0    |
 | 2    | External 1 |
-| 3    | TImer 1    |
+| 3    | Timer 1    |
 | 4    | Serial     |
 

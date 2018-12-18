@@ -1,6 +1,6 @@
 # Subselects
 
-Sybselects sind super simpel zu beschreiben: Sie sind einfach Unterabfragen in einer Abfrage. Sie können an jeder Stelle vorkommen an der sonst ein Table stehen würde. Durch dieses sehr simple Feature kann man aber sehr viel realisieren, was sonst entweder unmöglich war oder nur durch sehr komplizierte Joins, Views und ähnliches zu erreichen war. 
+Subselects sind super simpel zu beschreiben: Sie sind einfache Unterabfragen in einer Abfrage. Sie können an jeder Stelle vorkommen an der sonst ein Table stehen würde. Durch dieses sehr simple Feature kann man aber sehr viel realisieren, was sonst entweder unmöglich wäre oder nur durch sehr komplizierte Joins, Views und ähnliches zu möglich wäre.
 
 Gerne werden Subselects genutzt um auf intuitiven Weg mit Aggregatfunktionen zu interagieren. Man kann z.B. alle Datensätze suchen bei denen ein bestimmter Wert überdurchschnittlich / unterdurchschnittlich ist. Dafür würde man zunächst mit einem Subselect und der `avg`-Aggregatfunktion den Durchschnitt berechnen und dann diesen entstandenen Wert in der normalen (äußeren) Abfrage gegen alle Werte testen. 
 
@@ -24,7 +24,7 @@ SELECT id, amount FROM A
 WHERE amount >= ALL (SELECT amount FROM A)
 ```
 
-Diese Abfrage hätte man auch ganz einfach mit der Aggregatfunktion `MAX` realisieren können, aber es gibt manchmal syntaktische Gründe oder auch funktionsbedinge Gründe die dafür sprechen `ALL` zu nutzen. Man kann nämlich nicht unbedingt jede Abfrage mit einem `MAX` oder einem `MIN` abbilden die ein `ALL` produzieren kann. 
+Diese Abfrage hätte man auch ganz einfach mit der Aggregatfunktion `MAX` realisieren können, aber es gibt manchmal syntaktische Gründe oder auch funktionsbedingte Gründe die dafür sprechen `ALL` zu nutzen. Man kann nämlich nicht unbedingt jede Abfrage mit einem `MAX` oder einem `MIN` abbilden die ein `ALL` produzieren kann. 
 
 ### ANY
 
@@ -67,7 +67,7 @@ Mit `EXISTS` kann kontrolliert werden ob ein Datensatz in einem Subselect vorhan
 
 ```sql
 SELECT id, amount FROM A
-WHERE EXISTS (SELECT * FROM B WHERE A.id == B.id)
+WHERE EXISTS (SELECT * FROM B WHERE A.id = B.id)
 ```
 
 Es werden alle Datensätze aus `A` angegeben von denen die `id` auch in einem Datensatz von `B` unter dem Attribut `id` vorkommt. 
