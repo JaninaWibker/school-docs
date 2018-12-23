@@ -29,7 +29,7 @@ Die einfachsten Lösungen, falls man 2 Punkte gegeben hat, sind
 $$g: \vec{x} = \vec{A} + t \cdot (\vec{B} - \vec{A})$$ und 
 $$g: \vec{x} = \vec{B} + t \cdot (\vec{A} - \vec{B})$$.
 
-Als Beispiel sind die Punkte $A(0 \vert 5 \vert -4)$ und $B(6 \vert 3 \vert 1)$ gegeben.
+Als Beispiel sind die Punkte $A(0 \vert 5 \vert {-4})$ und $B(6 \vert 3 \vert 1)$ gegeben.
 
 $$g: \vec{x} = \begin{pmatrix}0\\\\5\\\\-4\end{pmatrix} + t \cdot \Bigg(\begin{pmatrix}6\\\\3\\\\1\end{pmatrix} - \begin{pmatrix}0\\\\5\\\\-4\end{pmatrix}\Bigg)$$
 
