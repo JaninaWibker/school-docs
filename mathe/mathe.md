@@ -31,3 +31,5 @@
 * [Matrix aus Punkten](mathe/abbildungsmatrix_aus_punkten.md)
 * [Fixelemente](mathe/fixelemente.md)
 * [Linearkombinationen](mathe/linearkombinationen.md)
+* [Geraden](/mathe/geraden.md)
+* [Geradeneigenschaften](/mathe/geradeneigenschaften.md)
