@@ -41,3 +41,16 @@ $$\lambda = \{ \lambda_1, \lambda_2, ..., \lambda_n \} \quad \vert \; \exists \l
 Man kann dies wiedermal auch anders formulieren bzw. definieren: Die Gruppe von Vektoren heißt **l.u**, wenn man einen Vektor aus der Gruppe **nicht** durch eine Linearkombination der restlichen Vektoren erstellen kann.
 
 $$\lambda = \{ \lambda_1, \lambda_2, ..., \lambda_n \} \quad \vert \; \lambda_i = 0$$
+
+### Berechnung
+
+Man berechnet die *lineare Abhängigkeit* bzw. *lineare Unabhängigkeit* indem man ein lineares Gleichungssystem aufstellt und berechnet, was für Lösungen existieren für $\lambda$. Falls $\lambda_1 = \lambda_2 = ... = \lambda_n = 0$ als einzige Lösung herauskommt sind die Vektoren *linear unabhängig*. Andernfalls müssen unendlich viele Lösungen herauskommen, bzw. eine Lösung mit einem frei wählbaren Faktor, was unendlich vielen Lösungen impliziert. Hierbei handelt es sich dann um *linear abhängige* Vektoren.
+
+$$\begin{aligned}
+\lambda_1 \cdot a_{1;1} + \lambda_2 \cdot a_{2;1} + ... + \lambda \cdot a_{n;1} = 0\\\\
+\lambda_1 \cdot a_{1;2} + \lambda_2 \cdot a_{2;2} + ... + \lambda \cdot a_{n;2} = 0
+\end{aligned}\\\\...\\\\\begin{aligned}
+\lambda_n \cdot a_{1;n} + \lambda_2 \cdot a_{2;n} + ... + \lambda \cdot a_{n;n} = 0\\\\
+\end{aligned}$$
+
+> Nach $\lambda_i$ auflösen und überprüfen ob alle möglichen $\lambda_i$-Werte gleich 0 sind. 
