@@ -8,6 +8,8 @@ Zwei Geraden können:
 - **windschief** sein
 - sich **schneiden** bzw. einen **Schnittpunkt** haben.
 
+> **Parallel** wird auch manchmal, zumindest für Vektoren, als **kollinear** bezeichnet, diese beiden Begriffe sind eigentlich das gleiche. Manchmal gibt es die Unterscheidung zwischen **parallel* und *anti-parallel*, falls diese gemacht wird bedeutet *kollinear**, das einfach, dass Vektoren beides sein können. 
+
 **Identisch** ist ein Unterpunkt von Parallel, da Gleichheit Parallelität impliziert, aber Parallelität nicht Gleichheit bedeuten muss. Ein **Schnittpunkt** existiert, wenn für einen Punkt auf einer Geraden ein Punkt auf der anderen Geraden existiert an dem beiden Punkte identisch sind. Hierzu ist zu sagen, dass identische Geraden nicht dazu gezählt werden, da sie theoretisch unendlich viele Schnittpunkte haben und es darum geht, dass die Geraden sich schneiden sollen, was impliziert, dass es nur einen Schnittpunkt gibt. **Windschief** bedeutet eigentlich nur, dass keine der vorherigen Relationen existiert, die Geraden sind weder parallel noch schneiden sie sich. 
 
 ## Berechnung

@@ -1,3 +1,5 @@
+# Matrix Grundlagen
+
 ## Matrix Addition
 
 Addition bei Matrizen funktioniert indem man jeweils die Elemente an den gleichen Positionen addiert. Daraus ergibt sich die Bedingung, dass die Matrizen die gleiche Größe haben müssen. Das Ergebnis hat die gleiche Größe wie die beiden Matrizen.

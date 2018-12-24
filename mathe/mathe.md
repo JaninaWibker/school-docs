@@ -30,6 +30,7 @@
 * [affine Abbildungen](mathe/affine_abbildungen.md)
 * [Matrix aus Punkten](mathe/abbildungsmatrix_aus_punkten.md)
 * [Fixelemente](mathe/fixelemente.md)
+* [Vektor Grundlagen](mathe/vektor_grundlagen.md)
 * [Linearkombinationen](mathe/linearkombinationen.md)
 * [Geraden](/mathe/geraden.md)
 * [Geradeneigenschaften](/mathe/geradeneigenschaften.md)

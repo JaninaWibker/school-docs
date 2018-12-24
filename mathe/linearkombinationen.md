@@ -42,6 +42,8 @@ Man kann dies wiedermal auch anders formulieren bzw. definieren: Die Gruppe von 
 
 $$\lambda = \{ \lambda_1, \lambda_2, ..., \lambda_n \} \quad \vert \; \lambda_i = 0$$
 
+> Sobald man mehr Vektoren als Dimensionen (also $n+1$) hat sind die Vektoren immer linear abhängig, da nichtmehr genug Möglichkeiten für Varianz / Abweichungen zwischen den Vektoren vorhanden sind, sodass Unabhängigkeit nichtmehr möglich ist.
+
 ### Berechnung
 
 Man berechnet die *lineare Abhängigkeit* bzw. *lineare Unabhängigkeit* indem man ein lineares Gleichungssystem aufstellt und berechnet, was für Lösungen existieren für $\lambda$. Falls $\lambda_1 = \lambda_2 = ... = \lambda_n = 0$ als einzige Lösung herauskommt sind die Vektoren *linear unabhängig*. Andernfalls müssen unendlich viele Lösungen herauskommen, bzw. eine Lösung mit einem frei wählbaren Faktor, was unendlich vielen Lösungen impliziert. Hierbei handelt es sich dann um *linear abhängige* Vektoren.
