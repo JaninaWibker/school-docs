@@ -275,7 +275,7 @@ body.dark .sidebar:hover::-webkit-scrollbar-track {
 }
 body.dark .sidebar-toggle {
   background-color: transparent;
-  background-color: rgba(63,63,63,0.8);
+  background-color: rgba(25,25,25,0.8);
   border: 0;
   outline: none;
   padding: 10px;
@@ -355,7 +355,7 @@ body.dark .markdown-section tr {
   border-top: 1px solid #ccc;
 }
 body.dark .markdown-section tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: rgba(255, 255, 255, 0.0275);
 }
 body.dark .markdown-section p.tip {
   background-color: #f8f8f8;
@@ -528,7 +528,7 @@ section.cover.show {
   display: flex;
 }
 body.dark section.cover.has-mask .mask {
-  background-color: #3f3f3f;
+  background-color: var(--background-color, #3f3f3f);
   opacity: 0.8;
   position: absolute;
   top: 0;
@@ -618,11 +618,11 @@ body.dark section.cover blockquote > p > a:hover {
   color: var(--theme-color, #ea6f5a);
 }
 body.dark {
-  background-color: #3f3f3f;
+  background-color: var(--background-color, #3f3f3f);
 }
 /* sidebar */
 body.dark .sidebar {
-  background-color: #3f3f3f;
+  background-color: var(--background-color, #3f3f3f);
   color: #c8c8c8;
 }
 .sidebar li {
@@ -714,7 +714,7 @@ body.dark .markdown-section em {
   color: #7f8c8d;
 }
 body.dark .markdown-section code {
-  background-color: #282828;
+  background-color: #1f1f1f;
   border-radius: 2px;
   color: #657b83;
   font-family: 'Roboto Mono', Monaco, courier, monospace;
@@ -726,7 +726,7 @@ body.dark .markdown-section code {
 body.dark .markdown-section pre {
   -moz-osx-font-smoothing: initial;
   -webkit-font-smoothing: initial;
-  background-color: #282828;
+  background-color: #1f1f1f;
   font-family: 'Roboto Mono', Monaco, courier, monospace;
   line-height: 1.5rem;
   margin: 1.2em 0;
@@ -814,7 +814,7 @@ body.dark .token.important {
 body.dark .markdown-section pre > code {
   -moz-osx-font-smoothing: initial;
   -webkit-font-smoothing: initial;
-  background-color: #282828;
+  background-color: #1f1f1f;
   border-radius: 2px;
   color: #657b83;
   display: block;
@@ -850,11 +850,15 @@ body.dark pre::after {
   top: 0;
 }
 body.dark .markdown-section p.tip {
-  background-color: #282828;
+  background-color: #1f1f1f;
   color: #657b83;
 }
 body.dark input[type='search'] {
   background: #4f4f4f;
   border-color: #4f4f4f;
   color: #c8c8c8;
+}
+
+body.dark .docsify-copy-code-button {
+  background-color: #333333;
 }

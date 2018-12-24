@@ -20,6 +20,8 @@ Beispielsweise könnte somit eine Geradengleichung so aussehen:
 
 $$g: \vec{x} = \begin{pmatrix}0\\\\5\\\\-4\end{pmatrix} + t \cdot \begin{pmatrix}6\\\\-2\\\\5\end{pmatrix}$$
 
+## Berechnung aus 2 Punkten
+
 Meistens sind zwei Punkte gegeben, welche auf der Geraden liegen sollen und es soll daraus eine mögliche Geradengleichung errechnet werden für diese Gerade. Es seien die Punkte $A$ und $B$ gegeben.
 
 > Es gibt unendlich viele Geradengleichungen für diese eine Gerade, da man entweder die Länge des Richtungsvektors ändern kann oder den Punkt verschieben kann an dem der Stützvektor die Gerade stützt / berührt. Die Gerade bleibt trotzdem die gleiche. 

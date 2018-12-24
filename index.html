@@ -16,11 +16,14 @@
   <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#42b983">
   <meta name="msapplication-TileColor" content="#42b983">
   <meta name="theme-color" content="#ffffff">
-  <style>.sidebar-toggle-button span{width:24px;height:3px;margin-bottom:6px;}.markdown-section pre>code{padding:2.2em 0px;}
+  <style>.sidebar-toggle-button span{width:24px!important;height:3px!important;margin-bottom:6px!important;}.markdown-section h1{font-size:2.25rem;}.markdown-section pre>code{padding:2.2em 0px;}
 @keyframes show{0%,50%{opacity:0;}100%{opacity:1;}}@keyframes hide{0%,50%{opacity:1;}100%{opacity:0;}}
 .qr-wrapper{float:left;width:24px;height:24px;}
 .qr-wrapper>svg{position:relative;margin-top:8px;right:4px;fill:#34495e;}
 .dark .qr-wrapper>svg{position:relative;margin-top:8px;right:4px;fill:#a0b5ca;}
+.dark .qr-wrapper>canvas{border:1px solid rgba(255,255,255,.93);}
+.dark .sidebar {z-index:3!important;}
+.dark img:not([class~=medium-zoom-image--open]){filter: invert(100%);}
 .qr-wrapper:hover>svg{fill:var(--theme-color,#42b983);}
 .qr-wrapper::before{content:'copied';right:100%;transition: all .25s ease 0.25s;margin-top:7px;padding:5px;border-radius:3px;font-size:14px;position:absolute;display:block;background-color:white;border:1px solid rgba(0,0,0,.07);z-index:5;transform: translateX(120%) scale(0);}
 .qr-wrapper.copied:before{transform: translateX(0) scale(1);}
@@ -28,12 +31,15 @@
 .qr-wrapper>.qr-corner{width:14px;height:14px;position:relative;top:-4.5px;z-index:5;transform:rotate(45deg);border-left:1px solid rgba(0,0,0,.07);border-top: 1px solid rgba(0,0,0,.07);background-color:white;}
 .qr-wrapper>canvas,.qr-wrapper>.qr-corner{opacity: 0;display:none;}
 .qr-wrapper:hover>canvas,.qr-wrapper:hover>.qr-corner{display: inline-block;animation: show 1s ease-out forwards;}
-.qr-heading-1 {margin-top:1px}
+.qr-heading-1 {margin-top:4px}
 .qr-heading-2 {margin-top:0px;}
 .qr-heading-3 {margin-top:-2px;}
 .qr-heading-4 {margin-top:-5px;}.qr-heading-4>svg{transform:scale(0.8);}
 .qr-heading-5 {margin-top:-8px;}.qr-heading-5>svg{transform:scale(0.7);right:2px;}
 .qr-heading-6 {margin-top:-9px;}.qr-heading-6>svg{transform:scale(0.7);}
+.pagination-item a{color:currentColor!important;}
+.markdown-section ul>li>ul{margin-top:0!important;margin-bottom:0!important}
+body.dark{--theme-color:#4a54c7;--background-color:#191919;}
 
 @media screen and (max-width: 768px) {
   .qr-wrapper>canvas{left:10px;}
@@ -68,7 +74,7 @@
 }
 </style>
 </head>
-<body>
+<body class="dark">
   <div id="app"></div>
   <script>
   (() => {
@@ -192,7 +198,15 @@
                 const startsWith = all.startsWith('$$')
                 const endsWith = all.endsWith('$$')
                 if((startsWith && endsWith) || (!startsWith && !endsWith)) {
-                  return katex.renderToString(code, {displayMode: startsWith})
+                  return katex.renderToString(code, {displayMode: startsWith, macros: {
+                    '\\pmatrix': '\\begin{pmatrix}#1\\end{pmatrix}',
+                    '\\bmatrix': '\\begin{bmatrix}#1\\end{bmatrix}',
+                    '\\vmatrix': '\\begin{vmatrix}#1\\end{vmatrix}',
+                    '\\Vmatrix': '\\begin{Vmatrix}#1\\end{Vmatrix}',
+                    '\\Bmatrix': '\\begin{Bmatrix}#1\\end{Bmatrix}',
+                     '\\matrix': '\\begin{matrix}#1\\end{matrix}',
+                      '\\array': '\\begin{array}#1\\end{array}'
+                  }})
                 } else {
                   console.warn('Error: mismatching dollar signs ($) in math expression, ignoring math expression')
                   return all
@@ -231,7 +245,7 @@
   <script src="/static/docsify/lib/plugins/search.min.4.7.0.js"></script>
   <script src="/static/docsify/lib/plugins/zoom-image.min.4.7.0.js"></script>
   <script src="/static/docsify-pagination/dist/docsify-pagination.min.2.3.4.js"></script>
-  <script src="/static/docsify-copy-code.min.2.0.2.js"></script>
+  <script src="/static/docsify-copy-code/docsify-copy-code.min.2.0.2.js"></script>
   <script src="/static/katex/dist/katex.min.0.10.0-rc.js"></script>
 </body>
 </html>
