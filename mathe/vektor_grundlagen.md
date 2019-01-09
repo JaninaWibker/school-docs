@@ -1,9 +1,5 @@
 # Vektor Grundlagen
 
-## Was sind Vektoren?
-
-// TODO Einleitung
-
 ## Gegenvektor
 
 Der **Gegenvektor** eines Vektors ist ein Vektor gleicher Länge, der genau in die entgegengesetzte Richtung zeigt. Mathematisch muss man einfach die Vorzeichen aller Werte tauschen.
