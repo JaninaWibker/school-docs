@@ -34,3 +34,4 @@
 * [Linearkombinationen](mathe/linearkombinationen.md)
 * [Geraden](/mathe/geraden.md)
 * [Geradeneigenschaften](/mathe/geradeneigenschaften.md)
+* [Ebenen](/mathe/ebenen.md)
