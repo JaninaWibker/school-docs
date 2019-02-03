@@ -1,1 +1,1 @@
-# affine Abbildungen (Matrizen)
+# affine Abbildungen
