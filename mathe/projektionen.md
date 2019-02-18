@@ -12,7 +12,7 @@ Generell kann man 2 distinkte Formen/Arten der *Projektion* finden. Einmal die *
 
 Eine mögliche Herleitung für *Parallelprojektion* ist eine *Zentralprojektion* mit einem idealen Punkt (ein unendlich weit entfernter Punkt bzw. ein Punkt in dem unendlich als Wert vorkommt), da desto weiter die Lichtquelle (der Punkt) entfernt ist, desto *"paralleler"* die Geraden werden. Im unendlichen approximieren sie parallele Geraden, daher auch die Aussage
 
-<p style="font-size: 18px; text-align: center">"Parallel lines meet at infinity".</p>
+<p style="font-size: 18px; text-align: center; font-style: italic;">"Parallel lines meet at infinity".</p>
 
 Diese Idee wird mathematisch besser definiert im Projektionsraums $\mathbb{P}$, in dem ideale Punkte und nicht-ideale Punkte gleichwertig und problemlos miteinander behandelt werden können. Dies ist aber ein riesen Thema für sich. Dieses Thema ist fundamental für *Computer Vision*, sowie *3D Computergrafiken*.
 

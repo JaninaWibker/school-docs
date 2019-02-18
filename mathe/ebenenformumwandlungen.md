@@ -12,16 +12,16 @@ Um eine Ebene von der *Parameterform* in die *Koordinatenform* umzuwandeln muss 
 
 > Das Vorgehen wird anstatt eines Beispiels gezeigt.
 
-$\epsilon: \vec{x} = \begin{pmatrix}17\\-1\\5\end{pmatrix} + r \cdot \begin{pmatrix}5\\6\\1\end{pmatrix} + s \cdot \begin{pmatrix}-1\\1\\2\end{pmatrix}$
+$\epsilon: \vec{x} = \begin{pmatrix}17\\\\-1\\\\5\end{pmatrix} + r \cdot \begin{pmatrix}5\\\\6\\\\1\end{pmatrix} + s \cdot \begin{pmatrix}-1\\\\1\\\\2\end{pmatrix}$
 
 Diese Ebene stellt man nun nach $(x_1, x_2, x_3)^T$ um (dies ist trivial, es muss nichts umgestellt werden, es müssen nur die einzelnen Vektoren voneinander getrennt werden)
 
-$$\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix} = \begin{pmatrix}17 + r \cdot 5 - s \cdot 1\\-1 + r \cdot 6 + s \cdot 1\\5 + r \cdot 1 + s \cdot 2\end{pmatrix}$$
+$$\begin{pmatrix}x_1\\\\x_2\\\\x_3\end{pmatrix} = \begin{pmatrix}17 + r \cdot 5 - s \cdot 1\\\\-1 + r \cdot 6 + s \cdot 1\\\\5 + r \cdot 1 + s \cdot 2\end{pmatrix}$$
 
 Nun formt man diesen Vektor zu einer $3 \times 3$-Matrix um, sodass man den Gauss-Algorithmus machen kann.
 
-$$\begin{pmatrix}17 & 5 & -1\\
--1 & 6 & 1\\
+$$\begin{pmatrix}17 & 5 & -1\\\\
+-1 & 6 & 1\\\\
 5 & 1 & 2\end{pmatrix}$$
 
 Man versucht nun durch den "Art Gauss-Algorithmus" eine Gleichung der Form der *Koordinatenform* erreichen. Diese Gleichung baut sich Schritt für Schritt durch die Operationen auf der Matrix auf. 
@@ -42,7 +42,7 @@ Für die Berechnung mit einem CAS geht man etwas anders vor, man braucht hierbei
 
 Man stellt wieder den Vektor $(x_1, x_2, x_3)^T$ auf. Diesen löst man dann mithilfe des CAS nach $r$ und $s$ auf. 
 
-$\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix} \implies r, s = ..., x_1 = ...$
+$\begin{pmatrix}x_1\\\\x_2\\\\x_3\end{pmatrix} \implies r, s = ..., x_1 = ...$
 
 Man formt nach $r$ und $s$ um, wodurch aber automatisch auch eine bestimmte umgeformte Gleichung für $x_1$ vorrausgesetzt werden muss, also wird diese auch angegeben. Diese Gleichung nimmt man und formt nurnoch zur *Koordinatenform* um. Von
 
@@ -80,10 +80,10 @@ Hierbei verwendet man jeweils nur Referenzen auf die eigene Gleichung und füllt
 
 Aus den 3 Gleichungen
 
-$$\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix} = \begin{pmatrix}x_1 + 0 + 0\\-2x_1 + 0 + 0\\0 + 0 + x_3\end{pmatrix}$$
+$$\begin{pmatrix}x_1\\\\x_2\\\\x_3\end{pmatrix} = \begin{pmatrix}x_1 + 0 + 0\\\\-2x_1 + 0 + 0\\\\0 + 0 + x_3\end{pmatrix}$$
 
 formt man jetzt die Parameterform
 
-$$\epsilon: \vec{x} = \begin{pmatrix}1\\2\\0\end{pmatrix} + r \cdot \begin{pmatrix}0\\0\\0\end{pmatrix} + s \cdot \begin{pmatrix}0\\-3\\1\end{pmatrix}$$
+$$\epsilon: \vec{x} = \begin{pmatrix}1\\\\2\\\\0\end{pmatrix} + r \cdot \begin{pmatrix}0\\\\0\\\\0\end{pmatrix} + s \cdot \begin{pmatrix}0\\\\-3\\\\1\end{pmatrix}$$
 
 Wie man sieht findet man die einzelnen $x_i$ und die mit Null gefüllten Stellen in der Parameterform wieder.
