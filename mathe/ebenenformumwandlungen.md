@@ -66,24 +66,24 @@ $\epsilon: 2x_1 + 1x_2 + 3x_3 = 0$
 
 Man wählt eines der $x_n$ aus, favorisiert werden dabei (da es einfacher ist) alleinstehende $x_i$, wie $x_2$ in diesem Beispiel.
 
-Daraufhin stellt man die Ebenengleichung zu dem gewählten $x_i$ um.
+Daraufhin stellt man die Ebenengleichung zu dem gewählten $x_i$ um. Hierbei muss das $d$ an erster Stelle stehen, auch wenn es gleich $0$ ist.
 
-$$x_2 = -2x_1 - 3x_3$$
+$$x_2 = 0 - 2x_1 - 3x_3$$
 
 Nun bildet man noch zwei weitere Gleichungen für die jeweils fehlenden $x_i$
 
-$x_1 = x_1 + 0 + 0$
+$x_1 = 0 + x_1 + 0$
 
 $x_3 = 0 + 0 + x_3$
 
-Hierbei verwendet man jeweils nur Referenzen auf die eigene Gleichung und füllt den Rest mit Nullen, sodass das $i$ in $x_i$ die Stelle in der Gleichung passend angibt.
+Hierbei verwendet man jeweils nur Referenzen auf die eigene Gleichung und füllt den Rest mit Nullen, sodass die erste Stelle für das $d$ ist (was für diese Gleichungen immer gleich $0$ ist) und die weiteren für die vorhandenen $x_i$. Man hat also sozusagen *"Spalten"* für d, und die beiden $x_i$, nach denen **nicht** umgestellt wurde (hier $x_1$ und $x_3$).
 
 Aus den 3 Gleichungen
 
-$$\begin{pmatrix}x_1\\\\x_2\\\\x_3\end{pmatrix} = \begin{pmatrix}x_1 + 0 + 0\\\\-2x_1 + 0 + 0\\\\0 + 0 + x_3\end{pmatrix}$$
+$$\begin{pmatrix}x_1\\\\x_2\\\\x_3\end{pmatrix} = \begin{pmatrix}0 + x_1 + 0\\\\0 - 2x_1 - 3x_3\\\\0 + 0 + x_3\end{pmatrix}$$
 
 formt man jetzt die Parameterform
 
-$$\epsilon: \vec{x} = \begin{pmatrix}1\\\\2\\\\0\end{pmatrix} + r \cdot \begin{pmatrix}0\\\\0\\\\0\end{pmatrix} + s \cdot \begin{pmatrix}0\\\\-3\\\\1\end{pmatrix}$$
+$$\epsilon: \vec{x} = \begin{pmatrix}0\\\\0\\\\0\end{pmatrix} + r \cdot \begin{pmatrix}1\\\\-2\\\\0\end{pmatrix} + s \cdot \begin{pmatrix}0\\\\-3\\\\1\end{pmatrix}$$
 
 Wie man sieht findet man die einzelnen $x_i$ und die mit Null gefüllten Stellen in der Parameterform wieder.
