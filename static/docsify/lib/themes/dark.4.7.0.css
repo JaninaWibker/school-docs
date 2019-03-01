@@ -11,9 +11,7 @@
 body.dark:not(.ready) {
   overflow: hidden;
 }
-body.dark:not(.ready) [data-cloak],
-body.dark:not(.ready) .app-nav,
-body.dark:not(.ready) > nav {
+body.dark:not(.ready) [data-cloak], body.dark:not(.ready) .app-nav, body.dark:not(.ready) > nav {
   display: none;
 }
 body.dark div#app {
@@ -39,7 +37,8 @@ body.dark .progress {
   -webkit-transition: width 0.2s, opacity 0.4s;
   transition: width 0.2s, opacity 0.4s;
   width: 0%;
-  z-index: 999999;
+  /* z-index: 999999; diff */
+  z-index: 5; /* diff */
 }
 body.dark .search a:hover {
   color: var(--theme-color, #ea6f5a);
@@ -49,8 +48,7 @@ body.dark .search .search-keyword {
   font-style: normal;
   font-weight: bold;
 }
-html,
-body {
+html, body {
   height: 100%;
 }
 body.dark {
@@ -74,11 +72,14 @@ body.dark kbd {
   border: solid 1px #ccc;
   border-radius: 3px;
   display: inline-block;
-  font-size: 12px !important;
+  font-size: 12px!important;
   line-height: 12px;
   margin-bottom: 3px;
   padding: 3px 5px;
   vertical-align: middle;
+}
+body.dark .task-list-item {
+  list-style-type: none;
 }
 body.dark li input[type='checkbox'] {
   margin: 0 0.2em 0.25em 0;
@@ -89,7 +90,8 @@ body.dark .app-nav {
   position: absolute;
   right: 0;
   text-align: right;
-  z-index: 10;
+  /* z-index: 10; /* diff */
+  z-index: 2;
 /* navbar dropdown */
 }
 body.dark .app-nav.no-badge {
@@ -102,8 +104,7 @@ body.dark .app-nav > a {
   margin: 0 1rem;
   padding: 5px 0;
 }
-body.dark .app-nav ul,
-body.dark .app-nav li {
+body.dark .app-nav ul, body.dark .app-nav li {
   display: inline-block;
   list-style: none;
   margin: 0;
@@ -205,20 +206,7 @@ body.dark .anchor span {
 body.dark .anchor:hover {
   text-decoration: underline;
 }
-body.dark .sidebar {
-  border-right: 1px solid rgba(0,0,0,0.07);
-  overflow-y: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-  transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
-  width: 300px;
-  z-index: 20;
-}
+
 .sidebar > h1 {
   margin: 0 auto 1rem;
   font-size: 1.5rem;
@@ -248,8 +236,7 @@ body.dark .sidebar {
   font-weight: 700;
   margin: 0;
 }
-.sidebar ul,
-.sidebar ul li {
+.sidebar ul, .sidebar ul li {
   list-style: none;
 }
 .sidebar ul li a {
@@ -274,7 +261,7 @@ body.dark .sidebar:hover::-webkit-scrollbar-track {
 }
 body.dark .sidebar-toggle {
   background-color: transparent;
-  background-color: rgba(25,25,25,0.8);
+  /* background-color: rgba(25,25,25,0.8); */
   border: 0;
   outline: none;
   padding: 10px;
@@ -285,7 +272,8 @@ body.dark .sidebar-toggle {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   width: 284px;
-  z-index: 30;
+  /* z-index: 30; diff */
+  z-index: 4;
 }
 body.dark .sidebar-toggle .sidebar-toggle-button:hover {
   opacity: 0.4;
@@ -297,8 +285,7 @@ body.dark .sidebar-toggle span {
   width: 16px;
   height: 2px;
 }
-body.sticky .sidebar,
-body.sticky .sidebar-toggle {
+body.sticky .sidebar, body.sticky .sidebar-toggle {
   position: fixed;
 }
 .content {
@@ -314,7 +301,7 @@ body.sticky .sidebar-toggle {
 .markdown-section {
   margin: 0 auto;
   max-width: 800px;
-  padding: 30px 15px 40px 15px;
+  padding: 30px 15px 40px 15px; /* diff */
   position: relative;
 }
 .markdown-section > * {
@@ -443,8 +430,7 @@ body.close .content {
     transition: transform 250ms ease;
     transition: transform 250ms ease, -webkit-transform 250ms ease;
   }
-  .app-nav,
-  .github-corner {
+  .app-nav, .github-corner {
     -webkit-transition: -webkit-transform 250ms ease-out;
     transition: -webkit-transform 250ms ease-out;
     transition: transform 250ms ease-out;
@@ -459,19 +445,11 @@ body.close .content {
     -webkit-transform: translateX(300px);
             transform: translateX(300px);
   }
-  body.close.dark .sidebar-toggle {
-    background-color: rgba(63,63,63,0.8);
-    -webkit-transition: 1s background-color;
-    transition: 1s background-color;
-    width: 284px;
-    padding: 10px;
-  }
   body.close .content {
     -webkit-transform: translateX(300px);
             transform: translateX(300px);
   }
-  body.close .app-nav,
-  body.close .github-corner {
+  body.close .app-nav, body.close .github-corner {
     display: none;
   }
   .github-corner:hover .octo-arm {
@@ -630,6 +608,7 @@ body.dark .sidebar {
 body.dark .sidebar ul li a {
   color: #c8c8c8;
   font-size: 14px;
+  /* font-weight: 400; diff */
   overflow: hidden;
   text-decoration: none;
   text-overflow: ellipsis;
@@ -642,9 +621,31 @@ body.dark .sidebar ul li a {
   padding: 0;
 }
 body.dark .sidebar ul li.active > a {
+  border-right: 2px solid;
   color: var(--theme-color, #ea6f5a);
   font-weight: 600;
 }
+body.dark .app-sub-sidebar li:before {
+  content: "-";
+  padding-right: 4px;
+  float: left;
+}
+/*
+.sidebar ul li.active>a {
+  border-right: 2px solid;
+  color: var(--theme-color,#42b983);
+  font-weight: 600
+}
+
+
+
+.app-sub-sidebar li:before {
+  content: "-";
+  padding-right: 4px;
+  float: left
+} diff
+*/
+
 /* markdown content found on pages */
 body.dark .markdown-section h1,
 body.dark .markdown-section h2,
@@ -848,6 +849,7 @@ body.dark pre::after {
   text-align: right;
   top: 0;
 }
+/* diff */
 body.dark .markdown-section p.tip {
   background-color: #1f1f1f;
   color: #657b83;

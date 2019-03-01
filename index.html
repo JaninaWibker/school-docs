@@ -42,13 +42,42 @@
 .markdown-section em { color: #8727d1; }
 body.dark{--theme-color:#4a54c7;--background-color:#191919;}
 body{--theme-color: #4a54c7; } /* #7f8c8d #42b983 */
+body .theme-chooser {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+  }
 
+  body .theme-chooser .svg-theme {
+    margin: 4px;
+    color: slateblue;
+  }
+
+  body.dark .theme-chooser .svg-theme {
+    margin: 4px;
+    color: yellow;
+  }
+
+  body:not(.dark) .theme-chooser .enable-light-theme-a {
+    display: none;
+  }
+
+  body.dark .theme-chooser .enable-dark-theme-a {
+    display: none;
+  }
 
 @media screen and (max-width: 768px) {
   .qr-wrapper>canvas{left:10px;}
   .qr-wrapper::before{left:40px;right:unset;transform:translateX(-120%) scale(0);}
 }
 @media print {
+
+  body .theme-chooser {
+    display: none;
+  }
 
   .markdown-section {
     max-width: 90vw;
@@ -73,15 +102,30 @@ body{--theme-color: #4a54c7; } /* #7f8c8d #42b983 */
 
   .markdown-section pre>code {
     white-space: pre-wrap;
-  }  
+  }
 }
 </style>
 </head>
-<body>
+<body class="">
+    <div class="theme-chooser">
+        <a class="enable-dark-theme-a" tabindex="0" onclick="$toggleTheme()">
+          <svg class="svg-theme enable-dark-theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </a>
+        <a class="enable-light-theme-a" tabindex="0"  onclick="$toggleTheme()">
+          <svg class="svg-theme enable-light-theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </a>
+      </div>
   <div id="app"></div>
   <script>
   (() => {
-
+    // <div class="theme-chooser">
+    //     <a class="enable-dark-theme-a" href="#" onclick="$toggleTheme()">
+    //       <svg class="svg-theme enable-dark-theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    //     </a>
+    //     <a class="enable-light-theme-a" href="#" onclick="$toggleTheme()">
+    //       <svg class="svg-theme enable-light-theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    //     </a>
+    //   </div>
     const qr_codes = {
 
     }
@@ -120,9 +164,24 @@ body{--theme-color: #4a54c7; } /* #7f8c8d #42b983 */
     </div>
     `
 
-    window.$toggleTheme = () => {
-        window.document.body.classList.toggle('dark')
+    window.$toggleTheme = (theme) => {
+        if(theme === 'dark') {
+          window.document.body.classList.add('dark')
+          localStorage.setItem('docsify.theme', 'dark')
+        } else if(theme === 'light') {
+          window.document.body.classList.remove('dark')
+          localStorage.setItem('docsify.theme', 'light')
+        } else {
+          window.document.body.classList.toggle('dark')
+          localStorage.setItem('docsify.theme', localStorage.getItem('docsify.theme') === 'dark' ? 'light' : 'dark')
+        }
     }
+
+    if(localStorage.getItem('docsify.theme')) {
+        $toggleTheme(localStorage.getItem('docsify.theme'))
+      } else {
+        $toggleTheme('light')
+      }
 
     window.$docsify = {
       name: 'Schule',
