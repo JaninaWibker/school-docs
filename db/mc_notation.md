@@ -2,7 +2,7 @@
 
 Die Kardinalität zwischen 2 Entitätstypen gibt an, wie viele Entitäten des zweiten Entitätstypen genau mit einer Entität des ersten Entitätstypen in Beziehung stehen.
 
-Für die Datenstrukturierung interessieren nicht die genauen Zaheln, sondern nur die Typen:
+Für die Datenstrukturierung interessieren nicht die genauen Zahlen, sondern nur die Typen:
 - genau eine Entität (1)
 - keine oder eine Entität (c)
 - mehrere Entitäten, aber minimal eine (m)

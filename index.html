@@ -47,7 +47,7 @@ body .theme-chooser {
     height: 32px;
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: 18px;
     z-index: 1;
   }
 
@@ -246,7 +246,7 @@ body .theme-chooser {
         }
       },
       plugins: [
-        (hook) => hook.mounted(() => {
+        hook => hook.mounted(() => {
           const themeChooser = document.createElement('div')
           themeChooser.classList.add('theme-chooser')
           themeChooser.innerHTML = `
