@@ -112,7 +112,7 @@ Die Ergebnisse bzw. daraus implizierten Informationen können
 
 $$\begin{alignedat}{3}
 {\scriptsize{(1)}}\;\;\; \implies & \text{false} & \implies & \text{Parallelität } (\epsilon_1 \mid\mid \epsilon_2)\\\\
-{\scriptsize{(1)}}\;\;\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\;\depends\; t & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
+{\scriptsize{(2)}}\;\;\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\;\depends\; t & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
 {\scriptsize{(3)}}\;\;\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\; \independs\; t, \;\; (r_{\epsilon_1}, s_{\epsilon_1})\; \depends\; (r_{\epsilon_2} \cup s_{\epsilon_2}) \; & \implies & \text{Equivalent } (\epsilon_1 = \epsilon_2)
 \end{alignedat}$$
 
@@ -150,7 +150,7 @@ Die Ergebnisse bzw. daraus implizierten Informationen können
 
 $$\begin{alignedat}{3}
 {\scriptsize{(1)}}\;\;\; \implies & \text{false} & \implies & \text{Parallelität } (\epsilon_1 \mid\mid \epsilon_2)\\\\
-{\scriptsize{(1)}}\;\;\; \implies & (r_{\epsilon_1}, s_{\epsilon_1})\; \depends\; t\;\; & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
+{\scriptsize{(2)}}\;\;\; \implies & (r_{\epsilon_1}, s_{\epsilon_1})\; \depends\; t\;\; & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
 {\scriptsize{(3)}}\;\;\; \implies & \text{true} & \implies & \text{Equivalent } (\epsilon_1 = \epsilon_2)
 \end{alignedat}$$
 

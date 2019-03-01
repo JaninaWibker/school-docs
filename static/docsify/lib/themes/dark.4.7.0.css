@@ -868,3 +868,7 @@ body.dark .docsify-copy-code-button {
 body.dark .search {
   border-color: #121212;
 }
+
+body.dark img.medium-zoom-image.medium-zoom-image--opened {
+  filter: invert(100%);
+}

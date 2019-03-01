@@ -28,7 +28,7 @@
 .qr-wrapper::before{content:'copied';right:100%;transition: all .25s ease 0.25s;margin-top:7px;padding:5px;border-radius:3px;font-size:14px;position:absolute;display:block;background-color:white;border:1px solid rgba(0,0,0,.07);z-index:5;transform: translateX(120%) scale(0);}
 .qr-wrapper.copied:before{transform: translateX(0) scale(1);}
 .qr-wrapper>canvas{position:absolute;left:-64px;margin-top:4px;z-index:4;border:1px solid rgba(0,0,0,.07);}
-.qr-wrapper>.qr-corner{width:14px;height:14px;position:relative;top:-4.5px;z-index:5;transform:rotate(45deg);border-left:1px solid rgba(0,0,0,.07);border-top: 1px solid rgba(0,0,0,.07);background-color:white;}
+.qr-wrapper>.qr-corner{width:14px;height:14px;position:relative;top:-4.5px;z-index:5;transform:rotate(45deg);border-left:1px solid rgba(0,0,0,.07);border-top: 1px solid rgba(0,0,0,.07);background-color:white;clip-path: polygon(100% 0, 100% 10%, 10% 100%, 0 100%, 0 0);}
 .qr-wrapper>canvas,.qr-wrapper>.qr-corner{opacity: 0;display:none;}
 .qr-wrapper:hover>canvas,.qr-wrapper:hover>.qr-corner{display: inline-block;animation: show 1s ease-out forwards;}
 .qr-heading-1 {margin-top:4px}
@@ -59,6 +59,10 @@ body .theme-chooser {
   body.dark .theme-chooser .svg-theme {
     margin: 4px;
     color: yellow;
+  }
+
+  body.medium-zoom--opened .theme-chooser {
+    display: none;
   }
 
   body:not(.dark) .theme-chooser .enable-light-theme-a {
@@ -309,9 +313,9 @@ body .theme-chooser {
   <script src="https://cdn.jannik.ml/static/prismjs/components/prism-clike.min.1.15.0.js"></script>
   <script src="https://cdn.jannik.ml/static/prismjs/components/prism-c.min.1.15.0.js"></script>
   <script src="https://cdn.jannik.ml/static/prismjs/components/prism-javascript.min.1.15.0.js"></script>
-  <script src="https://cdn.jannik.ml/static/docsify/lib/plugins/emoji.min.4.7.0.js"></script>
-  <script src="https://cdn.jannik.ml/static/docsify/lib/plugins/search.min.4.7.0.js"></script>
-  <script src="https://cdn.jannik.ml/static/docsify/lib/plugins/zoom-image.min.4.7.0.js"></script>
+  <script src="https://cdn.jannik.ml/static/docsify/lib/plugins/emoji.min.4.9.1.js"></script>
+  <script src="https://cdn.jannik.ml/static/docsify/lib/plugins/search.min.4.9.0.js"></script>
+  <script src="https://cdn.jannik.ml/static/docsify/lib/plugins/zoom-image.min.4.8.0.js"></script>
   <script src="https://cdn.jannik.ml/static/docsify-pagination/dist/docsify-pagination.min.2.3.4.js"></script>
   <script src="https://cdn.jannik.ml/static/docsify-copy-code/docsify-copy-code.min.2.0.2.js"></script>
   <script src="https://cdn.jannik.ml/static/katex/dist/katex.min.0.10.1-rc.js"></script>
