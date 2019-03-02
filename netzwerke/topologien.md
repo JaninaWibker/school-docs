@@ -6,7 +6,7 @@ Es gibt verschiedene Netzwerk Topologien, wobei die Topologie *Stern* am meisten
 
 Jedes *Endgerät* ist mit dem *Verteiler* verbunden, die Endgeräte sind untereinander nicht verbunden. Der Verteiler ist meistens ein *Hub* oder ein *Switch*. Da heutzutage Hubs fast garnicht mehr vorkommen ist die Chance einen anzutreffen eher niedrig.
 
-![Netzwerk Topologie Stern](https://i.imgur.com/hF0B5dy.png)
+![Netzwerk Topologie Stern](../assets/LTI-diagrams-sterntopologie.png)
 
 Die Vorteile von der Stern Topologie sind reichlich:
 - Ausfall eines Endgerät hat keinen Einfluss auf das restliche Netzwerk
@@ -21,7 +21,7 @@ Es gibt aber auch einen Nachteil:
 
 Bei der Bus Topologie sind alle Endgeräte an einen *Bus* angeschlossen. Dieser Bus ist vergleichbar mit einem Bussystem / Datenbus in einem Computer. Es gibt keine aktiven Komponenten wie Hubs oder Switches, da alle Endgeräte direkt an das Übertragungsmedium angeschlossen sind.
 
-![Netzwerk Topologie Bus](https://i.imgur.com/r9kzCwj.png)
+![Netzwerk Topologie Bus](../assets/LTI-diagrams-bustopologie.png)
 
 Vorteile:
 - geringe Kosten, da nur geringe Kabelmengen erforderlich sind
@@ -38,7 +38,7 @@ Es gibt wenige Anwendungsmöglichkeiten, die vom *Bus* im Vergleich zum *Stern* 
 
 Jedes Endgerät ist mit genau 2 weiteren Endgeräten verbunden, wodurch sich ein Kreis bzw. *Ring* formt. Die zu übertragenden Informationen werden von Teilnehmer zu Teilnehmer geschickt, bis sie ihr Ziel erreicht haben. Beim Ausfall eines einzelnen Endgerätes wird der Ring unterbrochen. Als Gegenmaßnahme gibt es etwas namens *Protection-Umschaltung*, wobei es theoretisch 2 Ringe gibt. Der zweite Ring geht in die entgegengesetzte Richtung des ersten Ringes. Bei Ausfall eines Endgerätes werden dann alle Daten, sobald sie den Ort des Ausfalls erreicht haben über den zweiten Ring zurück geschickt, wodurch sie immernoch ihr Ziel finden können, solange es nicht das ausgefallene Endgerät ist. Wenn 2 Endgeräte ausfallen, ist der Netzwerkabschnitt zwischen ihnen komplett vom restlichen Netzwerk getrennt und somit unerreichbar. Es gibt oft ein *Token System*, welches dafür sorgt, dass nur ein Endgerät gleichzeitig senden kann, wodurch Überschreibungen vorgebeugt werden. Das bedeutet, dass die Bandbreite die jedes Endgeräte maximal zur Verfügung hat die Bandbreite des Netzwerks geteilt durch die Anzahl der Endgeräte ist.
 
-![Netzwerk Topologie Ring](https://i.imgur.com/BIHZeoN.png)
+![Netzwerk Topologie Ring](../assets/LTI-diagrams-ringtopologie.png)
 
 Vorteile:
 - alle Endgeräte arbeiten als Verstärken bzw. Repeater, wodurch diese nicht extra nocheinmal vorkommen müssen
