@@ -3,6 +3,7 @@
 * [Netzwerke](/netzwerke/netzwerke)
   * [Netzwerk Topologien](/netzwerke/topologien.md)
   * [Anwendungsneutrale strukturierte Verkabelung](/netzwerke/strukturierte_verkabelung.md)
+  * [Netzwerkkomponenten](/netzwerke/netzwerkkomponenten.md)
   * [Twisted Pair - Kupferkabel](/netzwerke/twisted_pair.md)
   * [Lichtwellenleiter](/netzwerke/lwl.md)
   * [WLAN](/netzwerke/wlan.md)
