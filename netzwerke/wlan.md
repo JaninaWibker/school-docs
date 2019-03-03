@@ -19,7 +19,7 @@ WLAN agiert auf Layer 1 und 2 und nutzt die gleiche Addressierung wie Ethernet u
 
 ### Ad-hoc-Modus
 
-Der *Ad-hoc-Modus* ist eine Art *dezentralisierte Version des Infrastruktur Modus*. Es gibt keine gesonderte Station, wie den Access Point beim Infrastruktur Modus, jedes Gerät ist gleichwertig. Ad-hoc ist ein weg schnell, spontan kleinere Netze aufzubauen, wird aber oft durch Bluetooth oder ähnliches ersetzt.
+Der *Ad-hoc-Modus* ist eine Art *dezentralisierte, peer-to-peer Version des Infrastruktur Modus*. Es gibt keine gesonderte Station, wie den Access Point beim Infrastruktur Modus, jedes Gerät ist gleichwertig. Ad-hoc ist ein weg schnell, spontan kleinere Netze aufzubauen, wird aber oft durch Bluetooth oder ähnliches ersetzt.
 
 Wie zuvor auch müssen alle Endgeräte die gleiche SSID nutzen und sollten zudem auch die gleiche Verschlüsselung nutzen. Dadurch, dass es keinen Access Point gibt, der alles organisiert muss dies von allen Endgeräten selber passieren, daher *dezentralisiert*. Sobald die Geräte sich physikalisch etwas voneinander trennen bricht das System etwas zusammen, da nichtmehr alle Daten an alle geschickt werden können. Um dies zu mitigieren wird an *Routing-fähigen Protokollen* gearbeitet, die dafür sorgen, dass nichtmehr jedes Endgerät jedem Endgerät alles schicken muss, wodurch das Reichweitenproblem etwas verringert wird, zumindest solange jedes Endgerät mindestens ein anderes Endgerät in der Nähe hat, sodass durch Routing immernoch alle Daten an alle gehen können.
 
