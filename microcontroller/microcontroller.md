@@ -6,3 +6,4 @@
 * [Timer](microcontroller/timer.md)
 * [Code Snippets](microcontroller/code_snippets.md)
 * [Serielle Schnittstelle](microcontroller/serielle_schnittstelle.md)
+* [Wartezeiten](/microcontroller/wartezeiten)
