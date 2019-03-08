@@ -2,7 +2,7 @@
 
 *VLANs* (Virtual Local Area Networks) sind eigenständige LANs, die nicht auf physikalischen "Grenzen" basieren. Sie sind rein logisch und dienen zur Trennung von Endgeräten nach Kategorie (wie z.B. Drucker, Server, Workstations, ...). Ein VLAN definiert eine Broadcast Domain. Broadcasts von Geräten können nur innerhalb des VLANs empfangen werden; genauso Unicast Traffic, er kann nur an Mitglieder des VLANs geschickt werden. Unicast Traffic ist nicht außerhalb des LANs *routable* und kann somit nicht über die Grenze eines LANs hinweg verschickt werden, um soetwas zu erreichen bräuchte man einen Layer 3-fähigen Switch, der dann mehrere VLANs miteinander verbinden könnte.
 
-Es gibt 2 Technologien (*portbasierte VLANs* und *protokollbasierte VLANs* (VLAN tagging)) die bei der Implementation von VLANs verwendet werden, dabei werden oft beide gleichzeitig eingesetzt.
+Es gibt 2 Technologien (*portbasierte VLANs* und *protokollbasierte VLANs* (VLAN tagging)) die bei der Implementation von VLANs verwendet werden.
 
 ## Portbasierte VLANs
 
@@ -12,7 +12,11 @@ Bei *Portbasierten VLANs* wird einfach gewissen Ports ein bestimmtes VLAN zugeor
 
 Mit der Außnahme von *Trunk Ports* hat jeder Port nur ein zugeortnetes VLAN. Trunk Ports sind dafür da mehrere Switches miteinander zu verbinden, wobei man alle VLANs über ein oder mehrere Ports führen will, damit man nicht für jedes existierende VLAN ein physikalisches Kabel verwenden muss. Hier kommt dann das *VLAN tagging* ins Spiel um die Frames dann wieder den richtigen VLANs zuzuordnen.
 
-## Protokollbasierte VLANs - VLAN tagging
+## Protokollbasierte VLANs
+
+Protokollbasierte VLANs entscheiden nicht abhängig vom Port in welchem VLAN ein Endgerät ist, sondern anhand der MAC Adresse des Endgerätes, wozu es gehört. Man ordnet bestimmte MAC Adressen den VLANs zu. 
+
+## VLAN tagging
 
 Das *VLAN tagging* ist ein Verfahren für die Zuordnung von Ethernet Frames zu VLANs. Jeder Frame hat ein zusätzliches Datenfeld, in dem Informationen über das VLAN stehen. Diese Frames mit VLAN tag können von den meisten Endgeräten nicht verstanden werden, daher entfernt der Switch vor dem weiterschicken jegliche VLAN tags. Das gesamte Routing der Frames mit VLAN tag wird von Switches übernommen. VLANs können über mehrere Switches reichen, dies ist umgesetzt indem jeder Switch einfach identische VLANs konfiguriert hat. Die Konfiguration der VLANs wird auch oft von den Switchen von selbst miteinander ausgetauscht, wodurch alle immer die korrekten VLAN Definitionen haben.
 
