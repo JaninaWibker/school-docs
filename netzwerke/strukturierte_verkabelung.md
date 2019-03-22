@@ -1,6 +1,6 @@
 # Anwendungsneutrale strukturierte Verkabelung nach EN50173
 
-Die Norm **EN50173** beschreibt, wie ein Netzwerk physikalisch aufgebaut sein muss. Die Norm unterscheidet hier zwischen drei Bereichen: **Primär**, **Sekundär** und **Tertiär** mit ihren jewieligen Verteilern: **Standortverteiler**, **Gebäudeverteiler** und **Etagenverteiler**.
+Die Norm **EN50173** beschreibt, wie ein Netzwerk physikalisch aufgebaut sein muss. Die Norm unterscheidet hier zwischen drei Bereichen: **Primär**, **Sekundär** und **Tertiär** mit ihren jeweiligen Verteilern: **Standortverteiler**, **Gebäudeverteiler** und **Etagenverteiler**.
 
 ## Verteiler
 

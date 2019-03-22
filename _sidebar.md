@@ -1,8 +1,127 @@
 * [Übersicht](/)
+<!-- /// [db-db] -->
 * [Datenbanken](/db/db)
+  * [Datenbank Typen](/db/datenbank_typen.md)
+  * [Datenbank Diagramme](db/diagramme.md)
+  * [MC Notation](db/mc_notation.md)
+  * [ERD zu relationaler Datenbank](db/erd_zu_db.md)
+  * [Normalisierung](db/normalisierung.md)
+  * [Generalisierung & Spezialisierung](db/generalisierung_spezialisierung.md)
+  * [SQL Datentypen](db/datentypen.md)
+  * [SQL](db/sql.md)
+  * [Joins](db/joins.md)
+  * [Aggregatfunktionen](db/aggregatfunktionen.md)
+  * [in PHP mit einer Datenbank interagieren](db/php_db_interaktionen.md)
+  * [Referentielle Integrität](db/referentielle_integrität.md)
+  * [Views](db/views.md)
+  * [Permissions](db/permissions.md)
+  * [Subselects](db/subselects.md)
+  * [Mengenoperatoren](db/mengenoperatoren.md)
+  * [Projektmanagement](db/projektmanagement.md)
+<!-- /// [db-db] -->
+<!-- /// [netzwerke-netzwerke] -->
 * [Netzwerke](/netzwerke/netzwerke)
-* [Microcontroller](/microcontroller/microcontroller)
+  * [Netzwerk Topologien](/netzwerke/topologien.md)
+  * [Anwendungsneutrale strukturierte Verkabelung](/netzwerke/strukturierte_verkabelung.md)
+  * [Netzwerkkomponenten](/netzwerke/netzwerkkomponenten.md)
+  * [Twisted Pair - Kupferkabel](/netzwerke/twisted_pair.md)
+  * [Lichtwellenleiter](/netzwerke/lwl.md)
+  * [WLAN](/netzwerke/wlan.md)
+  * [OSI Schichtenmodell](/netzwerke/osi_schichtenmodell.md)
+  * [VLAN](/netzwerke/vlan.md)
+  * [IPv4](/netzwerke/ipv4.md)
+  * [statisches & dynamisches Routing](/netzwerke/routing.md)
+  * [NAT - Network Address Translation](/netzwerke/nat.md)
+  * [Access Lists und extended Access Lists](/netzwerke/acl.md)
+  * [Firewall](/netzwerke/firewall.md)
+  * [DHCP](/netzwerke/dhcp.md)
+  * [DNS](/netzwerke/dns.md)
+  * [IPv6](/netzwerke/ipv6.md)
+<!-- /// [netzwerke-netzwerke] -->
+<!-- /// [microcontroller-microcontroller] -->
+* [Microcontroller](microcontroller/microcontroller)
+  * [7 Segment Anzeige](/microcontroller/7segment.md)
+  * [BCD](/microcontroller/bcd.md)
+  * [Interrupts](/microcontroller/interrupts.md)
+  * [Timer](/microcontroller/timer.md)
+  * [Code Snippets](/microcontroller/code_snippets.md)
+  * [Serielle Schnittstelle](/microcontroller/serielle_schnittstelle.md)
+  * [Wartezeiten](/microcontroller/wartezeiten)
+<!-- /// [microcontroller-microcontroller] -->
+<!-- /// [informatik-informatik] -->
 * [Informatik](informatik/informatik)
+  * [Sicherheitsziele](informatik/sicherheitsziele.md)
+  * [Alice und Bob](informatik/alice_und_bob.md)
+  * [rot-N cipher](informatik/rot-n.md)
+  * [Asymmetrisch & Symmetrisch](informatik/a_symmetrisch.md)
+  * [Poly- & Monoalphabetisch](informatik/poly_mono_alphabetisch.md)
+  * [Diffie Hellman](informatik/diffie_hellman.md)
+<!-- /// [informatik-informatik] -->
+<!-- /// [mathe-mathe] -->
 * [Mathe](/mathe/mathe)
+<!-- /// [mathe-analysis] -->
+  * [**Analysis**](mathe/analysis.md)
+  * [Ableitung](mathe/ableitung.md)
+  * [Monotonie](mathe/monotonie.md)
+  * [Tangente & Normale](mathe/tangente_normale.md)
+  * [Funktionsscharen](mathe/funktionsscharen.md)
+  * [Extremwertaufgaben](mathe/extremwertaufgaben.md)
+  * [Funktionen aus Bedingungen](mathe/funktionen_aus_bedingungen.md)
+  * [kleinster Abstand](mathe/kleinster_abstand.md)
+  * [Splines](mathe/splines.md)
+  * [Krümmung, Krümmungskreis, ...](mathe/krümmung.md)
+  * [numerische Integration](mathe/numerische_integration.md)
+<!-- /// [mathe-analysis] -->
+<!-- /// [mathe-stochastik] -->
+  * [**Stochastik**](/mathe/stochastik.md)
+  * [Laplace Versuche](mathe/laplace.md)
+  * [Pfadregeln](mathe/pfadregeln.md)
+  * [empirisches Gesetz der großen Zahlen](mathe/empirisches_gesetz_der_großen_zahlen)
+  * [Fakultät](mathe/factorial.md)
+  * [allgemeine Zufallsgrößen](mathe/zufallsgrößen.md)
+  * [Erwartungswertbeweis](mathe/erwartungswertbeweis.md)
+<!-- /// [mathe-stochastik] -->
+<!-- /// [mathe-zahlentheorie] -->
+  * [**Zahlentheorie**](/mathe/zahlentheorie.md)
+  * [Potenzen](mathe/potenzen.md)
+  * [Modulo, Modul & Restklasse](mathe/modulo_modul_restklasse.md)
+  * [Primfaktorzerlegung, ggT, kgV](mathe/primfaktorzerlegung_ggt_kgv.md)
+  * [Multiplikationstabellen](mathe/multiplikationstabellen.md)
+  * [Eulersche Phi-Funktion](mathe/phi.md)
+  * [Euklidischer Algorithmus](mathe/euklidischer_algorithmus.md)
+  * [Square and Mulitply](mathe/square_and_multiply.md)
+  * [RSA](mathe/rsa.md)
+<!-- /// [mathe-zahlentheorie] -->
+<!-- /// [mathe-matrizen] -->
+  * [**Matrizen**](/mathe/matrizen.md)
+  * [Grundlagen](mathe/matrix_grundlagen.md)
+  * [neutrales Element bei Matrizen](mathe/matrix_neutrales_element.md)
+  * [inverse Matrizen](mathe/matrix_inverse.md)
+  * [Matrix Verschlüsselung](mathe/matrix_verschluesselung.md)
+  * [affine Abbildungen](mathe/affine_abbildungen.md)
+  * [Matrix aus Punkten](mathe/abbildungsmatrix_aus_punkten.md)
+  * [Fixelemente](/mathe/fixelemente.md)
+<!-- /// [mathe-matrizen] -->
+<!-- /// [mathe-vektoren] -->
+  * [**Vektoren**](/mathe/vektoren.md)
+  * [Grundlagen](mathe/vektor_grundlagen.md)
+  * [Linearkombinationen](/mathe/linearkombinationen.md)
+  * [Geraden](/mathe/geraden.md)
+  * [Geradeneigenschaften](/mathe/geradeneigenschaften.md)
+  * [Ebenen](/mathe/ebenen.md)
+  * [Umwandlung von Ebenenformen](/mathe/ebenenformumwandlungen.md)
+  * [Lagebeziehungen](/mathe/lagebeziehungen.md)
+  * [Projektionen](/mathe/projektionen.md)
+<!-- /// [mathe-vektoren] -->
+<!-- /// [mathe-mathe] -->
+<!-- /// [etk-etk] -->
 * [Elektrotechnik](/etk/etk)
+  * [Gleichrichterschaltungen](etk/gleichrichterschaltungen.md)
+<!-- /// [etk-etk] -->
+<!-- /// [französisch-französisch] -->
 * [Französisch](/französisch/französisch)
+  * [Adjektive](/französisch/adjektive.md)
+  * [Zahlen](/französisch/zahlen.md)
+  * [Fragen](/französisch/fragen.md)
+  * [L'imparfait](/französisch/imperfekt.md)
+<!-- /// [französisch-französisch] -->

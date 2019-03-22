@@ -91,7 +91,7 @@ IP-Netz: `192.168.0.0/22`
 2. mit 240 Adressen
 3. mit 120 Adressen
 
-Für jedes Bit, das man zur Subnetzmaske hinzufügt, halbiert sich Der HostID Pool. Bei `/24` wären es also **253** Adressen. Beim ersten Subnetz sind es **500** Adressen, also eine Subnetzmaske von `/23`, beim Zweiten sind es 240 Adressen also `/24`, und beim letzten sind es 120 Adressen also `/25`.
+Für jedes Bit, das man zur Subnetzmaske hinzufügt, halbiert sich der HostID Pool. Bei `/24` wären es also **253** Adressen. Beim ersten Subnetz sind es **500** Adressen, also eine Subnetzmaske von `/23`, beim Zweiten sind es 240 Adressen also `/24`, und beim letzten sind es 120 Adressen also `/25`.
 Nun berechnet man die Adressbereiche. Man sucht sich die Bits heraus, die nicht zur NetID gehören, setzt diese alle auf **`0`** und erhält mit den NetID bits damit dann die Netzadresse. Für die Broadcast Adresse muss man dies mit einer **`1`** anstatt einer 0 tun. Die NetID kann man mithilfe der ursprünglichen Subnetzmaske bestimmen. Gegeben war die Maske `/22`. Man kann also NetIDs im Bereich `192.168.0 - 3.x` verteilen.
 
 1. `192.168.0.0/23 - 192.168.1.255/23 `

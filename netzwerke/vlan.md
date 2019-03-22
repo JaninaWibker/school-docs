@@ -2,11 +2,11 @@
 
 *VLANs* (Virtual Local Area Networks) sind eigenständige LANs, die nicht auf physikalischen "Grenzen" basieren. Sie sind rein logisch und dienen zur Trennung von Endgeräten nach Kategorie (wie z.B. Drucker, Server, Workstations, ...). Ein VLAN definiert eine Broadcast Domain. Broadcasts von Geräten können nur innerhalb des VLANs empfangen werden; genauso Unicast Traffic, er kann nur an Mitglieder des VLANs geschickt werden. Unicast Traffic ist nicht außerhalb des LANs *routable* und kann somit nicht über die Grenze eines LANs hinweg verschickt werden, um soetwas zu erreichen bräuchte man einen Layer 3-fähigen Switch, der dann mehrere VLANs miteinander verbinden könnte.
 
-Es gibt 2 Technologien (*portbasierte VLANs* und *protokollbasierte VLANs* (VLAN tagging)) die bei der Implementation von VLANs verwendet werden.
+Es gibt 2 Technologien (*portbasierte VLANs* und *protokollbasierte VLANs*) die bei der Implementation von VLANs verwendet werden.
 
 ## Portbasierte VLANs
 
-Bei *Portbasierten VLANs* wird einfach gewissen Ports ein bestimmtes VLAN zugeortnen und Endgeräte die einen gewissen Port nutzen sind dadurch auch direkt einem VLAN zugeordnet. Der Switch wird in mehrere rein logische Switches segmentiert. 
+Bei *Portbasierten VLANs* wird einfach gewissen Ports ein bestimmtes VLAN zugeortnen und Endgeräte die einen gewissen Port nutzen sind dadurch auch direkt einem VLAN zugeordnet. Der Switch wird in mehrere rein logische Switches segmentiert.
 
 ![Portbasierte VLANs (6x VLAN 1, 6x VLAN 2)](../assets/LTI-diagrams-portbased-vlans.svg)
 
@@ -14,7 +14,7 @@ Mit der Außnahme von *Trunk Ports* hat jeder Port nur ein zugeortnetes VLAN. Tr
 
 ## Protokollbasierte VLANs
 
-Protokollbasierte VLANs entscheiden nicht abhängig vom Port in welchem VLAN ein Endgerät ist, sondern anhand der MAC Adresse des Endgerätes, wozu es gehört. Man ordnet bestimmte MAC Adressen den VLANs zu. 
+Protokollbasierte VLANs entscheiden nicht abhängig vom Port in welchem VLAN ein Endgerät ist, sondern anhand der jeweiligen MAC Adresse des Endgerätes, wozu es gehört. Man ordnet bestimmte MAC Adressen den VLANs zu. 
 
 ## VLAN tagging
 
