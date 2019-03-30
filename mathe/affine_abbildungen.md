@@ -127,4 +127,4 @@ Um zu überprüfen, ob $M$ erfolgreich invertiert wurde kann man $M \cdot M^{-1}
 
 ## andere Arten von Transformationen
 
-Es gibt weitere Arten von Transformationen, welche aber nicht wie affine Transformationen im euklidischen Raum $\R^N$ bzw. affinen Raum stattfinden müssen. Zum Beispiel gibt es Projektive Transformationen im Projektiven Raum $\P^N$
+Es gibt weitere Arten von Transformationen, welche aber nicht wie affine Transformationen im euklidischen Raum $\R^N$ bzw. affinen Raum stattfinden müssen. Zum Beispiel gibt es Projektive Abbildungen im Projektiven Raum $\P^N$. Zu [Projektionen](/mathe/projektionen.md), was teilweise eine Anwendung von Projektiven Abbildungen ist (Zentralprojektionen), gibt es bereits eine Seite.

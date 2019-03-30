@@ -9,6 +9,7 @@
   * [Extremwertaufgaben](mathe/extremwertaufgaben.md)
   * [Funktionen aus Bedingungen](mathe/funktionen_aus_bedingungen.md)
   * [Symmetrie](mathe/symmetrie.md)
+  * [e-Funktion](mathe/e-funktion.md)
   * [kleinster Abstand](mathe/kleinster_abstand.md)
   * [Splines](mathe/splines.md)
   * [Krümmung, Krümmungskreis, ...](mathe/krümmung.md)
@@ -22,7 +23,9 @@
   * [empirisches Gesetz der großen Zahlen](mathe/empirisches_gesetz_der_großen_zahlen)
   * [Fakultät](mathe/factorial.md)
   * [allgemeine Zufallsgrößen](mathe/zufallsgrößen.md)
+  * [Binomialverteilung](/mathe/binomialverteilung.md)
   * [Erwartungswertbeweis](mathe/erwartungswertbeweis.md)
+  * [Normalverteilung](/mathe/normalverteilung.md)
 <!-- /// [mathe-stochastik] -->
 
 <!-- /// [mathe-zahlentheorie] -->
