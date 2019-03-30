@@ -8,6 +8,7 @@
   * [Funktionsscharen](mathe/funktionsscharen.md)
   * [Extremwertaufgaben](mathe/extremwertaufgaben.md)
   * [Funktionen aus Bedingungen](mathe/funktionen_aus_bedingungen.md)
+  * [Symmetrie](mathe/symmetrie.md)
   * [kleinster Abstand](mathe/kleinster_abstand.md)
   * [Splines](mathe/splines.md)
   * [Krümmung, Krümmungskreis, ...](mathe/krümmung.md)

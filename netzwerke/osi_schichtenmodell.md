@@ -57,14 +57,11 @@ TCP ist ein *verbindungsorientiertes* Protokoll. TCP sorgt für eine verlässlic
 
 ![TCP Header](../assets/LTI-diagrams-tcp-header.svg)
 
-- **Source port number**: ...
-- **Destination port number**: ...
-- **Sequence Number**: ...
-- **Acknowledgement Number**: ...
-...
-- **Checksum**: ...
-
-> Coming soon!
+- **Source port number**: Der Quellport, der verwendet wurde. Bei Anfrage von Client zu Server ist dies meist ein Port zwischen 49152 (IANA; linux: 32768;) bis 65535 (IANA; linux 61000).
+- **Destination port number**: Der Zielport, der angesprochen wird. Bei Anfrage von Client zu Server ist dies meist ein standartisierter wie z.B. 80 oder 443. 
+- **Sequence Number** (4 Byte) und **Acknowledgement Number** (4 Byte): Die Sequence Number und Acknowledgement Number sind für die Ordnung der Packets sowie für die Bestätigung des korrekten Empfangens verantwortlich
+- **Flags** (9 Bit): Die Flags (NS, CWR, ECE, URG, ACK, PSH, RST, SYN, FIN) werden auch Control bits genannt. Sie sind dazu da zu zeigen, in welchem Zustand sich die TCP Verbindung befindet (wird sie gerade erst aufgebaut, soll sie beendet werden, ...)
+- **Checksum** (2 Byte): Die Checksum ist für Fehlerkorrektur verantwortlich und wird aus dem TCP Header und den Daten berechnet
 
 ### UDP - User Datagram Protocol
 
