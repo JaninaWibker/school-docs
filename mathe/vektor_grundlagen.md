@@ -26,7 +26,7 @@ Rechnerisch wieder genau das zu erwartende und gleiche wie bei der Addition, nur
 
 ## Länge von Vektoren
 
-Die **Länge eines Vektors** ist ziemlich selbsterklärend, es ist die Distanz, die ein Vektor in einer grafischen Darstellung zurücklegt. Die Länge ist aber nicht nur grafisch bestimmbar, man kann dies auch rechnerisch tun. Die Länge berechnet man mithilfe des Pythagoras.
+Die **Länge eines Vektors** (auch Betrag genannt) ist ziemlich selbsterklärend, es ist die Distanz, die ein Vektor in einer grafischen Darstellung zurücklegt. Die Länge ist aber nicht nur grafisch bestimmbar, man kann dies auch rechnerisch tun. Die Länge berechnet man mithilfe des Pythagoras.
 
 $$\vert \vec{v} \vert = \sqrt{v_1^2 + v_2^2 + ... + v_n^2}$$
 
@@ -49,3 +49,11 @@ Oft sieht man *Einheitsvektoren*, welche bis auf eine Eins nur aus Nullen besteh
 $$\vec{e}_1 = {\begin{pmatrix} 1\\\\0\\\\0\\\\\vdots\\\\0 \end{pmatrix}}, \; \vec{e}_2 = {\begin{pmatrix} 0\\\\1\\\\0\\\\\vdots\\\\0 \end{pmatrix}}, \; \vec{e}_3 = {\begin{pmatrix} 0\\\\0\\\\1\\\\\vdots\\\\0 \end{pmatrix}}, \; \dots ,\; \vec{e}_n = {\begin{pmatrix} 0\\\\0\\\\0\\\\\vdots\\\\1 \end{pmatrix}}$$
 
 Die *kanonischen Einheitsvektoren* stehen immer im 90° Winkel zueinander bzw. sind Orthogonal zueinander und dadurch auch immer linear unabhängig. Sie bilden sozusagen die Basis woraus man alle anderen Vektoren in dem Raum mithilfe von Linearkombinationen bilden kann.
+
+## Skalarprodukt
+
+Das **Skalarprodukt** (auch *inneres Produkt* oder *Punktprodukt* (*Dotproduct*)) ist eine Zuordnung von zwei Vektoren ($\vec{a}$ und $\vec{b}$) zu einer Zahl, auch Skalar genannt. Wenn man sich *nur* in einem euklidischen Raum befindet gilt, dass $\vec{a} \cdot \vec{b} = |\vec{a}| |\vec{b}| \cos \sphericalangle (\vec{a} \vec{b})$ ist, wobei $\cos \sphericalangle (\vec{a} \vec{b}) = \cos \varphi $ der Kosinus des von beiden eingeschlossenen Winkels ist. Wenn man dazu noch ein Kartesische Koordinaten hat (alle Dimensionen liegen in einem 90°-Winkel zueinander), gilt zudem $\vec{a} \cdot \vec{b} = a_1b_1 + a_2b_2 + ...$ bzw. $\displaystyle{\sum_{i=1}^{N} a_ib_i \enspace|\enspace a, b \in \R^N}$. Daraus lässt sich $\varphi = \arccos \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| |\vec{b}|}$ bestimmten.
+
+## Kreuzprodukt
+
+Das **Kreuzprodukt** (*Crossproduct*; auch *äußeres Produkt*, *Vektorprodukt* oder *vektorielles Produkt*) ist eine Zuordnung von zwei Vektoren ($\vec{a}$ und $\vec{b}) zu einem Vektor. Man stellt sich vor es wird eine Ebene aus den Vektoren $\vec{a}$ und $\vec{b}$ *aufgespannt* ([Ebenengleichung](/mathe/ebenen?id=dreipunktform) aus 3 Punkten, davon einer der Ursprung). Das Kreuzprodukt ist nun ein Vektor, der **senkrecht** auf dieser Ebene steht und die Fläche des aufgespannten Parallelogramms als Länge bzw. Betrag hat. 

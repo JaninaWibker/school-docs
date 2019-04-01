@@ -38,4 +38,16 @@ $$\Large{E: \vec{x} = \vec{p} + s \cdot (\vec{q} - \vec{p}) + r \cdot (\vec{r} -
 
 ## Normalenform
 
-#### Hessesche Normalenform
+Die **Normalenform** gibt eine Ebene mithilfe eines Stützvektors $\vec{p}$ und einem Normalenvektor $\vec{n}$ an. Der Endpunkt des Stützvektors ist ein Punkt der Ebene, an diesem Punkt liegt der Normalenvektor der Ebene. Somit muss eine Ebene durch den Endpunkt des Stützvektors gehen und den spezifischen Normalenvektor haben um diese Gleichung zu unterstützen. Da dies nur eine Ebene tut kann dies zur Definition einer Ebene genutzt werden. In der Gleichung kommt ein Punkt $\vec{x}$ vor, dieser ähnelt den einzusetzenden Koordinaten bei der Koordinatenform. Es wird überprüft ob dieser Punkt $\vec{x}$ in der Ebene liegt oder nicht, er tut dies, wenn er die Gleichung erfüllt, wenn er dies nicht tut dann liegt er nicht in der Ebene.
+
+$$\Large{E: (\vec{x} - \vec{p}) \cdot \vec{n}} = 0$$
+
+Hierbei ist $\cdot$ keine normale Multiplikation, sondern das [Skalarprodukt](/mathe/vektor_grundlagen?id=skalarprodukt), also beispielsweise für die beiden Vektoren $\vec{a}$ und $\vec{b}$ in $\R^3$ &nbsp;&nbsp; $\vec{a} \cdot \vec{b} = a_1b_1 + a_2b_2 + a_3b_3$.
+
+### Hessesche Normalenform
+
+Die **Hessische Normalenform** ist ähnlich wie die normale *Normalenform*, funktioniert aber etwas anders. Sie beinhaltet eine Distanz $d$ statt Stützvektor und einen normierten Normalenvektor $\vec{n_0}$ (ein normierter Vektor hast die Länge bzw. den Betrag von 1, also $|\vec{n}| = 1$) anstatt des sonstigen Normalenvektor. Man überprüft ob die Gleichung für einen Punkt $x$ aufgeht.
+
+$$\Large{E: \vec{x} \cdot \vec{n_0} = d}$$
+
+Es wird hierbei wieder das Skalarprodukt verwendet.
