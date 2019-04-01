@@ -4,7 +4,7 @@
 
 ## Internet Protokoll
 
-Bei der Entwicklung des *Internet Protokolls* wurde darauf geachtet, dass es möglichst klein und simpel bleibt. Das hat zufolge, dass IP nur Funktionen enthält, die benötigt werdenum Daten voneinem Sender zu einem Empfänger zu transportieren.
+Bei der Entwicklung des *Internet Protokolls* wurde darauf geachtet, dass es möglichst klein und simpel bleibt. Das hat zufolge, dass IP nur Funktionen enthält, die benötigt werden um Daten voneinem Sender zu einem Empfänger zu transportieren.
 
 ### IPv4 Header
 
@@ -61,7 +61,7 @@ Es gibt **5** Klassen von IP-Adressen **`A`** bis **`E`**:
 
 In den Netzen **A** bis **C** gibt es jeweils spezielle reservierte Bereiche für die Nutzung als Private IP-Adressen.
 
-| Klasse | Subnetzmaske  | Adress reichwiete               |
+| Klasse | Subnetzmaske  | Adress Reichweite               |
 | ------ | ------------- | ------------------------------- |
 | A      | `255.0.0.0`   | `10.0.0.0 - 10.255.255.255`     |
 | B      | `255.240.0.0` | `172.16.0.0 - 172.31.255.255`   |
