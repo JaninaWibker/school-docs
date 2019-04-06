@@ -43,7 +43,7 @@ Um die *Determinante* und die *Matrix of Minors* berechnen zu können braucht ma
 
 Die Notation für die Berechnung eines Minors einer Matrix ist $mnr(a_{ij})$.
 
-![Beispielbild Minor / Unterdeterminante](../assets/Mathe-diagrams-Matrix-Minor.svg)
+![Beispielbild Minor / Unterdeterminante](../assets/mathe/Matrix-Minor.svg)
 
 #### Determinante
 
@@ -60,7 +60,7 @@ Wie man sieht wird die Determinante berechnet indem man die erste Zeile der Matr
 
 Mit diesem Beispielbild kann man gut erkennen wie man vorgehen muss
 
-![Beispielbild Determinante](../assets/Mathe-diagrams-Matrix-Determinante.svg)
+![Beispielbild Determinante](../assets/mathe/Matrix-Determinante.svg)
 
 #### Matrix of Minors
 
@@ -76,7 +76,7 @@ $$M(A) = M \quad |\\ M_{ij} = det(mnr(A_{ij}));\ M \in \R^{n_A \times n_A}$$
 
 Die *Matrix of Cofactors* fügt den Vorzeichenwechsel zur *Matrix of Minors* hinzu den es auch bei der Determinante schon gab.  Die *Matrix of Cofactors* ist somit die einfachste Rechnung im gesamten Algorithmus, man muss nur jeden 2. Wert mit $-1$ mal nehmen bzw. das Vorzeichen wechseln. Mit diesem Beispielbild sollte jedem klar sein wie dies funktioniert
 
-![Beispiel](../assets/Mathe-diagrams-matrix-of-cofactors.svg)
+![Beispiel](../assets/mathe/matrix-of-cofactors.svg)
 
 Mathematisch kann man dies erreichen, indem man $(-1)^{i+j}$ mit jedem Element multipliziert.
 

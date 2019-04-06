@@ -11,7 +11,7 @@ $-47 \text{ mod }5=(-47+50)\text{ mod }5=3$
 
 ## Modul, Restklasse
 
-![Modul & Restklasse](../assets/Mathe-diagrams-Page-25.svg)
+![Modul & Restklasse](../assets/mathe/Modul-Restklasse.svg)
 
 Die Restklasse ist immer eine Menge von Zahlen, wobei diese Zahlen immer im gleichen Modul den gleichen Rest ergeben. Das bedeutet, dass z.B. im Modul $\Z_5$ die Restklasse $1 = \{..., -4, 1, 6, 11, ... \}$ ist, auch als $\overline{1}$ dargestellt. Wie man sieht sind auch negative Zahlen in einer Restklasse vorhanden. Da die Auflistung als Menge aufwendig ist und man "..." nutzen muss wird oft auch $\overline{r}$ genutzt.
 
@@ -26,4 +26,4 @@ $678 + 471 \text{ mod } 5 = 3+1 \text{ mod } 5 = 4$
 
 ### Regeln in den Modulen
 
-![neutrales Element, inverses Element & null Element im Model](../assets/Mathe-diagrams-Page-26.svg)
+![neutrales Element, inverses Element & null Element im Model](../assets/mathe/Elemente-im-Modul.svg)

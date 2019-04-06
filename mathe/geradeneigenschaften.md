@@ -16,7 +16,7 @@ Zwei Geraden können:
 
 Man kann mathematisch testen welche Eigenschaft / welcher Zustand vorhanden ist. Es seien die Vektoren  $g: \vec{x} = \vec{p} + r \cdot \vec{u}$ und $h: \vec{x} = \vec{q} + t \cdot \vec{v}$ gegeben
 
-![grafische Darstellung des darunter beschriebenden Vorgehen](../assets/Mathe-diagrams-Geradeneigenschaften.svg)
+![grafische Darstellung des darunter beschriebenden Vorgehen](../assets/mathe/Geradeneigenschaften.svg)
 
 Man überprüft zunächst ob die *Richtungsvektoren* *linear unabhängig* oder *linear abhängig* sind. Wenn die *Richtungsvektoren* *linear abhängig* sind, weiß man zunächst, dass sie parallel sein müssen, da die Richtungsvektoren in die gleiche Richtung zeigen (bzw. in die entgegengesetzte Richtung, was aber keine Auswirkung auf die *Parallelität* hat). Jetzt muss man nurnoch überprüfen, ob die Geraden vielleicht identisch sind. Hierzu prüft man, ob eine Punkt von der einen Geraden auf der zweiten Geraden liegt, wenn ja, dann sind die beiden Geraden identisch (und es liegt nicht nur dieser eine Punkt auf der anderen, sondern jeder). Falls die Geraden *linear unabhängig* sind, weiß man schonmal, dass die Richtungsvektoren in eine andere Richtung zeigen. Jetzt muss überprüft werden ob ein Schnittpunkt existiert, wenn ja *schneiden* die beiden Geraden sich, wenn nicht, sind sie *windschief* zueinander. Hierzu überprüft man, ob $g = h$ eine Lösung hat. Wenn keine Lösung existiert, dann sind sie *windschief*, wenn doch eine existiert, dann schneiden sie sich.
 

@@ -6,7 +6,7 @@ $\Z_n$ ist eine Tabelle mit $n$ Spalten und $n$ Zeilen, dabei wird aber meist  j
 
 **Beispiel**:
 
-![Multiplikationstabelle Z 8](../assets/Mathe-diagrams-Z_8.svg)
+![Multiplikationstabelle Z 8](../assets/mathe/Z_8.svg)
 
 Man erkennt einige Besonderheiten:
 
@@ -29,6 +29,6 @@ Es gibt in Multiplikationstabellen sogenannte **Nullteiler**, diese sind Kombina
 
 **Beispiel**:
 
-![teilerfremde Multiplikationstabelle Z 8 Stern](../assets/Mathe-diagrams-Z_8_Stern.svg)
+![teilerfremde Multiplikationstabelle Z 8 Stern](../assets/mathe/Z_8_Stern.svg)
 
 Diese neue Tabelle hat nun **keine Nullteiler** mehr, aber auch zusätzlich **Inverse Elemente für jedes Element**. Dies ist für die Kryptographie sehr wichtig.

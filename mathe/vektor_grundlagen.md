@@ -16,13 +16,13 @@ Nennenswert ist es, dass wenn man den Ursprung als Bezugspunkt wählt, man ein $
 
 Rechnerisch addiert man Vektoren wie erwartet, jeder Wert wird mit dem jeweiligen Wert aus dem zu addierenden Vektor addiert. Grafisch sieht es aus, als würde man die Vektoren aneinander setzen. 
 
-![grafische Vektoraddition](../assets/Mathe-diagrams-Vektoraddition.svg)
+![grafische Vektoraddition](../assets/mathe/Vektoraddition.svg)
 
 ## Subtraktion von Vektoren
 
 Rechnerisch wieder genau das zu erwartende und gleiche wie bei der Addition, nur mit subtrahieren anstatt addieren. Grafisch sieht es so aus, als ob man den Startpunkt von $\vec{b}$ an den Startpunkt von $\vec{a}$ setzt, und dann den Vektor vom Endpunkt von $\vec{b}$ zum Endpunkt von $\vec{a}$ nimmt. Man kann auch theoretisch einfach den Gegenvektor von $\vec{b}$ auf $\vec{a}$ addieren und erhält den gleichen Vektor.
 
-![grafische Vektorsubtraktion](../assets/Mathe-diagrams-Vektorsubtraktion.svg)
+![grafische Vektorsubtraktion](../assets/mathe/Vektorsubtraktion.svg)
 
 ## Länge von Vektoren
 

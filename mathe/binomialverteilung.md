@@ -82,8 +82,8 @@ Diese Verteilungsfunktion beschreibt nun die Wahrscheinlichkeit, dass zwischen $
 
 Die Wahrscheinlichkeiten, die mit der Wahrscheinlichkeitsfunktion berechnet werden, können in einem Histogramm dargestellt werden. Die Balken haben dabei immer einer Breite von 1 während die Höhe die Wahrscheinlichkeit repräsentiert. Die Fläche in einem bestimmten Bereich ist die Wahrscheinlichkeit, dass eine Anzahl aus diesem Bereich die Anzahl an Erfolgen ist. Das gesamte Vorgehen erinnert an [numerische Integration](/mathe/numerische_integration). Die Fläche vom Bereich $0$ bis $n$ muss 1 ergeben, da es immer eine insgesamte Wahrscheinlichkeit von $100\%$ gibt.
 
-![Histogramm Binomialverteilung](../assets/Mathe-diagrams-Binomialverteilung.svg)
+![Histogramm Binomialverteilung](../assets/mathe/Binomialverteilung.svg)
 
 Man kann auch ein Histogramm aus der kumulierten Binomialverteilung machen.
 
-![Histogramm kumulierte Binomialverteilung](../assets/Mathe-diagrams-kumulierte-Binomialverteilung.svg)
+![Histogramm kumulierte Binomialverteilung](../assets/mathe/kumulierte-Binomialverteilung.svg)

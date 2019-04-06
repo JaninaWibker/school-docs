@@ -20,7 +20,7 @@ $$C = A \cdot B = \begin{pmatrix}A_{11} & A_{12} & \dots\\\\A_{21} & A_{22} & \d
 
 Was genau passiert lässt sich besser an einer Grafik erkennen
 
-![Matrix Multiplikationstabelle](../assets/Mathe-diagrams-Matrix_Multiplikation.svg)
+![Matrix Multiplikationstabelle](../assets/mathe/Matrix_Multiplikation.svg)
 
 Man summiert die Produkte die durch die elementweisige Multiplikation der Zeile von $A$ und der Spalte von $B$ für das gesuchte Element in $C$ entstehen auf.  Man hat bei $2 \times 2$ Matrizen also beispielsweise für $C_{11}$ die Rechnung $C_{11} = A_{11} \cdot B_{11} + A_{12} \cdot B_{21}$.
 
