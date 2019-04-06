@@ -10,7 +10,7 @@ Bei der Entwicklung des *Internet Protokolls* wurde darauf geachtet, dass es mö
 
 Damit Daten über ein Netzwerk mithilfe des *Network layers* (Layer 3) gesendet werden können, müssen diese erst mit dem IPv4 Header *encapsulated* werden. Der Header wird an die Daten angeheftet und stellt alle Informationen, die zum senden des Packets benötigt werden zur Verfügung.
 
-![IPv4 Header](../assets/LTI-diagrams-ipv4header.svg)
+![IPv4 Header](../assets/lti/ipv4header.svg)
 
 Die wichtigsten Felder (und deren Funktion) sind:
 - **Version**: die Version des Internet Protokolls (`0x0100` für IPv4).

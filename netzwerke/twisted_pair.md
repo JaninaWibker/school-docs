@@ -6,11 +6,11 @@
 
 Ein Twisted Pair Kabel besteht aus *8 Leitern*, von denen immer jeweils zwei miteinadner verdrillt sind, also gibt es *4 Paare*. Diese Verdrillung ist weichtig, da bei hohen Übertragungsraten *cross talk* ein großes Problem wird. Um *cross talk* zu reduzieren, fliest der Strom in den verdrillten Leitern in entgegengesetzte Richtung, sodass sich die Magnetfelder aufheben.
 
-![Twisted Pair Interferenzen](../assets/LTI-diagrams-tp-interferences.png)
+![Twisted Pair Interferenzen](../assets/lti/tp-interferences.png)
 
 Die einzelnen Paare können zusätzlich auch noch, ähnlich wie das gesamte Kabel, durch ein Drahtgeflecht oder eine Folie ummantelt und geschützt werden.
 
-![Twisted Pair Kabel Aufbau](../assets/LTI-diagrams-tp-cable.svg)
+![Twisted Pair Kabel Aufbau](../assets/lti/tp-cable.svg)
 
 ## Kategorien
 

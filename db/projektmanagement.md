@@ -18,7 +18,7 @@ Etwas muss folgende Kriterien unterstützen um als Projekt bezeichnet werden zu 
 
 Ein Netzplandiagramm ist ein Weg den Ablauf eines Projektes abzubilden.
 
-![Netzplantechnik](../assets/LTI-diagrams-Netzplan.svg)
+![Netzplantechnik](../assets/lti/Netzplan.svg)
 
 Zur Berechnung der Werte muss man für jedes Ereignis wissen:
 

@@ -55,7 +55,7 @@ Das *Transport layer* ist für *Prüfung*, *Segmentierung* und das Zuweisen eine
 
 TCP ist ein *verbindungsorientiertes* Protokoll. TCP sorgt für eine verlässlichen Transport von Daten. TCP überprüft die Daten auf Fehler (durch checksums), auf erfolgreiche Zustellung (Bestätigung des Empängers), und die richtige Reihenfolge der Segmente wird auch gewährleistet. All diese Funktionen werden mit hilfe des *TCP-Headers* realisiet. Dieser Wird an Das Packet angehefted wodurch es zu einem Segment wird.
 
-![TCP Header](../assets/LTI-diagrams-tcp-header.svg)
+![TCP Header](../assets/lti/tcp-header.svg)
 
 - **Source port number**: Der Quellport, der verwendet wurde. Bei Anfrage von Client zu Server ist dies meist ein Port zwischen 49152 (IANA; linux: 32768;) bis 65535 (IANA; linux 61000).
 - **Destination port number**: Der Zielport, der angesprochen wird. Bei Anfrage von Client zu Server ist dies meist ein standartisierter wie z.B. 80 oder 443. 
@@ -67,7 +67,7 @@ TCP ist ein *verbindungsorientiertes* Protokoll. TCP sorgt für eine verlässlic
 
 UDP ist ein *verbindungsloses* Protokoll. Anders als TCP ist es nicht auf eine verläsliche sondern eine möglichst schnelle Verbindung aus bei der, der verlust von einzelnene Daten nicht wichtig ist, ein Beispiel wäre *Voice Over IP*. Genau wie bei TCP werden auch bei UDP die Packets mit hilfe des *UDP-Headers* *encapsulated*, doch der UDP-Header ist wesentlich kürzer und simpler als der TCP-Header.
 
-![UDP Header](../assets/LTI-diagrams-udp-header.svg)
+![UDP Header](../assets/lti/udp-header.svg)
 
 - **Source Port**: Der Port des Senders
 - **Destination Port**: Der Port des Empfängers (bspw. 443 für HTTPS)

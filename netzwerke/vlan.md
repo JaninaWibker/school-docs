@@ -8,7 +8,7 @@ Es gibt 2 Technologien (*portbasierte VLANs* und *protokollbasierte VLANs*) die 
 
 Bei *Portbasierten VLANs* wird einfach gewissen Ports ein bestimmtes VLAN zugeortnen und Endgeräte die einen gewissen Port nutzen sind dadurch auch direkt einem VLAN zugeordnet. Der Switch wird in mehrere rein logische Switches segmentiert.
 
-![Portbasierte VLANs (6x VLAN 1, 6x VLAN 2)](../assets/LTI-diagrams-portbased-vlans.svg)
+![Portbasierte VLANs (6x VLAN 1, 6x VLAN 2)](../assets/lti/portbased-vlans.svg)
 
 Mit der Außnahme von *Trunk Ports* hat jeder Port nur ein zugeortnetes VLAN. Trunk Ports sind dafür da mehrere Switches miteinander zu verbinden, wobei man alle VLANs über ein oder mehrere Ports führen will, damit man nicht für jedes existierende VLAN ein physikalisches Kabel verwenden muss. Hier kommt dann das *VLAN tagging* ins Spiel um die Frames dann wieder den richtigen VLANs zuzuordnen.
 

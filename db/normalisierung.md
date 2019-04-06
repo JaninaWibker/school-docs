@@ -30,7 +30,7 @@ Ein Relationsschema `R` ist in der 1. Normalform (**1NF**), wenn die Domänen de
 >
 > **Regel**: Erstelle für jedes nicht-atomare Attribut oder die verschaltelten Relationsschemata ein neues Relationsschemata
 
-![Anwendung der 1. Normalform](../assets/LTI-diagrams-1NF.svg)
+![Anwendung der 1. Normalform](../assets/lti/1NF.svg)
 
 Ein Relationsschema in der 1NF kann prinzipiell immernoch alle Probleme (Anomalien) aufweisen:
 - Unnötige Redundanz
@@ -50,7 +50,7 @@ Ein Relationsschema `R` ist in der 2. Normalform (**2NF**), wenn es in der 1NF i
 >
 > **Regel**: Zerlege das Relationsschema und erstelle ein neues für jeden partiellen Schlüssel mit seinem abhängigen Attributen. Erhalte das (restliche) Relationsschema mit dem ursprünglichen Primärschlüssel und Attributen, die von diesem voll funktional abhängig sind
 
-![Anwendung der 2. Normalform](../assets/LTI-diagrams-2NF.svg)
+![Anwendung der 2. Normalform](../assets/lti/2NF.svg)
 
 Auch ein Relationsschema in der 2NF kann prinzipiell noch alle genannten Probleme aufweisen:
 - Unnötige Redundanz
@@ -68,7 +68,7 @@ Ein Relationsschema `R` ist in der 3. Normalform (**3NF**), wenn es in der 2NF i
 >
 > **Regel**: Zerlege das Relationsschema und erstelle eine neues, welches das nicht nicht-primes Attribut bzw. die nicht-primen Attribute beinhaltet, die funktional von anderen nicht-primen Attributen bestimmt werden.
 
-![Anwendung der 3. Normalform](../assets/LTI-diagrams-3NF.svg)
+![Anwendung der 3. Normalform](../assets/lti/3NF.svg)
 
 Ein Relationschema in der 3. Normalform weißt meistens keine der Probleme & Anomalien auf, dies kann jedoch theoretisch selten noch vorkommen. Falls solche Anomalien auftreten kann man entweder weitere Normalformen anwenden oder diese Anomalien gut dokumentieren (vermutlich bessere Lösung).
 

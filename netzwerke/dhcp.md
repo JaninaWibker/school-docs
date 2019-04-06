@@ -6,7 +6,7 @@ DHCP ist also ein Protokoll zur Vermittlung von Daten zu Clients, die diese Date
 
 ## Commands
 
-![Ablauf der initialen IP Vergabe](../assets/LTI-diagrams-DHCP-query.svg)
+![Ablauf der initialen IP Vergabe](../assets/lti/DHCP-query.svg)
 
 ### Discover
 
@@ -29,7 +29,7 @@ Es folgt die finale Bestätigung des Servers über die Vergabe der IP Adresse. I
 
 ## zeitlicher Ablauf
 
-![zeitlicher Ablauf von verteilten IP Adressen](../assets/LTI-diagrams-DHCP-timeline.svg)
+![zeitlicher Ablauf von verteilten IP Adressen](../assets/lti/DHCP-timeline.svg)
 
 Nach **50%** der *Lease time* sendet der Client ein *Renewal packet* an den DHCP Server und fragt um eine Verlängerung der *Lease time* (deshalb wird dieser Zeitpunkt auch *Renewal time* genannt). Der DHCP Server lehnt entweder die Anfrage auf Verlängerung ab oder stimmt ihr zu. Zu diesem Zeitpunkt sendet der DHCP Server außerdem alle Informationen die sich geändert haben wie z.B. neue DNS Server IP oder ähnliches. Hiermit wird die Zeit wieder zurückgesetz.
 

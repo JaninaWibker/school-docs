@@ -2,7 +2,7 @@
 
 Es gibt mehrere Arten von Datenbanken, dabei ordnet man aber fast alle unter 2 Kategorien ein. Einmal *relationale Datenbanken* und *nicht-relationale Datenbanken*. Zu den relationalen Datenbanken zählt man in den meisten Fällen ausschließlich SQL basierte Datenbanken. Unter nicht-relationalen Datenbanken versteht man mehrere Arten von Datenbanken wie z.B. *key-value stores*, *document stores* und *graph databases*.
 
-![](../assets/LTI-diagrams-types-of-databases.svg)
+![](../assets/lti/types-of-databases.svg)
 
 ## Relationale Datenbanken
 

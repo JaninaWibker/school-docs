@@ -6,7 +6,7 @@ Eine *Firewall* ist wichtig, um die Sicherheit der Endgeräte und oder Server in
 
 Ein Konzept für Firewall Nutzung ist die sogenannte *Demilitarized Zone* (DMZ). Hierbei werden 2 Firewalls eingesetzt, die das lokale Netzwerk zunächst vom Internet abgrenzen und dann nochmal eine Grenze im lokalen Netzwerk zwischen Servern und den wirklichen Endgeräten implementieren. Hierdurch zunächst erstmal alle Geräte vom Internet durch mindestens eine Firewall geschützt. Dazu kommt noch, dass die Endgeräte von den Servern getrennt sind, was dafür sorgt, dass die Nutzer keinen direkten Zugriff auf die Server haben, was immer gut ist, und das die Nutzer nicht die Server mit irgendetwas infizieren können und andersrum, falls eins der beiden komprimiert wurde.
 
-![DMZ](../assets/LTI-diagrams-DMZ.svg)
+![DMZ](../assets/lti/DMZ.svg)
 
 Man kann zudem auch noch spezifischere Firewall Einstellungen machen, da die Interessenkonflikte zwischen Endgeräte und Server nicht von einer Firewall gehandhabt werden müssen, sondern von zwei getrennten (die Server brauchen DNAT, was aber für die Endgeräte nicht Vorteilhaft ist, bzw. ein Sicherheitsrisiko darstellt). 
 

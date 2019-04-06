@@ -19,7 +19,7 @@ Aber auch einigen Nachteilen:
 
 Der *Faserkern* (Kernglas) ist der zentrale Bereich eines Lichtwellenleiters, der zur Führung der Lichtwellen dient. Der Kern besteht aus einem Material mit *hohem Brechungsindex*. Um den Kern befindet sich das *Cladding* (Mantelglas), dies besteht aus einem *dielektrischem Material* mit einem *niedrigeren Brechungsindex* als der Kern. Zwischen dem Kern und dem Cladding finden die nahezu verlustfreien Reflexionen des Lichtes bzw. der Lichtstrahlen statt. Außen auf dem Mantelglas befindet sich eine dünne Kunststoffschutzschicht, genannt *Coating*. Um das Coating befindet sich eine weitere Schutzschicht, das *Buffering*, es ist dafür da den Leiter vor Umwelteinflüssen zu beschützen.
 
-![LWL Kabel Querschnitt / Aufbau](../assets/LTI-diagrams-lwl.png)
+![LWL Kabel Querschnitt / Aufbau](../assets/lti/lwl.png)
 
 ## Arten
 

@@ -6,7 +6,7 @@
 
 Die Anzeigen selber haben meist einfach 7 oder 8 Inputs für die einzelnen Segmente (inkl. Dezimalpunkt falls 8). Sie werden aber meist hinter einem **BCD Decoder** verwendet. Ein **BCD Decoder** wandelt *BCD Werte* ([BCD](/microcontroller/bcd)) in Outputs für die 7 Segment Anzeige um. Hierbei geht er einfach mithilfe eines sozusagen “lookup tables” vor welcher aus simplen *and-gates* besteht. Ein bestimmter Input verursacht durch die *and-gates* einen bestimmten einzigartigen Output. 
 
-![7 Segment Anzeige adressierung](../../assets/LTI-diagrams-7Segment-1.svg)
+![7 Segment Anzeige adressierung](../../assets/lti/7Segment-1.svg)
 
 Hiermit ist geklärt wie man eine 7 Segment Anzeige anspricht, nur was ist mit mehreren?
 Hierfür nutzt man aus, dass das menschliche Auge (bzw. eigentlich das Gehirn) vieles was sehr schnell passiert nicht richtig wahrnimmt oder nicht so schnell verarbeiten kann.
@@ -16,7 +16,7 @@ Nun zur wirklichen praktischen Ansteuerung.
 
 > Als Beispiel werden jetzt 8 oder weniger Anzeigen genutzt, sodass die adressierung mit 3 Bits noch funktioniert. 
 
-![7 Segment Anzeige adressierung](../../assets/LTI-diagrams-7Segment-2.svg)
+![7 Segment Anzeige adressierung](../../assets/lti/7Segment-2.svg)
 
 Wie man sieht gibt es insgesamt 8 Inputs, davon sind 3 für die Adressierung, einer für den Dezimalpunkt (DP) und die letzten 3 für den BCD Wert. Um nun an allen 7 Segment Anzeigen etwas anzuzeigen geht man alle möglichen Adressen (bzw. benutzten Adressen) durch und setzt die passenden BCD Werte für die Ziffern die man anzeigen will, zusätzlich guckt man noch, wann und ob man einen Dezimalpunkt braucht oder nicht.
 
