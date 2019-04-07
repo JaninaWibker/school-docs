@@ -16,7 +16,7 @@ Die Ableitung der von $e^x$ ist $e^x$. Mit dieser Information lassen sich nun je
 
 Die Grenzwerte von $e^x$ sind $\displaystyle{\lim_{x \to -\infty} e^x = 0}$ und $\displaystyle{\lim_{x \to \infty} e^x = \infty}$.
 
-Das Fläche des Integral von $-\infty$ bis $0$ hat den Wert $1$:
+Die Fläche des Integral von $-\infty$ bis $0$ hat den Wert $1$:
 
 $$\int_{-\infty}^{0} e^x \\, dx = 1$$
 
@@ -29,3 +29,8 @@ $$y = e^x \implies x = \ln(y)$$
 Daraus folgt, dass die Umkehrfunktion von $e^x$ gleich $\ln(x)$ ist. $\ln(x)$ ist der *Logarithmus Naturalis*, also der Logarithmus zur Basis $e$.
 
 ![die e-Funktion und die ln-Funktion](../assets/mathe/ln-e.svg ':size=600x400')
+
+Die Eigenschaften von $\ln(x)$ ähneln denen von $e^x$, aber. Die Ableitung von $\ln(x)$ ist $\dfrac{1}{x}$, die $x$-Achse wird bei $x=1$ geschnitten und die Grenzwerte sind $\displaystyle{\lim_{x \to 0^-} \ln(x) = -\infty}$ und $\displaystyle{\lim_{x \to \infty} \ln(x) = \infty}$. Die Fläche des Integral von $0$ bis $1$ hat den Wert $-1$:
+
+$$\int_{0}^{1} \ln(x) \\, dx = -1$$
+
