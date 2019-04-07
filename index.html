@@ -239,6 +239,7 @@ body .theme-chooser {
         }
       },
       plugins: [
+        hook => hook.afterEach((html, next) => next(html + '<div>Copyright © 2017-' + new Date().getFullYear() + ' Jannik Wibker, Lennard Kittner. All rights reserved.</div>')),
         hook => hook.mounted(() => {
           const themeChooser = document.createElement('div')
           themeChooser.classList.add('theme-chooser')
