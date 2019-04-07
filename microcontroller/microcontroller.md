@@ -6,4 +6,5 @@
 * [Timer](microcontroller/timer.md)
 * [Code Snippets](microcontroller/code_snippets.md)
 * [Serielle Schnittstelle](microcontroller/serielle_schnittstelle.md)
-* [Wartezeiten](/microcontroller/wartezeiten)
+* [Wartezeiten](/microcontroller/wartezeiten.md)
+* [Microcontroller 8051 - C](/microcontroller/8051-C.md)

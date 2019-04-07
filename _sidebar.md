@@ -46,7 +46,8 @@
   * [Timer](/microcontroller/timer.md)
   * [Code Snippets](/microcontroller/code_snippets.md)
   * [Serielle Schnittstelle](/microcontroller/serielle_schnittstelle.md)
-  * [Wartezeiten](/microcontroller/wartezeiten)
+  * [Wartezeiten](/microcontroller/wartezeiten.md)
+  * [Microcontroller 8051 - C](/microcontroller/8051-C.md)
 <!-- /// [microcontroller-microcontroller] -->
 <!-- /// [informatik-informatik] -->
 * [Informatik](informatik/informatik)
@@ -71,7 +72,7 @@
   * [e-Funktion](mathe/e-funktion.md)
   * [kleinster Abstand](mathe/kleinster_abstand.md)
   * [Splines](mathe/splines.md)
-  * [Krümmung, Krümmungskreis, ...](mathe/krümmung.md)
+  * [Krümmungskreis](mathe/krümmungskreis.md)
   * [numerische Integration](mathe/numerische_integration.md)
 <!-- /// [mathe-analysis] -->
 <!-- /// [mathe-stochastik] -->

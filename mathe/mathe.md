@@ -12,7 +12,7 @@
   * [e-Funktion](mathe/e-funktion.md)
   * [kleinster Abstand](mathe/kleinster_abstand.md)
   * [Splines](mathe/splines.md)
-  * [Krümmung, Krümmungskreis, ...](mathe/krümmung.md)
+  * [Krümmungskreis](mathe/krümmungskreis.md)
   * [numerische Integration](mathe/numerische_integration.md)
 <!-- /// [mathe-analysis] -->
 
