@@ -112,7 +112,9 @@ Mit dem Algorithmus lässt sich dies schnell herleiten, also hier die Kurzfassun
 - Die *Determinante* ist $ad - bc$, da die Minors von $a$ und $b$ jeweils $d$ und $c$ sind
 
 <br />
-<br />**Nützliche Links**
+<br />
+
+**Nützliche Links**
 
 > [eigene Code implementation](mathe/matrix_inverse_code)
 >

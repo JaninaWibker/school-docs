@@ -29,9 +29,9 @@ $$\tag{Eq} \Large{g = \epsilon} \implies ...$$
 Die Ergebnisse bzw. daraus implizierten Informationen können
 
 $$\begin{alignedat}{3}
-{\scriptsize{(1)}}\;\;\; \implies & \text{false} & \implies & \text{Parallelität } (g \mid\mid \epsilon)\\\\
-{\scriptsize{(2)}}\;\;\; \implies & r = r_1,\; s = s_1,\; t = t_1 & \implies & \text{Durchstoßpunkt } (\epsilon(r_1, s_1) = g(t_1))\\\\
-{\scriptsize{(3)}}\;\;\; \implies & r = r_1,\; s = s_1 & \implies & \text{Gerade in Ebene } (g \in \epsilon)
+{\scriptsize{(1)}}\\;\\;\\; \implies & \text{false} & \implies & \text{Parallelität } (g \mid\mid \epsilon)\\\\
+{\scriptsize{(2)}}\\;\\;\\; \implies & r = r_1,\; s = s_1,\; t = t_1 & \implies & \text{Durchstoßpunkt } (\epsilon(r_1, s_1) = g(t_1))\\\\
+{\scriptsize{(3)}}\\;\\;\\; \implies & r = r_1,\; s = s_1 & \implies & \text{Gerade in Ebene } (g \in \epsilon)
 \end{alignedat}$$
 
 sein.
@@ -69,9 +69,9 @@ $$\tag{Eq} \epsilon(g): a \cdot (\vec{r}_1 + t \cdot \vec{v}_1) + b \cdot (\vec{
 Die Ergebnisse bzw. daraus implizierten Informationen können
 
 $$\begin{alignedat}{3}
-{\scriptsize{(1)}}\;\;\; \implies & \text{false} & \implies & \text{Parallelität } (g \mid\mid \epsilon)\\\\
-{\scriptsize{(2)}}\;\;\; \implies & {\scriptsize{(Eq)}}\; \depends\; t & \implies & \text{Durchstoßpunkt } (\epsilon(g(t_1)))\\\\
-{\scriptsize{(3)}}\;\;\; \implies & {\scriptsize{(Eq)}}\; \independs\; t & \implies & \text{Gerade in Ebene } (g \in \epsilon)
+{\scriptsize{(1)}}\\;\\;\\; \implies & \text{false} & \implies & \text{Parallelität } (g \mid\mid \epsilon)\\\\
+{\scriptsize{(2)}}\\;\\;\\; \implies & {\scriptsize{(Eq)}}\; \depends\; t & \implies & \text{Durchstoßpunkt } (\epsilon(g(t_1)))\\\\
+{\scriptsize{(3)}}\\;\\;\\; \implies & {\scriptsize{(Eq)}}\; \independs\; t & \implies & \text{Gerade in Ebene } (g \in \epsilon)
 \end{alignedat}$$
 
 sein.
@@ -111,9 +111,9 @@ $$\tag{Eq} \Large{\epsilon_1 = \epsilon_2}$$
 Die Ergebnisse bzw. daraus implizierten Informationen können
 
 $$\begin{alignedat}{3}
-{\scriptsize{(1)}}\;\;\; \implies & \text{false} & \implies & \text{Parallelität } (\epsilon_1 \mid\mid \epsilon_2)\\\\
-{\scriptsize{(2)}}\;\;\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\;\depends\; t & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
-{\scriptsize{(3)}}\;\;\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\; \independs\; t, \;\; (r_{\epsilon_1}, s_{\epsilon_1})\; \depends\; (r_{\epsilon_2} \cup s_{\epsilon_2}) \; & \implies & \text{Equivalent } (\epsilon_1 = \epsilon_2)
+{\scriptsize{(1)}}\\;\\;\\; \implies & \text{false} & \implies & \text{Parallelität } (\epsilon_1 \mid\mid \epsilon_2)\\\\
+{\scriptsize{(2)}}\\;\\;\\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\;\depends\; t & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
+{\scriptsize{(3)}}\\;\\;\\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\; \independs\; t, \;\; (r_{\epsilon_1}, s_{\epsilon_1})\; \depends\; (r_{\epsilon_2} \cup s_{\epsilon_2}) \; & \implies & \text{Equivalent } (\epsilon_1 = \epsilon_2)
 \end{alignedat}$$
 
 sein.
@@ -149,9 +149,9 @@ $$\tag{Eq} \Large{a \cdot x_{\epsilon_{1}1} + b \cdot x_{\epsilon_{1}2} + c \cdo
 Die Ergebnisse bzw. daraus implizierten Informationen können
 
 $$\begin{alignedat}{3}
-{\scriptsize{(1)}}\;\;\; \implies & \text{false} & \implies & \text{Parallelität } (\epsilon_1 \mid\mid \epsilon_2)\\\\
-{\scriptsize{(2)}}\;\;\; \implies & (r_{\epsilon_1}, s_{\epsilon_1})\; \depends\; t\;\; & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
-{\scriptsize{(3)}}\;\;\; \implies & \text{true} & \implies & \text{Equivalent } (\epsilon_1 = \epsilon_2)
+{\scriptsize{(1)}}\\;\\;\\; \implies & \text{false} & \implies & \text{Parallelität } (\epsilon_1 \mid\mid \epsilon_2)\\\\
+{\scriptsize{(2)}}\\;\\;\\; \implies & (r_{\epsilon_1}, s_{\epsilon_1})\; \depends\; t\;\; & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
+{\scriptsize{(3)}}\\;\\;\\; \implies & \text{true} & \implies & \text{Equivalent } (\epsilon_1 = \epsilon_2)
 \end{alignedat}$$
 
 sein.

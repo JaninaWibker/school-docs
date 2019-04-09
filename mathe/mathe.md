@@ -14,6 +14,8 @@
   * [Splines](mathe/splines.md)
   * [Krümmungskreis](mathe/krümmungskreis.md)
   * [numerische Integration](mathe/numerische_integration.md)
+  * [Integration](mathe/integration.md)
+  * [partielle Integration](mathe/partielle_integration.md)
 <!-- /// [mathe-analysis] -->
 
 <!-- /// [mathe-stochastik] -->
