@@ -39,13 +39,13 @@ Falls $\displaystyle{\int a'(x) \cdot \smallint b(x)\\, dx\\; dx}$ nicht normal 
 
 $$
 \begin{alignedat}{3}
-{\scriptsize{(1)}}\\;\\;\\;&
+{\scriptsize{(\text{Aufg. }1)}}\\;\\;\\;&
 \int x \cdot \cos(x)\\; dx\\, &=&\\, x \cdot \smallint \sin(x)\\, dx - \int x' \cdot \smallint \cos(x)\\, dx \\; dx\\\\
                              &&=&\\, x \cdot \sin(x) - \int 1 \cdot \sin(x) \\; dx\\\\
 {\scriptsize{(\text{Erg. }1)}}\\;\\;\\;& &=&\\, x \cdot \sin(x) + \cos(x) + c\\\\
 \\\\
 \\\\
-{\scriptsize{(2)}}\\;\\;\\;&
+{\scriptsize{(\text{Aufg. }2)}}\\;\\;\\;&
 \int \ln(x) \\; dx\\, &=&\\, \int \ln(x) \cdot 1 \\; dx\\\\
                      &&=&\\, \int \ln(x) \cdot x' \\; dx \\\\
                      &&=&\\, \ln(x) \cdot x - \int \dfrac{1}{x} \cdot x \\; dx\\\\
@@ -53,7 +53,7 @@ $$
 {\scriptsize{(\text{Erg. }2)}}\\;\\;\\;& &=&\\, \ln(x) \cdot x - x + c\\\\
 \\\\
 \\\\
-{\scriptsize{(3)}}\\;\\;\\;&
+{\scriptsize{(\text{Aufg. }3)}}\\;\\;\\;&
 \int x^2 \cdot e^x \\; dx\\, &=&\\, x^2 \cdot e^x - \int 2x \cdot e^x \\; dx\\\\
                              &&=&\\, x^2 \cdot e^x - \left( 2x \cdot e^x - \int 2 \cdot e^x \\; dx \right)\\\\
                              &&=&\\, x^2 \cdot e^x - \left( 2x \cdot e^x - 2 \cdot \int e^x \\; dx \right)\\\\
@@ -61,7 +61,7 @@ $$
 {\scriptsize{(\text{Erg. }3)}}\\;\\;\\;& &=&\\, e^x \cdot \left( x^2 - 2x + 2 \right) + c\\\\
 \\\\
 \\\\
-{\scriptsize{(4)}}\\;\\;\\;&
+{\scriptsize{(\text{Aufg. }4)}}\\;\\;\\;&
 \int e^x \cdot \cos(x) \\; dx\\, &=&\\, e^x \cdot \sin(x) - \int e^x \cdot \sin(x) \\; dx\\\\
                                 &&=&\\, e^x \cdot \sin(x) - \left( e^x \cdot (-\cos(x)) - \int e^x \cdot (-\cos(x)) \\; dx \right)\\\\
                                 &&=&\\, e^x \cdot \sin(x) - \left( -e^x \cdot \cos + \int e^x \cdot  cos(x) \\; dx \right)\\\\
