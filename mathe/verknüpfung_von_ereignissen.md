@@ -16,7 +16,7 @@ Ereignisse sind Mengen bzw. Teilmengen der Ergebnismenge $S$. Durch Verknüpfung
 
 ## De Morganschen Gesetze
 
-Die Aussagen der Verknüpfungstabelle werden durch die *De Morganschen Gesetze* bestätigt welche lauten:
+Die Aussagen der Verknüpfungstabelle werden durch die *De Morganschen Gesetze* bestätigt, welche lauten:
 
 $$\overline{A \cap B} = \overline{A} \cup \overline{B}$$
 
@@ -24,4 +24,4 @@ $$\overline{A \cup B} = \overline{A} \cap \overline{B}$$
 
 **Beispiel**:
 
-Weder $A$ noch $B$ $:=\overline{A}  \cap \overline{B}$ ist das gegenereignis von $A$ oder $B$ $:= A \cup B$
+Weder $A$ noch $B$ $:=\overline{A} \cap \overline{B}$ ist das Gegenereignis von $A$ oder $B$ $:= A \cup B$

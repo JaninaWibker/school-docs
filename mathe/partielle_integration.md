@@ -10,13 +10,13 @@ $$\left( f(x) \cdot g(x) \right)' = f'(x) \cdot g(x) + f(x) \cdot g(x)$$
 
 Daraus folgt:
 
-$$f(x) \cdot g(x) = \int f'(x) \cdot g(x) dx + \int f(x) \cdot g'(x) dx$$
+$$f(x) \cdot g(x) = \int f'(x) \cdot g(x)\\, dx + \int f(x) \cdot g'(x)\\, dx$$
 
-Das lässt sich dann umformen zum Leitsatz der partiellen Integration?
+Das lässt sich dann umformen zum Leitsatz der partiellen Integration:
 
-$$\int f(x) \cdot g'(x) = f(x) \cdot g(x) - \int f(x) \cdot g(x) dx$$
+$$\int f(x) \cdot g'(x)\\, dx = f(x) \cdot g(x) - \int f'(x) \cdot g(x)\\, dx$$
 
-## Anweundung
+## Anwendung
 
 Meist wird die partielle Integration auf Integrale der Form $\displaystyle{\int a(x) \cdot b(x) dx}$ angewendet, kann aber auch verwendet werden für andere Arten von Integralen durch Erweiterung um den Faktor 1. Somit können auch Integrale wie z.B. $\displaystyle{\int \ln(x) dx}$ gelöst werden.
 
