@@ -24,4 +24,4 @@ $P(A)=\frac{6}{12}​$ $P(B)=\frac{6}{12}​$ $P(A \cap B)=\frac{3}{12}​$
 
 $P(A \cap B) \stackrel{?}{=} P(A) \cdot P(B)$
 
-$\frac{6}{12} = \frac{6}{12}  \cdot \frac{3}{12} \implies$ unabhängig
+$\frac{3}{12} = \frac{6}{12}  \cdot \frac{6}{12} \implies$ unabhängig
