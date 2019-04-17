@@ -71,6 +71,7 @@
   * [Symmetrie](mathe/symmetrie.md)
   * [e-Funktion](mathe/e-funktion.md)
   * [Kleinster Abstand](mathe/kleinster_abstand.md)
+  * [Umkehrfunktionen](mathe/umkehrfunktionen.md)
   * [Splines](mathe/splines.md)
   * [Krümmungskreis](mathe/krümmungskreis.md)
   * [Numerische Integration](mathe/numerische_integration.md)
