@@ -70,12 +70,12 @@
   * [Funktionen aus Bedingungen](mathe/funktionen_aus_bedingungen.md)
   * [Symmetrie](mathe/symmetrie.md)
   * [e-Funktion](mathe/e-funktion.md)
-  * [kleinster Abstand](mathe/kleinster_abstand.md)
+  * [Kleinster Abstand](mathe/kleinster_abstand.md)
   * [Splines](mathe/splines.md)
   * [Krümmungskreis](mathe/krümmungskreis.md)
-  * [numerische Integration](mathe/numerische_integration.md)
+  * [Numerische Integration](mathe/numerische_integration.md)
   * [Integration](mathe/integration.md)
-  * [partielle Integration](mathe/partielle_integration.md)
+  * [Partielle Integration](mathe/partielle_integration.md)
 <!-- /// [mathe-analysis] -->
 <!-- /// [mathe-stochastik] -->
   * [**Stochastik**](/mathe/stochastik.md)
