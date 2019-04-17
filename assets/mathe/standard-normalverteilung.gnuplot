@@ -3,7 +3,7 @@ set output 'standard-normalverteilung.svg'
 
 set object 1 rectangle fillstyle transparent solid 0
 
-set title "transfomierte Normalverteilung"
+set title "Standardnormalverteilung"
 
 set xtics ("-4" -4, "-3" -3, "-2" -2, "-1" -1, "-0.5" -0.5, "0" 0, "0.5" 0.5, "1" 1, "2" 2, "3" 3, "4" 4)
 set ytics 0.1

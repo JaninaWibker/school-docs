@@ -2,7 +2,7 @@
 
 Die *Gaußsche Normalverteilung* ist ein wichtiger Typ der stetigen Wahrscheinlichkeitsverteilung. Die Normalverteilung taucht in vielen Bereichen immerwieder auf, somit lassen sich viele Natur-, Wirtschafts- und Ingenieurswissenschaftliche Vorgänge mit ihr bechreiben. Außerdem kann sie zur Approximation der Binomialverteilung verwendet werden, wobei man aber die Faustregel von $\sigma > 3$ beachten sollte, da sonst die Approximation bei zu kleiner Standardabweichung zu ungenau wird.
 
-![Standardnormalverteilung](../assets/mathe/standard-normalverteilung.svg)
+<img width="600" alt="Standardnormalverteilung" src="../assets/mathe/standard-normalverteilung.svg" />
 
 ## Eigenschaften
 
@@ -49,4 +49,4 @@ $$\varphi(x, \sigma, \mu) = \dfrac{1}{\sigma \sqrt{2\pi}} \cdot e^{-\frac{1}{2}{
 
 Beispielsweise würde eine Normalverteilung mit $E(X) = 500$ und $\sigma = 25$ so aussehen:
 
-![transformierte Normalverteilung](../assets/mathe/transformierte-normalverteilung.svg)
+<img width="600" alt="transformierte Normalverteilung" src="../assets/mathe/transformierte-normalverteilung.svg" />
