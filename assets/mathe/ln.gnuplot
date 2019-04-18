@@ -1,3 +1,4 @@
+# Copyright © 2017-2019 Jannik Wibker. All rights reserved.
 set terminal svg size 600,400 dynamic enhanced font 'arial,10' butt dashlength 1.0
 set output 'ln.svg'
 
