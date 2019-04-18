@@ -8,3 +8,4 @@
 * [Serielle Schnittstelle](microcontroller/serielle_schnittstelle.md)
 * [Wartezeiten](/microcontroller/wartezeiten.md)
 * [Microcontroller 8051 - C](/microcontroller/8051-C.md)
+* [I2C](/microcontroller/i2c.md)

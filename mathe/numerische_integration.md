@@ -4,12 +4,9 @@ Die *numerische Integration* ist eine Methode den (orientierten) Flächeninhalt 
 
 Die numerische Integration baut auf der Idee auf, dass man die Fläche unter einem Graphen mit Balken bzw. Rechtecken berechnen kann, die die Höhe des Graphen und eine gewisse Breite haben. Die Fläche des Rechtecks kann dann durch Multiplizieren und Aufsummieren errechnet werden. Desto kleiner die Breite desto genauer die Fläche.
 
-
-<div>
-  <img width=600 alt="numerische Integration - Linkssumme" src="../assets/mathe/numerische_integration-1.svg" />
-  <img width=600 alt="numerische Integration - Rechtssumme" src="../assets/mathe/numerische_integration-2.svg" />
-  <img width=600 alt="numerische Integration - Trapezmethode" src="../assets/mathe/numerische_integration-3.svg" />
-</div>
+![numerische Integration - Linkssumme](../assets/mathe/numerische_integration-1.svg ':size=360')
+![numerische Integration - Rechtssumme](../assets/mathe/numerische_integration-2.svg ':size=360')
+![numerische Integration - Trapezmethode](../assets/mathe/numerische_integration-3.svg ':size=360')
 
 Bei der Bestimmung der Rechteckhöhe gibt es verschiedene Ansätze. Man kann sagen, dass die linke Kante den Graphen berühren soll (*Linkssumme*) oder, dass die rechte ihn berühren soll (*Rechtssumme*). Anstelle davon kann man auch noch sagen, dass der Durchschnitt beider Werte die Höhe sein soll. Dies wird *Trapezmethode* / *Regel* genannt, weil man auch Anstelle eines Rechtecks ein Trapez nehmen könnte und es auf das gleiche hinaus laufen würde. Was man wählt ist einem meist frei überlassen. Desto kleiner die Breite desto unrelevanter wird die Wahl der Methode, da die Approximation insgesamt besser wird.
 
