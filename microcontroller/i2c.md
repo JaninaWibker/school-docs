@@ -35,7 +35,7 @@ Der Transfer zwischen Master und Slave ist in Packets von jeweils 8 Bit gruppier
 
 ![I2C Adressierung und R/W Bit](../assets/lti/i2c-adressierung.svg)
 
-> Es gibt auch noch laut Spezifikation eine 10-Bit Adressierung, welche dann über mehrere Packets spannt, diese wird aber selten benutzt .
+> Es gibt auch noch laut Spezifikation eine 10-Bit Adressierung, welche dann über mehrere Packets spannt, diese wird aber selten benutzt.
 
 Einige Adressen sind von der Spezifikation aus reserviert.
 
@@ -48,6 +48,14 @@ Einige Adressen sind von der Spezifikation aus reserviert.
 | `0000 1xx x`          | HS-mode master code                   |
 | `1111 1xx 1`          | Device ID                             |
 | `1111 0xx x`          | 10-bit slave Adressierung             |
+
+Beispielcode für Adressierung unter Benutzung einer Write Funktion:
+
+```c
+void i2c_address(unsigned char address, unsigned char read_write) {
+  i2c_write((address << 1) + read_write);
+}
+```
 
 ## Protokoll
 
@@ -64,14 +72,113 @@ Die *Start condition* und *Stop condition* sind zwei besondere Sequenzen. Sie si
 ![Start condition](../assets/lti/i2c-start-condition.svg)
 ![Stop condition](../assets/lti/i2c-stop-condition.svg)
 
+Beispielcode für Start:
+
+```c
+void i2c_start() {
+
+  SDA = 1; // Auf Nummer sicher gehen, dass
+  SCL = 1; // beide wirklich zunächst auf
+  delay(); // High sind (relevant für repeated start)
+
+  SDA = 0;
+  delay();
+  SCL = 0;
+
+}
+```
+
+Beispielcode für Stop:
+
+```c
+void i2c_stop() {
+  SDA = 0; // Wiedermal auf Nummer
+  SCL = 0; // sicher gehen, dass beide
+  delay(); // zunächst auf Low sind
+
+  SCL = 1;
+  delay();
+  SDA = 1;
+}
+```
+
 ### Datenübertragung
 
-Die Datenübertragung kann erfolgen, sobald eine *Start condition* oder *Repeated Start condition* geschickt wurde, gefolgt von der Adressierung des Slaves und einstellung des `R/W'`-Modus. Die Datenbits werden im Takt mit der *SCL*-Leitung geschickt. 
+Die Datenübertragung kann erfolgen, sobald eine *Start condition* oder *Repeated Start condition* geschickt wurde, gefolgt von der Adressierung des Slaves und einstellung des `R/W'`-Modus. Die Datenbits werden im Takt mit der *SCL*-Leitung geschickt.
+
+Beispielcode für Read:
+
+```c
+unsigned char i2c_read() {
+  char byte = 0;
+  char i;
+  for(i = 0; i < 8; i++) {
+    SCL = 0;
+    delay();
+    SCL = 1;
+    delay();
+    byte += SDA << (7-i);
+    delay();
+  }
+  return byte;
+}
+```
+
+Beispielcode für Write (inklusive Einlesen des ACK/NACK):
+
+```c
+void i2c_write(unsigned char byte) {
+  delay();
+
+  char i;
+  for(i = 0; i < 8; i++) {
+    SDA = byte >> (7 - i) & 0x01;
+    delay();
+    SCL = 1;
+    delay();
+    SCL = 0;
+		delay();
+  }
+
+  SCL = 1;
+  delay();
+
+  if(SDA == 0) {
+     // acknowledge
+  } else {
+     // not acknowledge
+  }
+}
+```
 
 ### Acknowledge
 
 Nach jedem Übertragenen Byte muss der jeweils andere ein `ACK`  (Acknowledge) bzw. ein `NACK` (Not Acknowledge) schicken um zu bestätigen, dass die Daten korrekt bzw. nicht korrekt eingetroffen sind bzw. ob sie korrekt / konsistent sind oder nicht. Wenn kein Acknowledge mehr kommt heißt das entweder, dass keine Daten mehr geschickt werden müssen, oder dass das Gerät noch nicht bereit ist für mehr. Danach muss der Master entweder die *Stop condition*, oder eine *Repeated Start condition* senden. Falls ein `NACK` gesendet wird, muss selber die Fehlerkorrektur durchgeführt werden, es gibt keine standardmäßig implementierte Fehlerkorrektur. Wie dies genau erfolgt ist einem selbst überlassen.
 
+Beispielcode für Acknowledge:
+
+```c
+void i2c_ack() {
+  SCL = 0;
+  delay();
+  SDA = 0;
+  delay();
+  SCL = 1;
+}
+```
+
+Beispielcode für Not Acknowledge:
+
+```c
+void i2c_nack() {
+  SCL = 0;
+  delay();
+  SDA = 1;
+  delay();
+  SCL = 1;
+}
+```
+
 ### Multi-Master
 
-I2C kann mit mehreren Master gleichzeitig benutzt werden, hierbei ist es wichtig für die einzelnen Master zu erkennen, ob die Leitung gerade frei ist oder nicht. Entweder hat der Master die ganze Zeit lang schon aufgepasst, ob ein *Start* geschickt wurde, ode muss andernfalls für eine gewisse Zeit gucken, ob SCL und SDA auf Low gezogen werden oder nicht. Wenn ja, dann werden diese gerade verwendet, wenn nicht, dann sollten sie frei sein. Falls die Leitung nicht frei ist, muss der Master auf die *Stop condition* warten. 
+I2C kann mit mehreren Master gleichzeitig benutzt werden, hierbei ist es wichtig für die einzelnen Master zu erkennen, ob die Leitung gerade frei ist oder nicht. Entweder hat der Master die ganze Zeit lang schon aufgepasst, ob ein *Start* geschickt wurde, ode muss andernfalls für eine gewisse Zeit gucken, ob SCL und SDA auf Low gezogen werden oder nicht. Wenn ja, dann werden diese gerade verwendet, wenn nicht, dann sollten sie frei sein. Falls die Leitung nicht frei ist, muss der Master auf die *Stop condition* warten.
