@@ -30,8 +30,8 @@ Die Ergebnisse bzw. daraus implizierten Informationen können
 
 $$\begin{alignedat}{3}
 {\scriptsize{(1)}}\\;\\;\\; \implies & \text{false} & \implies & \text{Parallelität } (g \mid\mid \epsilon)\\\\
-{\scriptsize{(2)}}\\;\\;\\; \implies & r = r_1,\; s = s_1,\; t = t_1 & \implies & \text{Durchstoßpunkt } (\epsilon(r_1, s_1) = g(t_1))\\\\
-{\scriptsize{(3)}}\\;\\;\\; \implies & r = r_1,\; s = s_1 & \implies & \text{Gerade in Ebene } (g \in \epsilon)
+{\scriptsize{(2)}}\\;\\;\\; \implies & r = r_1,\\; s = s_1,\\; t = t_1 & \implies & \text{Durchstoßpunkt } (\epsilon(r_1, s_1) = g(t_1))\\\\
+{\scriptsize{(3)}}\\;\\;\\; \implies & r = r_1,\\; s = s_1 & \implies & \text{Gerade in Ebene } (g \in \epsilon)
 \end{alignedat}$$
 
 sein.
@@ -70,8 +70,8 @@ Die Ergebnisse bzw. daraus implizierten Informationen können
 
 $$\begin{alignedat}{3}
 {\scriptsize{(1)}}\\;\\;\\; \implies & \text{false} & \implies & \text{Parallelität } (g \mid\mid \epsilon)\\\\
-{\scriptsize{(2)}}\\;\\;\\; \implies & {\scriptsize{(Eq)}}\; \depends\; t & \implies & \text{Durchstoßpunkt } (\epsilon(g(t_1)))\\\\
-{\scriptsize{(3)}}\\;\\;\\; \implies & {\scriptsize{(Eq)}}\; \independs\; t & \implies & \text{Gerade in Ebene } (g \in \epsilon)
+{\scriptsize{(2)}}\\;\\;\\; \implies & {\scriptsize{(Eq)}}\\; \depends\\; t & \implies & \text{Durchstoßpunkt } (\epsilon(g(t_1)))\\\\
+{\scriptsize{(3)}}\\;\\;\\; \implies & {\scriptsize{(Eq)}}\\; \independs\\; t & \implies & \text{Gerade in Ebene } (g \in \epsilon)
 \end{alignedat}$$
 
 sein.
@@ -112,8 +112,8 @@ Die Ergebnisse bzw. daraus implizierten Informationen können
 
 $$\begin{alignedat}{3}
 {\scriptsize{(1)}}\\;\\;\\; \implies & \text{false} & \implies & \text{Parallelität } (\epsilon_1 \mid\mid \epsilon_2)\\\\
-{\scriptsize{(2)}}\\;\\;\\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\;\depends\; t & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
-{\scriptsize{(3)}}\\;\\;\\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\; \independs\; t, \;\; (r_{\epsilon_1}, s_{\epsilon_1})\; \depends\; (r_{\epsilon_2} \cup s_{\epsilon_2}) \; & \implies & \text{Equivalent } (\epsilon_1 = \epsilon_2)
+{\scriptsize{(2)}}\\;\\;\\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\\;\depends\\; t & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
+{\scriptsize{(3)}}\\;\\;\\; \implies & (r_{\epsilon_1}, s_{\epsilon_1}, r_{\epsilon_2}, s_{\epsilon_2})\\; \independs\\; t, \\;\\; (r_{\epsilon_1}, s_{\epsilon_1})\\; \depends\\; (r_{\epsilon_2} \cup s_{\epsilon_2}) \\; & \implies & \text{Equivalent } (\epsilon_1 = \epsilon_2)
 \end{alignedat}$$
 
 sein.
@@ -132,7 +132,7 @@ $\epsilon_2: \vec{x} = \begin{pmatrix}1\\\\3\\\\2\end{pmatrix} + r_{\epsilon_2} 
 
 <br />
 
-$\epsilon_1 = \epsilon_2 \implies r_{\epsilon_1} = \frac{2 \cdot t + 3}{4},\; s_{\epsilon_1} = \frac{7 - 2 \cdot t}{4},\; r_{\epsilon_2} = \small{3 - 2 \cdot t},\; s_{\epsilon_2} = \small{t} \implies \text{Schnittgerade}$
+$\epsilon_1 = \epsilon_2 \implies r_{\epsilon_1} = \frac{2 \cdot t + 3}{4},\\; s_{\epsilon_1} = \frac{7 - 2 \cdot t}{4},\\; r_{\epsilon_2} = \small{3 - 2 \cdot t},\\; s_{\epsilon_2} = \small{t} \implies \text{Schnittgerade}$
 
 $g: \vec{x} = \begin{pmatrix}1\\\\1\\\\1\end{pmatrix} + \frac{2 \cdot t + 3}{4} \cdot \begin{pmatrix}1\\\\2\\\\3\end{pmatrix} + \frac{7 - 2 \cdot t}{4} \cdot \begin{pmatrix}3\\\\2\\\\1\end{pmatrix} = \begin{pmatrix}7\\\\6\\\\5\end{pmatrix} + t \cdot \begin{pmatrix}-1\\\\0\\\\1\end{pmatrix}$
 
@@ -150,7 +150,7 @@ Die Ergebnisse bzw. daraus implizierten Informationen können
 
 $$\begin{alignedat}{3}
 {\scriptsize{(1)}}\\;\\;\\; \implies & \text{false} & \implies & \text{Parallelität } (\epsilon_1 \mid\mid \epsilon_2)\\\\
-{\scriptsize{(2)}}\\;\\;\\; \implies & (r_{\epsilon_1}, s_{\epsilon_1})\; \depends\; t\;\; & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
+{\scriptsize{(2)}}\\;\\;\\; \implies & (r_{\epsilon_1}, s_{\epsilon_1})\\; \depends\\; t\\;\\; & \implies & \text{Schnittgerade } (g(\epsilon_1 = \epsilon_2))\\\\
 {\scriptsize{(3)}}\\;\\;\\; \implies & \text{true} & \implies & \text{Equivalent } (\epsilon_1 = \epsilon_2)
 \end{alignedat}$$
 
@@ -178,8 +178,8 @@ Die Parameter kürzen sich heraus und die Gleichung geht nicht auf, daher sind d
 <br />
 
 > **Notation**:<br />
-> $X \; \depends \; Y$ bedeutet *$X {\small{\text{ ist abhängig von }}} Y$*<br />
-> $X \; \independs \; Y$ bedeutet *$X {\small{\text{ ist unabhängig von }}} Y$*<br />
-> $X \; \mid\mid \; Y$ bedeutet *$X {\small{\text{ ist parallel zu }}} Y$*<br />
-> $X \; = \; Y \implies ...$ bedeutet *$X {\small{\text{ wird mit }}} Y {\small{\text{ gleichgesetzt, woraus etwas impliziert werden kann}}}$*<br />
+> $X \\; \depends \\; Y$ bedeutet *$X {\small{\text{ ist abhängig von }}} Y$*<br />
+> $X \\; \independs \\; Y$ bedeutet *$X {\small{\text{ ist unabhängig von }}} Y$*<br />
+> $X \\; \mid\mid \\; Y$ bedeutet *$X {\small{\text{ ist parallel zu }}} Y$*<br />
+> $X \\; = \\; Y \implies ...$ bedeutet *$X {\small{\text{ wird mit }}} Y {\small{\text{ gleichgesetzt, woraus etwas impliziert werden kann}}}$*<br />
 > $X(Y)$ bedeutet *$Y {\small{\text{ wurde in }}} X {\small{\text{ eingesetzt (Beispiel: ein }}} t {\small{\text{ wurde in eine Gerade }}} g {\small{\text{ eingesetzt)}}}$*
