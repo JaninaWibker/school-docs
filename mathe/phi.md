@@ -2,7 +2,7 @@
 
 Die **Eulersche Phi-Funktion** gibt für einen gegebenen Wert $n$ die **Anzahl an teilerfremden Elementen im Modul $n$** an.
 
-$\varphi(n) := \forall a \in [1, n) \mid ggT(a, n) = 1$
+$\varphi(n) := |\lbrace\\; \forall a \in [1, n) \mid ggT(a, n) = 1 \\;\rbrace|$
 
 ## Regeln für Phi
 
@@ -32,7 +32,7 @@ $\varphi(n \mid n > 2)  \text{ mod } 2 = 0$
 
 - Da immernoch alle Primfaktoren bzw. Ergebnisse der 3. Regel teilerfremd sind nun die `2. Regel` anwenden
 
-- Die 1. Regel muss nicht angewandt werden, da sie durch die 3. Regel hergeleitet werden kann und die 3. Regel somit auch schon die 1. Regel ausführt hat.
+- Die 1. Regel muss nicht angewandt werden, da sie durch die 3. Regel hergeleitet werden kann und die 3. Regel somit auch schon die 1. Regel ausgeführt hat.
 
 > `Primfaktorzerlegung` > `3. Regel` > `2. Regel`
 

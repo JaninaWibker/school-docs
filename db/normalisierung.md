@@ -18,9 +18,9 @@ Eine Update-Anomalie tritt auf, wenn in der Datenbank redundant gespeicherte Dat
 
 ## Normalformen
 
-Es gab zunächst 3 Normalformen (1. - 3.), später kamen noch einige weitere hinzu, aber die ersten drei reichen in eigentlich fast allen Fällen aus
+Es gab zunächst 3 Normalformen (1. - 3.), später kamen noch einige weitere hinzu, aber die ersten drei reichen in eigentlich fast allen Fällen aus.
 
-Im Verlauf der Normalisierung werden Relationsschemata, die bestimmte Normalformtests nicht erfüllen, zerlegt, bis die resultierenden Relationsschemata die gewünschten Normalform Eigentschaften aufweisen.
+Im Verlauf der Normalisierung werden Relationsschemata, die bestimmte Normalformtests nicht erfüllen, zerlegt, bis die resultierenden Relationsschemata die gewünschten Normalformeigenschaften aufweisen.
 
 ## 1. Normalform
 

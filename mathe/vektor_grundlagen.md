@@ -56,4 +56,4 @@ Das **Skalarprodukt** (auch *inneres Produkt* oder *Punktprodukt* (*Dotproduct*)
 
 ## Kreuzprodukt
 
-Das **Kreuzprodukt** (*Crossproduct*; auch *äußeres Produkt*, *Vektorprodukt* oder *vektorielles Produkt*) ist eine Zuordnung von zwei Vektoren ($\vec{a}$ und $\vec{b}) zu einem Vektor. Man stellt sich vor es wird eine Ebene aus den Vektoren $\vec{a}$ und $\vec{b}$ *aufgespannt* ([Ebenengleichung](/mathe/ebenen?id=dreipunktform) aus 3 Punkten, davon einer der Ursprung). Das Kreuzprodukt ist nun ein Vektor, der **senkrecht** auf dieser Ebene steht und die Fläche des aufgespannten Parallelogramms als Länge bzw. Betrag hat. 
+Das **Kreuzprodukt** (*Crossproduct*; auch *äußeres Produkt*, *Vektorprodukt* oder *vektorielles Produkt*) ist eine Zuordnung von zwei Vektoren ($\vec{a}$ und $\vec{b}$) zu einem Vektor. Man stellt sich vor es wird eine Ebene aus den Vektoren $\vec{a}$ und $\vec{b}$ *aufgespannt* ([Ebenengleichung](/mathe/ebenen?id=dreipunktform) aus 3 Punkten, davon einer der Ursprung). Das Kreuzprodukt ist nun ein Vektor, der **senkrecht** auf dieser Ebene steht und die Fläche des aufgespannten Parallelogramms als Länge bzw. Betrag hat. 

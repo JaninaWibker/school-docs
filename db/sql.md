@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS <TabellenName> (
   <SpaltenName> <Datentyp>,
   ...
   primary key(<SpaltenNamePK),
-  foreign key(<SpaltenNameFK) references <TabellenNameFK><SpaltenNameFK>),
+  foreign key(<SpaltenNameFK) references <TabellenNameFK>(<SpaltenNameFK>),
   ...
 )
 ```

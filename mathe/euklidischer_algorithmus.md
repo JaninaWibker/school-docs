@@ -13,7 +13,7 @@ Mit Hilfe des **euklidischen Algorithmus** lässt sich der ggT zweier Zahlen ber
  4  = 4 *  1  +  0     // Ende weil r = 0
 ```
 
-Nun weiß man das der $\text{ggT}(77,53)=1$ ist, sie also kene Teiler Besitzen.
+Nun weiß man das der $\text{ggT}(77,53)=1$ ist, sie also keine Teiler besitzen.
 
 ## Erweiterter euklidischer Algorithmus
 
