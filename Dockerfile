@@ -12,7 +12,7 @@ RUN apt-get update && apt-get -yq install git
 RUN npm i -g git+https://${GIT_CREDENTIALS}@git.jannik.ml/jannik/serve-secure.git
 
 # incase the docs directory does not exist create it
-RUN mkdir /docs
+COPY . /docs
 WORKDIR /docs
 
 # the presence of a correctly configured .env file is assumed
