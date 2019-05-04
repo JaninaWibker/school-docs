@@ -1,3 +1,5 @@
+FROM scratch
+
 LABEL version="1.0"
 LABEL name="school-docs"
 
@@ -7,7 +9,7 @@ ARG GIT_CREDENTIALS
 RUN apt-get update && apt-get -yq install git
 
 # install serve-secure
-RUN npm i -g git+https://${GIT_CREDENTIALS}git.jannik.ml/jannik/serve-secure.git
+RUN npm i -g git+https://${GIT_CREDENTIALS}@git.jannik.ml/jannik/serve-secure.git
 
 # incase the docs directory does not exist create it
 RUN mkdir /docs
