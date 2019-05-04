@@ -76,7 +76,7 @@ $x_1 = 0 + x_1 + 0$
 
 $x_3 = 0 + 0 + x_3$
 
-Hierbei verwendet man jeweils nur Referenzen auf die eigene Gleichung und füllt den Rest mit Nullen, sodass die erste Stelle für das $d$ ist (was für diese Gleichungen immer gleich $0$ ist) und die weiteren für die vorhandenen $x_i$. Man hat also sozusagen *"Spalten"* für d, und die beiden $x_i$, nach denen **nicht** umgestellt wurde (hier $x_1$ und $x_3$).
+Hierbei verwendet man jeweils nur Referenzen auf die eigene Gleichung und füllt den Rest mit Nullen, sodass die erste Stelle für das $d$ ist (was für diese Gleichungen immer gleich $0$ ist) und die weiteren für die vorhandenen $x_i$. Man hat also sozusagen "*Spalten*" für d, und die beiden $x_i$, nach denen **nicht** umgestellt wurde (hier $x_1$ und $x_3$).
 
 Aus den 3 Gleichungen
 
