@@ -1,16 +1,16 @@
 # Matrix inverse
 
-Es gibt mehrere Methoden um eine *inverse Matrix* für eine Matrix zu berechnen. Inverse bei Matrizen haben ähnliche Bedingungen wie bei “normalen” Zahlen. $M \cdot M^{-1}  = E$, wobei $E$ das neutrale Element ist. Das neutrale Element für Matrizen hängt von der Größte der Matrizen ab, es existiert nur für quadratische Matrizen.
+Es gibt mehrere Methoden um eine *inverse Matrix* für eine Matrix zu berechnen. Inverse bei Matrizen haben ähnliche Eigenschaften wie bei “normalen” Zahlen. $M \cdot M^{-1}  = E$, wobei $E$ das neutrale Element ist. Das neutrale Element für Matrizen existiert nur für quadratische Matrizen und hängt von der Größe der Matrizen ab.
 
-Mit diesem Wissen und der Möglichkeit 2 Matrizen zu multiplizieren kann man sich theoretisch die inverse Matrix durch aufstellen von Gleichungen (solve, ...) erlangen, dass ist aber eine der schlechteren Methoden zur Bildung von Inversen. 
+Mit diesem Wissen und der Möglichkeit 2 Matrizen zu multiplizieren kann man theoretisch die inverse Matrix durch aufstellen von Gleichungen (solve, ...) erlangen, dass ist aber eine der schlechteren Methoden zur Bildung von Inversen.
 
 ## Gauss-Jordan-Algorithmus
 
-Eine Methode ist es einen Art Gauss-Algorithmus auf die Matrix anzuwenden und diese so umzuformen, dass man beim neutralen Element landet. Währenddesssen führt man die exakt gleichen Schritte die man auf der Matrix ausführt auch auf dem neutralen Element aus. Sobald man fertig ist, sollte man die Matrix $M$ zum neutralen Element $E$ und das neutrale Element zur Matrix $M^{-1}$ verändert haben. Diese Methode wird Gauss-Jordan Methode genannt.
+Eine Methode ist es einen Art Gauss-Algorithmus auf die Matrix anzuwenden und diese damit so umzuformen, dass man beim neutralen Element landet. Währenddesssen führt man die exakt gleichen Schritte die man auf der Matrix ausführt auch auf dem neutralen Element aus. Sobald man fertig ist, sollte man die Matrix $M$ zum neutralen Element $E$ und das neutrale Element zur Matrix $M^{-1}$ umgeformt haben. Diese Methode wird *Gauss-Jordan* Methode genannt.
 
-Dieser Prozess ist nicht unbedingt der beste, da man keinen optimalen Weg gegeben hat, sondern selber rum probieren muss. Zudem kann man sehr sehr leicht kleine Fehler machen, welche dann hinterher ein ganz anderes Ergebnis liefern. Daher ist diese Methode vorallem für Klausuren oder andere relativ stressige Umgebungen eher nicht geeignet. 
+Dieser Prozess ist nicht unbedingt der beste, da man keinen optimalen Weg gegeben hat, sondern selber herum probieren muss. Zudem kann man sehr sehr leicht kleine Fehler machen, welche dann hinterher ein ganz anderes Ergebnis liefern. Daher ist diese Methode vorallem für Klausuren oder andere relativ stressige Umgebungen eher nicht geeignet. 
 
-Es gibt eine besser Methode die einem **immer** das Inverse liefert ohne das man selber komisch rum probieren muss.
+Es gibt eine andere Methode die einem **immer** das Inverse liefert, ohne das man selber viel herum probieren muss. Diese ist zwar theoretisch rechnerisch aufwendiger, aber bietet dafür mehr Sicherheit.
 
 ## Analytic Solution / Cramersche Regel
 

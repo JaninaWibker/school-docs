@@ -2,7 +2,7 @@
 
 Die verschiedenen Formen in denen Ebenen alles angegeben bzw. definiert werden können bringen individuelle Vor- und Nachteile mit sich. Für eine bestimmte Aufgabe ist es vielleicht am besten die eine Form zu nutzen und für eine andere Aufgabe die andere, daher ist die Fähigkeit zwischen Formen umzuwandeln relativ essentiell.
 
-> Die Umwandlung kann variieren zwischen dem, was man Händisch machen kann und wofür man ein CAS (Computer Algebra System) braucht.
+> Die Umwandlung kann variieren zwischen dem, was man händisch machen kann und wofür man ein CAS (Computer Algebra System) braucht.
 
 ## Parameterform zu Koordinatenform
 
@@ -24,7 +24,7 @@ $$\begin{pmatrix}17 & 5 & -1\\\\
 -1 & 6 & 1\\\\
 5 & 1 & 2\end{pmatrix}$$
 
-Man versucht nun durch den "Art Gauss-Algorithmus" eine Gleichung der Form der *Koordinatenform* erreichen. Diese Gleichung baut sich Schritt für Schritt durch die Operationen auf der Matrix auf. 
+Man versucht nun durch den "Art Gauss-Algorithmus" eine Gleichung der Form der *Koordinatenform* erreichen. Diese Gleichung baut sich Schritt für Schritt durch die Operationen auf der Matrix auf. Das Ziel ist es eine Zeile zu haben, in der die Werte der Spalten $r$ und $s$ beide $0$ sind, sodass diese Zeile nichtmehr von ihnen abhängig ist. 
 
 In diesem Fall muss man:
 1. $x_1 - x_2$
