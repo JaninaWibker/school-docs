@@ -14,7 +14,7 @@ Wenn man Wahrscheinlichkeiten ermitteln möchte, muss man immer die Fläche des 
 
 Die Wahrscheinlichkeit, dass etwas zwischen den Werten $a$ und $b$ liegt berechnet man wie folgt:
 
-$$\int_{a}^{b} \varphi(x)\,dx$$
+$$\int_{a}^{b} \varphi(x)\\,dx$$
 
 ## Funktionen
 
@@ -24,7 +24,7 @@ $$\varphi(x) = \dfrac{1}{\sqrt{2\pi}} \cdot e^{-\frac{1}{2}x^2}$$
 
 Die Verteilungsfunktion der Standardnormalverteilung hat den Funktionsterm:
 
-$$\Phi(x) = \int_{z}^{-\infty} \varphi(x)\, dx$$
+$$\Phi(x) = \int_{z}^{-\infty} \varphi(x)\\, dx$$
 
 ## Sigmaumgebungen
 

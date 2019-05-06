@@ -54,22 +54,13 @@ $\varphi(5188) = \varphi(2^2 \cdot 1297) = (2^2 - 2^1) \cdot (1297^1 - 1297^0) =
 
 Potenziert man irgendein Element $a$ von $\Z_n^*$ mit der Anzahl der Elemente von $\Z_n^*$ so erhält man immer das Ergebnis $1$.
 
-Es gilt $a^{\varphi(n)} \equiv 1 \text{ mod } n$
+Es gilt $a^{\varphi(n)} \equiv 1 \text{ mod } n \\;\mid\\; a \in \Z_n^*$
 
-
+Daraus folgt, dass $a^{k \cdot \varphi(n) + r} \equiv a^r \text{ mod } n \\;\mid\\; a \in \Z_n^*$ auch gilt. <br />
+Dies kann man sehr gut nutzen um das ausrechnen von hohen Exponenten modulo $n$ zu optimieren. Man erhält sozusagen den optimalen Teiler für den Exponenten, danach muss man noch mit den anderen Tricks den Exponenten weiter herunterbrechen.
 
 ## Kleiner Satz von Fermat
 
-Für eine Primzahl ist $\Z_n^* = [1, p-1] \in \N$, denn alle diese Zahlen sind teilerfremd zu $p$. Damit hat der **Eulersche Satz** als Folgerung
+Für eine Primzahl ist $\Z_n^* = [1, p-1] \in \N$, denn alle diese Zahlen sind teilerfremd zu $p$. Damit hat der **Eulersche Satz** als Folgerung:
 
 $p \text{ Primzahl } \implies a^{p-1} \equiv 1 \text{ mod } p$ für alle $a$ mit $0 < a < p$
-
-
-
-## Potenzieren in $Z_n^*$
-
-In den Exponenten rechnet man modulo $\varphi(n)$
-
-$a \in \Z_n^* \implies a^{k \cdot \varphi(n)+r} \equiv a^r \text{ mod } n$
-
-> Dies kann zur manuellen Ausrechnung von $a^b \text{ mod } n$ verwendet werden um dies zu vereinfachen, da man den optimalen Teiler für den Exponenten erhält.

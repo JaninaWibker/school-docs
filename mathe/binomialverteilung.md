@@ -56,7 +56,7 @@ Die Zufallsgröße $X$ ist binomialverteilt mit $P(X=k)$ und zählt die Anzahl a
 
 Die Wahrscheinlichkeit der Binomialverteilung ist mit einer Verteilungsfunktion beschrieben.
 
-$$P(X = k) = \begin{pmatrix}n\\\\p\end{pmatrix} \cdot p^k \cdot q^{n-k} \qquad|\; n, k \in \N,\; p, q \in [0;1]$$
+$$P(X = k) = \begin{pmatrix}n\\\\p\end{pmatrix} \cdot p^k \cdot q^{n-k} \qquad|\\; n, k \in \N,\\; p, q \in [0;1]$$
 
 <br />
 

@@ -12,7 +12,7 @@ $P$ (groß P) wird meist als Art Funktion benutzt die die Wahrscheinlichkeit fü
 
 Ein **Histogramm** ist eine Methode Zufallsgrößen und ihre Ergebnisse zu visualiseren. Auf der x-Achse befinden sich die Zufallsgrößen und auf der y-Achse die Anzahl der eingetroffenen Ergebnisse für diese Zufallsgröße oder ihre Wahrscheinlichkeit.
 
-// TODO: Histogramm Bild (draw.io)
+![Histogramm - Zuordnung von Wahrscheinlichkeit zu Zufallsgröße](../assets/mathe/histogramm.svg)
 
 ## Erwartungswert
 
