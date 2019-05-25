@@ -2,14 +2,16 @@
 
 Subselects sind super simpel zu beschreiben: Sie sind einfache Unterabfragen in einer Abfrage. Sie können an jeder Stelle vorkommen an der sonst ein Table stehen würde. Durch dieses sehr simple Feature kann man aber sehr viel realisieren, was sonst entweder unmöglich wäre oder nur durch sehr komplizierte Joins, Views und ähnliches zu möglich wäre.
 
-Gerne werden Subselects genutzt um auf intuitiven Weg mit Aggregatfunktionen zu interagieren. Man kann z.B. alle Datensätze suchen bei denen ein bestimmter Wert überdurchschnittlich / unterdurchschnittlich ist. Dafür würde man zunächst mit einem Subselect und der `avg`-Aggregatfunktion den Durchschnitt berechnen und dann diesen entstandenen Wert in der normalen (äußeren) Abfrage gegen alle Werte testen. 
+Gerne werden Subselects genutzt um auf intuitiven Weg mit Aggregatfunktionen zu interagieren. Man kann z.B. alle Datensätze suchen bei denen ein bestimmter Wert überdurchschnittlich / unterdurchschnittlich ist. Dafür würde man zunächst mit einem Subselect und der `avg`-Aggregatfunktion den Durchschnitt berechnen und dann diesen entstandenen Wert in der normalen (äußeren) Abfrage gegen alle Werte testen.
 
 ```sql
 SELECT id, amount FROM A
 WHERE amount > (SELECT AVG(amount) FROM A)
 ```
 
-Hier sieht man den Syntax für ein Subselect. Ein Subselect ist einfach nur von normalen Klammern (`()`) eingeschlossen. An der Stelle wo sonst ein Table stehen könnte kann auch ein Subselect stehen, da ein Subselect ja eine Art Table produziert, ähnlich wie ein View. 
+Hier sieht man den Syntax für ein Subselect. Ein Subselect ist einfach nur von normalen Klammern (`()`) eingeschlossen. An der Stelle wo sonst ein Table stehen könnte kann auch ein Subselect stehen, da ein Subselect ja eine Art Table produziert, ähnlich wie ein View.
+
+Oft nutzt man den `GROUP BY`-Operator, wenn man Aggregatfunktionen und Subselects zusammen benutzt. `GROUP BY` gibt einer Aggregatfunktion an, welche verschiedenen Gruppen von Datensätze zusammen evaluiert werden sollen. Ohne `GROUP BY` werden alle Datensätze als einzige Gruppe angesehen. Man erhält also am Ende so viele Ergebnisse, wie es Gruppen gibt. Bei `GROUP BY` gibt man eine Spalte an, welche dann zur Zuordnung zu einer Gruppe verwendet wird, also gibt es so viele Gruppen wie einzigartige Werte in der Spalte. 
 
 ## Operatoren
 
