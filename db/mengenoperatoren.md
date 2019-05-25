@@ -4,7 +4,7 @@
 
 ## Minus
 
-**Minus** gibt nur die Datensätze der ersten Tabelle zurück die nicht in der zweiten existieren. In MySQL existiert **Minus** leider nicht und somit muss man es mit Hilfe eines **Left Joins** sowie **Where** abbilden.
+**Minus** gibt nur die Datensätze der ersten Tabelle zurück die nicht in der zweiten existieren. In MySQL existiert **Minus** leider nicht und somit muss man es mit Hilfe eines **Left Joins** sowie `WHERE`-Klausel abbilden.
 
 ```sql
 SELECT DISTINCT *
@@ -22,6 +22,10 @@ SELECT * FROM <Table1 A> WHERE <BedingungA>
 MINUS
 SELECT * FROM <Table2 B> WHERE <BedingungB>
 ```
+
+Daraus ergibt sich dann das folgende Mengenbild:
+
+![Mengenbild - SQL Minus / A ohne B](../assets/mathe/mengen-ohne.svg)
 
 ## Intersect
 
@@ -48,6 +52,10 @@ INTERSECT
 SELECT * FROM <Table2 B> WHERE <BedingungB>
 ```
 
+Daraus ergibt sich dann das folgende Mengenbild:
+
+![Mengenbild - SQL Intersect / A und B](../assets/mathe/mengen-und.svg)
+
 ## Union
 
 Mit **Union** kann man die Ausgabe zweier separaten SQL Abfragen verbinden. Es gibt hierbei aber strikte Anforderungen an diese Abfragen: Die Attribute der beiden Tabellen müssen gleichnamig sein, die gleiche Reihenfolge haben und insgesamt die gleiche Anzahl sein.
@@ -58,3 +66,6 @@ UNION
 SELECT * FROM <Table2 B> WHERE <BedingungB>
 ```
 
+Daraus ergibt sich dann das folgende Mengenbild:
+
+![Mengenbild - SQL Union / A oder B](../assets/mathe/mengen-oder.svg)
