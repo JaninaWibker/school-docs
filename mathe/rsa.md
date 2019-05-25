@@ -1,6 +1,6 @@
 # RSA
 
-**RSA** ist ein *asymmetrischer* Verschlüsselungsalgorithmus.   >  **Asymmetrisch** bedeutet, dass es 2 Schlüssel gibt und man aus dem einen nicht in annehmbarer Zeit den anderen berechnen kann.
+**RSA** ist ein *asymmetrischer* Verschlüsselungsalgorithmus. **Asymmetrisch** bedeutet, dass es 2 Schlüssel gibt und man aus dem einen nicht in annehmbarer Zeit den anderen berechnen kann.
 
 **RSA** benutzt einen *private key* (meist $e$) und einen *public key* (meist $d$), welche von ihren Eigenschaften und Fähigkeiten her ähnlich sind. Wenn $T$ mit $e$ verschlüsselt wird, kann dies nur mit $d$ entschlüsselt werden. Wenn $T$ mit $d$ verschlüsselt wird, kann dies nur mit $e$ entschlüsselt werden. Bei **RSA** wird einer dieser beiden Schlüssel als *public key* benutzt, diesen Key kann jeder haben. Falls jemand eine Nachricht an die Person mit dem *private key* schicken will und sicher gehen will, dass nur diese Person die Nachricht lesen kann verschlüsselt sie die Nachricht mit dem *public key*, da diese dann nurnoch mit dem *private key* entschlüsselt werden kann, nicht mit dem *public key*. Wenn der Besitzer des *private key*s verifizieren will, dass er wirklich der Besitzer ist verschlüsselt er etwas mit dem *private key* und andere können dies nun gegenprüfen indem sie dies mit dem *public key* entschlüsseln.  
 
