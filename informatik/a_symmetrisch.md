@@ -14,7 +14,7 @@ Bei einem **symmetrischen** Verschlüsselungsverfahren haben alle Parteien entwe
 - Der eine vorhandene Schlüssel darf auf keinen Fall in unbefugte Hände gelangen, da dadurch direkt beide Seiten kompromittiert sind.
 - Schlüssel müssen über einen sicheren Weg ausgetauscht und übermittelt werden (*out-of-band key exchange* oder [Diffie Hellman](#/informatik/diffie_hellman.md)).
 - Anzahl der Schlüssel in Hinsicht auf die Anzahl der Teilnehmer wächst quadratisch solange nicht alle den einen gleichen Schlüssel nutzen sondern für jede mögliche Kombination an Teilnehmern ein Schlüssel vorhanden ist.
-- *(Wo)*man-in-the-middle attack (auch Frauen können das machen, #equality, #lauratiltetgeradezutode, #womaninthemiddleklingtschonnachetwasgangbang)
+- man-in-the-middle attack 
 
 ## Asymmetrisch
 
