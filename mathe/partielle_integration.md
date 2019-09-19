@@ -1,12 +1,12 @@
 # Partielle Integration
 
-Die **partielle Integration** ist eine Methode bestimmte Funktionen zu integrieren, die man mit dem normalen Aufleiten nciht integrieren kann. Dabei nutzt man eine umgestellte Produktregel, die man dann auf die Funktion anwenden kann um eine Stammfunktion zu erhalten. Eventuell ist hierbei das mehrfache anwenden von partieller Integration, sowie normalem Formelumformen benötigt.
+Die **partielle Integration** ist eine Methode bestimmte Funktionen zu integrieren, die man mit dem normalen Aufleiten nicht integrieren kann. Dabei nutzt man eine umgestellte Produktregel, die man dann auf die Funktion anwenden kann um eine Stammfunktion zu erhalten. Eventuell ist hierbei das mehrfache anwenden von partieller Integration, sowie normalem Formelumformen benötigt.
 
 ## Herleitung
 
 Die normale Produktregel für die Funktionen $f(x)$ und $g(x)$ lautet:
 
-$$\left( f(x) \cdot g(x) \right)' = f'(x) \cdot g(x) + f(x) \cdot g(x)$$
+$$\left( f(x) \cdot g(x) \right)' = f'(x) \cdot g(x) + f(x) \cdot g'(x)$$
 
 Daraus folgt:
 
@@ -40,7 +40,7 @@ Falls $\displaystyle{\int a'(x) \cdot \smallint b(x)\\, dx\\; dx}$ nicht normal 
 $$
 \begin{alignedat}{3}
 {\scriptsize{(\text{Aufg. }1)}}\\;\\;\\;&
-\int x \cdot \cos(x)\\; dx\\, &=&\\, x \cdot \smallint \sin(x)\\, dx - \int x' \cdot \smallint \cos(x)\\, dx \\; dx\\\\
+\int x \cdot \cos(x)\\; dx\\, &=&\\, x \cdot \smallint \cos(x)\\, dx - \int x' \cdot \smallint \cos(x)\\, dx \\; dx\\\\
                              &&=&\\, x \cdot \sin(x) - \int 1 \cdot \sin(x) \\; dx\\\\
 {\scriptsize{(\text{Erg. }1)}}\\;\\;\\;& &=&\\, x \cdot \sin(x) + \cos(x) + c\\\\
 \\\\

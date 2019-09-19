@@ -10,9 +10,9 @@ Wenn also die Steigung von **f** negativ ist, ist **f'(x)** auch negativ. Bei ei
 | Constant | $c$ | $0$ |
 | Line | $a \cdot x$ | $a$ |
 |  | $x$ | $1$ |
-| Exponent | $a^x$ | $ln(a) \cdot a^x$ |
+| Exponent | $a^x$ | $\ln(a) \cdot a^x$ |
 |  | $e^x$ | $e^x$ |
-| Logarithm | $ln(x)$ | $\dfrac{1}{x}$ |
+| Logarithm | $\ln(x)$ | $\dfrac{1}{x}$ |
 | Multiplication by constant | $c \cdot f$ | $c \cdot f'$ |
 | Power Rule | $x^n$ | $n \cdot x^{n-1}$ |
 | Sum Rule | $f + g$ | $f' + g'$ |
@@ -25,10 +25,10 @@ Wenn also die Steigung von **f** negativ ist, ist **f'(x)** auch negativ. Bei ei
 
 | trigonomische Funktionen | $f(x)$ | $f'(x)$ |
 | :----------- | :----- | :------ |
-| Sinus | $sin(x)$ | $cos(x)$ |
-| Cosinus | $cos(x)$ | $-sin(x)$ |
-| -Sinus | $-sin(x)$ | $-cos(x)$ |
-| -Cosinus | $-cos(x)$ | $sin(x)$ |
+| Sinus | $\sin(x)$ | $\cos(x)$ |
+| Cosinus | $\cos(x)$ | $-\sin(x)$ |
+| -Sinus | $-\sin(x)$ | $-\cos(x)$ |
+| -Cosinus | $-\cos(x)$ | $\sin(x)$ |
 
 ## Eigenschaften interpretieren
 
