@@ -49,6 +49,7 @@
   * [Wartezeiten](/microcontroller/wartezeiten.md)
   * [Microcontroller 8051 - C](/microcontroller/8051-C.md)
   * [I2C](/microcontroller/i2c.md)
+  * [6502](/microcontroller/6502.md)
 <!-- /// [microcontroller-microcontroller] -->
 <!-- /// [informatik-informatik] -->
 * [Informatik](informatik/informatik)
@@ -78,6 +79,7 @@
   * [Numerische Integration](mathe/numerische_integration.md)
   * [Integration](mathe/integration.md)
   * [Partielle Integration](mathe/partielle_integration.md)
+  * [Substitution](mathe/substitution.md)
 <!-- /// [mathe-analysis] -->
 <!-- /// [mathe-stochastik] -->
   * [**Stochastik**](/mathe/stochastik.md)

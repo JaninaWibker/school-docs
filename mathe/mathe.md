@@ -17,6 +17,7 @@
   * [Numerische Integration](mathe/numerische_integration.md)
   * [Integration](mathe/integration.md)
   * [Partielle Integration](mathe/partielle_integration.md)
+  * [Substitution](mathe/substitution.md)
 <!-- /// [mathe-analysis] -->
 
 <!-- /// [mathe-stochastik] -->

@@ -9,3 +9,4 @@
 * [Wartezeiten](/microcontroller/wartezeiten.md)
 * [Microcontroller 8051 - C](/microcontroller/8051-C.md)
 * [I2C](/microcontroller/i2c.md)
+* [6502](/microcontroller/6502.md)
