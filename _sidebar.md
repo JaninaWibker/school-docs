@@ -130,6 +130,7 @@
 <!-- /// [mathe-vektoren] -->
 <!-- /// [mathe-lineare-algebra] -->
   * [**Lineare Algebra**](/mathe/lineare_algebra.md)
+  * [Gruppen, Ringe, Körper](/mathe/gruppen_ringe_körper.md)
 <!-- /// [mathe-mathe] -->
 <!-- /// [etk-etk] -->
 * [Elektrotechnik](/etk/etk)
