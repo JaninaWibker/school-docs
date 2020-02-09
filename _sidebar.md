@@ -128,6 +128,8 @@
   * [Lagebeziehungen](/mathe/lagebeziehungen.md)
   * [Projektionen](/mathe/projektionen.md)
 <!-- /// [mathe-vektoren] -->
+<!-- /// [mathe-lineare-algebra] -->
+  * [**Lineare Algebra**](/mathe/lineare_algebra.md)
 <!-- /// [mathe-mathe] -->
 <!-- /// [etk-etk] -->
 * [Elektrotechnik](/etk/etk)

@@ -70,3 +70,8 @@
   * [Lagebeziehungen](/mathe/lagebeziehungen.md)
   * [Projektionen](/mathe/projektionen.md)
 <!-- /// [mathe-vektoren] -->
+
+<!-- /// [mathe-lineare-algebra] -->
+* [**Lineare Algebra**](/mathe/lineare_algebra.md)
+  * [Gruppen, Ringe, Körper](/mathe/gruppen_ringe_körper.md)
+<!-- /// [mathe-lineare-algebra] -->
