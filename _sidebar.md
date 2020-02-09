@@ -130,7 +130,11 @@
 <!-- /// [mathe-vektoren] -->
 <!-- /// [mathe-lineare-algebra] -->
   * [**Lineare Algebra**](/mathe/lineare_algebra.md)
+  * [Vektorräume](/mathe/vektorräume.md)
   * [Gruppen, Ringe, Körper](/mathe/gruppen_ringe_körper.md)
+  * [Eigenwerte und Vektoren](/mathe/eigenwerte_vektoren.md)
+  * [Polynome](/mathe/polynome.md)
+<!-- /// [ mathe-lineare-algebra] -->
 <!-- /// [mathe-mathe] -->
 <!-- /// [etk-etk] -->
 * [Elektrotechnik](/etk/etk)
