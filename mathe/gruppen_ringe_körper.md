@@ -73,7 +73,7 @@ $$(R, +, \cdot) \text{ Ring} \iff (R, +) \text{ abelsche Gruppe} \band (R, \cdot
 ## Unter- und Oberringe
 
 Eine Teilmenge $U$ von $R$ heißt Unterring, wenn $U$ selbst wieder ein Ring ist:
-$$U \subset R \band (U, +, \cdot) \implies (U, +, \cdot) \text{ Unterring von } (R, +, \cdot)$$
+$$U \sube R \band (U, +, \cdot) \implies (U, +, \cdot) \text{ Unterring von } (R, +, \cdot)$$
 
 
 # Körper

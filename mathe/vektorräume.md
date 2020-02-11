@@ -26,7 +26,7 @@ Eine Menge $V$ ist ein $\K$-Vektorraum, genau dann wenn:
 
 ## Untervektorräume
 
-Eine Teilmenge $U \subset V$ heißt **Untervektorraum** wenn gilt:
+Eine Teilmenge $U \sube V$ heißt **Untervektorraum** wenn gilt:
 
 **U1**: $ 0 \in U$
 
