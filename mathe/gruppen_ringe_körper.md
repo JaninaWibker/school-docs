@@ -94,7 +94,13 @@ $(K, +, \cdot)$
 
 - **Abgeschlossenheit**: durch keine Operation darf man aus dem Körper heraus kommen
 
-$$(K, +, \cdot) \text{ Körper} \iff (K, +) \text{ abelsche Gruppe} \band (K \setminus \\{ 0 \\}, \cdot) \text{ abelsche Gruppe} \band \text{ Distributivgesetze}$$
+$$(K, +, \cdot) \text{ Körper} \iff$$
+
+$$\begin{alignedat}{1}
+        & (K, +) \text{ abelsche Gruppe}\\\\
+\band\  & (K \setminus \\{ 0 \\}, \cdot) \text{ abelsche Gruppe}\\\\
+\band\  & \text{ Distributivgesetze}
+\end{alignedat}$$
 
 
 # Beispiele
