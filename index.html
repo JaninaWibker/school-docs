@@ -142,11 +142,29 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
         theme_color_meta.setAttribute('content', getComputedStyle(document.body).getPropertyValue('--background-color') || '#ffffff')
     }
 
-    if(localStorage.getItem('docsify.theme')) {
-        $toggleTheme(localStorage.getItem('docsify.theme'))
-      } else {
-        $toggleTheme('light')
+    window.$determineInitialTheme = () => {
+      const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+      const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+      const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+      const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+      if(localStorage.getItem('docsify.theme')) { // saved theme
+        return localStorage.getItem('docsify.theme')
+      } else if(!hasNoSupport && isDarkMode) { // system dark mode
+        return 'dark'
+      } else if(!hasNoSupport && isLightMode) { // system light mode
+        return 'light'
+      } else if(!hasNoSupport && isNotSpecified) { // system unspecified
+        return 'light'
+      } else { // default
+        return 'light'
       }
+    }
+
+    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && window.$toggleTheme('dark'))
+    window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && window.$toggleTheme('light'))
+
+    window.$toggleTheme(window.$determineInitialTheme())
 
     window.$docsify = {
       name: 'Schule',
