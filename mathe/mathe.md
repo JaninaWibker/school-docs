@@ -74,7 +74,9 @@
 <!-- /// [mathe-lineare-algebra] -->
 * [**Lineare Algebra**](/mathe/lineare_algebra.md)
   * [Vektorräume](/mathe/vektorräume.md)
+  * [Basiswechsel](/mathe/basiswechsel.md)
   * [Gruppen, Ringe, Körper](/mathe/gruppen_ringe_körper.md)
   * [Eigenwerte und Vektoren](/mathe/eigenwerte_vektoren.md)
+  * [Diagonalisierbarkeit & Trigonalisierbarkeit](/mathe/diagonalisierbarkeit_trigonalisierbarkeit.md)
   * [Polynome](/mathe/polynome.md)
 <!-- /// [mathe-lineare-algebra] -->

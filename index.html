@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Self-hosted Mathe/IT Wiki | Copyright © 2017-2019 Jannik Wibker, Lennard Kittner">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jannik.ml/static/docsify/lib/themes/vue.4.7.0.css">
+  <link rel="stylesheet" href="https://cdn.jannik.ml/static/docsify/lib/themes/vue.4.7.1.css">
   <link rel="stylesheet" href="/static/docsify/lib/themes/dark.4.9.1.css">
   <link rel="stylesheet" href="https://cdn.jannik.ml/static/katex/dist/katex.min.0.10.1-rc.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
@@ -39,10 +39,10 @@
 .qr-heading-6 {margin-top:-9px;}.qr-heading-6>svg{transform:scale(0.7);}
 .pagination-item a{color:currentColor!important;}
 .markdown-section ul>li>ul{margin-top:0!important;margin-bottom:0!important}
-.markdown-section em { color: #8727d1; }
+.markdown-section em {color: #8727d1;}
 body.dark{--theme-color:#4a54c7;--background-color:#191919;--sidebar-nav-accent-color-1: #303141; --sidebar-nav-accent-color-2: #1c1844;}
 body{--theme-color: #4a54c7; --sidebar-nav-accent-color-1: #e7e7eb; --sidebar-nav-accent-color-2: #eff1f3; } /* #7f8c8d #42b983 */
-body .theme-chooser {width:32px;height:32px;position:absolute;top:0px;right:18px;z-index:1;}
+body .theme-chooser {width:32px;height:32px;position:absolute;top:0px;right:8px;z-index:1;}
 body .theme-chooser .svg-theme{margin:4px;color:slateblue;}
 body.dark .theme-chooser .svg-theme{margin:4px;color:yellow;}
 body.medium-zoom--opened .theme-chooser{display:none;}
@@ -55,35 +55,14 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
   .katex-html{overflow-x:overlay;overflow-y:hidden;}
 }
 @media print {
-
-  body .theme-chooser {
-    display: none;
-  }
-
-  .markdown-section {
-    max-width: 90vw;
-  }
-
-  .content {
-    left: 0;
-    padding-top: 0;
-  }
-
-  .docsify-pagination-container {
-    display: none!important;
-  }
-
-  .qr-wrapper {
-    display: none;
-  }
-
-  .markdown-section code {
-    filter: grayscale(1)
-  }
-
-  .markdown-section pre>code {
-    white-space: pre-wrap;
-  }
+  body .theme-chooser{display: none;}
+  .markdown-section{max-width: 90vw;}
+  .content{left:0;padding-top:0;}
+  .docsify-pagination-container{display: none!important;}
+  .qr-wrapper{display:none;}
+  .markdown-section code{filter:grayscale(1)}
+  .markdown-section pre>code{white-space:pre-wrap;}
+  div.copyright {position:fixed;bottom:8px;}
 }
 </style>
 </head>
@@ -218,7 +197,7 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
         }
       },
       plugins: [
-        hook => hook.afterEach((html, next) => next(html + '<div>Copyright © 2017-' + new Date().getFullYear() + ' Jannik Wibker, Lennard Kittner. All rights reserved.</div>')),
+        hook => hook.afterEach((html, next) => next(html + '<div class="copyright">Copyright © 2017-' + new Date().getFullYear() + ' Jannik Wibker, Lennard Kittner. All rights reserved.</div>')),
         hook => hook.mounted(() => {
           const themeChooser = document.createElement('div')
           themeChooser.classList.add('theme-chooser')
