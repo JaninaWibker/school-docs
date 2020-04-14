@@ -75,6 +75,7 @@
 * [**Lineare Algebra**](/mathe/lineare_algebra.md)
   * [Vektorräume](/mathe/vektorräume.md)
   * [Basiswechsel](/mathe/basiswechsel.md)
+  * [Quotientenräume](/mathe/quotientenraum.md)
   * [Gruppen, Ringe, Körper](/mathe/gruppen_ringe_körper.md)
   * [Eigenwerte und Vektoren](/mathe/eigenwerte_vektoren.md)
   * [Diagonalisierbarkeit & Trigonalisierbarkeit](/mathe/diagonalisierbarkeit_trigonalisierbarkeit.md)
