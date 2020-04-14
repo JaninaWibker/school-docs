@@ -66,6 +66,8 @@ Sei $G$ eine Gruppe und $H$ eine Untergruppe. Eine **Linksnebenklasse** von $H$ 
 
 $g \cdot H := \lbrace g \cdot h \\,\vert\\, h \in H \rbrace$
 
+> Es heißt *Links*nebenklasse, da man das $g$ von links mit $H$ verknüpft. Es gibt auch Rechtsnebenklassen.
+
 Die Linksnebenklasssen sind *Partitionen* von $G$
 
 Beispielsweise kann man $G = (\N_0, +)$ und $H = (2 \cdot \N_0, +)$ (also alle geraden Zahlen) nehmen hat nun die Partitionen $[0] = 0 + H$ und $[1] = 1 + H$.
