@@ -5,5 +5,6 @@
 * [Microcontroller](microcontroller/microcontroller)
 * [Informatik](informatik/informatik)
 * [Mathe](mathe/mathe)
+* [Softwaretechnik](swt/swt)
 * [Elektrotechnik](/etk/etk)
 * [Französisch](/französisch/französisch)

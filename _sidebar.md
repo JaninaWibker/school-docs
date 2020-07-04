@@ -140,6 +140,15 @@
   * [Diagonalisierbarkeit & Trigonalisierbarkeit](/mathe/diagonalisierbarkeit_trigonalisierbarkeit.md)
 <!-- /// [ mathe-lineare-algebra] -->
 <!-- /// [mathe-mathe] -->
+<!-- /// [swt-swt] -->
+* [Softwaretechnik](/swt/swt)
+<!-- /// [swt-einstieg] -->
+  * [**Einstieg**](/swt/einstieg)
+<!-- /// [swt-einstieg] -->
+<!-- /// [swt-entwurfsmuster] -->
+  * [**Entwurfsmuster**](/swt/entwurfsmuster)
+<!-- /// [swt-entwurfsmuster] -->
+<!-- /// [swt-swt] -->
 <!-- /// [etk-etk] -->
 * [Elektrotechnik](/etk/etk)
   * [Gleichrichterschaltungen](etk/gleichrichterschaltungen.md)
