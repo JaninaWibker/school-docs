@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass[]{Klient}{}{}
+
+  \umlclass[type=interface,alias=Iterator,left=2cm of Klient]{Iterator<E>}{}{
+    hasNext() : boolean \\
+    next() : E \\
+    remove() : void
+  }
+  \umlclass[below=2cm of Iterator]{KonkreterIterator}{}{
+    hasNext() : boolean \\
+    next() : E \\
+    remove() : void
+  }
+
+  \umlclass[type=interface,alias=Iterable,right=2cm of Klient]{Iterable<E>}{}{
+    iterator() : Iterator<E>
+  }
+  \umlclass[below=2cm of Iterable]{KonkretesIterable}{}{
+    iterator() : Iterator<E>
+  }
+
+
+  \umlreal{KonkreterIterator}{Iterator}
+  \umlreal{KonkretesIterable}{Iterable}
+
+  \umldep{Klient}{Iterator}
+  \umldep{Klient}{Iterable}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

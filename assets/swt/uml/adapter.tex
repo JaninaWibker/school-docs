@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+
+  \umlclass[type=abstract]{Ziel}{}{
+    \umlvirt{operation()}
+  }
+
+  \umlsimpleclass[right=2cm of Ziel]{Klient}
+
+  \umlclass[below=2cm of Ziel]{Adapter}{
+    operation()
+  }
+
+  \umlclass[right=4cm of Adapter]{AdaptierteKlasse}{}{
+    spezifischeOperation()
+  }
+
+  \umluniassoc{Klient}{Ziel}
+  \umlreal{Adapter}{Ziel}
+  \umluniassoc[arg2=adaptiertes Objekt,pos2=1,align2=right]{Adapter}{AdaptierteKlasse}
+
+  \umlnote[width=7cm,below right=1cm and -1cm of Adapter]{Adapter}{\code{adaptiertesObjekt.spezifischeOperation()}}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

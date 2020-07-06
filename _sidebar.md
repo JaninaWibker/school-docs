@@ -147,6 +147,12 @@
 <!-- /// [swt-einstieg] -->
 <!-- /// [swt-entwurfsmuster] -->
   * [**Entwurfsmuster**](/swt/entwurfsmuster)
+  * [Entkopplungsmuster](/swt/entkopplungsmuster.md)
+  * [Variantenmuster](/swt/variantenmuster.md)
+  * [Zustandshandhabungsmuster](/swt/zustandshandhabungsmuster.md)
+  * [Steuerungsmuster](/swt/steuerungsmuster.md)
+  * [Virtuelle Maschinen](/swt/virtuelle_maschinen.md)
+  * [Bequemlichkeitsmuster](/swt/bequemlichkeitsmuster.md)
 <!-- /// [swt-entwurfsmuster] -->
 <!-- /// [swt-swt] -->
 <!-- /// [etk-etk] -->

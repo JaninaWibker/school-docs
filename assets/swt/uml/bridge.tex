@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass[type=interface]{EigenschaftA}{}{}
+  \umlclass[type=interface,right=5cm of EigenschaftA]{EigenschaftB}{}{}
+
+  \umlclass[below=2cm of EigenschaftA]{ImplA2}{}{}
+  \umlclass[below=2cm of EigenschaftA,left=0.5cm  of ImplA2]{ImplA1}{}{}
+  \umlclass[below=2cm of EigenschaftA,right=0.5cm of ImplA2]{ImplA3}{}{}
+
+  \umlclass[below=2cm of EigenschaftB]{ImplB2}{}{}
+  \umlclass[below=2cm of EigenschaftB,left=0.5cm  of ImplB2]{ImplB1}{}{}
+  \umlclass[below=2cm of EigenschaftB,right=0.5cm of ImplB2]{ImplB3}{}{}
+
+  \umlreal{ImplA1}{EigenschaftA}
+  \umlreal{ImplA2}{EigenschaftA}
+  \umlreal{ImplA3}{EigenschaftA}
+
+  \umlreal{ImplB1}{EigenschaftB}
+  \umlreal{ImplB2}{EigenschaftB}
+  \umlreal{ImplB3}{EigenschaftB}
+
+  \umlassoc{EigenschaftA}{EigenschaftB}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

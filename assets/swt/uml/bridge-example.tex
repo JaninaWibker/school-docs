@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass[type=interface]{Component}{}{}
+  \umlclass[type=interface,right=5cm of Component]{Platform}{}{}
+
+  \umlclass[below=2cm of Component]{Text}{}{}
+  \umlclass[below=2cm of Component,left=0.5cm  of Text]{Button}{}{}
+  \umlclass[below=2cm of Component,right=0.5cm of Text]{Image}{}{}
+
+  \umlclass[below=2cm of Platform]{MacOS}{}{}
+  \umlclass[below=2cm of Platform,left=0.5cm  of MacOS]{Linux}{}{}
+  \umlclass[below=2cm of Platform,right=0.5cm of MacOS]{Windows}{}{}
+
+  \umlreal{Button}{Component}
+  \umlreal{Text}{Component}
+  \umlreal{Image}{Component}
+
+  \umlreal{Linux}{Platform}
+  \umlreal{MacOS}{Platform}
+  \umlreal{Windows}{Platform}
+
+  \umlassoc{Component}{Platform}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

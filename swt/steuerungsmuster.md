@@ -1,0 +1,6 @@
+# Steuerungsmuster
+
+## Befehl
+
+## Master/Worker
+
