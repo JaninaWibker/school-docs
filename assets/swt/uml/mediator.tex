@@ -21,9 +21,16 @@
 
   \umlclass[below=2cm of Mediator]{KonkreterMediator}{}{}
 
+  \umlclass[right=6cm of KonkreterMediator,type=interface]{Schnittstelle}{}{}
 
+  \umlclass[above right=0cm and 2cm of KonkreterMediator]{Klasse1}{}{}
+  \umlclass[below right=0cm and 2cm of KonkreterMediator]{Klasse2}{}{}
 
   \umlreal{KonkreterMediator}{Mediator}
+  \umluniassoc{KonkreterMediator}{Klasse1}
+  \umluniassoc{KonkreterMediator}{Klasse2}
+  \umlreal{Klasse1}{Schnittstelle}
+  \umlreal{Klasse2}{Schnittstelle}
 
 \end{tikzpicture}
 \end{figure}
