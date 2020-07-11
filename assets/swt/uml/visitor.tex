@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass[type=abstract]{Visitor}{}{
+    \umlvirt{visitLeaf(:Leaf)} \\
+    \umlvirt{visitComposite(:Composite)}
+  }
+
+  \umlclass[below left=2cm and -1cm of Visitor]{VisitorA}{}{
+    visitLeaf(:Leaf) \\
+    visitComposite(:Composite)
+  }
+  \umlclass[below right=2cm and -1cm of Visitor]{VisitorB}{}{
+    visitLeaf(:Leaf) \\
+    visitComposite(:Composite)
+  }
+
+
+  \umlclass[below=5cm of Visitor,type=abstract]{Node}{}{
+    \umlvirt{accept(:Visitor)}
+  }
+  \umlclass[below left=2cm and 0cm of Node]{Leaf}{}{
+    accept(v:Visitor)
+  }
+  \umlclass[below right=2cm and 0cm of Node]{Composite}{}{
+    accept(v:Visitor)
+  }
+
+  \umlclass[left=2cm of Node]{Programm}{}{}
+
+  \umlinherit[geometry=|-|]{VisitorA}{Visitor}
+  \umlinherit[geometry=|-|]{VisitorB}{Visitor}
+
+  \umlinherit[geometry=|-|]{Leaf}{Node}
+  \umlinherit[geometry=|-|]{Composite}{Node}
+
+  \umluniaggreg{Programm}{Node}
+
+  \umlnote[width=4cm,above right=1cm and 1cm of Composite]{Leaf}{\code{
+    v.visitLeaf(this);
+  }}
+
+  \umlnote[width=4cm,right=1cm of Composite]{Composite}{\code{
+    v.visitComposite(this);
+  }}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

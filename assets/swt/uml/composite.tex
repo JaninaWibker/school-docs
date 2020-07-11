@@ -20,18 +20,12 @@
     fill note=none
   }
 
-  \umlclass[alias=a]{instancename::Classname}{
-    + n : uint \\
-    \umlstatic{-- i : int} \\
-    \# r : float
-  }{
-    + setA(i : int) : void \\
-    \umlvirt{\# getA() : A}
-  }
+  \umlclass[type=abstract]{Node}{}{}
+  \umlclass[below left=1cm and 0cm of Node]{Leaf}{}{}
+  \umlclass[below right=1cm and 0cm of Node]{Composite}{}{}
 
-  \umlemptyclass[below=1cm of a,type=interface,alias=b]{Blub}
-
-  \umlreal{a}{b}
+  \umlinherit{Leaf}{Node}
+  \umlinherit{Composite}{Node}
 
 \end{tikzpicture}
 \end{figure}

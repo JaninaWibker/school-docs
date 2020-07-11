@@ -23,6 +23,7 @@ Es gibt sehr sehr viele, aber die folgenden sind die mit der höchsten Relevanz:
   - Vermittler
 - [**Variantenmuster**](/swt/variantenmuster.md)
   - Abstrakte Fabrik
+  - Kompositum
   - Besucher
   - *Erbauer* (nicht Prüfungsrelevant)
   - Fabrikmethode
