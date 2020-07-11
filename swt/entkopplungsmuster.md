@@ -36,6 +36,8 @@ sich um ein anderes Entwurfsmuster (**TODO**: welches?).
 
 ## Beobachter
 
+![Beobachter UML Diagramm](../assets/swt/uml/observer.svg)
+
 ## Brücke
 
 Eine Brücke kann man nutzen, wenn man Klassen mit 2 Eigenschaften erstellen will, sodass man bei $M \cdot N$ Klassen
@@ -66,6 +68,17 @@ vorkommt ist die Chance, dass Fehler auftreten etwas geringer.
 ![Stellvertreter UML Diagramm](../assets/swt/uml/proxy.svg)
 
 ## Vermittler
+
+Ein Vermittler ist dann nützlich, wenn man viele verschiedene Objekte hat die auf irgendeinem Wege miteinander Kommunizieren
+müssen, dies aber würden sie es direkt machen ein sehr sehr großes Spinnennetz an Abhängigkeiten und Aggregationen spannen
+würden. Bei GUIs ist dies oftmals der Fall: irgendeine Stelle des UI soll dann irgendetwas anzeigen wenn an einer anderen
+Stelle irgendetwas passiert. Nun kann aber nicht jeder Button und jeder Text jeden anderen Button und jedes andere Bild kennen,
+da man sonst ein riesiges Durcheinander hat. Es kann aber jedes Objekt einfach einen Vermittler kennen, welcher dann zwischen
+den Objekten vermittelt.
+
+Man kann auf dieser Idee aufbauend viele Entwurfsmuster entwickeln. Beispielsweise könnte man sagen, dass ein
+zentraler Store, welcher den relevantesten State des Programmes kennt und Veränderungen dieses States verwaltet und
+dann an die passenden Objekte, wenn er sich verändert weitergibt ([Flux](https://facebook.github.io/flux/docs/in-depth-overview/) pattern; siehe [Redux](https://redux.js.org/) / [MobX](https://mobx.js.org/)) eine Art Vermittler ist.
 
 ![Vermittler UML Diagramm](../assets/swt/uml/mediator.svg)
 

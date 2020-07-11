@@ -20,12 +20,28 @@
     fill note=none
   }
 
-  \umlclass[type=abstract]{Node}{}{}
-  \umlclass[below left=1cm and 0cm of Node]{Leaf}{}{}
-  \umlclass[below right=1cm and 0cm of Node]{Composite}{}{}
+  \umlclass[type=abstract]{Node}{}{
+    \umlvirt{gemeinsameOperation()} \\
+    add(:Node) \\
+    remove(:Node) \\
+    get(index)
+  }
+  \umlclass[below left=1cm and 0cm of Node]{Leaf}{}{
+    gemeinsameOperation() \\ \\ \\ \\
+  }
+  \umlclass[below right=1cm and 0cm of Node]{Composite}{}{
+    gemeinsameOperation() \\
+    add(:Node) \\
+    remove(:Node) \\
+    get(index)
+  }
 
-  \umlinherit{Leaf}{Node}
-  \umlinherit{Composite}{Node}
+  \umlinherit[geometry=|-|]{Leaf}{Node}
+  \umlinherit[geometry=|-|]{Composite}{Node}
+
+  \umluniaggreg[geometry=|-,anchors=50 and 0]{Composite}{Node}
+
+  \umlnote[width=3.6cm,left=2cm of Node]{Node}{NOP Impementationen von \code{add}, \code{remove} und \code{get}}
 
 \end{tikzpicture}
 \end{figure}
