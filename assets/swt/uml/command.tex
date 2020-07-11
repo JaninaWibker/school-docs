@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass{Client}{}{}
+
+  \umlclass[right=1.5cm of Client]{Aufrufer}{}{}
+
+  \umlclass[right=2.9cm of Aufrufer,type=abstract]{Befehl}{}{
+    run()
+  }
+
+  \umlclass[below=2cm of Befehl]{KonkreterBefehl}{}{
+    run()
+  }
+
+  \umlclass[left=2cm of KonkreterBefehl]{Empfänger}{}{
+    aktion()
+  }
+
+  \umlinherit{KonkreterBefehl}{Befehl}
+  \umluniaggreg{Aufrufer}{Befehl}
+  \umluniassoc{KonkreterBefehl}{Empfänger}
+  \umluniassoc[geometry=|-]{Client}{Empfänger}
+  \umldep{Client}{KonkreterBefehl}
+
+  \umlnote[below=1cm of KonkreterBefehl]{KonkreterBefehl}{\code{
+    empfänger.aktion()
+  }}
+
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

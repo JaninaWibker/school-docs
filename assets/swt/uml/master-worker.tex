@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass[width=15ex]{Master}{}{}
+
+  \umlclass[width=15ex,alias=WorkerB,right=4cm of Master]{B:Worker}{}{}
+  \umlclass[width=15ex,alias=WorkerA,above=1cm of WorkerB]{A:Worker}{}{}
+  \umlclass[width=15ex,alias=WorkerC,below=1cm of WorkerB]{C:Worker}{}{}
+
+  \umluniassoc[anchors=  12 and -172.5,arg1=Aufgaben,pos1=0.3]{Master}{WorkerA}
+  \umluniassoc[anchors=-7.5 and -172.5]{Master}{WorkerB}
+  \umluniassoc[anchors= -27 and -172.5]{Master}{WorkerC}
+
+  \umluniassoc[anchors=-187.5 and  27,arg1=Ergebnisse,pos1=0.4]{WorkerA}{Master}
+  \umluniassoc[anchors=-187.5 and 7.5]{WorkerB}{Master}
+  \umluniassoc[anchors=-187.5 and -12]{WorkerC}{Master}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}
