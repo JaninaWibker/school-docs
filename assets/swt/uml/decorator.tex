@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass[type=abstract]{Komponente}{}{
+    \umlvirt{methodeA()} \\
+    \umlvirt{methodeB()}
+  }
+
+  \umlclass[below left=2cm and 0cm of Komponente]{KonkreteKomponente}{}{
+    methodeA() \\
+    methodeB()
+  }
+
+  \umlclass[below right=2cm and 0cm of Komponente,type=abstract]{Dekorierer}{}{
+    methodeA() \\
+    methodeB()
+  }
+
+
+  \umlclass[below left=2cm and 0cm of Dekorierer]{KonkreterDekoriererA}{}{
+    methodeA() \\
+    methodeB() \\
+    erweiterteMethodeA()
+  }
+  \umlclass[below right=2cm and 0cm of Dekorierer]{KonkreterDekoriererB}{}{
+    methodeA() \\
+    methodeB() \\
+    erweiterteMethodeB()
+  }
+
+  \umlinherit[geometry=|-|]{KonkreteKomponente}{Komponente}
+  \umlinherit[geometry=|-|]{Dekorierer}{Komponente}
+  \umlinherit[geometry=|-|]{KonkreterDekoriererA}{Dekorierer}
+  \umlinherit[geometry=|-|]{KonkreterDekoriererB}{Dekorierer}
+
+  \umluniassoc[geometry=|-,anchors=70 and 0]{Dekorierer}{Komponente}
+
+  \umlnote[below left=1cm and -1cm of KonkreteKomponente]{KonkreteKomponente}{Zu erweiternde Komponente}
+
+  \umlnote[width=4cm,right=1cm of Dekorierer]{Dekorierer}{\code{
+    \\
+    methodeA() -> \\
+    \hspace*{2mm} komponente.methodeA(); \\
+    methodeB() -> \\
+    \hspace*{2mm} komponente.methodeB();
+  }}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

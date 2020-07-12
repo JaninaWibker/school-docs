@@ -90,3 +90,5 @@ eintreten wird.
 
 ## Dekorierer
 
+![Dekorierer UML Diagramm](../assets/swt/uml/decorator.svg)
+
