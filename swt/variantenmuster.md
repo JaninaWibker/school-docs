@@ -30,6 +30,8 @@ Somit hat man dann einmal am Anfang eine bestimmte Factory gewählt und muss dan
 
 ## Erbauer
 
+TODO
+
 ## Fabrikmethode
 
 ![Fabrikmethode UML Diagamm](../assets/swt/uml/factory-method.svg)

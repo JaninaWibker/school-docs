@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass{Subjekt}{
+    beobachter: Beobachter[]
+  }{
+    register(b:Observer) \\
+    unregister(b:Observer) \\
+    notify(state)
+  }
+
+  \umlclass[below=2cm of Subjekt]{KonkretesSubjekt}{}{
+  }
+
+  \umlclass[right=3cm of Subjekt,type=interface]{Observer}{}{
+    \umlvirt{update()}
+  }
+
+  \umlclass[below=2cm of Observer]{KonkreterObserver}{}{
+    update(state) \\ \\
+  }
+
+  \umlimpl{KonkretesSubjekt}{Subjekt}
+  \umlreal{KonkreterObserver}{Observer}
+
+  \umluniassoc[arg2=beobachter,pos2=0.7]{Subjekt}{Observer}
+  \umluniassoc[arg2=subjekt,pos2=0.7]{KonkreterObserver}{KonkretesSubjekt}
+
+  \umlnote[width=6cm,left=2cm of Subjekt]{Subjekt}{\code{
+    \\
+    register(b) -> \\
+    \hspace*{2mm} beobachter.add(b) \\
+    unregister(b) -> \\
+    \hspace*{2mm} beobachter.remove(b) \\
+    update(state) -> \\
+    \hspace*{2mm} $\forall$ b $\in$ beobachter: b.update(state)
+  }}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

@@ -18,7 +18,7 @@ Die Bequemlichkeitsmethode ist dann gut anwendbar, wenn Methoden oft mit den gle
 
 ## Fassade
 
-![Fassade UML Diagramm](../assets/swt/uml/template.svg)
+![Fassade UML Diagramm](../assets/swt/uml/facade.svg)
 
 ## Null-Objekt
 

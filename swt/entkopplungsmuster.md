@@ -36,6 +36,22 @@ sich um ein anderes Entwurfsmuster (**TODO**: welches?).
 
 ## Beobachter
 
+Das Beobachtermuster ist eine Erweiterung über dem Vermittlermuster. Hierbei hat man ein Objekt, welches seinen
+Zustand irgendwann (vielleicht) ändern wird und mehrere andere Objekte, die dies mitkriegen wollen.
+
+Es gibt beim Beobachtermuster mehrere Namen die für Klassen und Methoden häufig verwendet werden:
+
+- `attach()`, `detach()`, `dispatch()` und `Observer`
+- `register()`, `unregister()`, `update()` und `Listener`
+
+sowie Kombinationen daraus.
+
+Es gibt mehrere Varianten des Beobachters: eine "push" Variante und eine "pull" Variante. Der Unterschied hierbei ist,
+ob bei der Benachrichtigung, dass sich etwas aktualisiert hat die Daten direkt mitgeschickt werden, oder ob diese
+noch abgefragt werden müssen. Beides hat seine Vor- und Nachteile.
+
+Hier ist die "push"-Variante gezeigt.
+
 ![Beobachter UML Diagramm](../assets/swt/uml/observer.svg)
 
 ## Brücke
