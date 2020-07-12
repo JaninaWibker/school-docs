@@ -58,12 +58,24 @@ Die Eigenschaften die existieren sind einmal die Art von UI Komponente und die P
 Die Anzahl an Klassen steigt bei Nutzung einer Brücke weit aus langsamer an und, da nicht mehr so viel Codeduplizierung
 vorkommt ist die Chance, dass Fehler auftreten etwas geringer.
  
-
 ## Iterator
+
+Ein Iterator ermöglicht einem über *etwas* zu iterieren, ohne überhaupt zu wissen was *etwas* komplett ist.
+Hierbei wird das iterieren auf nur einige essenzielle Operationen reduziert. Man muss wissen, ob man weiter iterieren
+kann und man muss das nächste Element kriegen können. Des weiteren kann man manchmal auch Elemente entfernen.
+
+Die genaue Umsetzung von Iteratoren ist abhängig von der Implementation / Sprache. In Java gibt es die Methoden
+`hasNext() : boolean`, `next() : E` und `remove() : void`. In JavaScript gibt es nur die `next()`-Methode, welche
+aber `{ next: E, done: bool }` zurückgibt.
 
 ![Iterator UML Diagramm](../assets/swt/uml/iterator.svg)
 
 ## Stellvertreter
+
+Der Stellvertreter steht zwischen einem Klienten und einem Subjekt. Dies kann aus verschiedenen Gründen nützlich sein:
+
+- Authentifizierung / Authorizierung
+- Caching
 
 ![Stellvertreter UML Diagramm](../assets/swt/uml/proxy.svg)
 

@@ -2,6 +2,24 @@
 
 ## Abstrakte Fabrik
 
+Die abstrakte Fabrik ist dann nützlich, wenn man mit einer Entscheidung an einer Stelle auswählen will, welche Gruppe von
+Unterklassen man will. Somit trifft man einmal am Anfang die Wahl darüber was man will und danach ist dies klar und muss
+nicht weiter beachtet werden, da man automatisch die Unterklasse aus der richtigen Gruppe kriegt.
+
+Ein typisches Beispiel hierfür (und für viele andere Entwurfsmuster auch) ist eine graphische Benutzeroberfläche, die auf
+verschiedenen Platformen funktionieren soll.
+
+Es gibt die Platformen Windows und Linux und für jede dieser Platformen braucht man mehrere UI Elemente wie z.B. Textboxen
+oder Bilder. Man will nun einmal die Wahl treffen welche Gruppe an Unterklassen man will, also welche Platform.
+
+Man nutzt eine sogenannte Factory, welche Methoden hat um bestimmte Objekte zu erstellen, bspw. `createImage()`.
+Nun kann man aber einfach ein Factory Interface oder abstrakte Überklasse machen und für jede Platform eine spezifische
+Implementierung / Unterklasse, welche die passenden Unterklassen für die jeweilige Platform zurückgibt.
+
+Somit hat man dann einmal am Anfang eine bestimmte Factory gewählt und muss danach nicht weiter auf die Platform acht geben.
+
+![Abstrakte Fabrik UML Diagramm](../assets/swt/uml/abstract-factory.svg)
+
 ## Kompositum
 
 ![Kompositum UML Diagramm](../assets/swt/uml/composite.svg)
