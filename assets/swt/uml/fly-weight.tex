@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass{Klient}{}{}
+
+  \umlclass[above=4.5cm of Klient]{FliegengewichtFabrik}{}{
+    gibFliegengewicht(key)
+  }
+
+  \umlclass[right=4cm of FliegengewichtFabrik,type=abstract]{Fliegengewicht}{}{
+    \umlvirt{operation(extrinsischerZustand)}
+  }
+
+  \umlclass[below left=2cm and -1cm of Fliegengewicht]{KonkretesFliegengewicht}{
+    intrinsischerZustand
+  }{
+    operation(extrinsischerZustand)
+  }
+
+  \umlclass[below right=2cm and -3cm of Fliegengewicht]{GetrenntGenutzesKonkretesFliegengewicht}{
+    gesamtZustand
+  }{
+    operation(extrinsischerZustand)
+  }
+
+  \umlreal[geometry=|-|]{KonkretesFliegengewicht}{Fliegengewicht}
+  \umlreal[geometry=|-|]{GetrenntGenutzesKonkretesFliegengewicht}{Fliegengewicht}
+
+  \umldep{Klient}{FliegengewichtFabrik}
+  \umldep[geometry=-|]{Klient}{KonkretesFliegengewicht}
+  \umldep[geometry=-|]{Klient}{GetrenntGenutzesKonkretesFliegengewicht}
+
+  \umluniaggreg[arg1=fliegengewichte,pos1=0.3,mult2=*,pos2=0.9]{FliegengewichtFabrik}{Fliegengewicht}
+
+  \umlnote[width=5cm,below left=1cm and -1cm of FliegengewichtFabrik]{FliegengewichtFabrik}{\code{
+    if(fliegengewichte[key]) \\
+    \hspace*{2mm} return fliegengewichte[key]; \\
+    else \\
+    \hspace*{2mm} return fliegengewichte[key] = new Fliegengewicht(key);
+   }}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

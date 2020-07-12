@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass{Kontext}{}{
+    operation(input)
+  }
+
+  \umlclass[right=4cm of Kontext,type=abstract]{Zustand}{}{
+    nächster(input)
+  }
+
+  \umlclass[below left=3cm and -0.5cm of Zustand]{KonkreterZustandA}{}{
+    nächster(input)
+  }
+
+  \umlclass[below right=3cm and -0.5cm of Zustand]{KonkreterZustandB}{}{
+    nächster(input)
+  }
+
+  \umlimpl[geometry=|-|]{KonkreterZustandA}{Zustand}
+  \umlimpl[geometry=|-|]{KonkreterZustandB}{Zustand}
+
+  \umluniaggreg[arg1=zustand]{Kontext}{Zustand}
+
+  \umlnote[width=4cm,below=1cm of Kontext]{Kontext}{\code{
+    zustand.nächster(input)
+  }}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

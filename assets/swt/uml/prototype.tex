@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+  \umlclass{Klient}{}{
+    operation()
+  }
+
+  \umlclass[right=3cm of Klient,type=interface]{Prototyp}{}{
+    \umlvirt{clone()}
+  }
+
+  \umlclass[below left=2cm and -1cm of Prototyp]{KonkreterPrototypA}{}{
+    clone()
+  }
+
+  \umlclass[below right=2cm and -1cm of Prototyp]{KonkreterPrototypB}{}{
+    clone()
+  }
+
+  \umlreal[geometry=|-|]{KonkreterPrototypA}{Prototyp}
+  \umlreal[geometry=|-|]{KonkreterPrototypB}{Prototyp}
+
+  \umluniassoc{Klient}{Prototyp}
+
+  \umlnote[width=3.5cm,below left=2cm and -1cm of Klient]{Klient}{\code{
+    p = prototyp.clone()
+  }}
+
+  \umlnote[width=3.7cm,below=1cm of KonkreterPrototypA]{KonkreterPrototypA}{\code{
+    return this.clone();
+  }}
+
+  \umlnote[width=3.7cm,below=1cm of KonkreterPrototypB]{KonkreterPrototypB}{\code{
+    return this.clone();
+  }}
+
+
+\end{tikzpicture}
+\end{figure}
+\end{document}

@@ -6,7 +6,7 @@
 
 ## Fliegengewicht
 
-![Fliegengewicht UML Diagramm](../assets/swt/uml/flyweight.svg)
+![Fliegengewicht UML Diagramm](../assets/swt/uml/fly-weight.svg)
 
 ## Memento
 
