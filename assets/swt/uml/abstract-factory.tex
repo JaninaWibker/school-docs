@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none
+  }
+
+ \umlclass[type=interface]{AbstrakteFabrik}{}{
+    \umlvirt{erstelleKlasseA()} \\
+    \umlvirt{erstelleKlasseB()}
+  }
+
+  \umlclass[below=2cm of AbstrakteFabrik]{KonkreteFabrikA}{}{
+    erstelleKlasseA() \\
+    erstelleKlasseB()
+  }
+  \umlclass[below=5cm of AbstrakteFabrik]{KonkreteFabrikB}{}{
+    erstelleKlasseA() \\
+    erstelleKlasseB()
+  }
+
+
+  \umlclass[right=5cm of AbstrakteFabrik]{Klient}{}{}
+
+  \umlclass[below left=1cm and 0cm of Klient,type=interface]{AbstrakteKlasseA}{}{}
+  \umlclass[below right=1cm and 0cm of Klient,type=interface]{AbstrakteKlasseB}{}{}
+
+  \umlclass[below=2cm of AbstrakteKlasseA]{KonkreteKlasseAA}{}{}
+  \umlclass[below=5cm of AbstrakteKlasseA]{KonkreteKlasseAB}{}{}
+  \umlclass[below=2cm of AbstrakteKlasseB]{KonkreteKlasseBA}{}{}
+  \umlclass[below=5cm of AbstrakteKlasseB]{KonkreteKlasseBB}{}{}
+
+  \umlreal{KonkreteFabrikA}{AbstrakteFabrik}
+  \umlreal{KonkreteFabrikB}{AbstrakteFabrik}
+
+  \umldep[geometry=|-|]{Klient}{AbstrakteKlasseA}
+  \umldep[geometry=|-|]{Klient}{AbstrakteKlasseB}
+  \umldep{Klient}{AbstrakteFabrik}
+
+  \umlreal[geometry=|-|]{KonkreteKlasseAA}{AbstrakteKlasseA}
+  \umlreal[geometry=|-|]{KonkreteKlasseAB}{AbstrakteKlasseA}
+  \umlreal[geometry=|-|]{KonkreteKlasseBA}{AbstrakteKlasseB}
+  \umlreal[geometry=|-|]{KonkreteKlasseBB}{AbstrakteKlasseB}
+
+  \umluniassoc[geometry=-|]{KonkreteFabrikA}{KonkreteKlasseAA}
+  \umluniassoc[geometry=-|]{KonkreteFabrikA}{KonkreteKlasseBA}
+
+  \umluniassoc[geometry=-|]{KonkreteFabrikB}{KonkreteKlasseAB}
+  \umluniassoc[geometry=-|]{KonkreteFabrikB}{KonkreteKlasseBB}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}
