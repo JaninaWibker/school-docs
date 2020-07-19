@@ -20,7 +20,9 @@
     fill note=none
   }
 
-  \umlclass{Kontext}{}{
+  \umlclass{Kontext}{
+    zustand
+  }{
     operation(input)
   }
 
@@ -42,7 +44,7 @@
   \umluniaggreg[arg1=zustand]{Kontext}{Zustand}
 
   \umlnote[width=4cm,below=1cm of Kontext]{Kontext}{\code{
-    zustand.nächster(input)
+    zustand = zustand.nächster(input)
   }}
 
 \end{tikzpicture}
