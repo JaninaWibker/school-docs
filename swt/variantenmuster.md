@@ -68,6 +68,12 @@ Die Strategie kann gut genutzt werden, wenn man mehrere Algorithmen, Datenstrukt
 in bestimmten Bedingungen oder Situationen einer dem anderen Vorgezogen werden soll (z.B. abgängig von der Platform oder
 größe der Eingaben).
 
+Des weiteren, oder vielleicht vielmehr vorallem kann die Strategie benutzt werden um **Komposition durch Vererbung** umzusetzen.
+Stichwort dazu ist *Composition over Inheritance*. Man benutzt hierbei oft mehrmals das Strategie Muster indem man für jede
+Eigenschaft die die Klasse haben soll (die man sonst als Komposition zusammen setzen könnte) eine Schnittstelle macht mit bestimmten
+konkreten Strategien, welche dieses implementieren. Die Klasse die man nun als Komposition vieler Eigenschaften zusammensetzen
+besitzt nun Referenzen auf Objekte aller dieser Schnittstellen und nutzt diese um die eigenen Methoden zu implementieren.
+
 ![Strategie UML Diagramm](../assets/swt/uml/strategy.svg)
 
 Hierbei nutzt man eine abstrakte Klasse oder Schnittstelle, welche den Algorithmus oder ähnliches repräsentiert und

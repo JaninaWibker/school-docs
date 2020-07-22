@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none,
+    fill package=none
+  }
+
+  \begin{umlpackage}{Rahmenarchitektur}
+
+  \umlclass{Anwendung}{}{main()}
+
+  \umlclass[right=2cm of Anwendung]{Grafik}{}{
+    zeichne() \\
+    loesche()
+  }
+
+  \umlclass[below=2cm of Grafik]{Rechteck}{}{
+    zeichne() \\
+    loesche()
+  }
+
+  \umlclass[left=2cm of Rechteck]{Linie}{}{
+    zeichne() \\
+    loesche()
+  }
+
+  \umlclass[right=2cm of Rechteck]{Elipse}{}{
+    zeichne() \\
+    loesche()
+  }
+
+  \end{umlpackage}
+
+  \begin{umlpackage}{Erweiterung}
+
+  \umlclass[below=2cm of Rechteck]{Quadrat}{}{
+    zeichne() \\
+    loesche()
+  }
+
+  \umlclass[right=5cm of Quadrat]{Ikone}{}{
+    zeichne() \\
+    loesche()
+  }
+
+  \umlnote[left=2cm of Quadrat]{Quadrat}{\textbf{Problem}: Wie macht man der Rahmenarchitektur nun klar das die Einschübe existieren?}
+
+  \end{umlpackage}
+
+  \umlassoc{Anwendung}{Grafik}
+
+  \umlinherit[geometry=|-|]{Linie}{Grafik}
+  \umlinherit[geometry=|-|]{Rechteck}{Grafik}
+  \umlinherit[geometry=|-|]{Elipse}{Grafik}
+
+  \umlinherit{Quadrat}{Rechteck}
+  \umlinherit[geometry=|-]{Ikone}{Grafik}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}
