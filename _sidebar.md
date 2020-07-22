@@ -166,7 +166,7 @@
 <!-- /// [swt-implementierung] -->
 <!-- /// [swt-testen-wartung-pflege] -->
   * [**Testen**](/swt/testen.md)
-  * [**Wartung und Pflege**](/swt/wartung_und_pflege.md)
+  * [**Abnahme, Wartung und Pflege**](/swt/abnahme_wartung_und_pflege.md)
 <!-- /// [swt-testen-wartung-pflege] -->
 <!-- /// [swt-swt] -->
 <!-- /// [etk-etk] -->

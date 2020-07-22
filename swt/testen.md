@@ -1,6 +1,65 @@
 # Testen und Prüfen
 
-## Komponententests
+## Fehlerklassen
+
+Man kann generell Fehler in bestimmte Fehlerklassen aufteilen
+
+### Anforderungsfehler (Defekt im Pflichtenheft)
+
+Ein Anforderungsfehler ist ein Fehler (bzw. um genauer zu sein ein Defekt) der im Pflichtenheft ist.
+Dies kann mehreres heißen:
+
+- Inkorrekte Angabe der Wünsche des Kundens
+- Unvollständige Angaben über funktionale Anforderungen, ...
+- Inkonsistenz zwischen verschiedenen Anforderungen (die eine sagt X soll passieren und die andere sagt Y soll passieren, ...)
+- Undurchführbarkeit
+
+Generell kann ein Anforderungsfehler schwerwiegende Folgen mit sich bringen, wenn dieser bei einem relativ elementaren Teil
+des Produktes auftritt und damit große Einflüsse hat und eventuell auch nicht leicht zu beheben ist.
+
+### Entwurfsfehler (Defekt in der Spezifikation)
+
+- Unvollständige oder fehlerhafte Umsetzung der Anforderungen
+- Inkonsistenz der Spezifikation oder des Entwurfs
+- Inkonsistenz zwischen Anforderungen, Spezifikation und Entwurf
+
+### Implementierungsfehler (Defekt im Programm)
+
+Hierbei gibt es nur die fehlerhafte Umsetzung der Spezifikation.
+
+## Typen von Tests
+
+Es gibt mehrere verschiedene Arten von Tests. Die meisten davon werden vom Entwickler durchgeführt, es gibt aber auch
+welche die der Kunde macht: den *Abnahmetest*. Generell können Tests mithilfe von verschiedenen Dokumenten erstellt werden:
+
+![Testphasen - woraus entsteht welcher Test](../assets/swt/testphasen.svg)
+
+### Testhelfer
+
+Testhelfer sind nützliche *Dinge* die einem beim Testen helfen sollen. Sie sorgen beispielsweise dafür, dass man die Existenz
+von noch nicht implementierte Komponenten vortäuschen kann.
+
+Hierbei unterscheidet man zwischen **Stummeln** (stub), **Attrappen** (dummy) und **Nachahmungen** (mock).
+Die Unterschiede zwischen den 3 Typen können manchmal etwas verschmelzen, da alle eigentlich aufeinander aufbauen
+und mehr funktionalität dem vorherigen hinzufügen.
+
+Ein **Stummel** ist eine "Implementierung" der Schnittstelle einer Komponente die **absolut nichts tut**. Sie hat keine
+Funktionalität, kein Methodenaufruf hat einen Effekt, es wird nichts sinnvolles zurückgegeben (meist einfach der "Standardwert"
+für einen Datentypen, also vielleicht eine 0 für Integer, ...). Der Stummel dient zum größten Teil einfach dazu, dass das Programm
+kompiliert werden kann trotz der fehlenden Komponente.
+
+Wenn man dann ein wenig mehr Funktionalität einbaut ist man bei der **Attrappe** angelangt. Sie ist auch eine Implementierung
+der Schnittstelle hat aber rudimentale Funktionalität. Sie kann vielleicht einen fest vereinbarten Wert bei jedem Aufruf
+zurückgeben (jedes mal wird Benutzer "Max Mustermann" zurückgegeben) oder einen zufälligen (`#size()` gibt zufällig einen Wert
+zwischen 0 und 36 zurück).
+
+Zuletzt die **Nachahmung**. Die Nachahmung ist die mit den meisten Funktionen, sie kann Daten abspeichern wenn sie dies benötigt,
+komplexere Rechnungen durchführen und man kann mit ihr fast wie mit der wirklichen Komponente testen. Als Beispiel könnte man
+eine Schnittstelle für eine Benutzerdatenbank nehmen: Die Nachahmungen ist mit 3 Nutzern initialisiert und man kann alle Funktionen
+wie Nutzer anlegen, Nutzer entfernen, ... aufrufen und der Zustand der Nachahmung ändert sich wirklich mit. Soetwas ist bei einer
+Attrappe oder einem Stummel nicht möglich.
+
+### Komponententests
 
 > Unittests
 
@@ -10,7 +69,7 @@ was auch sehr wichtig ist, wie sie sich mit fehlerhaften Daten verhält. Sie sol
 korrekt behandeln, also passende fehler produzieren oder ähnliches. sie sollte vorallem nicht super irreguläres Verhalten
 zeigen.
 
-## Integrationstest
+### Integrationstest
 
 Vorraussetzung: Jede involvierte Komponente wurde bereits für sich überprüft
 
@@ -39,7 +98,7 @@ Es gibt verschiedene Anzätze wie man dies strukturiert bzw. zeitlich priorisier
   komplexesten Komponenten und testet sie. Ein großer Nachteil kann hierbei sein, dass diese Komponenten nichts miteinander zu tun haben
   können und man somit für vieles Attrappen bauen muss.
 
-## Systemtest
+### Systemtest
 
 Der Systemtest prüft das inziwschen komplett implementierte System (Komplettsystem) gegen seine Spezifikation.
 Hierbei achtet man nichtmehr richtig darauf in welche Komponenten das System geteilt ist, sondern testet das große ganze.
@@ -58,12 +117,12 @@ nicht-funktionalen Anforderungen überprüft. Bei dem nicht-funktionalen Systemt
 
 geachtet.
 
-## Regressionstest
+### Regressionstest
 
 Wenn man einen bereits bestandenen Test zu einem späteren Zeitpunkt nocheinmal ausführt um zu überprüfen, ob sich in der Zwischenzeit nichts
 zum schlechteren verändert hat nennt man Regressionstest.
 
-## Abnahmetest
+### Abnahmetest
 
 Der Abnahmetest ist dem Systemtest sehr ähnlich. Hierbei gibt es nur die Unterscheidung, dass der Abnahmetest nichtmehr im eigenen Haus durchgeführt wird,
 sondern beim Kunden vorort. Mit dem Abnahmetest verifiziert sich der Kunde ein letztes Mal vor der Abnahme, dass wirklich alles korrekt ist. Idealerweise
@@ -72,3 +131,25 @@ sich natürlich auch eigene Tests überlegen, welche er dem System unterstellen 
 
 Die formale Abnahme durch den Kunden beendet, sobald alle Fehler die noch gefunden wurden behoben sind, die Entwicklung an der Software. Danach geht es dann
 in die Wartungs und Pflege Phase des Softwareproduktes über.
+
+## Testfallbestimmung
+
+Am liebsten würde man alles testen, dies ist aber **sehr sehr sehr** schnell nichtmehr möglich, also muss man sich auf eine sinnvolle Menge an Tests
+beschränken. Um diese sinnvolle Menge zu finden (oder zu generieren) gibt es verschiedene Methoden.
+
+Man kann die Eingaben zunächst mal in Äquivalenzklassen einsortieren, abhängig von der Funktionalität die die Komponente gerade implementiert.
+
+Hierfür nimmt man sich die Anforderungen an die Komponente her und schaut welche Eingaben welches Ergebnis hervorrufen sollen und gruppiert danach
+die Eingaben (bspw. soll eine Komponente für Werte von 0-50 ein Verhalten haben und für Werte von 51-100 etwas anderes Verhalten). Danach kann man
+sich dann einige Elemente aus der Äquivalenzklasse nehmen und damit testen oder wirklich für diese Elemente alles wie gefordert funktioniert.
+Man hat damit dann die Menge an zu testenden Eingaben sehr stark minimiert. Dies nennt man **funktionale Äquivalenzklassenbildung**.
+
+Eine Methode die auf der funktionalen Äquivalenzklassenbildung aufbaut ist die **Grenzwertanalyse**. Hierbei sucht man die "Grenzen" zwischen den
+Äquivalenzklassen (bspw. die 50, 51 im obigen Beispiel) und kontrolliert (zusätzlich) diese Grenzen auf ihre Eigenschaften. Hiermit kann man dann
+im besten Fall "off-by-one"-Fehler oder ähnliches finden.
+
+Einfach zufällige Eingaben generieren und gucken ob das Programm irgendwann abstürzt oder ähnliches ist auch eine Methode des Testens
+(**Zufallstest** bzw. *Fuzzing*). Was bei Zufallstests schwierig ist, ist zu überprüfen ob das Ergebnis was man zurückkriegt korrekt ist,
+da man ja nicht für jede mögliche Eingabe das Ergebnis kennen kann. Manchmal werden daher Zufallstests eher dazu verwendet zu gucken ob ein Programm
+abstürzt, wenn man dies mit zufälligen Eingaben füttert. Manchmal lässt sich auch ein Ergebnis leichter verifizieren als es auszurechnen ist (bspw.
+Primfaktorzerlegung, Matrix Inverse berechen, Verschlüsselung), in diesen Fällen können dann Zufallstests gut funktionieren.
