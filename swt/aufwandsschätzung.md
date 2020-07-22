@@ -112,8 +112,57 @@ Danach gibt man jeder Kategorie eine Gewichtung und summiert somit den gesamten 
 
 ## COCOMO II
 
-> Constructive Cost Model
+> Constructive Cost Model (2)
 
 COCOMO II geht etwas geplanter und strukturierter an das Problem heran: Es gibt 22 feste Einflussfaktoren, für
 welche man einen Wert wählt auf einer Skalar wie zutreffend / beinflussend dieser Faktor ist.
 
+COCOMO II benutzt eine Formel zum berechnen der Personenmonate, welche die 22 verschiedenen Faktoren mit einbezieht:
+
+$$
+\text{PM} = A \cdot (\text{Size})^{1.01 + 0.01 \cdot \sum_{j=1}^{5} \text{SF}_j} \cdot \prod_{i=1}^{17} \text{EM}_i
+$$
+
+Hierbei ist:
+
+- $A$: Konstante für Kalibrierung des Modells (bspw. für LOC / KLOC, Funktionspunkte der Software)
+- $\text{Size}$: geschätzer Umfang der Software in KLOC oder unjustierten Funktionspunkten
+- $\text{SF}_j$ Skalierungsfaktoren
+- $\text{EM}_i$ multiplikative Kostenfaktoren
+
+$\text{SF}_j$ nimmt einen Wert zwischen 0 und 5 an, wobei 0 für "Extra High" und 5 für "Very Low" steht:
+
+- Precedentedness
+- Development Flexibility
+- Architecture / Risk Resolution
+- Team Cohesion
+- Process Maturity
+
+$\text{EM}_i$ ist ähnlich, hat aber eine Skalierung von -1 bis 3 mit einem Standardwert von 1:
+
+**Product**
+- Required Software Reliability
+- Data Base Size
+- Product Complexity
+- Developed for Reusability
+- Documentation Match to Lifecycle Needs
+
+**Personnel**
+- Analyst Capability
+- Programmer Capability
+- Personell Continuity
+- Application Experience
+- Platform Experience
+- Language and Toolset Experience
+
+**Platform**
+- Time Constraint
+- Storage Constraint
+- Platform Volatility
+
+**Project**
+- use of Software Tools
+- Multisite Development
+- Required Development Schedule
+
+Da alles selber ausrechnen und bewerten nervig sein kann gibt es natürlich [online Rechner](http://softwarecost.org/tools/COCOMO/) die einem diese Arbeit teilweise abnehmen können.
