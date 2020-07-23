@@ -59,6 +59,20 @@ wirklichen Softwareprodukt angekommen ist und nicht mehr nur einen Protoypen hat
 
 Das Ziel ist es nicht all zu viel Arbeit "umsonst" zu machen nur um den Kunden das Programm schon vorführen zu können.
 
+Man findet oft zwei Varianten des iterativen modells vor:
+
+**Evolutionär**:
+Es wird nur für einen Teil geplant, dieser wird dann als nächstes implementiert, somit durchläuft man für jeden Teil
+eigentlich jedes mal das komplette Wasserfallmodell.
+
+**Inkrementell**:
+Man plant und analysiert **alles** am Anfang und iteriert dann nur mehrmals über Entwurf, Implementierung und Testen.
+Also durchläuft man zwar nicht das komplette Wasserfallmodell jedes mal, aber schon große Teile davon in jeder iteration.
+
+![Visualiserung der beiden Varianten](../assets/swt/iterative-model.svg)
+
+Meistens werden die beiden Varianten etwas miteinander vermischt und nicht in Isolation angewendet.
+
 ### Synchronisiere und Stabilisiere
 
 > Auch "Microsoft-Modell"
@@ -73,7 +87,27 @@ oder Unklarheiten. Beispiele sind **Scrum**, **Extreme Programing**.
 
 ### Extreme Programming
 
-**TODO**
+Beim Extreme Programming (XP) macht man dass, was jedes hippe GitHub Repository und/oder Startup gerne tut:
+- Paarprogrammierung
+- Test-driven Development
+- Continuous Integration
+- Iterative Planung in kurzen Zyklen
+- Aktive Beteiligung des Kunden
+- genaue Programmierrichtlinien
+
+Diese Praktiken (mal mehr, mal weniger) haben nachweisbar gute Auswirkungen auf die Qualität des Quellcodes. Das Extreme Programming
+fokusiert stark auf automatisierte Tests (z.B. durch Continuous Integration), sowie gute Programmierpraktiken und Refaktorisierung.
+Es werden kleine inkrementelle Entwurfsschritte einer großen Entwurfsphase vorgezogen.
+
+Es wird stark mit dem Kunden zusammen gearbeitet und vieles in sogenannten Planungsspielen besprochen. Hierbei macht der Kunde
+Entscheidungen über den Umfang des Systems und was priorisiert werde sollte, während das Entwicklungsteam Entscheidungen technischer
+Natur trifft, bspw. wie etwas umgesetzt werden kann, was die Konsequenzen von einer Entscheidung sein könnten und wieviel Aufwand etwas
+benötigt.
+
+Das Produkt wird in mehreren Schritten ausgeliefert, wobei der Kunde entscheidet was als nächstes priorisiert werden soll.
+
+Damit viel Interaktion mit dem Kunden möglich ist ist ein Mitarbeiter des Kunden präferierterweise Vorort und kann auf Fragen antworten
+und den Kunden repräsentieren und dessen Meinung vertreten.
 
 #### Paarprogrammierung
 
@@ -112,5 +146,31 @@ Sobald einem wirklich garnichts mehr einfällt was man Testen könnte ist man fe
 
 ### Scrum
 
-**TODO**
+Bei Scrum wird alles in sogenannten **sprints** gemacht, welche meistens 2-4 Wochen dauern und als Ziel eine auslieferbare Softwarekomponente haben.
 
+Terminologie:
+- **Anforderungsliste** (*product backlog*)
+  - Liste aller Produktanforderungen
+  - vor Anfang eines Sprints werden Anforderungen durch den Kunden priorisiert, somit vergleichbar mit XP
+- **Aufgabenliste** (*sprint backlog*)
+  - Liste aller Aufgaben für den aktuellen Sprint
+- **Hindernisliste** (*impediment backlog*)
+  - Liste aller Hinternisse, die bei der Implementierung aufgetreten sind, die dann vom *Scrum Master*
+    mit dem Team besprochen und hoffentlich behoben werden können.
+- **Burndown chart**: Ein Graph (Datum / noch zu erledigende Arbeitszeit) welcher angibt wieviel noch für den aktuellen Sprint zu erledigen ist
+  inklusive Projektionen und vorhandenen Daten.
+
+Rollenverteilung:
+- **Product Owner**: Der Kunde/Auftraggeber oder ein Vertreter des Kunden
+- **Scrum Master**: Die Person die alles versucht zu koordinieren und Hindernisse aus dem Weg zu räumen
+- **Entwickler** / **Designer** / ...: Team der Personen die das Entwickeln und andere benötigte Tätigkeiten (Graphiken erstellen, Dokumentation schreiben...) machen
+
+Täglich finden Treffen (*daily scrum* genannt) statt in denen besprochen wird wie die Arbeit lief, ob es irgendwelche Probleme gab und was der Fortschritt ist.
+Hierbei ist der Scrum-Master der, der das Treffen koordiniert.
+
+Neben den täglichen Treffen gibt es auch Treffen am Ende eines Sprints (*sprint review*) in dem das Entwicklungsteam die Ergebnisse vorstellt, diese besprochen
+werden. An diesen Treffen nimmt generell neben Scrum-Master und Entwicklungsteam auch der Product Owner und falls dieser ein Vertreter ist auch der wirkliche
+Kunde teil.
+
+Des weiteren gibt es auch Treffen (*sprint retrospective*) in denen über vergangene Sprints gesprochen wird. Hierbei liegt der Fokus primär auf dem Prozess
+und was dies für Konsequenzen für folgende Sprints haben kann.
