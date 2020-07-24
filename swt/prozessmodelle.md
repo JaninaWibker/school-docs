@@ -31,7 +31,13 @@ und generell die vorherigen Phasen oft mehr Informationen aus laut Wasserfallmod
 
 ### V-Modell XT / 97
 
-**TODO**
+Das V-Modell XT
+
+- [x] definiert Aktivitäten und Produkte sowie Verantwortlichkeiten
+- [ ] legt die Reihenfolge bzw. Phasengrenzen fest
+- [x] hat das Wasserfallmodell als mögliche Ausprägung
+- [ ] erfordert die Definition von Meilensteinen
+- [x] ist in Submodelle gegliedert
 
 ### Prototypmodell
 

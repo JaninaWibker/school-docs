@@ -70,7 +70,17 @@ Oft hat man bei Compilern und Bild-/Videobearbeitung solche Fließbänder.
 
 > MVC - Model View Controller
 
-**TODO**
+Die Idee hinter MVC ist es, die verschiedenen Funktionen die Code übernimmt in GUI-Programmen aufzuteilen. Es gibt
+hierbei Logik zum anzeigen der Daten, Logik zum verarbeiten, aufbereiten der Daten für das Anzeigen und weitere Logik
+für die Abspeicherung der Daten. Bei MVC teilt man genau an diesen Grenzen das Programm in 3 Teile:
+
+Das Modell ist zum abspeichern da, die Steuerung (der Controller) ist zum aufbereiten der Daten und jegliche extra
+notwendigen Interaktionen zuständig, er ist quasi das Gehirn des gesamten Programmes. Die Präsentation (der View) ist
+zum anzeigen der da.
+
+Es gibt verschiedene Varianten von MVC, bei manchen wird alle Kommunikation durch den Controller geleitet, bei manchen
+ist der Controller bei weitem weniger "mächtig" und hat eher weniger Aufgaben. Manche Varianten sind somit eine
+Schichtenarchitektur, manche nicht.
 
 ## Rahmenarchitektur
 
