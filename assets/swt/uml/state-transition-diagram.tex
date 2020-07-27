@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} % use utf8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    % avoid garbled Unicode text in pdf
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\code}{\texttt}
+
+\begin{document}
+\pagestyle{empty}
+\begin{figure}[ht]
+\centering
+
+\begin{tikzpicture}
+
+  \tikzumlset{
+    fill class=none,
+    fill note=none,
+    fill state=none
+  }
+
+  \umlstateinitial[name=start]
+
+  \begin{umlstate}[right=2cm of start,entry=zurücksetzen(), name=ohnereservierung]{Ohne Reseriverung}{}\end{umlstate}
+  \begin{umlstate}[right=6cm of ohnereservierung,           name=teilweisereserviert]{Teilweise reserviert}{}\end{umlstate}
+  \begin{umlstate}[below=3cm of ohnereservierung,           name=geschlossen]{Geschlossen}{}\end{umlstate}
+  \begin{umlstate}[below=3cm of teilweisereserviert,        name=ausgebucht]{Ausgebucht}{}\end{umlstate}
+
+  \umlstatefinal[below=3cm of start,name=end]
+
+  \umltrans[]{start}{ohnereservierung}
+  \umltrans[arg=flugStreichen(),pos=0.5]{ohnereservierung}{end}
+  \umltrans[]{geschlossen}{end}
+
+  \umltrans[arg=reservieren(),pos=0.6,anchors=10 and 170]{ohnereservierung}{teilweisereserviert}
+  \umltrans[text width=3em,  arg=stornieren() \\  {[reserviertePlätze=1]},anchors=190 and -10]{teilweisereserviert}{ohnereservierung}
+  \umltrans[text width=8.5em,pos=1,align=right,recursive=160|130|3cm,arg=stornieren() \\ {[reserviertePlätze>1]}]{teilweisereserviert}{teilweisereserviert}
+  \umltrans[text width=8em,  pos=1,align=left, recursive= 20| 50|3cm,arg=reservieren() \\ {[freiePlätze>1]}]{teilweisereserviert}{teilweisereserviert}
+  \umltrans[text width=8em,  pos=0.6,anchors=-75 and 75,arg=reservieren() \\ {[freiePlätze=1]}]{teilweisereserviert}{ausgebucht}
+  \umltrans[arg=stornieren(),anchors=105 and -105]{ausgebucht}{teilweisereserviert}
+  \umltrans[arg=schließen()  ]{teilweisereserviert}{geschlossen}
+  \umltrans[arg=schließen()  ]{ausgebucht}{geschlossen}
+
+\end{tikzpicture}
+\end{figure}
+\end{document}
