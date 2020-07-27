@@ -171,6 +171,9 @@ Rollenverteilung:
 - **Scrum Master**: Die Person die alles versucht zu koordinieren und Hindernisse aus dem Weg zu räumen
 - **Entwickler** / **Designer** / ...: Team der Personen die das Entwickeln und andere benötigte Tätigkeiten (Graphiken erstellen, Dokumentation schreiben...) machen
 
+Bevor ein Sprint beginnen kann gibt es eine *sprint planning*-Treffen, in dem das Entwicklungsteam Anforderungen aus den Produktanforderungen auswählt, welche als
+nächstes angegangen werden können. Daraus setzt sich dann die Aufgabenliste (*sprint backlog*) für den folgenden Sprint zusammen.
+
 Täglich finden Treffen (*daily scrum* genannt) statt in denen besprochen wird wie die Arbeit lief, ob es irgendwelche Probleme gab und was der Fortschritt ist.
 Hierbei ist der Scrum-Master der, der das Treffen koordiniert.
 

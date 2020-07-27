@@ -146,15 +146,14 @@
   * [**Einstieg**](/swt/einstieg.md)
   * [Phasen der Softwareentwicklung](/swt/phasen.md)
 <!-- /// [swt-einstieg] -->
-<!-- /// [swt-planung-entwurf] -->
+<!-- /// [swt-planung] -->
   * [**Planung**](/swt/planung.md)
   * [Aufwandsschätzung](/swt/aufwandsschätzung.md)
   * [Prozessmodelle](/swt/prozessmodelle.md)
   * [**Definition**](/swt/definition.md)
+<!-- /// [swt-planung] -->
+<!-- /// [swt-entwurf] -->
   * [**Entwurf**](/swt/entwurf.md)
-<!-- /// [swt-planung-entwurf] -->
-<!-- /// [swt-implementierung] -->
-  * [**Implementierung**](/swt/implementierung.md)
   * [**Architekturen**](/swt/architekturen.md)
   * [**Entwurfsmuster**](/swt/entwurfsmuster.md)
   * [Entkopplungsmuster](/swt/entkopplungsmuster.md)
@@ -163,6 +162,9 @@
   * [Steuerungsmuster](/swt/steuerungsmuster.md)
   * [virtuelle Maschinen](/swt/virtuelle_maschinen.md)
   * [Bequemlichkeitsmuster](/swt/bequemlichkeitsmuster.md)
+<!-- /// [swt-entwurf] -->
+<!-- /// [swt-implementierung] -->
+  * [**Implementierung**](/swt/implementierung.md)
 <!-- /// [swt-implementierung] -->
 <!-- /// [swt-testen-wartung-pflege] -->
   * [**Testen**](/swt/testen.md)
