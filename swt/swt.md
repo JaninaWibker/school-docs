@@ -14,6 +14,8 @@
 
 <!-- /// [swt-entwurf] -->
 * [**Entwurf**](/swt/entwurf.md)
+  * [Aktivitätsdiagramme](/swt/aktivitätsdiagramme.md)
+  * [Zustandsdiagramme](/swt/zustandsdiagramme.md)
 * [**Architekturen**](/swt/architekturen.md)
 * [**Entwurfsmuster**](/swt/entwurfsmuster.md)
   * [Entkopplungsmuster](/swt/entkopplungsmuster.md)
