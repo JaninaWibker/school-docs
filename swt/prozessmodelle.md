@@ -1,6 +1,6 @@
 # Prozessmodelle
 
-## nicht-agile Prozesse
+## Nicht-agile Prozesse
 
 Prozessmodelle sind Modelle zur Planung des kompletten Ablaufs, von Planung bis Abnahme des Kunden.
 
@@ -24,7 +24,7 @@ Die bisher besprochenen Phasen nacheinander abarbeiten:
 - **Entwurf**: Entwurfsdokumente, UML Diagramme, ...
 - **Implementierung**: Softwarekomponenten, Dokumentation
 - **Testen**: Tests, "fertiges" System
-- **Wartung und Pflege**
+- **Abnahme, Wartung und Pflege**
 
 Nicht zu empfehlen, da sobald ein Fehler in einer vorherigen Phase entdeckt wurd dieser nicht berichtigt werden kann
 und generell die vorherigen Phasen oft mehr Informationen aus laut Wasserfallmodell zukünftigen Phasen brauchen.
@@ -85,7 +85,7 @@ Meistens werden die beiden Varianten etwas miteinander vermischt und nicht in Is
 
 **TODO**
 
-## agile Prozesse
+## Agile Prozesse
 
 Ein agiler Prozess hat minimale Vorausplanung, inkrementelle Planung und vermeidet unterstützende Dokumente wie Dokumentation
 oder Pflichtenhefte. Der Kunde ist generell sehr stark mit einbezogen und kann somit schnelle Rückmeldung geben bei Nachfragen

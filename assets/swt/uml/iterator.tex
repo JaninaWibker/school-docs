@@ -24,17 +24,21 @@
     next() : E \\
     remove() : void
   }
-  \umlclass[below=2cm of Iterator]{KonkreterIterator}{}{
+  \umlclass[below=2cm of Iterator,alias=KonkreterIterator]{KonkreterIterator<E>}{}{
     hasNext() : boolean \\
     next() : E \\
     remove() : void
   }
 
   \umlclass[type=interface,alias=Iterable,right=2cm of Klient]{Iterable<E>}{}{
-    iterator() : Iterator<E>
+    iterator() : Iterator<E> \\
+    \\
+    \\
   }
-  \umlclass[below=2cm of Iterable]{KonkretesIterable}{}{
-    iterator() : Iterator<E>
+  \umlclass[below=2cm of Iterable,alias=KonkretesIterable]{KonkretesIterable<E>}{}{
+    iterator() : Iterator<E> \\
+    \\
+    \\
   }
 
 
@@ -43,6 +47,9 @@
 
   \umldep{Klient}{Iterator}
   \umldep{Klient}{Iterable}
+
+  \umluniassoc[anchors=10 and 170]{KonkreterIterator}{KonkretesIterable}
+  \umldep[anchors=190 and -10]{KonkretesIterable}{KonkreterIterator}
 
 \end{tikzpicture}
 \end{figure}

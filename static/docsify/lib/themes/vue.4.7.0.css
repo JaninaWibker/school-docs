@@ -893,7 +893,7 @@ section.cover blockquote>p>a:hover {
   max-width: inherit;
   overflow: inherit;
   padding: 2.2em 5px;
-  white-space: inherit
+  white-space: pre-wrap;
 }
 
 .markdown-section code:after,.markdown-section code:before {
