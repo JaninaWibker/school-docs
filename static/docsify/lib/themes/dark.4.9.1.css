@@ -399,6 +399,9 @@ body.close .content {
   body.dark main {
     overflow-x: unset;
   }
+  body.dark .markdown-section pre > code {
+    white-space: pre-wrap!important;
+  }
 }
 @media screen and (max-width: 768px) {
   .github-corner,
@@ -828,7 +831,7 @@ body.dark .markdown-section pre > code {
   max-width: inherit;
   overflow: inherit;
   padding: 2.2em 5px;
-  white-space: pre-wrap;
+  white-space: unset;
 }
 .markdown-section code::after,
 .markdown-section code::before {

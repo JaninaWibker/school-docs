@@ -461,6 +461,11 @@ body.close .content {
   .app-nav,.github-corner,.sidebar,.sidebar-toggle {
     display: none
   }
+
+
+  .markdown-section pre>code {
+    white-space: pre-wrap;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -893,7 +898,7 @@ section.cover blockquote>p>a:hover {
   max-width: inherit;
   overflow: inherit;
   padding: 2.2em 5px;
-  white-space: pre-wrap;
+  white-space: unset;
 }
 
 .markdown-section code:after,.markdown-section code:before {
