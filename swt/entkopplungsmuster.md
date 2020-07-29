@@ -58,8 +58,10 @@ Hier ist die "push"-Variante gezeigt.
 
 Eine Brücke kann man nutzen, wenn man Klassen mit 2 Eigenschaften erstellen will, sodass man bei $M \cdot N$ Klassen
 landen würde, wenn man für jede Kombination der Eigenschaften eine Klasse erstellt. Mit einer Brücke kann man diese
-Anzahl an Klassen, welche oft sehr ähnlich aussehen, auf $M + N + 2$ reduzieren. Man Erstellt pro Eigenschaft eine
-Superklasse und für jeden Wert die die Eigenschaft annehmen kann eine Unterklasse.
+Anzahl an Klassen, welche oft sehr ähnlich aussehen, auf $M + N + 2$ reduzieren. Man erstellt pro Eigenschaft eine
+Superklasse und für jeden Wert die die Eigenschaft annehmen kann eine Unterklasse. Man wählt hierbei eine der Eigenschaften
+als Abstraktion und eine als Implementierer, danach was nützlicher erscheint. Meistens ist der Implementierer die Klasse
+von der viele Methoden benutzt werden ausgehend von der Abstraktion.
 
 ![Brücke UML Diagramm](../assets/swt/uml/bridge.svg)
 

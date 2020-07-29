@@ -10,6 +10,8 @@
 \begin{figure}[ht]
 \centering
 
+\newcommand{\code}{\texttt}
+
 \begin{tikzpicture}
 
   \tikzumlset{
@@ -17,26 +19,34 @@
     fill note=none
   }
 
-  \umlclass[type=interface]{EigenschaftA}{}{}
-  \umlclass[type=interface,right=5cm of EigenschaftA]{EigenschaftB}{}{}
+  \umlclass[type=abstract]{Abstraktion}{}{
+    operation()
+  }
+  \umlclass[type=interface,right=6cm of Abstraktion]{Implementierer}{}{
+    operationsImp()
+  }
 
-  \umlclass[below=2cm of EigenschaftA]{ImplA2}{}{}
-  \umlclass[below=2cm of EigenschaftA,left=0.5cm  of ImplA2]{ImplA1}{}{}
-  \umlclass[below=2cm of EigenschaftA,right=0.5cm of ImplA2]{ImplA3}{}{}
+  \umlclass[below left= 2cm and -1cm of Abstraktion,alias=SAA]{SpezialisierteAbstrA}{}{}
+  \umlclass[below right=2cm and -1cm of Abstraktion,alias=SAB]{SpezialisierteAbstrB}{}{}
 
-  \umlclass[below=2cm of EigenschaftB]{ImplB2}{}{}
-  \umlclass[below=2cm of EigenschaftB,left=0.5cm  of ImplB2]{ImplB1}{}{}
-  \umlclass[below=2cm of EigenschaftB,right=0.5cm of ImplB2]{ImplB3}{}{}
+  \umlclass[below left= 2cm and -1cm of Implementierer,alias=KIB]{KonkreterImplB}{}{
+    operationsImp()
+  }
+  \umlclass[below right=2cm and -1cm of Implementierer,alias=KIA]{KonkreterImplA}{}{
+    operationsImp()
+  }
 
-  \umlreal{ImplA1}{EigenschaftA}
-  \umlreal{ImplA2}{EigenschaftA}
-  \umlreal{ImplA3}{EigenschaftA}
+  \umlreal{SAA}{Abstraktion}
+  \umlreal{SAB}{Abstraktion}
 
-  \umlreal{ImplB1}{EigenschaftB}
-  \umlreal{ImplB2}{EigenschaftB}
-  \umlreal{ImplB3}{EigenschaftB}
+  \umlreal{KIA}{Implementierer}
+  \umlreal{KIB}{Implementierer}
 
-  \umlassoc{EigenschaftA}{EigenschaftB}
+  \umluniassoc[arg2=imp]{Abstraktion}{Implementierer}
+
+  \umlnote[below right=0cm and 1cm of Abstraktion,width=3.1cm]{Abstraktion}{\code{
+    imp.operationsImp()
+  }}
 
 \end{tikzpicture}
 \end{figure}
