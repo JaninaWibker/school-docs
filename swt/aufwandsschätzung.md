@@ -77,7 +77,8 @@ Somit ergibt sich, wenn man nur die Programmiersprache beachtet und die anderen 
 dass das neue Projekt etwa 21% weniger Aufwand als das ältere brauchen sollte.
 
 Die Relationsmethode ist schon etwas komplexer und aufwendiger als die Analogiemethode und bietet damit auch eine meist
-bessere Abschätzung.
+bessere Abschätzung. Man zählt sie aber immernoch zu den Methoden womit eine **grobe** Schätzung möglich ist, da sie
+trotzdem noch nicht so aufwendig und genau ist wie z.B. COCOMO II.
 
 ## Phasenaufteilung
 
