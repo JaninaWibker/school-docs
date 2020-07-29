@@ -127,7 +127,7 @@ zum schlechteren verändert hat nennt man Regressionstest.
 Der Abnahmetest ist dem Systemtest sehr ähnlich. Hierbei gibt es nur die Unterscheidung, dass der Abnahmetest nichtmehr im eigenen Haus durchgeführt wird,
 sondern beim Kunden vorort. Mit dem Abnahmetest verifiziert sich der Kunde ein letztes Mal vor der Abnahme, dass wirklich alles korrekt ist. Idealerweise
 werden hierbei wirkliche Daten verwendet und die Umgebung ist schon genau die gleiche wie die in der die Software finalerweise laufen wird. Der Kunde kann
-sich natürlich auch eigene Tests überlegen, welche er dem System unterstellen will.
+sich natürlich auch eigene Tests überlegen, welche er dem System unterstellen will. Zum Abnahmetest gehören idealerweise auch Stress- und Belastungstests.
 
 Die formale Abnahme durch den Kunden beendet, sobald alle Fehler die noch gefunden wurden behoben sind, die Entwicklung an der Software. Danach geht es dann
 in die Wartungs und Pflege Phase des Softwareproduktes über.
