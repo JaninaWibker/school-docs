@@ -10,20 +10,21 @@
   * [Aufwandsschätzung](/swt/aufwandsschätzung.md)
   * [Prozessmodelle](/swt/prozessmodelle.md)
 * [**Definition**](/swt/definition.md)
+  * [Aktivitätsdiagramme](/swt/aktivitätsdiagramme.md)
+  * [Zustandsdiagramme](/swt/zustandsdiagramme.md)
+  * [Sequenzdiagramme](/swt/sequenzdiagramme.md)
 <!-- /// [swt-planung] -->
 
 <!-- /// [swt-entwurf] -->
 * [**Entwurf**](/swt/entwurf.md)
-  * [Aktivitätsdiagramme](/swt/aktivitätsdiagramme.md)
-  * [Zustandsdiagramme](/swt/zustandsdiagramme.md)
-* [**Architekturen**](/swt/architekturen.md)
-* [**Entwurfsmuster**](/swt/entwurfsmuster.md)
-  * [Entkopplungsmuster](/swt/entkopplungsmuster.md)
-  * [Variantenmuster](/swt/variantenmuster.md)
-  * [Zustandshandhabungsmuster](/swt/zustandshandhabungsmuster.md)
-  * [Steuerungsmuster](/swt/steuerungsmuster.md)
-  * [virtuelle Maschinen](/swt/virtuelle_maschinen.md)
-  * [Bequemlichkeitsmuster](/swt/bequemlichkeitsmuster.md)
+  * [**Architekturen**](/swt/architekturen.md)
+  * [**Entwurfsmuster**](/swt/entwurfsmuster.md)
+    * [Entkopplungsmuster](/swt/entkopplungsmuster.md)
+    * [Variantenmuster](/swt/variantenmuster.md)
+    * [Zustandshandhabungsmuster](/swt/zustandshandhabungsmuster.md)
+    * [Steuerungsmuster](/swt/steuerungsmuster.md)
+    * [virtuelle Maschinen](/swt/virtuelle_maschinen.md)
+    * [Bequemlichkeitsmuster](/swt/bequemlichkeitsmuster.md)
 <!-- /// [swt-entwurf] -->
 
 <!-- /// [swt-implementierung] -->

@@ -2,6 +2,7 @@
 
 In der Planungsphase ist das Ziel ein **Lastenheft** zu produzieren. Dazu gehört, bzw. wird auch manchmal
 seperat gemacht, eine [Aufwandsschätzung](/swt/aufwandsschätzung.md) sowie **Durchführbarkeitsanalyse**.
+Auch **Projektplan** und **GUI-Skizzen** entstehen in der Planungsphase.
 
 
 Im Lastenheft will man **in Worten des Kunden** das zu entwickelnde System beschreiben.

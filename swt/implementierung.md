@@ -1,5 +1,9 @@
 # Implementierungsphase
 
+In der Implementierungsphase wird dann der Plan für die Software umgesetzt und implementiert. Am Ende der Implementierung
+sollte man **Quellcode** der Komponenten, **Dokumentation** über Klassen, Schnittstellen, ..., und möglicherweise Testdaten
+haben.
+
 In der Implementierungsphase ist wichtig zu wissen, wie man:
 
 - UML Diagramme korrekt in Quellcode umsetzt,
