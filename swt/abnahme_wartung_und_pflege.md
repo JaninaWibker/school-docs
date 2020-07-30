@@ -78,3 +78,13 @@ Entwicklungsprozess entstanden ist.
 
 Wenn der Kunde dies nicht selber macht wird dies alles oft nicht benötigt und man kann weniger an den Kunden
 raus geben.
+
+Die Tätigkeiten in der Wartung und Pflege kann man in **korrektive** und **progressive** Tätigkeiten einsortieren:
+
+**korrektiv**:
+- Stabilisierung / Korrektur
+- Optimierung / Leistungsverbesserung
+
+**progressive**: 
+- Anpassung / Änderung
+- Erweiterung

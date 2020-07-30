@@ -350,7 +350,8 @@ body.dark.sticky .sidebar,body.dark.sticky .sidebar-toggle {
   right: 0;
   bottom: 0;
   left: 300px;
-  transition: left .25s ease
+  transition: left .25s ease;
+  overflow-x: overlay;
 }
 
 .markdown-section {

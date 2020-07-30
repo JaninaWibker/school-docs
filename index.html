@@ -64,6 +64,7 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
   .markdown-section pre>code{white-space:pre-wrap;}
   div.copyright {position:fixed;bottom:8px;}
   .dark img:not([class~=medium-zoom-image--open]){filter: none;}
+  section.content { overflow-x: unset }
 }
 </style>
 </head>
@@ -116,15 +117,15 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
       let bit
       const query = {}
       let first
-      let second;
+      let second
       for(let i = 0; i < s.length; i++) {
-        bit = s[i].split("=");
-        first = decodeURIComponent(bit[0]);
-        if(first.length == 0) continue;
-        second = decodeURIComponent(bit[1]);
-        if(typeof query[first] == "undefined") query[first] = second;
-        else if(query[first] instanceof Array) query[first].push(second);
-        else query[first] = [query[first], second]; 
+        bit = s[i].split("=")
+        first = decodeURIComponent(bit[0])
+        if(first.length == 0) continue
+        second = decodeURIComponent(bit[1])
+        if(typeof query[first] == "undefined") query[first] = second
+        else if(query[first] instanceof Array) query[first].push(second)
+        else query[first] = [query[first], second]
       }
       return query;
     }
@@ -149,11 +150,11 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
       const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
       const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-      if(localStorage.getItem('docsify.theme')) { // saved theme
+      if(localStorage.getItem('docsify.theme')) {  // saved theme
         return localStorage.getItem('docsify.theme')
-      } else if(!hasNoSupport && isDarkMode) { // system dark mode
+      } else if(!hasNoSupport && isDarkMode) {     // system dark mode
         return 'dark'
-      } else if(!hasNoSupport && isLightMode) { // system light mode
+      } else if(!hasNoSupport && isLightMode) {    // system light mode
         return 'light'
       } else if(!hasNoSupport && isNotSpecified) { // system unspecified
         return 'light'
@@ -169,6 +170,7 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
 
     window.$docsify = {
       name: 'Schule',
+      auto2top: true,
       loadSidebar: true,
       maxLevel: 2,
       repo: '',
@@ -176,19 +178,21 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
       latex: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md',
-        '/db': '/db/db',
+        '/db':  '/db/db',
         '/db/': '/db/db',
-        '/netzwerke': '/netzwerke/netzwerke',
+        '/netzwerke':  '/netzwerke/netzwerke',
         '/netzwerke/': '/netzwerke/netzwerke',
-        '/microcontroller': '/microcontroller/microcontroller',
+        '/microcontroller':  '/microcontroller/microcontroller',
         '/microcontroller/': '/microcontroller/microcontroller',
-        '/informatik': '/informatik/informatik',
+        '/informatik':  '/informatik/informatik',
         '/informatik/': '/informatik/informatik',
-        '/mathe': '/mathe/mathe',
+        '/mathe':  '/mathe/mathe',
         '/mathe/': '/mathe/mathe',
-        '/etk': '/etk/etk',
+        '/swt':  '/swt/swt',
+        '/swt/': '/swt/swt',
+        '/etk':  '/etk/etk',
         '/etk/': '/etk/etk',
-        '/französisch': '/französisch/französisch',
+        '/französisch':  '/französisch/französisch',
         '/französisch/': '/französisch/französisch',
       },
       pagination: {

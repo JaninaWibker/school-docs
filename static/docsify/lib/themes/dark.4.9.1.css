@@ -297,6 +297,7 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
   left: 300px;
   -webkit-transition: left 250ms ease;
   transition: left 250ms ease;
+  overflow-x: overlay;
 }
 .markdown-section {
   margin: 0 auto;
