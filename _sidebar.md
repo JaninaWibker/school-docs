@@ -139,6 +139,11 @@
   * [Polynome](/mathe/polynome.md)
   * [Diagonalisierbarkeit & Trigonalisierbarkeit](/mathe/diagonalisierbarkeit_trigonalisierbarkeit.md)
 <!-- /// [ mathe-lineare-algebra] -->
+<!-- /// [mathe-höhere-mathematik] -->
+  * [**Höhere Mathematik**](/mathe/höhere_mathematik.md)
+  * [Höhere Mathematik I](/mathe/höhere_mathematik_1.md)
+  * [Höhere Mathematik II](/mathe/höhere_mathematik_2.md)
+<!-- /// [mathe-höhere-mathematik] -->
 <!-- /// [mathe-mathe] -->
 <!-- /// [swt-swt] -->
 * [Softwaretechnik](/swt/swt)

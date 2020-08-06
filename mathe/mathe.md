@@ -78,6 +78,12 @@
   * [Quotientenräume](/mathe/quotientenraum.md)
   * [Gruppen, Ringe, Körper](/mathe/gruppen_ringe_körper.md)
   * [Eigenwerte und Vektoren](/mathe/eigenwerte_vektoren.md)
-  * [Diagonalisierbarkeit & Trigonalisierbarkeit](/mathe/diagonalisierbarkeit_trigonalisierbarkeit.md)
-  * [Polynome](/mathe/polynome.md)
+  * [diagonalisierbarkeit & trigonalisierbarkeit](/mathe/diagonalisierbarkeit_trigonalisierbarkeit.md)
+  * [polynome](/mathe/polynome.md)
 <!-- /// [mathe-lineare-algebra] -->
+
+<!-- /// [mathe-höhere-mathematik] -->
+* [**Höhere Mathematik**](/mathe/höhere_mathematik.md)
+  * [Höhere Mathematik I](/mathe/höhere_mathematik_1.md)
+  * [Höhere Mathematik II](/mathe/höhere_mathematik_2.md)
+<!-- /// [mathe-höhere-mathematik] -->

@@ -1,0 +1,320 @@
+# Höhere Mathematik II
+
+## Umkehrsatz
+
+Es sei $D \subseteq \R^n$ offen, $f \in C^1(D, \R^n)$ und $x_0 \in D$. Ist $\det f'(x_0) \ne 0$, so existiert ein $\epsilon > 0$ mit:
+
+- $U_{\epsilon}(x_0) \subseteq D$ und $f(U_{\epsilon}(x_0))$ ist offen
+- $f$ ist auf $U_{\epsilon}$ injektiv,
+- $f^{-1}: f(U_{\epsilon}(x_0)) \to U_{\epsilon}(x_0)$ ist in $C^1(f(U_{\epsilon}(x_0)), \R^n)$, $\det f'(x) \ne 0 (x \in U_{\epsilon}(x_0))$
+  und $(f^{-1})'(y) = (f'(f^{-1}(y)))^{-1} (y \in f(U_{\epsilon}(x_0)))$
+
+## Integration im $\R^n$
+
+> **Definitionen**: kompaktes Intervall, Zerlegung, messbar, innerer Inhalt, äußerer Inhalt
+
+Die Idee ist, dass man die Menge über die man integrieren will so anpasst, dass man leichter damit rechnen kann. Hierfür
+bieten sich oft Kreisscheiben, Zylinder, Kugeln, ... an. Man modifiziert hierbei die Menge an Eingabeparametern und passt
+danach die Funktion so an, dass diese transformierten Eingabeparameter wieder zurücktransformiert werden und mit etwas glück
+kann man dann damit einiges vereinfachen.
+
+### Satz von Fubini
+
+Sei $\R^n = \R^p \times \R^q$ mit $I_1$ kompaktes Intervall in $\R^p$ und $I_2$ kompaktes Intervall in $\R^q$. Sei $I = I_1 \times I_2$
+$(x, y) \in I$ mit $x \in I_1, y \in I_2$
+
+- Wenn für jedes feste $y \in I_2$ ist die Funktion $x \mapsto f(x, y)$ int. über $I_1$ und $g(y) := \int_{I_1} f(x,y) dx$, dann ist $g \in R(I_2)$ und
+  $\int_{I} f(x,y) d(x,y) = \int_{I_2} g(y) dy = \int{I_2} \int_{I_1} f(x, y) dx dy$
+- Analog für $x \in I_1$
+
+Sei $I = [a_1, b_1] \times [a_2, b_2] \times ... [a_n, b_n]$ und $f \in C(I)$, dann kann man die Reihenfolge der Integrale beliebig tauschen:
+
+$$\int_{I} f(x) dx = \int_{I} f(x_1, \dots, x_n) d(x_1, \dots, x_n) = \int_{a_1}^{b_1} \int_{a_2}^{b_2} \dots dx_2 dx_1$$
+
+### Prinzip von Cavalieri
+
+Sei $B \subseteq \R^{n+1}$ messbar. Schreibe $(x, z) \in B$ mit $x \in \R^n$ und $z \in R$ mit $z \in [a, b] \iff (x,z) \in B$.
+
+Für $z \in [a,b]$ sei: $Q(z) := \lbrace x\in\R^n: (x,z) \in B\rbrace$.
+Weiter sei $Q(z)$ messbar für jedes $z \in [a,b]$. Dann ist $z \mapsto \vert Q(z) \vert$ integrierbar über $[a,b]$ und
+
+$$\vert B \vert = \int_a^b \vert Q(z) \vert dz$$
+
+Man hat also eigentlich nur nach einer der Variablen "entwickelt" und einen geschlossenen Ausdruck dafür gefunden womit man gut arbeiten kann.
+
+### Rotationskörper
+
+**TODO**
+
+### Substitutionsregel
+
+$G \subseteq \R^n$ offen, $g \in C^1(G, \R^n)$ und $B \subseteq G$ kompakt und messbar. Weiter sei $g$ auf dem Inneren $B^\circ$ von $B$ injektiv und
+
+$$\det g'(y) \ne 0 (y \in B^\circ)$$
+
+Ist dann $A := g(B)$ und $f \in C(A, \R)$, so ist $A$ kompakt und messbar und es gilt:
+
+$$\int_A f(x) dx = \int_B f(g(y)) \cdot \vert \det g'(y) \vert dy$$
+
+### Polarkoordinaten (n=2)
+
+Nutze die Substitutionsregel um die normalen Koordinaten zu Polarkoordinaten zu machen wie man sie von komplexen Zahlen kennt.
+
+$$\begin{aligned}
+x &= r \cos \varphi \\\\
+y &= r \sin \varphi \\\\
+\text{mit } r &= \Vert (x, y) \Vert
+\end{aligned}$$
+
+$$g(r, \varphi) := (r \cos \varphi, r \sin \varphi), det g_(r, \varphi) = r$$
+
+Betrachte $\varphi_1, \varphi_2 \in [0, 2\pi]$ mit $\varphi_1 < \varphi_2$ und $0 \le R_1 \lt R_2$ und
+$A := \lbrace (r \cos \varphi, r \sin \varphi): \varphi \in [\varphi_1, \varphi_2], r \in [R_1, R_2] \rbrace$
+
+Mit $B := \underbrace{[R_1, R_2]}_{r} \times \underbrace{[\varphi_1, \varphi_2]}_{\varphi}$ ist $A = g(B)$. Auf $B^\circ = (R_1, R_2) \times (\varphi_1, \varphi_2)$ ist $g$ injektiv und $det g' \ne 0$.
+
+Hierbei ist:
+- $R_1$: innerer Radius
+- $R_2$: äußerer Radius
+- $\varphi_1$: min. Winkel
+- $\varphi_2$: max. Winkel
+
+Ist nun $f \in C(A, \R)$, so gilt:
+
+$$\int_A f(x, y) d(x, y) = \int_B f(r \cos \varphi, r \sin \varphi) \cdot r d(r, \varphi) = \int_{\varphi_1}^{\varphi_2} \int_{R_1}^{R_2} f(r \cos \varphi, r \sin \varphi) \cdot r dr d\varphi$$
+
+### Zylinderkoordinaten (n=3)
+
+Fast das gleiche wie Polarkoordinaten, nur eine "unbenutzte" Variable $z$ zusätzlich (Höhe des Zylinders):
+
+$$\begin{aligned}
+x &= r \cos \varphi \\\\
+y &= r \sin \varphi \\\\
+z &= z \\\\
+\text{mit } r &= \Vert (x, y) \Vert
+\end{aligned}$$
+
+$$g(r, \varphi, z) := (r \cos \varphi, r \sin \varphi, z), det g_(r, \varphi, z) = r$$
+
+$A, B \subseteq \R^3$ wie bei Substitutionsregel und $f \in C(A, \R)$:
+
+$B := \underbrace{[R_1, R_2]}_{r} \times \underbrace{[\varphi_1, \varphi_2]}_{\varphi} \times \underbrace{[h_1, h_2]}_{z}$
+
+Hierbei ist:
+- $R_1$: innerer Radius
+- $R_2$: äußerer Radius
+- $\varphi_1$: min. Winkel
+- $\varphi_2$: max. Winkel
+- $h_1$: min. Höhe
+- $h_2$: max. Höhe
+
+$$\int_A f(x, y, z) d(x, y, z) = \int_B f(r \cos \varphi, r \sin \varphi, z) \cdot r d(r, \varphi, z)$$
+
+### Kugelkoordinaten (n=3)
+
+Auch wieder fast wie Polarkoordinaten, nur mit 3 Variablen, wobei anders als bei Zylinderkoordinaten, alle 3 benutzt werden:
+
+$$\begin{aligned}
+x &= r \cos \varphi \cos \vartheta \\\\
+y &= r \sin \varphi \cos \vartheta \\\\
+z &= z \sin \vartheta \\\\
+\text{mit } r &= \Vert (x, y, z) \Vert
+\end{aligned}$$
+
+$$g(r, \varphi, \vartheta) := (r \cos \varphi \cos \vartheta, r \sin \varphi \cos \vartheta, r \sin \vartheta)$$
+
+$$\vert det g'(r, \varphi, \vartheta) \vert = r^2 \cos \vartheta$$
+
+$A, B \subseteq \R^3$ wie bei Prinzip von Cavalieri (also $A = g(B)$) und $f \in C(A, \R)$:
+
+$B := \underbrace{[R_1, R_2]}_{r} \times \underbrace{[\varphi_1, \varphi_2]}_{\varphi} \times \underbrace{[\vartheta_1, \vartheta_2]}_{\vartheta}$
+
+Hierbei ist:
+- $R_1$: innerer Radius
+- $R_2$: äußerer Radius
+- $\varphi_1$: min. horizontaler Winkel
+- $\varphi_2$: max. horizontaler Winkel
+- $\vartheta_1$: min. vertikaler Winkel 
+- $\vartheta_2$: max. vertikaler Winkel
+
+$$\int_A f(x, y, z) d(x, y, z) = \int_B f(g(r, \varphi, \vartheta)) \cdot r^2 \cos \vartheta d(r, \varphi, \vartheta)$$
+
+## Fouriertransformation
+
+> **Definitionen**: stückweise stetig, stückweise glatt, (absolut) konvergent, (absolut) integrierbar, bandbeschränkt, schnell fallend
+
+### Cauchyscher Hauptwert (CH)
+
+$$CH-\int_{\infty}^{\infty} f(x) dx := lim_{\alpha\to\infty} \int_{-\alpha}^{\alpha} f(x) dx$$
+
+> Das ist kein Minus, das ist ein Bindestrich
+
+Bedenke, dass $\int_{-\infty}^{\infty} f(x) dx$ **nicht** so definiert ist. Die Unendlichkeiten sind unabhängig voneinander.
+
+### Fouriertransformation von $f$:
+
+$$\hat{f}(s) = \dfrac{1}{2\pi} \int_{-\infty}^{\infty} f(t)e^{-ist} dt$$
+
+### Rücktransformation von $\hat{f}$:
+
+$$f(t) = \int_{-\infty}^{\infty} \hat{f}(s)e^ist ds$$
+
+### idk
+
+Es sei $V: \lbrace f: \R \to \C: f \text{ ist stückweise stetig und absolut integrierbar} \rbrace$. Für jedes $f \in V$ existiert
+die Fouriertransformierte $\hat{f}$.
+
+Es gilt
+
+- $V$ ist ein Vektorraum und es gilt für $f, g \in V$ und $\alpha, \beta \in \C$: $\hat{\alpha f + \beta g} = \alpha\hat{f} + \beta\hat{g}$
+- Sei $f \in V, h \in \R$ und $f_h: \R \to \C$ sei definiert durch $f_h(t) := f(t+h)$.
+  Dann ist $f_h \in V$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s) (s \in \R)$
+
+### Faltung
+
+Es seien $f_1, f_2: \R \to \C$ so, dass
+
+$$\int_{-\infty}^{\infty} f_1(t-x)f_2(x) dx$$
+
+für jedes $t \in \R$ konvergent ist. Dann heißt die Funktion
+
+$$f_1 * f_2: \R \to \C, (f_1 * f_2)(t) := \dfrac{1}{2\pi} \int_{-\infty}^{\infty} f_1(t-x)f_2(x) dx$$
+
+die Faltung von $f_1$ und $f_2$
+
+$f_1, f_2$ stetig und absolut integrierbar und $f_1$ beschränkt
+
+$\implies f_1 * f_2$ ist stetig und absolut integrierbar ($f_1 * f_2 \in V$) und $\hat{f_1 * f_2}(s) = \hat{f_1}(s)\hat{f_2}(s)$
+
+### idk
+
+$f \in V$, $f'$ absolut integrierbar $\implies f' \in V$ und $\hat{f'}(s) = is\hat{f}(s)$
+
+### schnell fallende Funktionen / Schwarz-Raum
+
+Schwarzraum:
+
+$$S := \lbrace f: \R \to \C: f \text{ ist schnell fallend}$$
+
+$f, g \in S$, $p$ Polynom:
+
+- $f$ ist absout integrierbar und $lim_{t\to\pm\infty} f(t) = 0$
+- $\forall \alpha, \beta \in \C: \alpha f + \beta g \in S$ ($S$ ist VR)
+- $fg, pf, \overline{f}, \text{Re } f, \text{Im } f, t \mapsto f(-t) \in S$
+- $\hat{f} \in S$ und $f(t) = \int_{-\infty}^{\infty} \hat{f}e^{ist} ds$
+- $f^{(n)} \in S$ und $\hat{f^{(n)}}(s) = (is)^n \hat{f}(s)$
+- $f_h \in S$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s)$
+- $f * g \in S$ und $\hat{f * g} = \hat{f} \cdot \hat{g}$
+- Für $h := e^{-t^2/2}$ gilt $h \in S$ und $\hat{h} = \dfrac{1}{\sqrt{2\pi}}h$
+
+Die Fouriertransformation $\mathscr{F}: f \mapsto \hat{f}$ ist eine Isometrie mit der Rücktransformation $\mathscr{G}$ als Umkehrfunktion
+
+## Differenzialgleichungen
+
+### Differenzialgleichung mit getrennten Veränderlichen
+
+Es seien $I_1, I_2 \subseteq \R$ Intervalle, es seien $f \in C(I_1, \R)$ und $g \in C(I_2, \R)$. Die Differenzialgleichung
+
+$$y'(x) = f(x)g(y(x)) \tag{1}$$
+
+heißt eine **Differenzialgleichung mit getrennten Veränderlichen**. Gilt $g(y) \ne 0 (y \in I_2)$, so erhält man die Lösung von *(1)* indem man die Gleichung
+
+$$\int \dfrac{dy}{g(y)} = \int f(x) dx + c$$
+
+nach y auflöst.
+
+**Merkregel**: $y' = f(x)g(y) \implies \dfrac{dy}{dx} = f(x)g(y) \implies \dfrac{dy}{g(y)} = f(x)dx \implies \int \dfrac{dy}{g(y)} = \int f(x) dx + c$
+
+### Lineare Differentialgleichungen
+
+Es sei $I \subseteq \R$ ein Intervall und $\alpha, s: I \to \R$ stetig. Die Differentialgleichung
+
+$$y'(x) = \alpha(x)y(x) + s(x) \tag{2}$$
+
+heißt eine **lineare Differentialgleichung** und $s$ heißt **Störfunktion**. Die Differentialgleichung
+
+$$y'(x) = \alpha(x)y(x) \tag{3}$$
+
+heißt die zu *(2)* gehörige **homogene Gleichung**. Ist $s \ne 0$ so heißt die Gleichung *(2)* **inhomogen**.
+
+Sei $\beta$ eine Stammfunktion von $\alpha$ auf $I$, $y: I \to \R$ eine Funktion:
+
+$$\exists c \in \R: y(x) = ce^{\beta(x)} \iff \text{y ist eine Lösung von (3) auf I}$$
+
+$$\exists c \in \R: y(x) = y_p(x) + ce^{\beta(x)} \iff \text{y ist eine Lösung von (2) auf I, } y_p \text{ ist spezielle Lösung von (2) auf I}$$
+
+$y_p(x) = c(x)e^{\beta(x)}$ mit unbekannter Funktion $c$ ist eine speziellen Lösung von *(2)*.
+
+Es sei $x_0 \in I$ und $y_0 \in \R$. Dann hat das AWP $y'(x) = \alpha(x)y(x) + s(x)$ mit $y(x_0) = y_0$ auf $I$ genau eine Lösung.
+
+Um das unbekannte $c(x)$ zu berechnen kann man wie folgt vorgehen:
+
+$y_p'(x) \stackrel{!}{=} \alpha(x)y_p(x) + s(x)$
+
+$\displaystyle{\implies c(x) \int s(x)e^{-\beta(x)}}$
+
+### Bernoullische Differentialgleichung
+
+Man kann eine Bernoullische Differentialgleichung zu einer linearen Differentialgleichung umformen.
+
+Sei $I \subseteq \R$ ein Intervall, $g, h \in C(I, \R)$ und $\alpha \in \R$. Die Differentialgleichung
+
+$$y'(x) + g(x)y(x) + h(x)y(x)^{\alpha} = 0 \tag{*}$$
+
+heißt **Bernoullische Differentialgleichung**. Für $\alpha \in \lbrace 0, 1 \rbrace$ erhält man eine lineare Differentialgleichung. Ob homogen oder nicht
+hängt von $h$ ab.
+
+Für $\alpha \in \R \setminus \lbrace 0, 1 \rbrace$.
+
+Setze $z(x) = (y(x))^{1-\alpha}$. Nun leitet man $z$ ab und erhält $z'(x) = \dots$. Hiermit hat man dann nun eine **lineare Differentialgleichung** für $z$.
+
+Wenn man dann eine Lösung $z$ gefunden hat auf $I$ kann man diese in $y(x) := z(x)^{\frac{1}{1-\alpha}}$ einsetzen ($x \in I_1 \subseteq I$). Hierbei muss man
+darauf achten, dass $z(x)^{\frac{1}{1-\alpha}}$ nur auf $I_1$ eine Lösung bietet und nicht unbedingt auf komplett $I$. Dann ist $y$ eine Lösung für *(&#42;)* auf $I_1$.
+
+### Riccatische Differentialgleichung
+
+Seien $g, h, k \in C(I, \R)$. Die Differentialgleichung
+
+$$y'(x)+g(x)y(x) + h(x)y^2(x) = k(x) \tag{**}$$
+
+heißt **Riccatische Differentialgleichung**. Hat man eine Lösung $y_2$ von *(&#42;&#42;)* so kann man sich ein $u := y_1 - y_2$ aufstellen, wobei $y_1$ eine weitere
+unbekannte Lösung ist. Dieses $u$ kann man dann ableiten zu:
+
+$$u'(x) = -(g(x) + 2h(x)y_2))u(x) - h(x)u^2(x)$$
+
+und kann dadurch weitere Lösungen von *(&#42;&#42;)* finden von der Form $y_2(x) + u(x)$.
+
+
+## Lineare Systeme mit konstanten Koeffizienten
+
+**Definitionen**: Stammfunktion (für Multidimensionale Funktionen)
+
+Sie $A = (a_{jk})$ eine reelle $n \times n$-Matrix und $b_j: I \to \R$ stetig ($j = 1, \dots, n$).
+
+Ein **lineares Differentialsystem** sieht nun wie folgt aus:
+
+$$\begin{alignedat}{5}
+  &      y'_1(x) &= a_{11}y_1(x) + a_{12}y_2(x) & + \dots + & a_{1n}y_n(x) & + b_1(x) \\\\
+  &      y'_2(x) &= a_{21}y_1(x) + a_{12}y_2(x) & + \dots + & a_{1n}y_n(x) & + b_1(x) \\\\
+  & \quad \vdots & \vdots \quad\quad            &           & \vdots       &          \\\\
+  &      y'_n(x) &= a_{n1}y_1(x) + a_{12}y_2(x) & + \dots + & a_{nn}y_n(x) & + b_n(x)
+\end{alignedat}$$
+
+Mit $y := (y_1, \dots, y_n)^T$ und $b := (b_1, \dots, b_n)^T$ schreibt man dann
+
+$$y'(x) = Ay(x) + b(x) \tag{1}$$
+
+Nun ist
+
+$$y'(x) = Ay(x) \tag{2}$$
+
+das zu *(1)* zugehörige homogene System. *(1)* ist selbst schon homogen, falls $b \ne 0$
+
+Die Lösungen von *(2)* sind auf ganz $\R$ definiert und bilden n-dimensionalen Vektorraum $V := \lbrace y: \R \to \R^n: y \text{ ist eine Lösung von (2)}$.
+Diesen VR nennt man auch **Fundamentalsystem** von *(2)*.
+
+$$\exists y_h \in V: y(x) = y_p(x) + y_h(x) (x \in I) \iff \text{y ist eine Lösung von (1) auf I}$$
+
+AWP sieht gleich aus wie schon bei linearen Differentialgleichungen, nur diesmal mit Vektoren.
+
+
