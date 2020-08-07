@@ -20,14 +20,16 @@ kann man dann damit einiges vereinfachen.
 
 ### Satz von Fubini
 
-Sei $\R^n = \R^p \times \R^q$ mit $I_1$ kompaktes Intervall in $\R^p$ und $I_2$ kompaktes Intervall in $\R^q$. Sei $I = I_1 \times I_2$
+Sei $\R^n = \R^p \times \R^q$ mit $I_1$ kompaktes Intervall in $\R^p$ und $I_2$ kompaktes Intervall in $\R^q$.
+Sei $I = I_1 \times I_2$
 $(x, y) \in I$ mit $x \in I_1, y \in I_2$
 
 - Wenn für jedes feste $y \in I_2$ ist die Funktion $x \mapsto f(x, y)$ int. über $I_1$ und $g(y) := \int_{I_1} f(x,y) dx$, dann ist $g \in R(I_2)$ und
   $\int_{I} f(x,y) d(x,y) = \int_{I_2} g(y) dy = \int{I_2} \int_{I_1} f(x, y) dx dy$
 - Analog für $x \in I_1$
 
-Sei $I = [a_1, b_1] \times [a_2, b_2] \times ... [a_n, b_n]$ und $f \in C(I)$, dann kann man die Reihenfolge der Integrale beliebig tauschen:
+Sei $I = [a_1, b_1] \times [a_2, b_2] \times ... [a_n, b_n]$ und $f \in C(I)$, dann kann man die Reihenfolge der
+Integrale beliebig tauschen:
 
 $$\int_{I} f(x) dx = \int_{I} f(x_1, \dots, x_n) d(x_1, \dots, x_n) = \int_{a_1}^{b_1} \int_{a_2}^{b_2} \dots dx_2 dx_1$$
 
@@ -66,12 +68,13 @@ y &= r \sin \varphi \\\\
 \text{mit } r &= \Vert (x, y) \Vert
 \end{aligned}$$
 
-$$g(r, \varphi) := (r \cos \varphi, r \sin \varphi), det g_(r, \varphi) = r$$
+$$g(r, \varphi) := (r \cos \varphi, r \sin \varphi), \det g_(r, \varphi) = r$$
 
 Betrachte $\varphi_1, \varphi_2 \in [0, 2\pi]$ mit $\varphi_1 < \varphi_2$ und $0 \le R_1 \lt R_2$ und
 $A := \lbrace (r \cos \varphi, r \sin \varphi): \varphi \in [\varphi_1, \varphi_2], r \in [R_1, R_2] \rbrace$
 
-Mit $B := \underbrace{[R_1, R_2]}_{r} \times \underbrace{[\varphi_1, \varphi_2]}_{\varphi}$ ist $A = g(B)$. Auf $B^\circ = (R_1, R_2) \times (\varphi_1, \varphi_2)$ ist $g$ injektiv und $det g' \ne 0$.
+Mit $B := \underbrace{[R_1, R_2]}_{r} \times \underbrace{[\varphi_1, \varphi_2]}_{\varphi}$ ist $A = g(B)$.
+Auf $B^\circ = (R_1, R_2) \times (\varphi_1, \varphi_2)$ ist $g$ injektiv und $\det g' \ne 0$.
 
 Hierbei ist:
 - $R_1$: innerer Radius
@@ -94,7 +97,7 @@ z &= z \\\\
 \text{mit } r &= \Vert (x, y) \Vert
 \end{aligned}$$
 
-$$g(r, \varphi, z) := (r \cos \varphi, r \sin \varphi, z), det g_(r, \varphi, z) = r$$
+$$g(r, \varphi, z) := (r \cos \varphi, r \sin \varphi, z), \det g_(r, \varphi, z) = r$$
 
 $A, B \subseteq \R^3$ wie bei Substitutionsregel und $f \in C(A, \R)$:
 
@@ -157,12 +160,12 @@ $$\hat{f}(s) = \dfrac{1}{2\pi} \int_{-\infty}^{\infty} f(t)e^{-ist} dt$$
 
 ### Rücktransformation von $\hat{f}$:
 
-$$f(t) = \int_{-\infty}^{\infty} \hat{f}(s)e^ist ds$$
+$$f(t) = \int_{-\infty}^{\infty} \hat{f}(s)e^{ist} ds$$
 
 ### idk
 
-Es sei $V: \lbrace f: \R \to \C: f \text{ ist stückweise stetig und absolut integrierbar} \rbrace$. Für jedes $f \in V$ existiert
-die Fouriertransformierte $\hat{f}$.
+Es sei $V: \lbrace f: \R \to \C: f \text{ ist stückweise stetig und absolut integrierbar} \rbrace$. Für jedes
+$f \in V$ existiert die Fouriertransformierte $\hat{f}$.
 
 Es gilt
 
@@ -194,7 +197,7 @@ $f \in V$, $f'$ absolut integrierbar $\implies f' \in V$ und $\hat{f'}(s) = is\h
 
 Schwarzraum:
 
-$$S := \lbrace f: \R \to \C: f \text{ ist schnell fallend}$$
+$$S := \lbrace f: \R \to \C: f \text{ ist schnell fallend} \rbrace$$
 
 $f, g \in S$, $p$ Polynom:
 
@@ -206,8 +209,8 @@ $f, g \in S$, $p$ Polynom:
 - $f_h \in S$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s)$
 - $f * g \in S$ und $\hat{f * g} = \hat{f} \cdot \hat{g}$
 - Für $h := e^{-t^2/2}$ gilt $h \in S$ und $\hat{h} = \dfrac{1}{\sqrt{2\pi}}h$
-
-Die Fouriertransformation $\mathscr{F}: f \mapsto \hat{f}$ ist eine Isometrie mit der Rücktransformation $\mathscr{G}$ als Umkehrfunktion
+Die Fouriertransformation $\mathscr{F}: f \mapsto \hat{f}$ ist eine Isometrie mit der Rücktransformation $\mathscr{G}$
+als Umkehrfunktion
 
 ## Differenzialgleichungen
 
@@ -217,13 +220,15 @@ Es seien $I_1, I_2 \subseteq \R$ Intervalle, es seien $f \in C(I_1, \R)$ und $g 
 
 $$y'(x) = f(x)g(y(x)) \tag{1}$$
 
-heißt eine **Differenzialgleichung mit getrennten Veränderlichen**. Gilt $g(y) \ne 0 (y \in I_2)$, so erhält man die Lösung von *(1)* indem man die Gleichung
+heißt eine **Differenzialgleichung mit getrennten Veränderlichen**. Gilt $g(y) \ne 0 (y \in I_2)$, so erhält man die
+Lösung von *(1)* indem man die Gleichung
 
 $$\int \dfrac{dy}{g(y)} = \int f(x) dx + c$$
 
 nach y auflöst.
 
 **Merkregel**: $y' = f(x)g(y) \implies \dfrac{dy}{dx} = f(x)g(y) \implies \dfrac{dy}{g(y)} = f(x)dx \implies \int \dfrac{dy}{g(y)} = \int f(x) dx + c$
+
 
 ### Lineare Differentialgleichungen
 
@@ -245,13 +250,15 @@ $$\exists c \in \R: y(x) = y_p(x) + ce^{\beta(x)} \iff \text{y ist eine Lösung 
 
 $y_p(x) = c(x)e^{\beta(x)}$ mit unbekannter Funktion $c$ ist eine speziellen Lösung von *(2)*.
 
-Es sei $x_0 \in I$ und $y_0 \in \R$. Dann hat das AWP $y'(x) = \alpha(x)y(x) + s(x)$ mit $y(x_0) = y_0$ auf $I$ genau eine Lösung.
+Es sei $x_0 \in I$ und $y_0 \in \R$. Dann hat das AWP $y'(x) = \alpha(x)y(x) + s(x)$ mit $y(x_0) = y_0$ auf $I$ genau
+eine Lösung.
 
 Um das unbekannte $c(x)$ zu berechnen kann man wie folgt vorgehen:
 
 $y_p'(x) \stackrel{!}{=} \alpha(x)y_p(x) + s(x)$
 
 $\displaystyle{\implies c(x) \int s(x)e^{-\beta(x)}}$
+
 
 ### Bernoullische Differentialgleichung
 
@@ -261,15 +268,18 @@ Sei $I \subseteq \R$ ein Intervall, $g, h \in C(I, \R)$ und $\alpha \in \R$. Die
 
 $$y'(x) + g(x)y(x) + h(x)y(x)^{\alpha} = 0 \tag{*}$$
 
-heißt **Bernoullische Differentialgleichung**. Für $\alpha \in \lbrace 0, 1 \rbrace$ erhält man eine lineare Differentialgleichung. Ob homogen oder nicht
+heißt **Bernoullische Differentialgleichung**. Für $\alpha \in \lbrace 0, 1 \rbrace$ erhält man eine lineare
+Differentialgleichung. Ob homogen oder nicht
 hängt von $h$ ab.
 
 Für $\alpha \in \R \setminus \lbrace 0, 1 \rbrace$.
 
-Setze $z(x) = (y(x))^{1-\alpha}$. Nun leitet man $z$ ab und erhält $z'(x) = \dots$. Hiermit hat man dann nun eine **lineare Differentialgleichung** für $z$.
+Setze $z(x) = (y(x))^{1-\alpha}$. Nun leitet man $z$ ab und erhält $z'(x) = \dots$. Hiermit hat man dann nun
+eine **lineare Differentialgleichung** für $z$.
 
-Wenn man dann eine Lösung $z$ gefunden hat auf $I$ kann man diese in $y(x) := z(x)^{\frac{1}{1-\alpha}}$ einsetzen ($x \in I_1 \subseteq I$). Hierbei muss man
-darauf achten, dass $z(x)^{\frac{1}{1-\alpha}}$ nur auf $I_1$ eine Lösung bietet und nicht unbedingt auf komplett $I$. Dann ist $y$ eine Lösung für *(&#42;)* auf $I_1$.
+Wenn man dann eine Lösung $z$ gefunden hat auf $I$ kann man diese in $y(x) := z(x)^{\frac{1}{1-\alpha}}$ einsetzen
+($x \in I_1 \subseteq I$). Hierbei muss man darauf achten, dass $z(x)^{\frac{1}{1-\alpha}}$ nur auf $I_1$ eine
+Lösung bietet und nicht unbedingt auf komplett $I$. Dann ist $y$ eine Lösung für *(&#42;)* auf $I_1$.
 
 ### Riccatische Differentialgleichung
 
@@ -277,12 +287,13 @@ Seien $g, h, k \in C(I, \R)$. Die Differentialgleichung
 
 $$y'(x)+g(x)y(x) + h(x)y^2(x) = k(x) \tag{**}$$
 
-heißt **Riccatische Differentialgleichung**. Hat man eine Lösung $y_2$ von *(&#42;&#42;)* so kann man sich ein $u := y_1 - y_2$ aufstellen, wobei $y_1$ eine weitere
-unbekannte Lösung ist. Dieses $u$ kann man dann ableiten zu:
+heißt **Riccatische Differentialgleichung**. Hat man eine Lösung $y_2$ von *(&#42;&#42;)* so kann man sich
+ein $u := y_1 - y_2$ aufstellen, wobei $y_1$ eine weitere unbekannte Lösung ist. Dieses $u$ kann man dann ableiten zu:
 
 $$u'(x) = -(g(x) + 2h(x)y_2))u(x) - h(x)u^2(x)$$
 
-und kann dadurch weitere Lösungen von *(&#42;&#42;)* finden von der Form $y_2(x) + u(x)$.
+Dies hat die Form einer Bernoullischen Differentialgleichung wodurch man dann weitere Lösungen für die ursprüngliche
+Differentialgleichung erhalten kann.
 
 
 ## Lineare Systeme mit konstanten Koeffizienten
@@ -316,5 +327,98 @@ Diesen VR nennt man auch **Fundamentalsystem** von *(2)*.
 $$\exists y_h \in V: y(x) = y_p(x) + y_h(x) (x \in I) \iff \text{y ist eine Lösung von (1) auf I}$$
 
 AWP sieht gleich aus wie schon bei linearen Differentialgleichungen, nur diesmal mit Vektoren.
+
+Sei $\lambda \in \R$ Eigenwert von $A$ und $v \in \R^n \setminus \lbrace 0 \rbrace$ der zugehörige Eigenvektor.
+
+Mit $y(x) = e^{\lambda x}v$ gilt
+
+$$y'(x) = \lambda e^{\lambda x}v = e^{\lambda x}Av = A(e^{\lambda x}v) = Ay(x) \quad (x \in \R)$$
+
+**Lösungsverfahren für homogene Gleichungssysteme** $y'(x) = Ay(x)$
+
+Es gilt, dass wenn $\lambda_0 \in \C$ ist und $p(\lambda_0) = 0$ gilt auch $p(\overline{\lambda_0}) = 0$ gelten muss.
+
+1. Bestimme die verschiedenen Eigenwerte $\lambda_1, \dots, \lambda_r$ von $A$ ($r \lt n$) und deren algebraische
+   Vielfachheit $k_1, \dots, k_r$. Stelle charakteristisches Polynom $p(\lambda) = (-1)^n(\lambda-\lambda_1)^k \dots$
+   auf.
+2. Sortiere Eigenwerte in $\R$ und $\C \setminus \R$. Seien $\lambda_1, \dots, \lambda_m$ reellwertig und $\mu_1, \dots, \mu_s$
+   komplex. Sortiere dabei auch gleichzeitig alle komplexen Eigenwerte die nur das komplex konjugierte eines anderen
+   Eigenwertes sind aus. $M := \lbrace \lambda_1, \dots, \lambda_m, \mu_1, \dots \mu_s \rbrace$.
+3. Bestimme Hauptraum $V_j$ für alle $\lambda_j \in M$ (hiermit sind alle Eigenwerte gemeint, nicht nur die strikt reellwertigen)
+4. Es sei $\lambda_j \in M$, $v \ V_j$ Basisvektor.
+   Setze $y(x) := e^{\lambda_j}x \left( v = \displaystyle{\sum_{n=1}^{k_j-1} \dfrac{x^n}{n!} (A - \lambda_jI)^n v} \right)$
+
+   Fall $\lambda_j \in \R$: Dann ist $y(x) \in \R^n$ und $y$ eine Lösung des homogenen Gleichungssystem auf $\R$
+
+   Fall $\lambda_j \in \C \setminus \R$: Dann ist $y(x) \in \C^n$. Zerlege $y(x)$ komponentenweise in Real- und
+   Imaginärteil: $y^{(1)}(x) + iy^{(2)}(x)$. Dann sind $y^{(1)}$ und $y^{(2)}$ linear unabhängige Lösungen des
+   homogenen Gleichungssystems auf $\R$.
+5. Führt man 4. für jedes $\lambda_j \in M$ und jeden Basisvektor von $V_j$ durch, so erhält man ein Fundamentalsystem des
+   homogenen Gleichungssystems und ist somit fertig.
+
+Es sei $y^{(1)}, y^{(2)}, \dots, y^{(n)}$ ein Fundamentalsystem der homogenen Gleichung $y'(x) = Ay(x)$
+
+Setze $Y(x) := (y^{(1)}(x), \dots, y^{(n)}(x)) (x \in \R$
+
+Für jedes $x \in \R$ ist $Y(x)$ eine reelle $n \times n$-Matrix mit $j$-ter Spalte $y^{(j)}(x)$. Sie nennt man ebenfalls
+**Fundamentalsystem** oder auch **Fundamentalmatrix**. Die Lösungen des inhomogenen Gleichungssystemes sind somit die
+Funktionen $y: \R \to \R^n$ der Form $y(x) = Y(x)c \quad (c \in \R^n)$
+
+Um nun eine spezielle Lösung $y_p: I \to \R^n$ des inhomogenen Gleichungssystems zu finden geht man wie folgt vor:
+
+$$y_p(x) = Y(x)c(x)$$
+
+Suche ein passendes $c: I \to \R^n$. Dies findet man indem man
+
+$$c(x) = \int (Y(x))^{-1}b(x) dx$$
+
+berechnet. Damit hat man dann eine allgemeine Lösung:
+
+$$y(x) = Y(x)c  + y_p(x) \quad (c \in \R^n)$$
+
+## Lineare Differentialgleichungen n-ter Ordnung mit konstanten Koeffizienten
+
+Sei $y: I \to \R$ $n$-mal db. auf $I$. Dann ist
+
+$$Ly := y^{(n)} + a_{n-1}y^{(n-1)} + \dots + a_{1}y^{(1)} + a_0y$$
+
+Die Differentialgleichung
+
+$$(Ly)(x) = b(x) \tag{1}$$
+
+heißt **lineare Differentialgleichung n-ter Ordnung mit konstanten Koeffizienten**. Wie sonst auch gibt es
+eine homogene Gleichung für $b = 0$ *(2)* und eine inhomogene Gleichung für $b \ne 0$.
+
+$V := \lbrace y: \R \to \R: \text{y ist eine Lösung von (2)} \rbrace$ ist ein VR mit dim. $n$. Jede Basis von $V$
+heißt ein Fundamentalsystem von *(2)*.
+
+$$\exists y_h \in V \forall x \in I: y(x) = y_p(x) + y_h(x) \iff \text{y ist eine Lösung von (1) auf I}$$
+
+Es gibt wie sonst auch Anfangswertprobleme, hierfür gibt es immer eine eindeutige Lösung.
+
+**Lösungsmethode für *(2)***: $y^{(n)}(x) + a_{n-1}y^{(n-1)}(x) + \dots + a_0y(x) = 0$ 
+
+1. charakteristisches Polynom aufstellen in der Form $p(\lambda) = (\lambda - \lambda_1)^{k_1} \dots$
+2. Aufteilen der Eigenwerte in rein reellwertige Nullstellen, rein komplexe Nullstellen und komplexe Nullstellen die das
+   komplex konjugierte einer anderen Nullstelle sind. Wie zuvor wirft man letzteres einfach weg, der Rest kommt in die Menge $M$
+3. Für alle $\lambda_j \in M$
+
+   Fall $\lambda_j \in \R$:
+
+   $$e^{\lambda_j}x, xe^{\lambda_j}x, \dots, x^{k_j-1}e^{\lambda_j}x$$
+
+   sind linear unabhängige Lösungen von *(2)*.
+
+   Fall $\lambda_j \in \C \setminus \R$:
+
+   schreibe $\lambda_j = \alpha + i\beta$
+
+   $$\begin{aligned}
+   e^{\alpha x}\cos \beta x, xe^{\alpha x}\cos \beta x, \dots, x^{k_j-1}e^{\alpha x}\cos \beta x \\\\
+   e^{\alpha x}\sin \beta x, xe^{\alpha x}\sin \beta x, \dots, x^{k_j-1}e^{\alpha x}\sin \beta x
+   \end{aligned}$$
+
+   sind linear unabhängige Lösungen von *(2)*
+4. Diese insgesamt $n$ Lösungen bilden nun ein Fundamentalsystem von *(2)*
 
 

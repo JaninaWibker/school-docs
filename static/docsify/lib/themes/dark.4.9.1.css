@@ -659,7 +659,7 @@ body.dark .markdown-section h2,
 body.dark .markdown-section h3,
 body.dark .markdown-section h4,
 body.dark .markdown-section strong {
-  color: #657b83;
+  color: var(--accent-color-1, #657b83);
   font-weight: 600;
 }
 body.dark .markdown-section a {
@@ -718,7 +718,7 @@ body.dark .markdown-section blockquote {
   margin: 1em 0;
 }
 body.dark .markdown-section em {
-  color: #7f8c8d;
+  color: var(--accent-color-2, #7f8c8d);
 }
 body.dark .markdown-section code {
   background-color: #1f1f1f;
