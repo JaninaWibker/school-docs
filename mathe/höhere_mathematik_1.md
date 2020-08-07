@@ -20,19 +20,65 @@ $$\sinh(x) = \dfrac{e^x}{2} - \dfrac{e^{-x}}{2}$$
 
 $$\cosh(x) = \dfrac{e^x}{2} + \dfrac{e^{-x}}{2}$$
 
-## geometrische Reihe
+## bekannte Folgen & Reihen
 
-$$\sum_{n=0}^{\infty} x^n = \dfrac{1}{1-x} (\vert x \vert < 1)$$
+**TODO**: bekannte Folgen
+
+### geometrische Reihe
+
+$$\sum_{n=0}^{\infty} x^n = \dfrac{1}{1-x} \quad (\vert x \vert < 1)$$
+
+### harmonische Reihe
+
+$$\sum_{n=1}^{\infty} \dfrac{1}{n} \text{ divergiert}$$
+
+## Alternierende harmonische Reihe
+
+$$\sum_{n=1}^{\infty} \dfrac{(-1)^{n+1}}{n} = \ln(2)$$
+
+## Exponentialreihe
+
+$$\sum_{n=0}^{\infty} \dfrac{x^n}{n!} = e^x$$
+
+Insbesondere ist $\displaystyle{\sum_{n=0}^{\infty} \dfrac{1}{n!} = e}$
+
+## Monotoniekriterium
+
+Sind alle $a_n \gt 0$ und ist $(s_n)$ beschränkt, so ist $\displaystyle{\sum_{n=1}^{\infty} a_n}$ konvergent.
+
+## Cauchykriterium
+
+$$\sum_{n=1}^{\infty} a_n \text{ ist konvergent} \iff \forall \epsilon > 0 \exists n_0 \in \N \forall m > n \gt n_0: \vert \sum_{k=n+1}^{m} a_k \vert < \epsilon$$
+
+## Leibnizkriterium
+
+Es sei $(b_n)$ eine Folge mit:
+
+1. $(b_n)$ ist monoton fallend,
+2. $b_n \to 0 \quad (n \to \infty)$
+
+Dann ist $\displaystyle{\sum_{n=1}^{\infty} (-1)^{n+1} b_n}$ konvergent
+
+## Majorantenkriterium
+
+Gilt $\vert a_n \vert \lt b_n \text{ ffa } n \in \N$ und ist $\displaystyle{\sum_{n=1}^{\infty}} b_n$ konvergent, so ist
+$\displaystyle{\sum_{n=1}^{\infty} a_n}$ absolut konvergent.
+
+## Minorantenkriterium
+
+Gilt $a_n \gt b_n > 0 \text{ ffa } n \in \N$ und ist $\displaystyle{\sum_{n=1}^{\infty} b_n}$ divergent, so ist
+$\displaystyle{\sum_{n=1}^{\infty} a_n}$ divergent.
 
 ## Wurzelkriterium
 
-Sei $(a_n)$ eine Folge, $c_n := \sqrt[n]{\vert a_n \vert}$.
+Es sei $(a_n)$ eine Folge, $c_n := \sqrt[n]{\vert a_n \vert} \quad (n \in \N)$.
 
-- Ist $(c_n)$ unbeschränkt, so ist $\sum_{n=1}^{\infty} a_n$ divergent.
-- Es sei $(c_n)$ beschränkt und $\alpha := \limsup_{n\to\infty} c_n$. Dann ist
-  - Ist $\alpha < 1$, so ist $\sum_{n=1}^{\infty} a_n$ absolut konvergent.
-  - Ist $\alpha > 1$, so ist $\sum_{n=1}^{\infty} a_n$ divergent.
-  - Im Falle $\alpha = 1$ ist keine allgemeine Aussage möglich.
+1. Ist $(c_n)$ ungeschränkt, so ist $\displaystyle{\sum_{n=1}^{\infty}}$ divergent
+2. Es sei $(c_n)$ beschränkt und $\alpha := \limsup_{n\to\infty} c_n$. Dann gilt:
+   - Ist $\alpha < 1$, so ist $\displaystyle{\sum_{n=1}^{\infty}}$ absolut konvergent.
+   - Ist $\alpha > 1$, so ist $\displaystyle{\sum_{n=1}^{\infty}}$ divergent.
+
+   Im Fall $\alpha = 1$ ist keine allgemeine Aussage möglich.
 
 ## Quotientenkriterium
 
@@ -62,6 +108,27 @@ Wobei $L$ die Lipschitz-Konstante ist für die Funktion. Man kann dies eigentlic
 für die Steigung der Funktion ansehen.
 
 Wenn eine Funktion Lipschitz-stetig ist, dann ist sie auch gleichmäßig stetig. Die Umkehrung gilt nicht immer.
+
+## Punktweise Konvergenz
+
+Eine Funktionsfolge $f_n: d \to \r, n \in \n$ ist punktweise konvergent gegen die Funktion $f: D \to \R$, wenn
+für alle $x \in D$ gilt:
+
+$$\lim_{n\to\infty} f_n(x) = f(x)$$
+
+## Gleichmäßige Konvergenz
+
+Wenn eine Funktion schon punktweise konvergent ist kann sie zudem auch noch gleichmäßig konvergent sein. Dafür muss
+folgendes gelten:
+
+$$\lim_{n\to\infty} \sup_{x \in D_f} \vert f_n(x) - f(x) \vert = 0$$
+
+wobei $f(x)$ die Grenzfunktion ist. Der bedeutende Unterschied zu punktweise konvergent ist hierbei, dass sich das
+$x$ in Abhängigkeit von $n$ ändern kann. Wenn man also ein $x(n)$ findet, wofür $\vert f_n(x) - f(x) \vert$ nicht gegen
+$0$ geht, hat man gezeigt dass die Funktionsfolge nicht gleichmäßig konvergent ist.
+
+Um zu zeigen, dass das $n$ für die Wahl des $x$ irrelevant ist erfolgt meist durch rauskürzen, sodass hinterher das $x$
+garnicht mehr vorkommt.
 
 ## Umkehrsatz
 
