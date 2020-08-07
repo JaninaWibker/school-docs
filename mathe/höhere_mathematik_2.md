@@ -413,12 +413,36 @@ Es gibt wie sonst auch Anfangswertprobleme, hierfür gibt es immer eine eindeuti
 
    schreibe $\lambda_j = \alpha + i\beta$
 
-   $$\begin{aligned}
-   e^{\alpha x}\cos \beta x, xe^{\alpha x}\cos \beta x, \dots, x^{k_j-1}e^{\alpha x}\cos \beta x \\\\
-   e^{\alpha x}\sin \beta x, xe^{\alpha x}\sin \beta x, \dots, x^{k_j-1}e^{\alpha x}\sin \beta x
-   \end{aligned}$$
+   $$\begin{alignedat}{4}
+   &e^{\alpha x}\cos \beta x&,\\; xe^{\alpha x}\cos \beta x&,\\; \dots,\\; x^{k_j-1}e^{\alpha x}\cos \beta x& \\\\
+   &e^{\alpha x}\sin \beta x&,\\; xe^{\alpha x}\sin \beta x&,\\; \dots,\\; x^{k_j-1}e^{\alpha x}\sin \beta x&
+   \end{alignedat}$$
 
    sind linear unabhängige Lösungen von *(2)*
 4. Diese insgesamt $n$ Lösungen bilden nun ein Fundamentalsystem von *(2)*
 
+**Lösungsmethode für spezielle Lösung *(1)***: $(Ly)(x) = b(x)$
 
+Es seien $\gamma, \delta \in \R, m \N_0, q$ ein Polynom vom Grad $m$ und $b$ hat die Form
+
+$$b(x) = q(x)e^{\gamma x} \cos(\delta x) \text{ oder } b(x) = q(x)e^{\gamma x} \sin(\delta x)$$
+
+Sei $p$ das charakteristische Polynom von $(Ly)(x) = 0$
+
+Fall $p(\gamma + i\delta) \ne 0$:
+
+$$y_p(x) := (\hat{q}(x)\cos(\gamma x) + \tilde{q} \sin(\delta x))e^{\gamma x}$$
+
+Fall $\gamma + i\delta$ ist eine $\upsilon$-fache Nullstelle von $p$. Wähle den Ansatz:
+
+$$y_p(x) := x^{\upsilon} (\hat{q}(x)\cos(\delta x) + \tilde{q}(x)\sin(\delta x))e^{\gamma x}$$
+
+In beiden Fällen sind $\hat{q}$ und $\tilde{q}$ Polynome vom Grad $m$. In beiden Fällen führt der Ansatz zu einer
+speziellen Lösung $y_p$ von *(1)*.
+
+Die Polynome $\hat{q}$ und $\tilde{q}$ bekommt man heraus indem man das $b(x)$ in *(1)* einsetzt und guckt, für welche
+Polynome die Gleichung aufgeht
+
+$$(Ly)(x) \stackrel{!}{=} b(x)$$
+
+Hierfür ist die Beschränkung des Grades der Polynome sehr essentiell.
