@@ -59,7 +59,8 @@ Sei $A \in \R^n$
 - $A$ heißt **abgeschlossen**: $\iff \R^n \setminus A$ ist offen<br />
   *andere Definition*: Jeder Häufungspunkt von $A$ gehört zu $A$<br />
   *Beispiel*: $[a, b]$ ist ein abgeschlossenes Intervall, weil $a$ und $b$ im Intervall enthalten sind und somit nicht<br />
-  in $\R^n \ A$ sind wodurch man immer ein $\epsilon > 0$ finden kann.
+  in $\R^n \setminus A$ sind wodurch man immer ein $\epsilon > 0$ finden kann.<br />
+  $[a, \infty]$ ist auch abgeschlossen, aber $(a, \infty)$ nicht.
 - $A$ heißt **kompakt**: $\iff$ $A$ ist beschränkt und abgeschlossen.<br />
   *andere Definition*: Jede Folge $(x_n)$ in $A$ enthält eine konvergente Teilfolge $(x_{n_k})$
   mit $\displaystyle{\lim_{k\to\infty} x_{n_k}} \in D$
