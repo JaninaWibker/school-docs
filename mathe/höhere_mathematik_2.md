@@ -11,6 +11,7 @@ $$\text{grad}(f) = \begin{pmatrix} f_{x_1} & f_{x_2} & \dots & f_{x_n} \end{pmat
 
 Hierbei ist $f_{x_i}$ die Ableitung von $f$ nach dem $i$-ten Eintrag von $\R^n$.
 
+
 ### Hesse-Matrix
 
 Die Hesse-Matrix repräsentiert die zweite Ableitung. Sie ist nur für Funktionen von $\R^n \to \R$ benutzbar, also
@@ -27,6 +28,7 @@ $$H_f = \begin{pmatrix}
 \end{pmatrix}$$
 
 > Die Hesse-Matrix ist symmetrisch.
+
 
 ### Jacobi-Matrix
 
@@ -72,6 +74,7 @@ Sei $A \in \R^n$
 - $\R^n$ ist abgeschlossen, aber nicht kompakt, da $\R^n \setminus \R^n = \emptyset$ ist, was offen ist.
 - $[a, \infty)$ und $(-\infty, a]$ sind abgeschlossen, aber nicht kompakt, weil sie nicht beschränkt sind.
 
+
 ## Umkehrsatz
 
 Es sei $D \subseteq \R^n$ offen, $f \in C^1(D, \R^n)$ und $x_0 \in D$. Ist $\det f'(x_0) \ne 0$, so existiert ein $\epsilon > 0$ mit:
@@ -81,12 +84,13 @@ Es sei $D \subseteq \R^n$ offen, $f \in C^1(D, \R^n)$ und $x_0 \in D$. Ist $\det
 - $f^{-1}: f(U_{\epsilon}(x_0)) \to U_{\epsilon}(x_0)$ ist in $C^1(f(U_{\epsilon}(x_0)), \R^n)$, $\det f'(x) \ne 0 (x \in U_{\epsilon}(x_0))$
   und $(f^{-1})'(y) = (f'(f^{-1}(y)))^{-1} (y \in f(U_{\epsilon}(x_0)))$
 
+
 ## Richtungsableitung
 
 Eine Richtungsableitung ist eine Ableitung, welche sich nicht unbedingt an *den Achsen festhält*, also keine Ableitung welche
 die Steigung an genau einer der Achsen misst, sondern an einer beliebigen Gerade. Beispielsweise könnte man eine Richtungsbleitung machen, welche genau gleichviel nach $x$ und nach $y$ ableitet / läuft.
 
-Sei $a \in \R^n$ mit $\Vert a \Vert$, dann nennt man $a$ eine **Richtung** oder einen **Richtungsvektor**.
+Sei $a \in \R^n$ mit $\Vert a \Vert = 1$, dann nennt man $a$ eine **Richtung** oder einen **Richtungsvektor**.
 
 Passe nun die Definition des Differenzenquotienten so an, dass er mit Richtungen funktioniert:
 
@@ -101,6 +105,7 @@ Ist $f$ in $x_0 \in D$ differenzierbar und $a \in \R^n$ eine Richtung, dann ist
 
 $$\dfrac{\partial f}{\partial a}(x_0) = a \cdot \text{grad} f(x_0)$$
 
+
 ## Extrema im $\R^n$
 
 Sei $A$ eine reelle und symmetrische $n \times n$-Matrix. $A$ heißt
@@ -114,13 +119,19 @@ Sei $A$ eine reelle und symmetrische $n \times n$-Matrix. $A$ heißt
 - $A$ ist positiv definit $\iff$ alle Eigenwerte von $A$ sind $> 0$
 - $A$ ist negativ definit $\iff$ alle Eigenwerte von $A$ sind $< 0$
 - $A$ ist indefinit       $\iff$ es gibt Eigenwerte die $> 0$ und Eigenwerte die $< 0$ sind
+- $A$ ist nicht definit   $\iff$ es gibt Eigenwerte die $0$ sind.
 
+Für den Spezialfall, dass $\displaystyle{A = \begin{pmatrix} \alpha & \beta \\\\ \beta & \gamma \end{pmatrix}}$ ist gilt:
+
+- $A$ ist positiv definit $\iff \alpha > 0, \det A > 0$
+- $A$ ist positiv definit $\iff \alpha < 0, \det A > 0$
+- $A$ ist indefinit       $\iff \det A = 0$
 
 Für $M \subseteq \R^n, g: M \to \R$ und $x_0 \in M$
-- **lokales Maximum**:  $\iff \exists \delta > 0 \forall x \in U_{\delta}(x_0) \cap M: g(x) \lt g(x_0)$
-- **lokales Minimum**:  $\iff \exists \delta > 0 \forall x \in U_{\delta}(x_0) \cap M: g(x) \gt g(x_0)$
-- **globales Maximum**: $\iff \forall x \in M: g(x) \lt g(x_0)$
-- **globales Minimum**: $\iff \forall x \in M: g(x) \gt g(x_0)$
+- **lokales Maximum**:  $\iff \exists \delta > 0 \forall x \in U_{\delta}(x_0) \cap M: g(x) \le g(x_0)$
+- **lokales Minimum**:  $\iff \exists \delta > 0 \forall x \in U_{\delta}(x_0) \cap M: g(x) \ge g(x_0)$
+- **globales Maximum**: $\iff \forall x \in M: g(x) \le g(x_0)$
+- **globales Minimum**: $\iff \forall x \in M: g(x) \ge g(x_0)$
 
 Ist $f$ in $x_0 \in D$ partiell differenzierbar und hat $f$ in $x_0$ ein lokales Extremum, so ist $\text{grad}(x_0) = 0$
 
@@ -128,6 +139,7 @@ Ist $f \in C^2(D, \R), x_0 \in D$ und $\text{grad} f(x_0) = 0$, so gilt:
 - Ist $H_f(x_0)$ positiv definit, so hat $f$ in $x_0$ ein lokales Minimum.
 - Ist $H_f(x_0)$ negativ definit, so hat $f$ in $x_0$ ein lokales Maximum.
 - Ist $H_f(x_0)$ indefinit,       so hat $f$ in $x_0$ kein lokales Extremum.
+
 
 ## Integration im $\R^n$
 
@@ -137,6 +149,7 @@ Die Idee ist, dass man die Menge über die man integrieren will so anpasst, dass
 bieten sich oft Kreisscheiben, Zylinder, Kugeln, ... an. Man modifiziert hierbei die Menge an Eingabeparametern und passt
 danach die Funktion so an, dass diese transformierten Eingabeparameter wieder zurücktransformiert werden und mit etwas glück
 kann man dann damit einiges vereinfachen.
+
 
 ### Satz von Fubini
 
@@ -153,6 +166,7 @@ Integrale beliebig tauschen:
 
 $$\int_{I} f(x) dx = \int_{I} f(x_1, \dots, x_n) d(x_1, \dots, x_n) = \int_{a_1}^{b_1} \int_{a_2}^{b_2} \dots dx_2 dx_1$$
 
+
 ### Prinzip von Cavalieri
 
 Sei $B \subseteq \R^{n+1}$ messbar. Schreibe $(x, z) \in B$ mit $x \in \R^n$ und $z \in R$ mit $z \in [a, b] \iff (x,z) \in B$.
@@ -163,6 +177,7 @@ Weiter sei $Q(z)$ messbar für jedes $z \in [a,b]$. Dann ist $z \mapsto \vert Q(
 $$\vert B \vert = \int_a^b \vert Q(z) \vert dz$$
 
 Man hat also eigentlich nur nach einer der Variablen "entwickelt" und einen geschlossenen Ausdruck dafür gefunden womit man gut arbeiten kann.
+
 
 ### Rotationskörper
 
@@ -177,6 +192,7 @@ $$\det g'(y) \ne 0 (y \in B^\circ)$$
 Ist dann $A := g(B)$ und $f \in C(A, \R)$, so ist $A$ kompakt und messbar und es gilt:
 
 $$\int_A f(x) dx = \int_B f(g(y)) \cdot \vert \det g'(y) \vert dy$$
+
 
 ### Polarkoordinaten (n=2)
 
@@ -206,6 +222,7 @@ Ist nun $f \in C(A, \R)$, so gilt:
 
 $$\int_A f(x, y) d(x, y) = \int_B f(r \cos \varphi, r \sin \varphi) \cdot r d(r, \varphi) = \int_{\varphi_1}^{\varphi_2} \int_{R_1}^{R_2} f(r \cos \varphi, r \sin \varphi) \cdot r dr d\varphi$$
 
+
 ### Zylinderkoordinaten (n=3)
 
 Fast das gleiche wie Polarkoordinaten, nur eine "unbenutzte" Variable $z$ zusätzlich (Höhe des Zylinders):
@@ -232,6 +249,7 @@ Hierbei ist:
 - $h_2$: max. Höhe
 
 $$\int_A f(x, y, z) d(x, y, z) = \int_B f(r \cos \varphi, r \sin \varphi, z) \cdot r d(r, \varphi, z)$$
+
 
 ### Kugelkoordinaten (n=3)
 
@@ -262,75 +280,6 @@ Hierbei ist:
 
 $$\int_A f(x, y, z) d(x, y, z) = \int_B f(g(r, \varphi, \vartheta)) \cdot r^2 \cos \vartheta d(r, \varphi, \vartheta)$$
 
-## Fouriertransformation
-
-> **Definitionen**: stückweise stetig, stückweise glatt, (absolut) konvergent, (absolut) integrierbar, bandbeschränkt, schnell fallend
-
-### Cauchyscher Hauptwert (CH)
-
-$$CH-\int_{\infty}^{\infty} f(x) dx := lim_{\alpha\to\infty} \int_{-\alpha}^{\alpha} f(x) dx$$
-
-> Das ist kein Minus, das ist ein Bindestrich
-
-Bedenke, dass $\int_{-\infty}^{\infty} f(x) dx$ **nicht** so definiert ist. Die Unendlichkeiten sind unabhängig voneinander.
-
-### Fouriertransformation von $f$:
-
-$$\hat{f}(s) = \dfrac{1}{2\pi} \int_{-\infty}^{\infty} f(t)e^{-ist} dt$$
-
-### Rücktransformation von $\hat{f}$:
-
-$$f(t) = \int_{-\infty}^{\infty} \hat{f}(s)e^{ist} ds$$
-
-### idk
-
-Es sei $V: \lbrace f: \R \to \C: f \text{ ist stückweise stetig und absolut integrierbar} \rbrace$. Für jedes
-$f \in V$ existiert die Fouriertransformierte $\hat{f}$.
-
-Es gilt
-
-- $V$ ist ein Vektorraum und es gilt für $f, g \in V$ und $\alpha, \beta \in \C$: $\hat{\alpha f + \beta g} = \alpha\hat{f} + \beta\hat{g}$
-- Sei $f \in V, h \in \R$ und $f_h: \R \to \C$ sei definiert durch $f_h(t) := f(t+h)$.
-  Dann ist $f_h \in V$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s) (s \in \R)$
-
-### Faltung
-
-Es seien $f_1, f_2: \R \to \C$ so, dass
-
-$$\int_{-\infty}^{\infty} f_1(t-x)f_2(x) dx$$
-
-für jedes $t \in \R$ konvergent ist. Dann heißt die Funktion
-
-$$f_1 * f_2: \R \to \C, (f_1 * f_2)(t) := \dfrac{1}{2\pi} \int_{-\infty}^{\infty} f_1(t-x)f_2(x) dx$$
-
-die Faltung von $f_1$ und $f_2$
-
-$f_1, f_2$ stetig und absolut integrierbar und $f_1$ beschränkt
-
-$\implies f_1 * f_2$ ist stetig und absolut integrierbar ($f_1 * f_2 \in V$) und $\hat{f_1 * f_2}(s) = \hat{f_1}(s)\hat{f_2}(s)$
-
-### idk
-
-$f \in V$, $f'$ absolut integrierbar $\implies f' \in V$ und $\hat{f'}(s) = is\hat{f}(s)$
-
-### schnell fallende Funktionen / Schwarz-Raum
-
-Schwarzraum:
-
-$$S := \lbrace f: \R \to \C: f \text{ ist schnell fallend} \rbrace$$
-
-$f, g \in S$, $p$ Polynom:
-
-- $f$ ist absout integrierbar und $lim_{t\to\pm\infty} f(t) = 0$
-- $\forall \alpha, \beta \in \C: \alpha f + \beta g \in S$ ($S$ ist VR)
-- $fg, pf, \overline{f}, \text{Re } f, \text{Im } f, t \mapsto f(-t) \in S$
-- $\hat{f} \in S$ und $f(t) = \int_{-\infty}^{\infty} \hat{f}e^{ist} ds$
-- $f^{(n)} \in S$ und $\hat{f^{(n)}}(s) = (is)^n \hat{f}(s)$
-- $f_h \in S$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s)$
-- $f * g \in S$ und $\hat{f * g} = \hat{f} \cdot \hat{g}$
-- Für $h := e^{-t^2/2}$ gilt $h \in S$ und $\hat{h} = \dfrac{1}{\sqrt{2\pi}}h$
-Die Fouriertransformation $\mathscr{F}: f \mapsto \hat{f}$ ist eine Isometrie mit der Rücktransformation $\mathscr{G}$
-als Umkehrfunktion
 
 ## Differenzialgleichungen
 
@@ -400,6 +349,7 @@ eine **lineare Differentialgleichung** für $z$.
 Wenn man dann eine Lösung $z$ gefunden hat auf $I$ kann man diese in $y(x) := z(x)^{\frac{1}{1-\alpha}}$ einsetzen
 ($x \in I_1 \subseteq I$). Hierbei muss man darauf achten, dass $z(x)^{\frac{1}{1-\alpha}}$ nur auf $I_1$ eine
 Lösung bietet und nicht unbedingt auf komplett $I$. Dann ist $y$ eine Lösung für *(&#42;)* auf $I_1$.
+
 
 ### Riccatische Differentialgleichung
 
@@ -496,6 +446,7 @@ berechnet. Damit hat man dann eine allgemeine Lösung:
 
 $$y(x) = Y(x)c  + y_p(x) \quad (c \in \R^n)$$
 
+
 ## Lineare Differentialgleichungen n-ter Ordnung mit konstanten Koeffizienten
 
 Sei $y: I \to \R$ $n$-mal db. auf $I$. Dann ist
@@ -566,3 +517,80 @@ Polynome die Gleichung aufgeht
 $$(Ly)(x) \stackrel{!}{=} b(x)$$
 
 Hierfür ist die Beschränkung des Grades der Polynome sehr essentiell.
+
+
+## Fouriertransformation
+
+> **Definitionen**: stückweise stetig, stückweise glatt, (absolut) konvergent, (absolut) integrierbar, bandbeschränkt, schnell fallend
+
+### Cauchyscher Hauptwert (CH)
+
+$$CH-\int_{\infty}^{\infty} f(x) dx := lim_{\alpha\to\infty} \int_{-\alpha}^{\alpha} f(x) dx$$
+
+> Das ist kein Minus, das ist ein Bindestrich
+
+Bedenke, dass $\int_{-\infty}^{\infty} f(x) dx$ **nicht** so definiert ist. Die Unendlichkeiten sind unabhängig voneinander.
+
+
+### Fouriertransformation von $f$:
+
+$$\hat{f}(s) = \dfrac{1}{2\pi} \int_{-\infty}^{\infty} f(t)e^{-ist} dt$$
+
+
+### Rücktransformation von $\hat{f}$:
+
+$$f(t) = \int_{-\infty}^{\infty} \hat{f}(s)e^{ist} ds$$
+
+### idk
+
+Es sei $V: \lbrace f: \R \to \C: f \text{ ist stückweise stetig und absolut integrierbar} \rbrace$. Für jedes
+$f \in V$ existiert die Fouriertransformierte $\hat{f}$.
+
+Es gilt
+
+- $V$ ist ein Vektorraum und es gilt für $f, g \in V$ und $\alpha, \beta \in \C$: $\hat{\alpha f + \beta g} = \alpha\hat{f} + \beta\hat{g}$
+- Sei $f \in V, h \in \R$ und $f_h: \R \to \C$ sei definiert durch $f_h(t) := f(t+h)$.
+  Dann ist $f_h \in V$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s) (s \in \R)$
+
+
+### Faltung
+
+Es seien $f_1, f_2: \R \to \C$ so, dass
+
+$$\int_{-\infty}^{\infty} f_1(t-x)f_2(x) dx$$
+
+für jedes $t \in \R$ konvergent ist. Dann heißt die Funktion
+
+$$f_1 * f_2: \R \to \C, (f_1 * f_2)(t) := \dfrac{1}{2\pi} \int_{-\infty}^{\infty} f_1(t-x)f_2(x) dx$$
+
+die Faltung von $f_1$ und $f_2$
+
+$f_1, f_2$ stetig und absolut integrierbar und $f_1$ beschränkt
+
+$\implies f_1 * f_2$ ist stetig und absolut integrierbar ($f_1 * f_2 \in V$) und $\hat{f_1 * f_2}(s) = \hat{f_1}(s)\hat{f_2}(s)$
+
+
+### idk
+
+$f \in V$, $f'$ absolut integrierbar $\implies f' \in V$ und $\hat{f'}(s) = is\hat{f}(s)$
+
+
+### schnell fallende Funktionen / Schwarz-Raum
+
+Schwarzraum:
+
+$$S := \lbrace f: \R \to \C: f \text{ ist schnell fallend} \rbrace$$
+
+$f, g \in S$, $p$ Polynom:
+
+- $f$ ist absout integrierbar und $lim_{t\to\pm\infty} f(t) = 0$
+- $\forall \alpha, \beta \in \C: \alpha f + \beta g \in S$ ($S$ ist VR)
+- $fg, pf, \overline{f}, \text{Re } f, \text{Im } f, t \mapsto f(-t) \in S$
+- $\hat{f} \in S$ und $f(t) = \int_{-\infty}^{\infty} \hat{f}e^{ist} ds$
+- $f^{(n)} \in S$ und $\hat{f^{(n)}}(s) = (is)^n \hat{f}(s)$
+- $f_h \in S$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s)$
+- $f * g \in S$ und $\hat{f * g} = \hat{f} \cdot \hat{g}$
+- Für $h := e^{-t^2/2}$ gilt $h \in S$ und $\hat{h} = \dfrac{1}{\sqrt{2\pi}}h$
+Die Fouriertransformation $\mathscr{F}: f \mapsto \hat{f}$ ist eine Isometrie mit der Rücktransformation $\mathscr{G}$
+als Umkehrfunktion
+
