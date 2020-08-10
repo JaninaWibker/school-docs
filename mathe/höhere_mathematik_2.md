@@ -1,5 +1,37 @@
 # Höhere Mathematik II
 
+
+## Fundamentales & Notation
+
+**TODO**
+
+## Beschränkt, Offen, Abgeschlossen, ...
+
+Sei $A \in \R^n$
+
+- $A$ heißt **beschränkt**: $\iff \exists c \gt 0 \forall a \in A: \Vert a \Vert \lt c$<br />
+  *Erklärung*: Man findet immer ein Maximum für die Entfernung vom Ursprung, welches aus $(0, \infty)$ ist.<br />
+  *Beispiel*: $[a, \infty)$ ist **nicht** beschränkt, da $\infty$.
+- $A$ heißt **offen**: $\iff \forall a \in A \exists \epsilon = \epsilon(a) > 0: U_{\epsilon}(a) \subseteq A$<br />
+  *Erklärung*: Es gibt für jeden beliebigen Punkt $a \in A$ eine $\epsilon$-Umgebung, welche komplett in $A$ enthalten
+  ist<br />
+  *Beispiel*: $(a, b)$ ist ein offenes Intervall
+  $\epsilon$ darf von $a$ abhängen, muss aber größer $0$ sein.
+- $A$ heißt **abgeschlossen**: $\iff \R^n \setminus A$ ist offen<br />
+  *andere Definition*: Jeder Häufungspunkt von $A$ gehört zu $A$<br />
+  *Beispiel*: $[a, b]$ ist ein abgeschlossenes Intervall, weil $a$ und $b$ im Intervall enthalten sind und somit nicht<br />
+  in $\R^n \ A$ sind wodurch man immer ein $\epsilon > 0$ finden kann.
+- $A$ heißt **kompakt**: $\iff$ $A$ ist beschränkt und abgeschlossen.<br />
+  *andere Definition*: Jede Folge $(x_n)$ in $A$ enthält eine konvergente Teilfolge $(x_{n_k})$
+  mit $\displaystyle{\lim_{k\to\infty} x_{n_k}} \in D$
+
+- $\emptyset$ ist offen.
+- $\emptyset$ ist kompakt.
+- Endliche Mengen sind kompakt.
+- Ist $A$ kompakt und $A \ne \emptyset$, so existieren $\max A$ und $\min A$.
+- $\R^n$ ist abgeschlossen, aber nicht kompakt, da $\R^n \setminus \R^n = \emptyset$ ist, was offen ist.
+- $[a, \infty)$ und $(-\infty, a]$ sind abgeschlossen, aber nicht kompakt, weil sie nicht beschränkt sind.
+
 ## Umkehrsatz
 
 Es sei $D \subseteq \R^n$ offen, $f \in C^1(D, \R^n)$ und $x_0 \in D$. Ist $\det f'(x_0) \ne 0$, so existiert ein $\epsilon > 0$ mit:
@@ -8,6 +40,30 @@ Es sei $D \subseteq \R^n$ offen, $f \in C^1(D, \R^n)$ und $x_0 \in D$. Ist $\det
 - $f$ ist auf $U_{\epsilon}$ injektiv,
 - $f^{-1}: f(U_{\epsilon}(x_0)) \to U_{\epsilon}(x_0)$ ist in $C^1(f(U_{\epsilon}(x_0)), \R^n)$, $\det f'(x) \ne 0 (x \in U_{\epsilon}(x_0))$
   und $(f^{-1})'(y) = (f'(f^{-1}(y)))^{-1} (y \in f(U_{\epsilon}(x_0)))$
+
+## Richtungsableitung
+
+Eine Richtungsableitung ist eine Ableitung, welche sich nicht unbedingt an *den Achsen festhält*, also keine Ableitung welche
+die Steigung an genau einer der Achsen misst, sondern an einer beliebigen Gerade. Beispielsweise könnte man eine Richtungsbleitung machen, welche genau gleichviel nach $x$ und nach $y$ ableitet / läuft.
+
+Sei $a \in \R^n$ mit $\Vert a \Vert$, dann nennt man $a$ eine **Richtung** oder einen **Richtungsvektor**.
+
+Passe nun die Definition des Differenzenquotienten so an, dass er mit Richtungen funktioniert:
+
+Sei $x_0 \in D$, $a$ eine Richtung. $f$ heißt **in** $x_0$ **in Richtung** $a$ **differenzierbar**: $\iff$ Es existiert
+der Grenzwert
+
+$$\dfrac{\partial f}{\partial a}(x_0) := \lim_{t\to 0} \dfrac{f(x_0 + ta) - f(x_0)}{t} \in \R$$
+
+### einfachere berechnung der Richtungsableitung
+
+Ist $f$ in $x_0 \in D$ differenzierbar und $a \in \R^n$ eine Richtung, dann ist
+
+$$\dfrac{\partial f}{\partial a}(x_0) a \cdot grad f(x_0)$$
+
+## Extrema im $\R^n$
+
+**TODO**
 
 ## Integration im $\R^n$
 
