@@ -591,6 +591,7 @@ $f, g \in S$, $p$ Polynom:
 - $f_h \in S$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s)$
 - $f * g \in S$ und $\hat{f * g} = \hat{f} \cdot \hat{g}$
 - Für $h := e^{-t^2/2}$ gilt $h \in S$ und $\hat{h} = \dfrac{1}{\sqrt{2\pi}}h$
+
 Die Fouriertransformation $\mathscr{F}: f \mapsto \hat{f}$ ist eine Isometrie mit der Rücktransformation $\mathscr{G}$
 als Umkehrfunktion
 
