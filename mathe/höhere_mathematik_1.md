@@ -22,7 +22,13 @@ $$\cosh(x) = \dfrac{e^x}{2} + \dfrac{e^{-x}}{2}$$
 
 ## bekannte Folgen & Reihen
 
-**TODO**: bekannte Folgen
+### Exponentialfolge
+
+$$\lim_{n\to\infty} (1 + \dfrac{1}{n})^n = e$$
+
+$$\lim_{n\to\infty} (1 + \dfrac{x}{n})^n = e^x$$
+
+$$\lim_{n\to\infty} (1 - \dfrac{1}{n})^n = \dfrac{1}{e}$$
 
 ### geometrische Reihe
 
@@ -41,6 +47,12 @@ $$\sum_{n=1}^{\infty} \dfrac{(-1)^{n+1}}{n} = \ln(2)$$
 $$\sum_{n=0}^{\infty} \dfrac{x^n}{n!} = e^x$$
 
 Insbesondere ist $\displaystyle{\sum_{n=0}^{\infty} \dfrac{1}{n!} = e}$
+
+## Sinus, Cosinus
+
+$$\cos(x) := \sum_{n=0}^{\infty} (-1)^n \dfrac{x^{2n}}{(2n)!}$$
+
+$$\sin(x) := \sum_{n=0}^{\infty} (-1)^n \dfrac{x^{2n+1}}{(2n+1)}$$
 
 ## Monotoniekriterium
 
