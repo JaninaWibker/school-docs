@@ -111,7 +111,7 @@ Wenn eine Funktion Lipschitz-stetig ist, dann ist sie auch gleichmäßig stetig.
 
 ## Punktweise Konvergenz
 
-Eine Funktionsfolge $f_n: d \to \r, n \in \n$ ist punktweise konvergent gegen die Funktion $f: D \to \R$, wenn
+Eine Funktionsfolge $f_n: D \to \R, n \in \N$ ist punktweise konvergent gegen die Funktion $f: D \to \R$, wenn
 für alle $x \in D$ gilt:
 
 $$\lim_{n\to\infty} f_n(x) = f(x)$$

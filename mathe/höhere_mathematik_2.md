@@ -1,9 +1,48 @@
 # Höhere Mathematik II
 
-
 ## Fundamentales & Notation
 
-**TODO**
+### Gradient - Ableitungen in $\R^n$
+
+Man kann im $\R^n$ nicht wie zuvor nur nach einer Variable ableiten, man muss *irgendwie* alle betrachten.
+Daher die Definition des **Gradienten**: Sei $f: \R^n \to \R$
+
+$$\text{grad}(f) = \begin{pmatrix} f_{x_1} & f_{x_2} & \dots & f_{x_n} \end{pmatrix}$$
+
+Hierbei ist $f_{x_i}$ die Ableitung von $f$ nach dem $i$-ten Eintrag von $\R^n$.
+
+### Hesse-Matrix
+
+Die Hesse-Matrix repräsentiert die zweite Ableitung. Sie ist nur für Funktionen von $\R^n \to \R$ benutzbar, also
+explizit **nicht** für $\R^n \to \R^n$
+
+$$H_f = \begin{pmatrix}
+  f_{x_1, x_1} & f_{x_1, x_2} & \dots & f_{x_1, x_n} \\\\
+  \dots        &              &       & \vdots       \\\\
+  f_{x_n, x_1} & f_{x_n, x_2} & \dots & f_{x_n, x_n}
+\end{pmatrix} = \begin{pmatrix}
+  \text{grad}(f_{x_1}) \\\\
+  \vdots               \\\\
+  \text{grad}(f_{x_n})
+\end{pmatrix}$$
+
+> Die Hesse-Matrix ist symmetrisch.
+
+### Jacobi-Matrix
+
+Falls man eine Funktion von $\R^n \to \R^n$ hat nennt man dies nichtmehr Gradient sondern **Jacobi Matrix**,
+**Ableitung** oder **Fundamentalmatrix**:
+
+$$\dfrac{\partial f}{\partial x} := J_f = \begin{pmatrix}
+  \frac{\partial f_1}{\partial x_1} & \dots & \frac{\partial f_1}{\partial x_n} \\\\
+  \vdots                            &       & \vdots                            \\\\
+  \frac{\partial f_n}{\partial x_n} & \dots & \frac{\partial f_n}{\partial x_n}
+\end{pmatrix} = \begin{pmatrix}
+  \text{grad}(f_1) \\\\
+  \vdots           \\\\
+  \text{grad}(f_n)
+\end{pmatrix}$$
+
 
 ## Beschränkt, Offen, Abgeschlossen, ...
 
@@ -59,11 +98,35 @@ $$\dfrac{\partial f}{\partial a}(x_0) := \lim_{t\to 0} \dfrac{f(x_0 + ta) - f(x_
 
 Ist $f$ in $x_0 \in D$ differenzierbar und $a \in \R^n$ eine Richtung, dann ist
 
-$$\dfrac{\partial f}{\partial a}(x_0) a \cdot grad f(x_0)$$
+$$\dfrac{\partial f}{\partial a}(x_0) a \cdot \text{grad} f(x_0)$$
 
 ## Extrema im $\R^n$
 
-**TODO**
+Sei $A$ eine reelle und symmetrische $n \times n$-Matrix. $A$ heißt
+
+- **positiv definit** (pd): $\iff \forall x \in \R^n \setminus \lbrace 0 \rbrace: (Ax) \cdot x > 0$
+- **negativ definit** (nd): $\iff \forall x \in \R^n \setminus \lbrace 0 \rbrace: (Ax) \cdot x < 0$
+- **indefinit**       (id): $\iff \exists u, v \in \R^n: (Au) \cdot u > 0$ und $(Av) \cdot v < 0$
+
+> Hierbei steht $(Ax) \cdot x$ für das Skalarprodukt von $Ax$ mit $x$.
+
+- $A$ ist positiv definit $\iff$ alle Eigenwerte von $A$ sind $> 0$
+- $A$ ist negativ definit $\iff$ alle Eigenwerte von $A$ sind $< 0$
+- $A$ ist indefinit       $\iff$ es gibt Eigenwerte die $> 0$ und Eigenwerte die $< 0$ sind
+
+
+Für $M \subseteq \R^n, g: M \to \R$ und $x_0 \in M$
+- **lokales Maximum**:  $\iff \exists \delta > 0 \forall x \in U_{\delta}(x_0) \cap M: g(x) \lt g(x_0)$
+- **lokales Minimum**:  $\iff \exists \delta > 0 \forall x \in U_{\delta}(x_0) \cap M: g(x) \gt g(x_0)$
+- **globales Maximum**: $\iff \forall x \in M: g(x) \lt g(x_0)$
+- **globales Minimum**: $\iff \forall x \in M: g(x) \gt g(x_0)$
+
+Ist $f$ in $x_0 \in D$ partiell differenzierbar und hat $f$ in $x_0$ ein lokales Extremum, so ist $\text{grad}(x_0) = 0$
+
+Ist $f \in C^2(D, \R), x_0 \in D$ und $\text{grad} f(x_0) = 0$, so gilt:
+- Ist $H_f(x_0)$ positiv definit, so hat $f$ in $x_0$ ein lokales Minimum.
+- Ist $H_f(x_0)$ negativ definit, so hat $f$ in $x_0$ ein lokales Maximum.
+- Ist $H_f(x_0)$ indefinit,       so hat $f$ in $x_0$ kein lokales Extremum.
 
 ## Integration im $\R^n$
 
