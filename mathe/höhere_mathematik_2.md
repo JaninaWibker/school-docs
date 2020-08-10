@@ -94,11 +94,11 @@ der Grenzwert
 
 $$\dfrac{\partial f}{\partial a}(x_0) := \lim_{t\to 0} \dfrac{f(x_0 + ta) - f(x_0)}{t} \in \R$$
 
-### einfachere berechnung der Richtungsableitung
+### einfachere Berechnung der Richtungsableitung
 
 Ist $f$ in $x_0 \in D$ differenzierbar und $a \in \R^n$ eine Richtung, dann ist
 
-$$\dfrac{\partial f}{\partial a}(x_0) a \cdot \text{grad} f(x_0)$$
+$$\dfrac{\partial f}{\partial a}(x_0) = a \cdot \text{grad} f(x_0)$$
 
 ## Extrema im $\R^n$
 
