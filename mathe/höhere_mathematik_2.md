@@ -74,6 +74,10 @@ Sei $A \in \R^n$
 - $\R^n$ ist abgeschlossen, aber nicht kompakt, da $\R^n \setminus \R^n = \emptyset$ ist, was offen ist.
 - $[a, \infty)$ und $(-\infty, a]$ sind abgeschlossen, aber nicht kompakt, weil sie nicht beschränkt sind.
 
+Wenn $I$ ein kompaktes Intervall ist, dann gilt für $f: I \to \R$
+
+- $f$ ist *immer* beschränkt
+- $f$ stetig $\iff$ $f$ gleichmäßig stetig
 
 ## Umkehrsatz
 
@@ -140,6 +144,27 @@ Ist $f \in C^2(D, \R), x_0 \in D$ und $\text{grad} f(x_0) = 0$, so gilt:
 - Ist $H_f(x_0)$ negativ definit, so hat $f$ in $x_0$ ein lokales Maximum.
 - Ist $H_f(x_0)$ indefinit,       so hat $f$ in $x_0$ kein lokales Extremum.
 
+## implizit definierte Funktionen
+
+Sei $f(x, g(x)) = 0$ gegeben sowie $f(x, y)$. Nun soll man Aussagen über $g(x)$ und $g'(x)$ machen. Dieses $g(x)$ kann man oft
+nicht explizit angeben.
+
+Sei $(x_0, y_0) \in D, f(x_0, y_0) = 0$ und $\det \dfrac{\partial f}{\partial y}(x_0, y_0) \ne 0$. Dann existieren
+$\delta, \nu > 0$ mit folgenden Eigenschaften:
+
+- $U_{\delta}(x_0) \times U_{\nu}(y_0) \subseteq D$
+- $\forall x \in U_{\delta}(x_0) \exists_1 y =: g(x) \in U_{\nu}(y_0): f(x, y) = 0$
+- $g \in C^1(U_{\delta}(x_0), \R^p)$
+- $\forall x \in U_{\delta}(x_0): \det f_y(x, g(x)) \ne 0$
+- $\forall x \in U_{\delta}(x_0): g'(x) = -(f_y(x, g(x)))^{-1} \cdot (f_x(x, g(x)))$
+- Ist $f \in C^l(D, \R^p), l \ge 2$, so ist $g \in C^l(U_{\delta}(x_0), \R^p)$
+
+**Spezialfall**: Es sei $f \in C^1(D, \R), (x_0, y_0) \in D, f(x_0, y_0) = 0$ und $f_y(x_0, y_0) \ne 0$. Dann
+existieren $\delta, \nu > 0$ und
+genau eine stetig differenzxierbare Funktion $g: (x_0 - \delta, x_0 + \delta) \to (y_0 - \nu, y_0 + \nu)$ mit
+
+$g(x_0) = y_0$ und $\forall x \in (x_0 - \delta, x_0 + \delta): f(x, g(x)) = 0$
+
 
 ## Integration im $\R^n$
 
@@ -182,6 +207,7 @@ Man hat also eigentlich nur nach einer der Variablen "entwickelt" und einen gesc
 ### Rotationskörper
 
 **TODO**
+
 
 ### Substitutionsregel
 
@@ -326,7 +352,7 @@ Um das unbekannte $c(x)$ zu berechnen kann man wie folgt vorgehen:
 
 $y_p'(x) \stackrel{!}{=} \alpha(x)y_p(x) + s(x)$
 
-$\displaystyle{\implies c(x) \int s(x)e^{-\beta(x)}}$
+$\displaystyle{\implies c(x) = \int s(x)e^{-\beta(x)}}$
 
 
 ### Bernoullische Differentialgleichung
@@ -476,7 +502,7 @@ Es gibt wie sonst auch Anfangswertprobleme, hierfür gibt es immer eine eindeuti
 
    Fall $\lambda_j \in \R$:
 
-   $$e^{\lambda_j}x, xe^{\lambda_j}x, \dots, x^{k_j-1}e^{\lambda_j}x$$
+   $$e^{\lambda_j x}, xe^{\lambda_j x}, \dots, x^{k_j-1}e^{\lambda_j x}$$
 
    sind linear unabhängige Lösungen von *(2)*.
 
@@ -494,7 +520,7 @@ Es gibt wie sonst auch Anfangswertprobleme, hierfür gibt es immer eine eindeuti
 
 **Lösungsmethode für spezielle Lösung *(1)***: $(Ly)(x) = b(x)$
 
-Es seien $\gamma, \delta \in \R, m \N_0, q$ ein Polynom vom Grad $m$ und $b$ hat die Form
+Es seien $\gamma, \delta \in \R, m \in \N_0, q$ ein Polynom vom Grad $m$ und $b$ hat die Form
 
 $$b(x) = q(x)e^{\gamma x} \cos(\delta x) \text{ oder } b(x) = q(x)e^{\gamma x} \sin(\delta x)$$
 
@@ -502,7 +528,7 @@ Sei $p$ das charakteristische Polynom von $(Ly)(x) = 0$
 
 Fall $p(\gamma + i\delta) \ne 0$:
 
-$$y_p(x) := (\hat{q}(x)\cos(\gamma x) + \tilde{q} \sin(\delta x))e^{\gamma x}$$
+$$y_p(x) := (\hat{q}(x)\cos(\delta x) + \tilde{q}(x)\sin(\delta x))e^{\gamma x}$$
 
 Fall $\gamma + i\delta$ ist eine $\upsilon$-fache Nullstelle von $p$. Wähle den Ansatz:
 
@@ -539,7 +565,29 @@ $$\hat{f}(s) = \dfrac{1}{2\pi} \int_{-\infty}^{\infty} f(t)e^{-ist} dt$$
 
 ### Rücktransformation von $\hat{f}$:
 
+Falls $f$ absolut integrierbar, stückweise glatt und stetig ist gilt:
+
 $$f(t) = \int_{-\infty}^{\infty} \hat{f}(s)e^{ist} ds$$
+
+Falls $f$ nur absolut integrierbar und stückweise glatt ist aber **nicht** stetig dann erhält man nicht immer
+genau $f$ zurück, es gilt nämlich nach Rücktransformation:
+
+$$\forall t \in \R: \text{CH}-\int_{-\infty}^{\infty} \hat{f}(s) e^{ist} ds = \frac{1}{2} (f(t+) + f(t-))$$
+
+Man nimmt also den Durchschnitt der Limes von links und von rechts. Somit hat man an den Stellen an denen $f$ nicht
+stetig ist hinterher den Durchschnitt der beiden Grenzwerte. Bis auf diese Besonderheiten sollte man aber eigentlich
+genau die Funktion $f$ zurückkriegen.
+
+**Beispiel**:
+
+$$f(t) := \begin{cases}
+  t & \text{ if } t \in [-1, 1] \\\\
+  0 & \text{ otherwise }
+\end{cases}$$
+
+Dann ist
+
+$\text{CH}-\int_{-\infty}^{\infty} \hat{f} e^{ist} ds$ an Stelle $t = -1$ genau gleich $\frac{1}{2}$ und an $t = 1$.
 
 ### idk
 
@@ -583,7 +631,7 @@ $$S := \lbrace f: \R \to \C: f \text{ ist schnell fallend} \rbrace$$
 
 $f, g \in S$, $p$ Polynom:
 
-- $f$ ist absout integrierbar und $lim_{t\to\pm\infty} f(t) = 0$
+- $f$ ist absout integrierbar und $\lim_{t\to\pm\infty} f(t) = 0$
 - $\forall \alpha, \beta \in \C: \alpha f + \beta g \in S$ ($S$ ist VR)
 - $fg, pf, \overline{f}, \text{Re } f, \text{Im } f, t \mapsto f(-t) \in S$
 - $\hat{f} \in S$ und $f(t) = \int_{-\infty}^{\infty} \hat{f}e^{ist} ds$

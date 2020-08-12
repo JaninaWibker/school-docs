@@ -54,6 +54,20 @@ $$\cos(x) := \sum_{n=0}^{\infty} (-1)^n \dfrac{x^{2n}}{(2n)!}$$
 
 $$\sin(x) := \sum_{n=0}^{\infty} (-1)^n \dfrac{x^{2n+1}}{(2n+1)}$$
 
+## Sandwichkriterium
+
+Sei $(b_n)_{n=0}^{\infty}$ eine Folge. Wenn man Folgen $(a_n)_{n=0}^{\infty}$ und $(c_n)_{n=0}^{\infty}$ findet für die gilt:
+
+$$a_n \ge b_n \ge c_n \quad (\forall n \in \N_0)$$
+
+und $(a_n)$ und $(c_n)$ gegen Grenzwerte $a$ und $c$ konvergieren gilt, dass $(b_n)$ auch
+konvergent ist und gegen ein $b \in [a, c]$ konvergiert.
+
+Hiermit kann man also den Grenzwert nach oben und unten abschätzen und bestenfalls sogar
+Folgen $(a_n)$ und $(c_n)$ finden für die $a =c$ gilt, womit dann $a = b = c$ gelten muss.
+
+> Die genauen Startwerte für $n$ sind nicht ganz so streng zu sehen, sie könnten auch $n=1$ oder ähnliches sein.
+
 ## Monotoniekriterium
 
 Sind alle $a_n \gt 0$ und ist $(s_n)$ beschränkt, so ist $\displaystyle{\sum_{n=1}^{\infty} a_n}$ konvergent.
@@ -141,6 +155,8 @@ $0$ geht, hat man gezeigt dass die Funktionsfolge nicht gleichmäßig konvergent
 
 Um zu zeigen, dass das $n$ für die Wahl des $x$ irrelevant ist erfolgt meist durch rauskürzen, sodass hinterher das $x$
 garnicht mehr vorkommt.
+
+Falls $f$ nicht stetig ist, ist direkt klar, dass $f_n$ nicht gleichmäßig konvergent ist.
 
 ## Umkehrsatz
 
