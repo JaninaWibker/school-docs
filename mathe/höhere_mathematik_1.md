@@ -70,7 +70,14 @@ Folgen $(a_n)$ und $(c_n)$ finden für die $a =c$ gilt, womit dann $a = b = c$ g
 
 ## Monotoniekriterium
 
-Sind alle $a_n \gt 0$ und ist $(s_n)$ beschränkt, so ist $\displaystyle{\sum_{n=1}^{\infty} a_n}$ konvergent.
+Die Folge $(a_n)$ sei monoton wachsend und nach oben beschränkt. Dann ist $(a_n)$ konvergent
+und $\lim_{n\to\infty} a_n = \sup_{n\in\N} a_n$.
+
+Die Folge $(a_n)$ sei monoton fallend und nahc unten beschränkt. Dann ist $(a_n)$ konvergent
+und $\lim_{n\to\infty} a_n = \inf_{n\in\N} a_n$.
+A
+Sei $(a_n)$ eine Folge, $s_n = \sum_{k=1}^{n} a_k$. Sind alle $a_k \ge 0$ und ist $(s_n)$ beschränkt,
+so ist $\sum_{n=1}^{\infty} a_n = \lim_{n\to\infty} s_n$ konvergent.
 
 ## Cauchykriterium
 

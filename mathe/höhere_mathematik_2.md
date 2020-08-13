@@ -50,10 +50,10 @@ $$\dfrac{\partial f}{\partial x} := J_f = \begin{pmatrix}
 
 Sei $A \in \R^n$
 
-- $A$ heißt **beschränkt**: $\iff \exists c \gt 0 \forall a \in A: \Vert a \Vert \lt c$<br />
+- $A$ heißt **beschränkt**: $\iff \exists c \gt 0\\; \forall a \in A: \Vert a \Vert \lt c$<br />
   *Erklärung*: Man findet immer ein Maximum für die Entfernung vom Ursprung, welches aus $(0, \infty)$ ist.<br />
   *Beispiel*: $[a, \infty)$ ist **nicht** beschränkt, da $\infty$.
-- $A$ heißt **offen**: $\iff \forall a \in A \exists \epsilon = \epsilon(a) > 0: U_{\epsilon}(a) \subseteq A$<br />
+- $A$ heißt **offen**: $\iff \forall a \in A \\; \exists \epsilon = \epsilon(a) > 0: U_{\epsilon}(a) \subseteq A$<br />
   *Erklärung*: Es gibt für jeden beliebigen Punkt $a \in A$ eine $\epsilon$-Umgebung, welche komplett in $A$ enthalten
   ist<br />
   *Beispiel*: $(a, b)$ ist ein offenes Intervall
@@ -66,6 +66,7 @@ Sei $A \in \R^n$
 - $A$ heißt **kompakt**: $\iff$ $A$ ist beschränkt und abgeschlossen.<br />
   *andere Definition*: Jede Folge $(x_n)$ in $A$ enthält eine konvergente Teilfolge $(x_{n_k})$
   mit $\displaystyle{\lim_{k\to\infty} x_{n_k}} \in D$
+
 
 - $\emptyset$ ist offen.
 - $\emptyset$ ist kompakt.
@@ -85,8 +86,9 @@ Es sei $D \subseteq \R^n$ offen, $f \in C^1(D, \R^n)$ und $x_0 \in D$. Ist $\det
 
 - $U_{\epsilon}(x_0) \subseteq D$ und $f(U_{\epsilon}(x_0))$ ist offen
 - $f$ ist auf $U_{\epsilon}$ injektiv,
-- $f^{-1}: f(U_{\epsilon}(x_0)) \to U_{\epsilon}(x_0)$ ist in $C^1(f(U_{\epsilon}(x_0)), \R^n)$, $\det f'(x) \ne 0 (x \in U_{\epsilon}(x_0))$
-  und $(f^{-1})'(y) = (f'(f^{-1}(y)))^{-1} (y \in f(U_{\epsilon}(x_0)))$
+- $f^{-1}: f(U_{\epsilon}(x_0)) \to U_{\epsilon}(x_0)$ ist in $C^1(f(U_{\epsilon}(x_0)), \R^n)$,<br />
+  $\det f'(x) \ne 0 (x \in U_{\epsilon}(x_0))$ und<br />
+  $(f^{-1})'(y) = (f'(f^{-1}(y)))^{-1} (y \in f(U_{\epsilon}(x_0)))$
 
 
 ## Richtungsableitung
@@ -107,7 +109,7 @@ $$\dfrac{\partial f}{\partial a}(x_0) := \lim_{t\to 0} \dfrac{f(x_0 + ta) - f(x_
 
 Ist $f$ in $x_0 \in D$ differenzierbar und $a \in \R^n$ eine Richtung, dann ist
 
-$$\dfrac{\partial f}{\partial a}(x_0) = a \cdot \text{grad} f(x_0)$$
+$$\dfrac{\partial f}{\partial a}(x_0) = a \cdot (\text{grad}f)(x_0)$$
 
 
 ## Extrema im $\R^n$
@@ -132,14 +134,14 @@ Für den Spezialfall, dass $\displaystyle{A = \begin{pmatrix} \alpha & \beta \\\
 - $A$ ist indefinit       $\iff \det A = 0$
 
 Für $M \subseteq \R^n, g: M \to \R$ und $x_0 \in M$
-- **lokales Maximum**:  $\iff \exists \delta > 0 \forall x \in U_{\delta}(x_0) \cap M: g(x) \le g(x_0)$
-- **lokales Minimum**:  $\iff \exists \delta > 0 \forall x \in U_{\delta}(x_0) \cap M: g(x) \ge g(x_0)$
+- **lokales Maximum**:  $\iff \exists \delta > 0 \\; \forall x \in U_{\delta}(x_0) \cap M: g(x) \le g(x_0)$
+- **lokales Minimum**:  $\iff \exists \delta > 0 \\; \forall x \in U_{\delta}(x_0) \cap M: g(x) \ge g(x_0)$
 - **globales Maximum**: $\iff \forall x \in M: g(x) \le g(x_0)$
 - **globales Minimum**: $\iff \forall x \in M: g(x) \ge g(x_0)$
 
-Ist $f$ in $x_0 \in D$ partiell differenzierbar und hat $f$ in $x_0$ ein lokales Extremum, so ist $\text{grad}(x_0) = 0$
+Ist $f$ in $x_0 \in D$ partiell differenzierbar und hat $f$ in $x_0$ ein lokales Extremum, so ist $(\text{grad} f)(x_0) = 0$
 
-Ist $f \in C^2(D, \R), x_0 \in D$ und $\text{grad} f(x_0) = 0$, so gilt:
+Ist $f \in C^2(D, \R), x_0 \in D$ und $(\text{grad} f)(x_0) = 0$, so gilt:
 - Ist $H_f(x_0)$ positiv definit, so hat $f$ in $x_0$ ein lokales Minimum.
 - Ist $H_f(x_0)$ negativ definit, so hat $f$ in $x_0$ ein lokales Maximum.
 - Ist $H_f(x_0)$ indefinit,       so hat $f$ in $x_0$ kein lokales Extremum.
@@ -149,19 +151,20 @@ Ist $f \in C^2(D, \R), x_0 \in D$ und $\text{grad} f(x_0) = 0$, so gilt:
 Sei $f(x, g(x)) = 0$ gegeben sowie $f(x, y)$. Nun soll man Aussagen über $g(x)$ und $g'(x)$ machen. Dieses $g(x)$ kann man oft
 nicht explizit angeben.
 
-Sei $(x_0, y_0) \in D, f(x_0, y_0) = 0$ und $\det \dfrac{\partial f}{\partial y}(x_0, y_0) \ne 0$. Dann existieren
+Sei $(x_0, y_0) \in D, f(x_0, y_0) = 0$ und $\det \dfrac{\partial f}{\partial y}(x_0, y_0) \ne 0$ (oft hat man ein $x_0$
+gegeben und muss eventuell das dazugehörige $y_0$ manuell finden, also mit Nullstellen suchen anfangen). Dann existieren
 $\delta, \nu > 0$ mit folgenden Eigenschaften:
 
 - $U_{\delta}(x_0) \times U_{\nu}(y_0) \subseteq D$
-- $\forall x \in U_{\delta}(x_0) \exists_1 y =: g(x) \in U_{\nu}(y_0): f(x, y) = 0$
+- $\forall x \in U_{\delta}(x_0) \\; \exists_1 y =: g(x) \in U_{\nu}(y_0): f(x, y) = 0$
 - $g \in C^1(U_{\delta}(x_0), \R^p)$
 - $\forall x \in U_{\delta}(x_0): \det f_y(x, g(x)) \ne 0$
-- $\forall x \in U_{\delta}(x_0): g'(x) = -(f_y(x, g(x)))^{-1} \cdot (f_x(x, g(x)))$
+- $\forall x \in U_{\delta}(x_0): g'(x) = -(f_y(x, g(x)))^{-1} \cdot (f_x(x, g(x)))$ (**wichtig**)
 - Ist $f \in C^l(D, \R^p), l \ge 2$, so ist $g \in C^l(U_{\delta}(x_0), \R^p)$
 
 **Spezialfall**: Es sei $f \in C^1(D, \R), (x_0, y_0) \in D, f(x_0, y_0) = 0$ und $f_y(x_0, y_0) \ne 0$. Dann
 existieren $\delta, \nu > 0$ und
-genau eine stetig differenzxierbare Funktion $g: (x_0 - \delta, x_0 + \delta) \to (y_0 - \nu, y_0 + \nu)$ mit
+genau eine stetig differenzierbare Funktion $g: (x_0 - \delta, x_0 + \delta) \to (y_0 - \nu, y_0 + \nu)$ mit
 
 $g(x_0) = y_0$ und $\forall x \in (x_0 - \delta, x_0 + \delta): f(x, g(x)) = 0$
 
@@ -182,11 +185,12 @@ Sei $\R^n = \R^p \times \R^q$ mit $I_1$ kompaktes Intervall in $\R^p$ und $I_2$ 
 Sei $I = I_1 \times I_2$
 $(x, y) \in I$ mit $x \in I_1, y \in I_2$
 
-- Wenn für jedes feste $y \in I_2$ ist die Funktion $x \mapsto f(x, y)$ int. über $I_1$ und $g(y) := \int_{I_1} f(x,y) dx$, dann ist $g \in R(I_2)$ und
-  $\int_{I} f(x,y) d(x,y) = \int_{I_2} g(y) dy = \int{I_2} \int_{I_1} f(x, y) dx dy$
+- Wenn für jedes feste $y \in I_2$ ist die Funktion $x \mapsto f(x, y)$ integriert über
+  $I_1$ und $g(y) := \int_{I_1} f(x,y) dx$, dann ist $g \in R(I_2)$ und
+  $\int_{I} f(x,y) d(x,y) = \int_{I_2} g(y) dy = \int_{I_2} \int_{I_1} f(x, y) dx dy$
 - Analog für $x \in I_1$
 
-Sei $I = [a_1, b_1] \times [a_2, b_2] \times ... [a_n, b_n]$ und $f \in C(I)$, dann kann man die Reihenfolge der
+Sei $I = [a_1, b_1] \times [a_2, b_2] \times \dots \times [a_n, b_n]$ und $f \in C(I)$, dann kann man die Reihenfolge der
 Integrale beliebig tauschen:
 
 $$\int_{I} f(x) dx = \int_{I} f(x_1, \dots, x_n) d(x_1, \dots, x_n) = \int_{a_1}^{b_1} \int_{a_2}^{b_2} \dots dx_2 dx_1$$
@@ -230,7 +234,7 @@ y &= r \sin \varphi \\\\
 \text{mit } r &= \Vert (x, y) \Vert
 \end{aligned}$$
 
-$$g(r, \varphi) := (r \cos \varphi, r \sin \varphi), \det g_(r, \varphi) = r$$
+$$g(r, \varphi) := (r \cos \varphi, r \sin \varphi), \det g'(r, \varphi) = r$$
 
 Betrachte $\varphi_1, \varphi_2 \in [0, 2\pi]$ mit $\varphi_1 < \varphi_2$ und $0 \le R_1 \lt R_2$ und
 $A := \lbrace (r \cos \varphi, r \sin \varphi): \varphi \in [\varphi_1, \varphi_2], r \in [R_1, R_2] \rbrace$
@@ -246,7 +250,9 @@ Hierbei ist:
 
 Ist nun $f \in C(A, \R)$, so gilt:
 
-$$\int_A f(x, y) d(x, y) = \int_B f(r \cos \varphi, r \sin \varphi) \cdot r d(r, \varphi) = \int_{\varphi_1}^{\varphi_2} \int_{R_1}^{R_2} f(r \cos \varphi, r \sin \varphi) \cdot r dr d\varphi$$
+$$\int_A f(x, y) d(x, y) =
+  \int_B f(r \cos \varphi, r \sin \varphi) \cdot r d(r, \varphi) =
+  \int_{\varphi_1}^{\varphi_2} \int_{R_1}^{R_2} f(r \cos \varphi, r \sin \varphi) \cdot r \\; dr d\varphi$$
 
 
 ### Zylinderkoordinaten (n=3)
@@ -260,11 +266,13 @@ z &= z \\\\
 \text{mit } r &= \Vert (x, y) \Vert
 \end{aligned}$$
 
-$$g(r, \varphi, z) := (r \cos \varphi, r \sin \varphi, z), \det g_(r, \varphi, z) = r$$
+$$g(r, \varphi, z) := (r \cos \varphi, r \sin \varphi, z), \det g'(r, \varphi, z) = r$$
 
 $A, B \subseteq \R^3$ wie bei Substitutionsregel und $f \in C(A, \R)$:
 
-$B := \underbrace{[R_1, R_2]}_{r} \times \underbrace{[\varphi_1, \varphi_2]}_{\varphi} \times \underbrace{[h_1, h_2]}_{z}$
+$B := \underbrace{[R_1, R_2]}_{r} \times
+      \underbrace{[\varphi_1, \varphi_2]}_{\varphi} \times
+      \underbrace{[h_1, h_2]}_{z}$
 
 Hierbei ist:
 - $R_1$: innerer Radius
@@ -274,7 +282,7 @@ Hierbei ist:
 - $h_1$: min. Höhe
 - $h_2$: max. Höhe
 
-$$\int_A f(x, y, z) d(x, y, z) = \int_B f(r \cos \varphi, r \sin \varphi, z) \cdot r d(r, \varphi, z)$$
+$$\int_A f(x, y, z) d(x, y, z) = \int_B f(r \cos \varphi, r \sin \varphi, z) \cdot r \\; d(r, \varphi, z)$$
 
 
 ### Kugelkoordinaten (n=3)
@@ -290,11 +298,13 @@ z &= z \sin \vartheta \\\\
 
 $$g(r, \varphi, \vartheta) := (r \cos \varphi \cos \vartheta, r \sin \varphi \cos \vartheta, r \sin \vartheta)$$
 
-$$\vert det g'(r, \varphi, \vartheta) \vert = r^2 \cos \vartheta$$
+$$\vert \det g'(r, \varphi, \vartheta) \vert = r^2 \cos \vartheta$$
 
 $A, B \subseteq \R^3$ wie bei Prinzip von Cavalieri (also $A = g(B)$) und $f \in C(A, \R)$:
 
-$B := \underbrace{[R_1, R_2]}_{r} \times \underbrace{[\varphi_1, \varphi_2]}_{\varphi} \times \underbrace{[\vartheta_1, \vartheta_2]}_{\vartheta}$
+$B := \underbrace{[R_1, R_2]}_{r} \times
+      \underbrace{[\varphi_1, \varphi_2]}_{\varphi} \times
+      \underbrace{[\vartheta_1, \vartheta_2]}_{\vartheta}$
 
 Hierbei ist:
 - $R_1$: innerer Radius
@@ -304,7 +314,7 @@ Hierbei ist:
 - $\vartheta_1$: min. vertikaler Winkel 
 - $\vartheta_2$: max. vertikaler Winkel
 
-$$\int_A f(x, y, z) d(x, y, z) = \int_B f(g(r, \varphi, \vartheta)) \cdot r^2 \cos \vartheta d(r, \varphi, \vartheta)$$
+$$\int_A f(x, y, z) d(x, y, z) = \int_B f(g(r, \varphi, \vartheta)) \cdot r^2 \cos \vartheta \\; d(r, \varphi, \vartheta)$$
 
 
 ## Differenzialgleichungen
@@ -322,7 +332,11 @@ $$\int \dfrac{dy}{g(y)} = \int f(x) dx + c$$
 
 nach y auflöst.
 
-**Merkregel**: $y' = f(x)g(y) \implies \dfrac{dy}{dx} = f(x)g(y) \implies \dfrac{dy}{g(y)} = f(x)dx \implies \int \dfrac{dy}{g(y)} = \int f(x) dx + c$
+**Merkregel**: $\displaystyle{y' =
+f(x)g(y) \implies \dfrac{dy}{dx} =
+f(x)g(y) \implies \dfrac{dy}{g(y)} =
+f(x)dx \implies \int \dfrac{dy}{g(y)} =
+\int f(x) dx + c}$
 
 
 ### Lineare Differentialgleichungen
@@ -440,9 +454,9 @@ Es gilt, dass wenn $\lambda_0 \in \C$ ist und $p(\lambda_0) = 0$ gilt auch $p(\o
 2. Sortiere Eigenwerte in $\R$ und $\C \setminus \R$. Seien $\lambda_1, \dots, \lambda_m$ reellwertig und $\mu_1, \dots, \mu_s$
    komplex. Sortiere dabei auch gleichzeitig alle komplexen Eigenwerte die nur das komplex konjugierte eines anderen
    Eigenwertes sind aus. $M := \lbrace \lambda_1, \dots, \lambda_m, \mu_1, \dots \mu_s \rbrace$.
-3. Bestimme Hauptraum $V_j$ für alle $\lambda_j \in M$ (hiermit sind alle Eigenwerte gemeint, nicht nur die strikt reellwertigen)
-4. Es sei $\lambda_j \in M$, $v \ V_j$ Basisvektor.
-   Setze $y(x) := e^{\lambda_j}x \left( v = \displaystyle{\sum_{n=1}^{k_j-1} \dfrac{x^n}{n!} (A - \lambda_jI)^n v} \right)$
+3. Bestimme Hauptraum $V_j$ für alle $\lambda_j \in M$ (hiermit sind alle Eigenwerte gemeint, nicht nur die strikt reellwertigen). Hierbei ist die Wahl der Basisvektoren für ein eventuelles AWP relevant. Man muss die Vektoren dazu anpassen.
+4. Es sei $\lambda_j \in M$, $v \in V_j$ Basisvektor.
+   Setze $y(x) := e^{\lambda_j x} \left( v + \displaystyle{\sum_{n=1}^{k_j-1} \dfrac{x^n}{n!} (A - \lambda_jI)^n v} \right)$
 
    Fall $\lambda_j \in \R$: Dann ist $y(x) \in \R^n$ und $y$ eine Lösung des homogenen Gleichungssystem auf $\R$
 
