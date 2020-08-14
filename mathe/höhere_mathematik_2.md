@@ -614,7 +614,8 @@ $$f(t) := \begin{cases}
 
 Dann ist
 
-$\text{CH}-\int_{-\infty}^{\infty} \hat{f} e^{ist} ds$ an Stelle $t = -1$ genau gleich $\frac{1}{2}$ und an $t = 1$.
+$\text{CH}-\int_{-\infty}^{\infty} \hat{f} e^{ist} ds$ an Stelle $t = -1$ genau gleich $-\frac{1}{2}$ und
+an $t = 1$ gleich $\frac{1}{2}$.
 
 ### Vektorraum der fouriertransformierbaren Funktionen
 
@@ -625,9 +626,9 @@ Es gilt
 
 - $V$ ist ein Vektorraum und es gilt für $f, g \in V$ und $\alpha, \beta \in \C$: $\widehat{\alpha f + \beta g} = \alpha\hat{f} + \beta\hat{g}$
 - Sei $f \in V, h \in \R$ und $f_h: \R \to \C$ sei definiert durch $f_h(t) := f(t+h)$.
-  Dann ist $f_h \in V$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s) (s \in \R)$
+  Dann ist $f_h \in V$ und $\hat{f_h}(s) = e^{ish} \cdot \hat{f}(s) \\; (s \in \R)$
 
-Wenn $f \in V$ ist **und** zusätzlich noch stetig stückweise glatt ist, kann man $\hat{f}$ auch zu $f$ zurücktransformieren.
+Wenn $f \in V$ ist **und** zusätzlich noch stetig und stückweise glatt ist, kann man $\hat{f}$ auch zu $f$ zurücktransformieren.
 
 ### Faltung
 
@@ -652,23 +653,23 @@ $\widehat{f_1 * f_2}(s) = \hat{f_1}(s)\hat{f_2}(s)$
 $f \in V$, $f'$ absolut integrierbar $\implies f' \in V$ und $\hat{f'}(s) = is\hat{f}(s)$
 
 
-### schnell fallende Funktionen / Schwarz-Raum
+### schnell fallende Funktionen / Schwartz-Raum
 
-Schwarzraum:
+Schwartzraum:
 
 $$S := \lbrace f: \R \to \C: f \text{ ist schnell fallend} \rbrace$$
 
-Das Problem, dass $\hat{f}$ im Allgemeinen nicht absolut integrierbar ist existiert im Schwarzraum nicht mehr.
+Das Problem, dass $\hat{f}$ im Allgemeinen nicht absolut integrierbar ist existiert im Schwartzraum nicht mehr.
 
 $f, g \in S$, $p$ Polynom:
 
-- $f$ ist absout integrierbar und $\lim_{t\to\pm\infty} f(t) = 0$
+- $f$ ist absolut integrierbar und $\lim_{t\to\pm\infty} f(t) = 0$
 - $\forall \alpha, \beta \in \C: \alpha f + \beta g \in S$ ($S$ ist VR)
 - $fg, pf, \overline{f}, \text{Re } f, \text{Im } f, t \mapsto f(-t) \in S$
 - $\hat{f} \in S$ und $f(t) = \int_{-\infty}^{\infty} \hat{f}e^{ist} ds$
-- $f^{(n)} \in S$ und $\hat{f^{(n)}}(s) = (is)^n \hat{f}(s)$
+- $f^{(n)} \in S$ und $\widehat{f^{(n)}}(s) = (is)^n \hat{f}(s)$
 - $f_h \in S$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s)$
-- $f * g \in S$ und $\hat{f * g} = \hat{f} \cdot \hat{g}$
+- $f * g \in S$ und $\widehat{f * g} = \hat{f} \cdot \hat{g}$
 - Für $h := e^{-t^2/2}$ gilt $h \in S$ und $\hat{h} = \dfrac{1}{\sqrt{2\pi}}h$
 
 Die Fouriertransformation $\mathscr{F}: f \mapsto \hat{f}$ ist eine Isometrie mit der Rücktransformation $\mathscr{G}$
