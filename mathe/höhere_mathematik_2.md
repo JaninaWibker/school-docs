@@ -87,8 +87,8 @@ Es sei $D \subseteq \R^n$ offen, $f \in C^1(D, \R^n)$ und $x_0 \in D$. Ist $\det
 - $U_{\epsilon}(x_0) \subseteq D$ und $f(U_{\epsilon}(x_0))$ ist offen
 - $f$ ist auf $U_{\epsilon}$ injektiv,
 - $f^{-1}: f(U_{\epsilon}(x_0)) \to U_{\epsilon}(x_0)$ ist in $C^1(f(U_{\epsilon}(x_0)), \R^n)$,<br />
-  $\det f'(x) \ne 0 (x \in U_{\epsilon}(x_0))$ und<br />
-  $(f^{-1})'(y) = (f'(f^{-1}(y)))^{-1} (y \in f(U_{\epsilon}(x_0)))$
+  $\det f'(x) \ne 0 \\; (x \in U_{\epsilon}(x_0))$ und<br />
+  $(f^{-1})'(y) = (f'(f^{-1}(y)))^{-1} \\; (y \in f(U_{\epsilon}(x_0)))$ (**wichtig**)
 
 
 ## Richtungsableitung
@@ -151,7 +151,7 @@ Ist $f \in C^2(D, \R), x_0 \in D$ und $(\text{grad} f)(x_0) = 0$, so gilt:
 Sei $f(x, g(x)) = 0$ gegeben sowie $f(x, y)$. Nun soll man Aussagen über $g(x)$ und $g'(x)$ machen. Dieses $g(x)$ kann man oft
 nicht explizit angeben.
 
-Sei $(x_0, y_0) \in D, f(x_0, y_0) = 0$ und $\det \dfrac{\partial f}{\partial y}(x_0, y_0) \ne 0$ (oft hat man ein $x_0$
+Sei $(x_0, y_0) \in D, f(x_0, y_0) = 0$ und $\det f_y(x_0, y_0) \ne 0$ (oft hat man ein $x_0$
 gegeben und muss eventuell das dazugehörige $y_0$ manuell finden, also mit Nullstellen suchen anfangen). Dann existieren
 $\delta, \nu > 0$ mit folgenden Eigenschaften:
 
@@ -215,6 +215,8 @@ Man hat also eigentlich nur nach einer der Variablen "entwickelt" und einen gesc
 
 ### Substitutionsregel
 
+**Idee**: Substituiere $x$ mit einem angenehmeren $g(x)$. Dies funktioniert sehr ähnlich wie Integration durch Substitution.
+
 $G \subseteq \R^n$ offen, $g \in C^1(G, \R^n)$ und $B \subseteq G$ kompakt und messbar. Weiter sei $g$ auf dem Inneren $B^\circ$ von $B$ injektiv und
 
 $$\det g'(y) \ne 0 (y \in B^\circ)$$
@@ -226,7 +228,7 @@ $$\int_A f(x) dx = \int_B f(g(y)) \cdot \vert \det g'(y) \vert dy$$
 
 ### Polarkoordinaten (n=2)
 
-Nutze die Substitutionsregel um die normalen Koordinaten zu Polarkoordinaten zu machen wie man sie von komplexen Zahlen kennt.
+Nutze die Substitutionsregel um die normalen Koordinaten zu Polarkoordinaten umzuwandeln wie man sie von komplexen Zahlen kennt.
 
 $$\begin{aligned}
 x &= r \cos \varphi \\\\
@@ -245,15 +247,17 @@ Auf $B^\circ = (R_1, R_2) \times (\varphi_1, \varphi_2)$ ist $g$ injektiv und $\
 Hierbei ist:
 - $R_1$: innerer Radius
 - $R_2$: äußerer Radius
-- $\varphi_1$: min. Winkel
-- $\varphi_2$: max. Winkel
+- $\varphi_1$: min. Winkel ($\ge 0$)
+- $\varphi_2$: max. Winkel ($\le 2\pi$)
 
 Ist nun $f \in C(A, \R)$, so gilt:
 
 $$\int_A f(x, y) d(x, y) =
-  \int_B f(r \cos \varphi, r \sin \varphi) \cdot r d(r, \varphi) =
+  \int_B f(r \cos \varphi, r \sin \varphi) \cdot r \\; d(r, \varphi) =
   \int_{\varphi_1}^{\varphi_2} \int_{R_1}^{R_2} f(r \cos \varphi, r \sin \varphi) \cdot r \\; dr d\varphi$$
 
+Mit dem Satz von Fubini sind die beiden Integrale hierbei sogar vertauschbar, solange natürlich keine Abhängigkeiten
+zwischen dem äußeren Integral und den Grenzen des Inneren existieren.
 
 ### Zylinderkoordinaten (n=3)
 
@@ -277,10 +281,12 @@ $B := \underbrace{[R_1, R_2]}_{r} \times
 Hierbei ist:
 - $R_1$: innerer Radius
 - $R_2$: äußerer Radius
-- $\varphi_1$: min. Winkel
-- $\varphi_2$: max. Winkel
+- $\varphi_1$: min. Winkel ($\ge 0$)
+- $\varphi_2$: max. Winkel ($\le 2\pi$)
 - $h_1$: min. Höhe
 - $h_2$: max. Höhe
+
+Nun gilt:
 
 $$\int_A f(x, y, z) d(x, y, z) = \int_B f(r \cos \varphi, r \sin \varphi, z) \cdot r \\; d(r, \varphi, z)$$
 
@@ -309,10 +315,12 @@ $B := \underbrace{[R_1, R_2]}_{r} \times
 Hierbei ist:
 - $R_1$: innerer Radius
 - $R_2$: äußerer Radius
-- $\varphi_1$: min. horizontaler Winkel
-- $\varphi_2$: max. horizontaler Winkel
-- $\vartheta_1$: min. vertikaler Winkel 
-- $\vartheta_2$: max. vertikaler Winkel
+- $\varphi_1$: min. horizontaler Winkel ($\ge 0$)
+- $\varphi_2$: max. horizontaler Winkel ($\le 2\pi$)
+- $\vartheta_1$: min. vertikaler Winkel ($\ge -\tfrac{\pi}{2}$)
+- $\vartheta_2$: max. vertikaler Winkel ($\le  \tfrac{\pi}{2}$)
+
+Schlussendlich gilt:
 
 $$\int_A f(x, y, z) d(x, y, z) = \int_B f(g(r, \varphi, \vartheta)) \cdot r^2 \cos \vartheta \\; d(r, \varphi, \vartheta)$$
 
@@ -565,7 +573,7 @@ Hierfür ist die Beschränkung des Grades der Polynome sehr essentiell.
 
 ### Cauchyscher Hauptwert (CH)
 
-$$CH-\int_{\infty}^{\infty} f(x) dx := lim_{\alpha\to\infty} \int_{-\alpha}^{\alpha} f(x) dx$$
+$$CH-\int_{\infty}^{\infty} f(x) dx := \lim_{\alpha\to\infty} \int_{-\alpha}^{\alpha} f(x) dx$$
 
 > Das ist kein Minus, das ist ein Bindestrich
 
@@ -574,19 +582,24 @@ Bedenke, dass $\int_{-\infty}^{\infty} f(x) dx$ **nicht** so definiert ist. Die 
 
 ### Fouriertransformation von $f$:
 
+Falls $f$ absolut integrierbar und stückweise stetig ist gilt:
+
 $$\hat{f}(s) = \dfrac{1}{2\pi} \int_{-\infty}^{\infty} f(t)e^{-ist} dt$$
 
 
 ### Rücktransformation von $\hat{f}$:
 
-Falls $f$ absolut integrierbar, stückweise glatt und stetig ist gilt:
+Falls $f$ absolut integrierbar, stetig und stückweise glatt ist gilt:
 
 $$f(t) = \int_{-\infty}^{\infty} \hat{f}(s)e^{ist} ds$$
 
-Falls $f$ nur absolut integrierbar und stückweise glatt ist aber **nicht** stetig dann erhält man nicht immer
+Falls $f$ nur absolut integrierbar und stückweise glatt ist aber **nicht** stetig erhält man nicht immer
 genau $f$ zurück, es gilt nämlich nach Rücktransformation:
 
 $$\forall t \in \R: \text{CH}-\int_{-\infty}^{\infty} \hat{f}(s) e^{ist} ds = \frac{1}{2} (f(t+) + f(t-))$$
+
+Dies liegt dem zu Grunde, dass $\hat{f}$ im allgemeinen nicht mehr absolut integrierbar ist, falls $f$ stetig ist gilt dies
+jedoch.
 
 Man nimmt also den Durchschnitt der Limes von links und von rechts. Somit hat man an den Stellen an denen $f$ nicht
 stetig ist hinterher den Durchschnitt der beiden Grenzwerte. Bis auf diese Besonderheiten sollte man aber eigentlich
@@ -603,17 +616,18 @@ Dann ist
 
 $\text{CH}-\int_{-\infty}^{\infty} \hat{f} e^{ist} ds$ an Stelle $t = -1$ genau gleich $\frac{1}{2}$ und an $t = 1$.
 
-### idk
+### Vektorraum der fouriertransformierbaren Funktionen
 
 Es sei $V: \lbrace f: \R \to \C: f \text{ ist stückweise stetig und absolut integrierbar} \rbrace$. Für jedes
 $f \in V$ existiert die Fouriertransformierte $\hat{f}$.
 
 Es gilt
 
-- $V$ ist ein Vektorraum und es gilt für $f, g \in V$ und $\alpha, \beta \in \C$: $\hat{\alpha f + \beta g} = \alpha\hat{f} + \beta\hat{g}$
+- $V$ ist ein Vektorraum und es gilt für $f, g \in V$ und $\alpha, \beta \in \C$: $\widehat{\alpha f + \beta g} = \alpha\hat{f} + \beta\hat{g}$
 - Sei $f \in V, h \in \R$ und $f_h: \R \to \C$ sei definiert durch $f_h(t) := f(t+h)$.
   Dann ist $f_h \in V$ und $\hat{f_h}(s) = e^{ish}\hat{f}(s) (s \in \R)$
 
+Wenn $f \in V$ ist **und** zusätzlich noch stetig stückweise glatt ist, kann man $\hat{f}$ auch zu $f$ zurücktransformieren.
 
 ### Faltung
 
@@ -629,10 +643,11 @@ die Faltung von $f_1$ und $f_2$
 
 $f_1, f_2$ stetig und absolut integrierbar und $f_1$ beschränkt
 
-$\implies f_1 * f_2$ ist stetig und absolut integrierbar ($f_1 * f_2 \in V$) und $\hat{f_1 * f_2}(s) = \hat{f_1}(s)\hat{f_2}(s)$
+$\implies f_1 * f_2$ ist stetig und absolut integrierbar ($f_1 * f_2 \in V$) und
+$\widehat{f_1 * f_2}(s) = \hat{f_1}(s)\hat{f_2}(s)$
 
 
-### idk
+### Ableitungen von fouriertransformierbaren Funktionen
 
 $f \in V$, $f'$ absolut integrierbar $\implies f' \in V$ und $\hat{f'}(s) = is\hat{f}(s)$
 
@@ -642,6 +657,8 @@ $f \in V$, $f'$ absolut integrierbar $\implies f' \in V$ und $\hat{f'}(s) = is\h
 Schwarzraum:
 
 $$S := \lbrace f: \R \to \C: f \text{ ist schnell fallend} \rbrace$$
+
+Das Problem, dass $\hat{f}$ im Allgemeinen nicht absolut integrierbar ist existiert im Schwarzraum nicht mehr.
 
 $f, g \in S$, $p$ Polynom:
 

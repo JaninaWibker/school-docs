@@ -16,19 +16,28 @@
 | $\sinh(x)$   | $\cosh(x)$             |
 | $\cosh(x)$   | $\sinh(x)$             |
 
-$$\sinh(x) = \dfrac{e^x}{2} - \dfrac{e^{-x}}{2}$$
+$\sinh(x) = \dfrac{e^x}{2} - \dfrac{e^{-x}}{2}$
 
-$$\cosh(x) = \dfrac{e^x}{2} + \dfrac{e^{-x}}{2}$$
+$\cosh(x) = \dfrac{e^x}{2} + \dfrac{e^{-x}}{2}$
+
+$\sin^2(x) + \cos^2(x) = 1$
+
+$\sin^2(x) - \cos^2(x) = -\cos(2x)$
+
+$\sin(x) = \sqrt{1 - \cos^2(x)}$
+
+$\cos(x) = \sqrt{1 - \sin^2(x)}$
+
 
 ## bekannte Folgen & Reihen
 
 ### Exponentialfolge
 
-$$\lim_{n\to\infty} (1 + \dfrac{1}{n})^n = e$$
+$$\lim_{n\to\infty} (1 + \tfrac{1}{n})^n = e$$
 
-$$\lim_{n\to\infty} (1 + \dfrac{x}{n})^n = e^x$$
+$$\lim_{n\to\infty} (1 + \tfrac{x}{n})^n = e^x$$
 
-$$\lim_{n\to\infty} (1 - \dfrac{1}{n})^n = \dfrac{1}{e}$$
+$$\lim_{n\to\infty} (1 - \tfrac{1}{n})^n = \tfrac{1}{e}$$
 
 ### geometrische Reihe
 
@@ -52,7 +61,7 @@ Insbesondere ist $\displaystyle{\sum_{n=0}^{\infty} \dfrac{1}{n!} = e}$
 
 $$\cos(x) := \sum_{n=0}^{\infty} (-1)^n \dfrac{x^{2n}}{(2n)!}$$
 
-$$\sin(x) := \sum_{n=0}^{\infty} (-1)^n \dfrac{x^{2n+1}}{(2n+1)}$$
+$$\sin(x) := \sum_{n=0}^{\infty} (-1)^n \dfrac{x^{2n+1}}{(2n+1)!}$$
 
 ## Sandwichkriterium
 
@@ -73,15 +82,15 @@ Folgen $(a_n)$ und $(c_n)$ finden für die $a =c$ gilt, womit dann $a = b = c$ g
 Die Folge $(a_n)$ sei monoton wachsend und nach oben beschränkt. Dann ist $(a_n)$ konvergent
 und $\lim_{n\to\infty} a_n = \sup_{n\in\N} a_n$.
 
-Die Folge $(a_n)$ sei monoton fallend und nahc unten beschränkt. Dann ist $(a_n)$ konvergent
+Die Folge $(a_n)$ sei monoton fallend und nach unten beschränkt. Dann ist $(a_n)$ konvergent
 und $\lim_{n\to\infty} a_n = \inf_{n\in\N} a_n$.
-A
+
 Sei $(a_n)$ eine Folge, $s_n = \sum_{k=1}^{n} a_k$. Sind alle $a_k \ge 0$ und ist $(s_n)$ beschränkt,
 so ist $\sum_{n=1}^{\infty} a_n = \lim_{n\to\infty} s_n$ konvergent.
 
 ## Cauchykriterium
 
-$$\sum_{n=1}^{\infty} a_n \text{ ist konvergent} \iff \forall \epsilon > 0 \exists n_0 \in \N \forall m > n \gt n_0: \vert \sum_{k=n+1}^{m} a_k \vert < \epsilon$$
+$$\sum_{n=1}^{\infty} a_n \text{ ist konvergent} \iff \forall \epsilon > 0 \\; \exists n_0 \in \N \\; \forall m > n \gt n_0: \vert \sum_{k=n+1}^{m} a_k \vert < \epsilon$$
 
 ## Leibnizkriterium
 
@@ -106,10 +115,10 @@ $\displaystyle{\sum_{n=1}^{\infty} a_n}$ divergent.
 
 Es sei $(a_n)$ eine Folge, $c_n := \sqrt[n]{\vert a_n \vert} \quad (n \in \N)$.
 
-1. Ist $(c_n)$ ungeschränkt, so ist $\displaystyle{\sum_{n=1}^{\infty}}$ divergent
+1. Ist $(c_n)$ ungeschränkt, so ist $\displaystyle{\sum_{n=1}^{\infty} a_n}$ divergent
 2. Es sei $(c_n)$ beschränkt und $\alpha := \limsup_{n\to\infty} c_n$. Dann gilt:
-   - Ist $\alpha < 1$, so ist $\displaystyle{\sum_{n=1}^{\infty}}$ absolut konvergent.
-   - Ist $\alpha > 1$, so ist $\displaystyle{\sum_{n=1}^{\infty}}$ divergent.
+   - Ist $\alpha < 1$, so ist $\displaystyle{\sum_{n=1}^{\infty} a_n}$ absolut konvergent.
+   - Ist $\alpha > 1$, so ist $\displaystyle{\sum_{n=1}^{\infty} a_n}$ divergent.
 
    Im Fall $\alpha = 1$ ist keine allgemeine Aussage möglich.
 
@@ -124,18 +133,19 @@ Es sei $a_n \ne 0$ für fast alle $n \in \N$ und $c_n := \vert \dfrac{a_{n+1}}{a
 
 ## L'Hôpital
 
-Sei $\lim_{x \to x_0} \dfrac{f(x)}{g(x)}$ zu bestimmen. L'Hôpital ist genau dann anwendbar, wenn
-$\lim_{x \to x_0} f(x)$ und $\lim_{x \to x_0} g(x)$ entweder beide $0$ oder beide $\infty$ sind.
+Sei $\displaystyle{\lim_{x \to x_0} \tfrac{f(x)}{g(x)}}$ zu bestimmen. L'Hôpital ist genau dann anwendbar, wenn
+$\displaystyle{\lim_{x \to x_0} f(x)}$ und $\displaystyle{\lim_{x \to x_0} g(x)}$ entweder beide $0$ oder beide $\infty$ sind.
 
 Wenn L'Hôpital anwendbar ist, gilt folgendes:
 
-$\lim_{x \to x_0} \frac{f(x)}{g(x)} = \lim_{x \to x_0} \frac{f'(x)}{g'(x)}$
+$\displaystyle{\lim_{x \to x_0} \tfrac{f(x)}{g(x)} = \lim_{x \to x_0} \tfrac{f'(x)}{g'(x)}}$
 
-**solange** $\lim_{x \to x_0} \frac{f'(x)}{g'(x)}$ definiert ist.
+**solange** $\displaystyle{\lim_{x \to x_0} \tfrac{f'(x)}{g'(x)}}$ definiert ist.
 
 ## Lipschitz-Stetigkeit
 
-$f: D \to \R$ heißt auf $D$ **Lipschitz-stetig**: $\iff \exists L \gt 0 \forall x,y \in D: \vert f(x) - f(y) \vert \lt L\vert x - y \vert$
+$f: D \to \R$ heißt auf $D$ **Lipschitz-stetig**:
+$\iff \exists L \gt 0 \\; \forall x,y \in D: \vert f(x) - f(y) \vert \lt L\vert x - y \vert$
 
 Wobei $L$ die Lipschitz-Konstante ist für die Funktion. Man kann dies eigentlich als eine betragsmäßige Abschätzung
 für die Steigung der Funktion ansehen.
@@ -144,7 +154,7 @@ Wenn eine Funktion Lipschitz-stetig ist, dann ist sie auch gleichmäßig stetig.
 
 ## Punktweise Konvergenz
 
-Eine Funktionsfolge $f_n: D \to \R, n \in \N$ ist punktweise konvergent gegen die Funktion $f: D \to \R$, wenn
+Eine Funktionsfolge $f_n: D \to \R, \\; n \in \N$ ist punktweise konvergent gegen die Funktion $f: D \to \R$, wenn
 für alle $x \in D$ gilt:
 
 $$\lim_{n\to\infty} f_n(x) = f(x)$$
@@ -171,8 +181,9 @@ Es sei $D \subseteq \R^n$ offen, $f \in C^1(D, \R^n)$ und $x_0 \in D$. Ist $\det
 
 - $U_{\epsilon}(x_0) \subseteq D$ und $f(U_{\epsilon}(x_0))$ ist offen
 - $f$ ist auf $U_{\epsilon}$ injektiv,
-- $f^{-1}: f(U_{\epsilon}(x_0)) \to U_{\epsilon}(x_0)$ ist in $C^1(f(U_{\epsilon}(x_0)), \R^n)$, $\det f'(x) \ne 0 (x \in U_{\epsilon}(x_0))$
-  und $(f^{-1})'(y) = (f'(f^{-1}(y)))^{-1} (y \in f(U_{\epsilon}(x_0)))$
+- $f^{-1}: f(U_{\epsilon}(x_0)) \to U_{\epsilon}(x_0)$ ist in $C^1(f(U_{\epsilon}(x_0)), \R^n)$,<br />
+  $\det f'(x) \ne 0 (x \in U_{\epsilon}(x_0))$ und<br />
+  $(f^{-1})'(y) = (f'(f^{-1}(y)))^{-1} (y \in f(U_{\epsilon}(x_0)))$
 
 ## Potenzreihen
 
@@ -205,3 +216,11 @@ Kurz "$r = \frac{1}{\rho}$". $r$ ist der Konvergenzradius (KR) der Potenzreihe.
 - Ist $r \in (0, \infty)$, so konv. die Potenzreihe absolut in einem Radius $r$ um $x_0$ herum, also
   $\vert x - x_0 \vert \lt r$ und div. für jedes anderer $x$ mit Ausnahme der Ränder, also $\vert x - x_0 \vert > r$.
   Über die Ränder (also $x = x_0 \pm r$) ist keine Aussage im allgemeinen möglich.
+
+Man kann auch das Quotientenkriterium anwenden um den Konvergenzradius zu berechnen anstatt des Wurzelkriteriums:
+
+Betrachte:
+
+$$c_n = \vert \dfrac{a_n}{a_{n+1}} \vert, \quad r = \lim_{n\to\infty} c_n$$
+
+> Beachte: dies ist der Kehrwert des normalen Quotientenkriteriums, dadurch erhält man auch direkt $r$.
