@@ -130,8 +130,9 @@ Sei $A$ eine reelle und symmetrische $n \times n$-Matrix. $A$ heißt
 Für den Spezialfall, dass $\displaystyle{A = \begin{pmatrix} \alpha & \beta \\\\ \beta & \gamma \end{pmatrix}}$ ist gilt:
 
 - $A$ ist positiv definit $\iff \alpha > 0, \det A > 0$
-- $A$ ist positiv definit $\iff \alpha < 0, \det A > 0$
-- $A$ ist indefinit       $\iff \det A = 0$
+- $A$ ist negativ definit $\iff \alpha < 0, \det A > 0$
+- $A$ ist indefinit       $\iff \det A < 0$
+- $A$ ist nicht definit   $\iff \det A = 0$
 
 Für $M \subseteq \R^n, g: M \to \R$ und $x_0 \in M$
 - **lokales Maximum**:  $\iff \exists \delta > 0 \\; \forall x \in U_{\delta}(x_0) \cap M: g(x) \le g(x_0)$
@@ -408,7 +409,7 @@ $$y'(x)+g(x)y(x) + h(x)y^2(x) = k(x) \tag{**}$$
 heißt **Riccatische Differentialgleichung**. Hat man eine Lösung $y_2$ von *(&#42;&#42;)* so kann man sich
 ein $u := y_1 - y_2$ aufstellen, wobei $y_1$ eine weitere unbekannte Lösung ist. Dieses $u$ kann man dann ableiten zu:
 
-$$u'(x) = -(g(x) + 2h(x)y_2))u(x) - h(x)u^2(x)$$
+$$u'(x) = -(g(x) + 2h(x)y_2(x))u(x) - h(x)u^2(x)$$
 
 Dies hat die Form einer Bernoullischen Differentialgleichung wodurch man dann weitere Lösungen für die ursprüngliche
 Differentialgleichung erhalten kann.
@@ -442,7 +443,7 @@ das zu *(1)* zugehörige homogene System. *(1)* ist selbst schon homogen, falls 
 Die Lösungen von *(2)* sind auf ganz $\R$ definiert und bilden n-dimensionalen Vektorraum $V := \lbrace y: \R \to \R^n: y \text{ ist eine Lösung von (2)}$.
 Diesen VR nennt man auch **Fundamentalsystem** von *(2)*.
 
-$$\exists y_h \in V: y(x) = y_p(x) + y_h(x) (x \in I) \iff \text{y ist eine Lösung von (1) auf I}$$
+$$\exists y_h \in V: y(x) = y_p(x) + y_h(x) \\; (x \in I) \iff \text{y ist eine Lösung von (1) auf I}$$
 
 AWP sieht gleich aus wie schon bei linearen Differentialgleichungen, nur diesmal mit Vektoren.
 
