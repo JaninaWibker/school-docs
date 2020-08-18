@@ -551,11 +551,15 @@ Sei $p$ das charakteristische Polynom von $(Ly)(x) = 0$
 
 Fall $p(\gamma + i\delta) \ne 0$:
 
-$$y_p(x) := (\hat{q}(x)\cos(\delta x) + \tilde{q}(x)\sin(\delta x))e^{\gamma x}$$
+$$y_p(x) := e^{\gamma x}(\hat{q}(x)\cos(\delta x) + \tilde{q}(x)\sin(\delta x))$$
 
-Fall $\gamma + i\delta$ ist eine $\upsilon$-fache Nullstelle von $p$. Wähle den Ansatz:
+Fall $\gamma + i\delta = \lambda_i$ ist eine $\upsilon$-fache Nullstelle von $p$. Wähle den Ansatz:
 
-$$y_p(x) := x^{\upsilon} (\hat{q}(x)\cos(\delta x) + \tilde{q}(x)\sin(\delta x))e^{\gamma x}$$
+$$y_p(x) := x^{\upsilon} e^{\gamma x}(\hat{q}(x)\cos(\delta x) + \tilde{q}(x)\sin(\delta x))$$
+
+> Man kann sich dies vorstellen als würde man für $\upsilon$ immer die algebraische Vielfachheit nehmen, wobei man
+> $\upsilon = 0$ nimmt, wenn $\gamma + i\delta$ keine Nullstelle von $p$ ist. Somit kann man eigentlich immer die
+> Formel mit dem extra $x^{\upsilon}$ verwenden, wenn man dies passend bestimmt.
 
 In beiden Fällen sind $\hat{q}$ und $\tilde{q}$ Polynome vom Grad $m$. In beiden Fällen führt der Ansatz zu einer
 speziellen Lösung $y_p$ von *(1)*.
