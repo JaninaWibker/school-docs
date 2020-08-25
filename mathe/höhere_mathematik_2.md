@@ -299,7 +299,7 @@ Auch wieder fast wie Polarkoordinaten, nur mit 3 Variablen, wobei anders als bei
 $$\begin{aligned}
 x &= r \cos \varphi \cos \vartheta \\\\
 y &= r \sin \varphi \cos \vartheta \\\\
-z &= z \sin \vartheta \\\\
+z &= r \sin \vartheta \\\\
 \text{mit } r &= \Vert (x, y, z) \Vert
 \end{aligned}$$
 
@@ -477,7 +477,7 @@ Es gilt, dass wenn $\lambda_0 \in \C$ ist und $p(\lambda_0) = 0$ gilt auch $p(\o
 
 Es sei $y^{(1)}, y^{(2)}, \dots, y^{(n)}$ ein Fundamentalsystem der homogenen Gleichung $y'(x) = Ay(x)$
 
-Setze $Y(x) := (y^{(1)}(x), \dots, y^{(n)}(x)) (x \in \R$
+Setze $Y(x) := (y^{(1)}(x), \dots, y^{(n)}(x)) \; (x \in \R)$
 
 Für jedes $x \in \R$ ist $Y(x)$ eine reelle $n \times n$-Matrix mit $j$-ter Spalte $y^{(j)}(x)$. Sie nennt man ebenfalls
 **Fundamentalsystem** oder auch **Fundamentalmatrix**. Die Lösungen des inhomogenen Gleichungssystemes sind somit die

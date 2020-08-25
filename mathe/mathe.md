@@ -79,7 +79,11 @@
   * [Gruppen, Ringe, Körper](/mathe/gruppen_ringe_körper.md)
   * [Eigenwerte und Vektoren](/mathe/eigenwerte_vektoren.md)
   * [diagonalisierbarkeit & trigonalisierbarkeit](/mathe/diagonalisierbarkeit_trigonalisierbarkeit.md)
-  * [polynome](/mathe/polynome.md)
+  * [Polynome](/mathe/polynome.md)
+  * [Jordannormalform](/mathe/jordannormalform.md)
+  * [Skalarprodukte](/mathe/skalarprodukte.md)
+  * [Isometrien](/mathe/isometrien.md)
+  * [(Selbst-)Adjungierte Matrizen](/mathe/adjungierte_matrizen.md)
 <!-- /// [mathe-lineare-algebra] -->
 
 <!-- /// [mathe-höhere-mathematik] -->

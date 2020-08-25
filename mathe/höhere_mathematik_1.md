@@ -33,11 +33,13 @@ $\cos(x) = \sqrt{1 - \sin^2(x)}$
 
 ### Exponentialfolge
 
-$$\lim_{n\to\infty} (1 + \tfrac{1}{n})^n = e$$
+$$\lim_{n\to\infty} (\tfrac{n+1}{n})^n = \lim_{n\to\infty} (\tfrac{n}{n-1})^n = e$$
+
+> das ist keine legale Umformung, das folgt aus $(\tfrac{n}{n+1})^n = \tfrac{1}{(\tfrac{n+1}{n})^n} \to \tfrac{1}{e}$
 
 $$\lim_{n\to\infty} (1 + \tfrac{x}{n})^n = e^x$$
 
-$$\lim_{n\to\infty} (1 - \tfrac{1}{n})^n = \tfrac{1}{e}$$
+$$\lim_{n\to\infty} (\tfrac{n-1}{n})^n = \lim_{n\to\infty} (\tfrac{n}{n+1})^n = \tfrac{1}{e}$$
 
 ### geometrische Reihe
 
@@ -62,6 +64,12 @@ Insbesondere ist $\displaystyle{\sum_{n=0}^{\infty} \dfrac{1}{n!} = e}$
 $$\cos(x) := \sum_{n=0}^{\infty} (-1)^n \dfrac{x^{2n}}{(2n)!}$$
 
 $$\sin(x) := \sum_{n=0}^{\infty} (-1)^n \dfrac{x^{2n+1}}{(2n+1)!}$$
+
+$$\cosh(x) := \sum_{n=0}^{\infty} \dfrac{x^{2n}}{(2n)!}$$
+
+$$\sinh(x) := \sum_{n=0}^{\infty} \dfrac{x^{2n+1}}{(2n+1)!}$$
+
+> Der Unterschied zwischen $\cos$ und $\cosh$ ist einfach nur, dass $(-1)^n$ weg fällt, $\sinh$ analog.
 
 ## Sandwichkriterium
 
@@ -103,7 +111,7 @@ Dann ist $\displaystyle{\sum_{n=1}^{\infty} (-1)^{n+1} b_n}$ konvergent
 
 ## Majorantenkriterium
 
-Gilt $\vert a_n \vert \lt b_n \text{ ffa } n \in \N$ und ist $\displaystyle{\sum_{n=1}^{\infty}} b_n$ konvergent, so ist
+Gilt $\vert a_n \vert \le b_n \text{ ffa } n \in \N$ und ist $\displaystyle{\sum_{n=1}^{\infty}} b_n$ konvergent, so ist
 $\displaystyle{\sum_{n=1}^{\infty} a_n}$ absolut konvergent.
 
 ## Minorantenkriterium

@@ -138,6 +138,10 @@
   * [Eigenwerte und Vektoren](/mathe/eigenwerte_vektoren.md)
   * [Polynome](/mathe/polynome.md)
   * [Diagonalisierbarkeit & Trigonalisierbarkeit](/mathe/diagonalisierbarkeit_trigonalisierbarkeit.md)
+  * [Jordannormalform](/mathe/jordannormalform.md)
+  * [Skalarprodukte](/mathe/skalarprodukte.md)
+  * [Isometrien](/mathe/isometrien.md)
+  * [(Selbst-)Adjungierte Matrizen](/mathe/adjungierte_matrizen.md)
 <!-- /// [ mathe-lineare-algebra] -->
 <!-- /// [mathe-höhere-mathematik] -->
   * [**Höhere Mathematik**](/mathe/höhere_mathematik.md)
