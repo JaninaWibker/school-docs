@@ -187,6 +187,22 @@ garnicht mehr vorkommt.
 
 Falls $f$ nicht stetig ist, ist direkt klar, dass $f_n$ nicht gleichmäßig konvergent ist.
 
+### Nützliche Sätze
+
+**Satz 8.1a**:
+Die Folge $(f_n)$ konvergiere auf $D$ punktweise gegen $f: D \to \R$. Weiter sei $(a_n)$ eine Folge mit $\alpha_n \to 0, m \in \N$ und
+
+$$\forall n \ge m \forall x \in D: \vert f_n(x) - f(x) \vert \le \alpha_n$$
+
+Dann konvergiert $(f_n)$ auf $D$ gleichmäßig gegen $f$.
+
+**Satz 8.1b / Kriterium von Weierstraß**:
+Es sei $m \in \N, (c_n)$ eine Folge in $[0, \infty), \\; \displaystyle{\sum_{n=1}^{\infty}} c_n$ sei konvergent und
+
+$$\forall n \ge m \forall x \in D: \\; \vert f_n(x) \vert \le c_n$$
+
+Dann konvergiert $\displaystyle{\sum_{n=1}^{\infty} c_n}$ auf $D$ gleichmäßig
+
 ## Umkehrsatz
 
 Es sei $D \subseteq \R^n$ offen, $f \in C^1(D, \R^n)$ und $x_0 \in D$. Ist $\det f'(x_0) \ne 0$, so existiert ein $\epsilon > 0$ mit:
