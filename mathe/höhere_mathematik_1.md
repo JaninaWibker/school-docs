@@ -16,9 +16,9 @@
 | $\sinh(x)$   | $\cosh(x)$             |
 | $\cosh(x)$   | $\sinh(x)$             |
 
-$\sinh(x) = \dfrac{e^x}{2} - \dfrac{e^{-x}}{2}$
+$\sinh(x) = \dfrac{e^x}{2} - \dfrac{e^{-x}}{2}, \quad \sin(x) = \dfrac{e^{ix}}{2} - \dfrac{e^{-ix}}{2}$
 
-$\cosh(x) = \dfrac{e^x}{2} + \dfrac{e^{-x}}{2}$
+$\cosh(x) = \dfrac{e^x}{2} + \dfrac{e^{-x}}{2}, \quad \cos(x) = \dfrac{e^{ix}}{2} + \dfrac{e^{-ix}}{2}$
 
 $\sin^2(x) + \cos^2(x) = 1$
 
@@ -27,6 +27,10 @@ $\sin^2(x) - \cos^2(x) = -\cos(2x)$
 $\sin(x) = \sqrt{1 - \cos^2(x)}$
 
 $\cos(x) = \sqrt{1 - \sin^2(x)}$
+
+$\cos(x) = \cosh(ix), \quad \cos(ix) = \cosh(x)$
+
+$\sin(x) = \sinh(ix), \quad \sin(ix) = \sinh(x)$
 
 
 ## bekannte Folgen & Reihen

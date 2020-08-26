@@ -1,0 +1,1 @@
+# (Selbst-)Adjungierte Matrizen
