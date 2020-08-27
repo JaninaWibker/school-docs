@@ -182,26 +182,26 @@ wobei $f(x)$ die Grenzfunktion ist. Der bedeutende Unterschied zu punktweise kon
 $x$ in Abhängigkeit von $n$ ändern kann. Wenn man also ein $x(n)$ findet, wofür $\vert f_n(x) - f(x) \vert$ nicht gegen
 $0$ geht, hat man gezeigt dass die Funktionsfolge nicht gleichmäßig konvergent ist.
 
-Um zu zeigen, dass das $n$ für die Wahl des $x$ irrelevant ist erfolgt meist durch rauskürzen, sodass hinterher das $x$
-garnicht mehr vorkommt.
+Zeigen, dass das $n$ für die Wahl des $x$ irrelevant ist erfolgt meist durch rauskürzen des $x$'es, sodass es hinterher garnicht
+mehr vorkommt, dies kann auch wie man in *Satz 8.1a* sehen kann durch Abschätzen gemacht werden.
 
-Falls $f$ nicht stetig ist, ist direkt klar, dass $f_n$ nicht gleichmäßig konvergent ist.
+> Falls $f$ nicht stetig ist, ist direkt klar, dass $f_n$ nicht gleichmäßig konvergent ist.
 
 ### Nützliche Sätze
 
 **Satz 8.1a**:
 Die Folge $(f_n)$ konvergiere auf $D$ punktweise gegen $f: D \to \R$. Weiter sei $(a_n)$ eine Folge mit $\alpha_n \to 0, m \in \N$ und
 
-$$\forall n \ge m \forall x \in D: \vert f_n(x) - f(x) \vert \le \alpha_n$$
+$$\forall n \ge m \\; \forall x \in D: \vert f_n(x) - f(x) \vert \le \alpha_n$$
 
 Dann konvergiert $(f_n)$ auf $D$ gleichmäßig gegen $f$.
 
 **Satz 8.1b / Kriterium von Weierstraß**:
-Es sei $m \in \N, (c_n)$ eine Folge in $[0, \infty), \\; \displaystyle{\sum_{n=1}^{\infty}} c_n$ sei konvergent und
+Es sei $m \in \N, \\; (c_n)$ eine Folge in $[0, \infty), \\; \displaystyle{\sum_{n=1}^{\infty}} c_n$ sei konvergent und
 
-$$\forall n \ge m \forall x \in D: \\; \vert f_n(x) \vert \le c_n$$
+$$\forall n \ge m \\; \forall x \in D: \\; \vert f_n(x) \vert \le c_n$$
 
-Dann konvergiert $\displaystyle{\sum_{n=1}^{\infty} c_n}$ auf $D$ gleichmäßig
+Dann konvergiert $\displaystyle{\sum_{n=1}^{\infty} c_n}$ auf $D$ gleichmäßig.
 
 ## Umkehrsatz
 
