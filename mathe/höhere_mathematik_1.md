@@ -16,7 +16,7 @@
 | $\sinh(x)$   | $\cosh(x)$             |
 | $\cosh(x)$   | $\sinh(x)$             |
 
-$\sinh(x) = \dfrac{e^x}{2} - \dfrac{e^{-x}}{2}, \quad \sin(x) = \dfrac{e^{ix}}{2} - \dfrac{e^{-ix}}{2}$
+$\sinh(x) = \dfrac{e^x}{2} - \dfrac{e^{-x}}{2}, \quad \sin(x) = \dfrac{i e^{-ix}}{2} - \dfrac{i e^{ix}}{2}$
 
 $\cosh(x) = \dfrac{e^x}{2} + \dfrac{e^{-x}}{2}, \quad \cos(x) = \dfrac{e^{ix}}{2} + \dfrac{e^{-ix}}{2}$
 
@@ -30,7 +30,7 @@ $\cos(x) = \sqrt{1 - \sin^2(x)}$
 
 $\cos(x) = \cosh(ix), \quad \cos(ix) = \cosh(x)$
 
-$\sin(x) = \sinh(ix), \quad \sin(ix) = \sinh(x)$
+$\sin(x) = \dfrac{\sinh(ix)}{i}, \quad \sin(ix) = i \sinh(x)$
 
 
 ## bekannte Folgen & Reihen
@@ -201,7 +201,10 @@ Es sei $m \in \N, \\; (c_n)$ eine Folge in $[0, \infty), \\; \displaystyle{\sum_
 
 $$\forall n \ge m \\; \forall x \in D: \\; \vert f_n(x) \vert \le c_n$$
 
-Dann konvergiert $\displaystyle{\sum_{n=1}^{\infty} c_n}$ auf $D$ gleichmäßig.
+Dann konvergiert $\displaystyle{\sum_{n=1}^{\infty} f_n}$ auf $D$ gleichmäßig.
+
+**Satz 10.8**: Ist $(f_n)$ eine Funktionsfolge in $R([a, b])$, welche gleichmäßig gegen $f: [a, b] \to \R$ konvergiert dann gilt:
+$$\lim_{n\to\infty} \int_a^b f_n(x) \\; dx = \int_a^b \lim_{n\to\infty} f_n(x) \\; dx = \int_a^b f(x) \\; dx$$
 
 ## Umkehrsatz
 
