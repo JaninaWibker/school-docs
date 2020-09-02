@@ -232,4 +232,76 @@ Sei $F$ symmetrisch mit $F = (f_{ij}) \in \R^{n \times n}$. Dann sind die folgen
 - Es gibt eine obere Dreiecksmatrix $A \in GL_n(\R)$ mit $F = A^T \cdot A$
 - Für $1 \le k \le n$ sind die Determinanten der Matrix $F_k := (f_{ij})_{1 \le i,j \le k}$ positiv
 
+### Orthogonale Komplemente und Abstände
 
+Es sei $V$ ein VR und $M \subseteq V$ Teilmenge. Dann ist der **Orthogonalraum** zu $M$ ($M^{\bot}$, sprich "M senkrecht") definiert durch
+
+$$M^{\bot} := \lbrace v \in V \vert \forall m \in M: m \\; \bot \\; v \rbrace
+            = \lbrace v \in V \vert \forall m \in M: \langle v, m \rangle = 0 \rbrace$$
+
+$M^{\bot}$ ist UVR von $V$.
+
+> Man kann das Skalarprodukt benutzen, um $V$ als Teilraum des Dualraums $V^*$ zu verstehen. Dann ist $M^{\bot}$ der
+> Durchschnitt der Kerne der zu $m \in M$ gehörenden Linearformen.
+>
+> $N \subseteq M \implies M^{\bot} \subseteq N^{\bot}, \quad M^{\bot} = \langle M \rangle^{\bot}$
+
+<br />
+
+In einem **endlichdimensionalen** euklidischen VR $V$ sei ein euklidischer UVR $U$ gegeben. Dann ist $U^{\bot}$ zu $U$
+ein komplementärer UVR von $V$.
+
+Dieses $U^{\bot}$ nennt man dann auch **Orthogonales Komplement** zu $U$ und es gilt $V = U \oplus U^{\bot}$.
+
+**Orthogonale Projektion und Abstand**
+
+Sei $V = U \oplus U^{\bot}$ eine Zerlegung von $V$. Dann kann man einen zugehörigen Homomorphismus
+
+$$\pi_U: V \to U, \pi_U(u + u^{\bot}) := u$$
+
+definieren, welcher einfach immer für beliebiges $v \in V$ den Teil aus $U^{\bot}$ entfernt, womit nurnoch $u \in U$ bleibt.
+
+Dies nennt man dann **orthogonale Projektion** von $V$ auf $U$ längs $U^{\bot}$. Man kann dies auch als Endomorphismus
+anstatt Homomorphismus betrachten, da $U < V$.
+
+Folglich gilt: $\ker(\pi_U) = U^{\bot}$ und $U = \text{Eig}(\pi_U, 1)$ (da für $u \in U$ gilt, dass $\pi_U(u) = u$ ist).
+Es gilt auch, dass $\pi_U^2 = \pi_U$ ist, da $u^{\bot}$ nach einem Mal anwenden schon entfernt ist und somit nurnoch ein
+$u \in U$ bleibt, wofür $\pi_U$ die Identität ist.
+
+> Das gleiche kann man natürlich auch für $\pi_{U^\bot}$ machen.
+
+Den Abstand zwischen 2 Teilmengen $A, B$ von $V$ definiert man als den minimalen Abstand zwischen $(a,b) \in A \times B$, also
+
+$$d(A, B) := \inf \lbrace d(a, b) \vert a \in A, b \in B \rbrace$$
+
+Für $V = U \oplus U^{\bot}$ ist der Abstand zwischen einem Vektor und $U$ bzw. $U^{\bot}$ folgendes:
+
+OBdA. für $U$:
+
+$v = u + u^{\bot} \in V$, dann ist $d(v, U) = \Vert u^{\bot} \Vert = \Vert \pi_{U^{\bot}}(v) \Vert$
+
+Für beliebige Teilmengen $A \in V$ (also auch für UVR) gilt: $d(A, U) = d(\pi_{U^{\bot}}(A), 0)$
+
+Falls man $A$ als affinen Unterraum (/affiner Teilraum) $v + W$ mit $W < V$ UVR wählt, dann gilt
+$d(A, U)= \Vert \pi_{(U+W)^{\bot}}(v) \Vert$.
+
+**affiner Teilraum, Lot, Lotfußpunkte**
+
+Affine Teilräume scheinen das gleiche zu sein wie affine Unterräume.
+
+Für $a, b \in V$ heißt:
+
+$$\overline{a, b} := \lbrace \lambda a + (1-\lambda)b \vert \lambda \in \K \lbrace = a + \K \cdot (b-A)$$
+
+die *offene Gerade* durch $a$ und $b$.
+
+Wenn $\K = \R$ gilt, dann ist für $a, b$ in $V$ die Menge
+
+$$[a,b] := \lbrace \lambda a + (1 - \lambda)b \vert 0 \le \lambda \le 1 \rbrace$$
+
+die *Strecke* zwischen $a$ und $b$.
+
+Seien $U, W$ endlichdim. UVR vom euklidischen VR $V$, $v \in V$ und $A := v + W$. Dann gibt es $u \in U$ und $w \in W$, sodass
+$v - u - w$ auf $U + W$ senkrecht steht. Dann hießt die Strecke $[u, v-w]$ ein **Lot** zwischen $U$ und $A$, und die Punkte
+$u \in U$ und $v-w \in A$ heißen seine **Lotfußpunkte**. Das Lot ist genau dann eindeutig bestimmt,
+wenn $U \cap W = \lbrace 0 \rbrace$. Ansonsten kann man es um eien beliebigen Vektor aus $U \cap W$ verschieben.
