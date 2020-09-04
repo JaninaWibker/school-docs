@@ -124,8 +124,6 @@ $$v \bot w \iff \Vert v + w \Vert^2 = \Vert v \Vert^2 + \Vert w \Vert^2$$
 
 da wenn $v \bot w$ gilt $\langle v, w \rangle = 0$ gilt.
 
-**TODO**: fehlt hier noch etwas?
-
 ### Orthogonal- und Orthonormalbasis
 
 Es sei $P: V \times V \to \K$ eine Bilinearform auf $V$ ($n$-dim. $\K$-VR)
@@ -155,7 +153,7 @@ $$\tilde{S} = \lbrace \dfrac{1}{\Vert s \Vert} \cdot s \vert s \in S \rbrace$$
 
 <br />
 
-**Fourierformel**:
+### Fourierformel
 
 $$B \\; \text{Orthonormalbasis}, v \in V \implies v = \sum_{b \in B} P(v, b) \cdot b$$
 
@@ -184,7 +182,7 @@ denn der $(i, j)$-te Eintrag ist dann gerade $\langle v_i, v_j \rangle$.
 
 Die *orthogonale Gruppe* sei wie folgt definiert
 
-$$O(n) := \lbrace A \in \R^{n \times n} \vert A^T \cdot A = \id \rbrace$$
+$$O(n) := \lbrace A \in \R^{n \times n} \\; \vert \\; A^T \cdot A = \id \rbrace$$
 
 Es gilt:
 - $O(n) \subseteq GL_n(\R)$, da $A^{-1} = A^T$ also existiert das Inverse.
@@ -193,11 +191,11 @@ Es gilt:
   $(A \cdot B^{-1})^T \cdot A \cdot B^{-1} = (B^{-1})^T \cdot A^T \cdot A \cdot B^{-1} = B \cdot B^T = \id$
 - Es gilt $\det(A^T \cdot A) = \det(A^2) = 1$, also ist $\det(A) = 1$ oder $-1$.
 
-$$SO(n) := \lbrace A \in O(n) \vert \det(A) = 1 \rbrace$$
+$$SO(n) := \lbrace A \in O(n) \\; \vert \\; \det(A) = 1 \rbrace$$
 
 > Die Gruppe der *speziell orthogonalen $n \times n$-Matrizen
 
-**Orthogonalisierungsverfahren von Gram Schmidt**
+### Orthogonalisierungsverfahren von Gram Schmidt
 
 Sei $\lbrace v_1, v_2, \dots, v_k \rbrace$ eine Basis von $U < V$. Man versucht nun aus der vorhandenen Basis eine
 ONB zu machen. Man definiert rekursiv $w_1, \dots, w_k$:
@@ -212,7 +210,7 @@ $$\tilde{S} := \lbrace \dfrac{1}{\Vert w_1 \Vert} \cdot w_1, \\; \dots, \\; \dfr
 
 <br />
 
-**Iwasawa-Zerlegung von $GL_n(\R)$**
+### Iwasawa-Zerlegung von $GL_n(\R)$
 
 Man stelle sich die Modifikationen auf der Matrix mit Basisvektoren als Spalten, die beim orthogonaliseren durch
 Gram Schmidt auftreten vor. Die Veränderungen sind elementare Spaltenumformungen, können also mit Multiplikation einer
@@ -232,12 +230,12 @@ Sei $F$ symmetrisch mit $F = (f_{ij}) \in \R^{n \times n}$. Dann sind die folgen
 - Es gibt eine obere Dreiecksmatrix $A \in GL_n(\R)$ mit $F = A^T \cdot A$
 - Für $1 \le k \le n$ sind die Determinanten der Matrix $F_k := (f_{ij})_{1 \le i,j \le k}$ positiv
 
-### Orthogonale Komplemente und Abstände
+### Orthogonale Komplemente, Projektionen und Abstände
 
 Es sei $V$ ein VR und $M \subseteq V$ Teilmenge. Dann ist der **Orthogonalraum** zu $M$ ($M^{\bot}$, sprich "M senkrecht") definiert durch
 
-$$M^{\bot} := \lbrace v \in V \vert \forall m \in M: m \\; \bot \\; v \rbrace
-            = \lbrace v \in V \vert \forall m \in M: \langle v, m \rangle = 0 \rbrace$$
+$$M^{\bot} := \lbrace v \in V \\; \vert \\; \forall m \in M: m \\; \bot \\; v \rbrace
+            = \lbrace v \in V \\; \vert \\; \forall m \in M: \langle v, m \rangle = 0 \rbrace$$
 
 $M^{\bot}$ ist UVR von $V$.
 
@@ -272,7 +270,7 @@ $u \in U$ bleibt, wofür $\pi_U$ die Identität ist.
 
 Den Abstand zwischen 2 Teilmengen $A, B$ von $V$ definiert man als den minimalen Abstand zwischen $(a,b) \in A \times B$, also
 
-$$d(A, B) := \inf \lbrace d(a, b) \vert a \in A, b \in B \rbrace$$
+$$d(A, B) := \inf \lbrace d(a, b) \\; \vert \\; a \in A, b \in B \rbrace$$
 
 Für $V = U \oplus U^{\bot}$ ist der Abstand zwischen einem Vektor und $U$ bzw. $U^{\bot}$ folgendes:
 
@@ -285,19 +283,19 @@ Für beliebige Teilmengen $A \in V$ (also auch für UVR) gilt: $d(A, U) = d(\pi_
 Falls man $A$ als affinen Unterraum (/affiner Teilraum) $v + W$ mit $W < V$ UVR wählt, dann gilt
 $d(A, U)= \Vert \pi_{(U+W)^{\bot}}(v) \Vert$.
 
-**affiner Teilraum, Lot, Lotfußpunkte**
+### affiner Teilraum, Lot, Lotfußpunkte
 
 Affine Teilräume scheinen das gleiche zu sein wie affine Unterräume.
 
 Für $a, b \in V$ heißt:
 
-$$\overline{a, b} := \lbrace \lambda a + (1-\lambda)b \vert \lambda \in \K \lbrace = a + \K \cdot (b-A)$$
+$$\overline{a, b} := \lbrace \lambda a + (1-\lambda)b \\; \vert \\; \lambda \in \K \rbrace = a + \K \cdot (b-a)$$
 
-die *offene Gerade* durch $a$ und $b$.
+die *affine Gerade* durch $a$ und $b$.
 
 Wenn $\K = \R$ gilt, dann ist für $a, b$ in $V$ die Menge
 
-$$[a,b] := \lbrace \lambda a + (1 - \lambda)b \vert 0 \le \lambda \le 1 \rbrace$$
+$$[a,b] := \lbrace \lambda a + (1 - \lambda)b \\; \vert \\; 0 \le \lambda \le 1 \rbrace$$
 
 die *Strecke* zwischen $a$ und $b$.
 
