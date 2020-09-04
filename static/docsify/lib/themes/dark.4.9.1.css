@@ -201,7 +201,7 @@ body.dark .anchor {
   transition: all 0.3s;
 }
 body.dark .anchor span {
-  color: #c8c8c8;
+  color: #283848;
 }
 body.dark .anchor:hover {
   text-decoration: underline;
