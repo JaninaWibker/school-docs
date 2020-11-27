@@ -61,6 +61,12 @@ Für Endomorphismen gilt des weiteren: Sei $B$ eine ONB (**wichtig**)
 Daraus folgt, dass lineare Isometrien eines endlich dim. euklidischen VR entweder $\det\Phi = \pm 1$ haben,
 da $\det A \\; A \in O(n)$ immer $\pm 1$ ist. Man nennt Isometrien mit $\det = 1$ auch *eigentliche Bewegungen*.
 
+Ein nützlicher Satz um zu zeigen, dass etwas eine lineare Isometrie ist, ist der folgende:
+
+Alle Isometrien können als $\psi + b$ geschrieben werden, wobei $\psi$ eine lineare Isometrie ist und $b$ ein beliebiger
+Vektor.
+
+Wenn man beweisen will, dass eine gegebene Isometrie linear ist kann man versuchen zu zeigen, dass $b = 0$ sein muss.
 
 ### invariante Komplemente, Eigenwerte
 
@@ -134,4 +140,4 @@ Die Eigenwerte von $D + D^T$ und $A + A^T$ stehen direkt in Relation mit den Eig
 
 - Wenn $A + A^T$ den Eigenwert  $2$ hat müssen $A$ und $A^T$ beide den Eigenwert  $1$ haben.
 - Wenn $A + A^T$ den Eigenwert $-2$ hat müssen $A$ und $A^T$ beide den Eigenwert $-1$ haben.
-- Jedes Drehkästchen ...
+- Jedes Drehkästchen ... **TODO**

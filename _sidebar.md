@@ -148,6 +148,11 @@
   * [Höhere Mathematik I](/mathe/höhere_mathematik_1.md)
   * [Höhere Mathematik II](/mathe/höhere_mathematik_2.md)
 <!-- /// [mathe-höhere-mathematik] -->
+<!-- /// [mathe-wahrscheinlichkeitstheorie] -->
+  * [**Wahrscheinlichkeitstheorie**](/mathe/wahrscheinlichkeitstheorie.md)
+  * [Grundlagen](/mathe/wt_grundlagen.md)
+  * [Verteilungen](/mathe/verteilungen.md)
+<!-- /// [mathe-wahrscheinlichkeitstheorie] -->
 <!-- /// [mathe-mathe] -->
 <!-- /// [swt-swt] -->
 * [Softwaretechnik](/swt/swt)
