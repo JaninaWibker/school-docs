@@ -188,6 +188,18 @@
   * [**Abnahme, Wartung und Pflege**](/swt/abnahme_wartung_und_pflege.md)
 <!-- /// [swt-testen-wartung-pflege] -->
 <!-- /// [swt-swt] -->
+
+<!-- /// [os-os] -->
+* [Operating Systems](/os/os)
+  * [Processes & Threads](/os/process_thread.md)
+  * [Scheduling & Interrupts](/os/scheduling_interrupts.md)
+  * [Concurrency & IPC](/os/concurrency_ipc.md)
+  * [Memory and Page Allocation](/os/allocation.md)
+  * [Caching](/os/caching.md)
+  * [Device Management & Storage devices](/os/device_storage.md)
+  * [Filesystems](/os/filesystems.md)
+<!-- /// [os-os] -->
+
 <!-- /// [etk-etk] -->
 * [Elektrotechnik](/etk/etk)
   * [Gleichrichterschaltungen](etk/gleichrichterschaltungen.md)
