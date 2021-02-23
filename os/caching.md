@@ -62,6 +62,35 @@ The address used for calculation can differ from cache to cache but it is usuall
 The address often also has an offset which is the last few bytes.
 This is because one cache entry does not store only a singular value but a whole block of data at a time and so an offset into this block of data is needed.
 
+### physically indexed, virtually tagged
+
+No cache flush needed when context switching (because ambiguity is not a problem)
+
+Write-back can be complicated especially since the addres space is switched.
+
+Access time depends on the speed of the MMU.
+
+DMA / multi processor things can be tricky to implement.
+
+### physically indexed, physically tagged
+
+all cache related things are completely independant of CPU inner workings (context switches, ...).
+
+Access time depends on the speed of the MMU.
+
+DMA / multi processor things are super easy.
+
+You might need to do page coloring (/recoloring) to get better cache usage because of conflicting entries.
+
+#### Page coloring
+
+Two addresses (/blocks of memory) have the same color if and only if they map to the same cache line.
+
+The strategy is to assign different colors (by modifying the placement when creating pages) so that pages that were allocated right after each other map to different cache lines.
+Using this the chance of just reusing the same cache line over and over again (overwriting it each time) is reduced to a minimum.
+
+> Why talk about pages now when the cache does not cache whole pages but only significantly smaller blocks of memory (maybe 64 bytes at a time or something similar, nowhere near the size of a page)?
+
 ## Types of caches
 
 
@@ -73,8 +102,6 @@ In a n-way set associative cache the index is used to get to the correct cache s
 From there on the tags are compared to find the correct cache line.
 
 If that fails you've got a cache miss; if you find a matching tag you've got a cache hit.
-
-
 
 
 ### Fully-associative cache
