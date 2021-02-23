@@ -75,6 +75,10 @@ There is a distinction to be made between **kernel level threads** (KLTs; one-to
 These are both called thread models.
 Certain more complex models also sometimes exist where both is done at the same time; this is then called many-to-many or hybrid thread model.
 
+Kernel level threads are threads managed by the kernel, meaning the kernel does all the scheduling and so on.
+
+User level threads on the other hand might not even be known to the kernel at all and are handled completely in userland using pthreads for example.
+
 Kernel level threads have the following advantages and disadvantages:
 
 | Advantage                  | Disadvantage                                             |
@@ -149,6 +153,13 @@ The interrupt service routine must first save the state of the interrupted proce
 - Instruction pointer (IP)
 - Stack pointer (SP)
 - Status word (PSW)
+
+Interrupts can be masked, meaning that they get put in a queue of interrupts to handle later on.
+When an interrupt is unmasked it is handled and removed from the queue.
+This is useful because you absolutely don't want to interrupt another interrupt while it is currently being handled.
+
+There are also non-maskable interrupts (NMI) which the system cannot ignore.
+These usually indicate hardware errors.
 
 ## Exceptions
 
