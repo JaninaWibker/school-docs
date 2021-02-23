@@ -71,20 +71,27 @@ For each thread a **Thread Control Block** (**TCB**) exists which houses the fol
 
 Threads are sometimes called lightweight processes.
 
-There is a distinction to be made between **kernel level threads** (KLTs) and user level threads** (ULTs)
+There is a distinction to be made between **kernel level threads** (KLTs; one-to-one) and user level threads** (ULTs; many-to-one).
+These are both called thread models.
+Certain more complex models also sometimes exist where both is done at the same time; this is then called many-to-many or hybrid thread model.
 
-Kernel level threads are managed by the kernel.
-This means they are scheduled by the scheduler, can be preempted like other processes, ...
+Kernel level threads have the following advantages and disadvantages:
 
-The kernel definitly knows about them.
+| Advantage                  | Disadvantage                                             |
+| -------------------------- | -------------------------------------------------------- |
+| Real parallelism possible  | OS manages every thread in the system (TCB, stacks, ...) |
+| Threads block individually | Syscalls needed for thread management                    |
+|                            | Scheduling fixed in OS                                   |
 
-On the other hand ULTs are entirely managed in userspace, they are managed by the process itself without intervention from the operating system.
+User level threads have the following advantages and disadvantages:
 
-This has the result that context switching is a lot faster, more threads can be created and so on.
+| Advantage                                             | Disadvantage                                          |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| Faster thread management operations (up to 100 times) | No parallel execution                                 |
+| Flexible scheduling policy                            | Whole process blocks if only one user thread blocks   |
+| Few system resources                                  | Need to re-implement parts of the OS (e.g. scheduler) |
+| Can be used even if the OS does not support threads   |                                                       |
 
-ULTs have the disadvantage that you have to implement threads and context switching yourself (can be done through libraries like pthreads) but can come at a great speed advantage.
-
-Another disadvantage is that one userlevel thread blocking because of a resource results in all other userlevel threads blocking as well.
 
 ## OS Invocation
 
