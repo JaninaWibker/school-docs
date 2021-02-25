@@ -1,4 +1,4 @@
-# Scheduling & Interrupts
+# Scheduling
 
 In general a process / thread can be in one of the following states: *new*, *ready*, *running*, *waiting* or *terminated*.
 
