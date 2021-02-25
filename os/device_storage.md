@@ -68,4 +68,46 @@ Processor interrupted after entire block has been transferred.
 
 ## Storage devices
 
-TODO
+### Hard drives
+
+![Hard drive terminilogy](../assets/os/hdd.svg)
+
+Reading from disk involves the following step:
+
+Seek:
+- **speedup**: accelerate arm to max. speed or half way point
+- **coast**: at max. speed (for long seeks)
+- **slowdown**: stops arm near destination
+- **settle**: adjust head to actual desired track (~1ms)
+
+Writing requires a more accurate head position than reading because for reading you can rely partially on checksums to fill in the missing details which arise from a slightly incorrect head position.
+
+With writing you can't do that as the actual location you write something to cannot be off by a tiny amount.
+
+### Solid State Drives
+
+Don't contain any moving parts, consume less power than regular hard drives and don't have a seek time or similar.
+
+The amount of read and write requests is limited per block. A block wears out after about 10,000 erasures for Multi-level cells and 100,000 for single-level cells.
+The SSDs memory controller is a **flash translation layer** (FTL) which keeps track of wear of cells and buffers requests as well as making sure cells are used equally by redirecting requests to different blocks.
+
+FTL can impact performance, especially random writes.
+
+Everytime something is written to a block it first has to be erased, this can take a long time (about 2ms) and then the new data has to be written.
+To minimize the performance impact of this spare blocks are used.
+These are blocks which have already been erased and can just be written to without having to erase them first.
+Periodically unused blocks are garbage collected and erased in order to increase the amount of spare blocks.
+This has to be initiated by the operating system using the trim command which tells the SSD which logical blocks are unused.
+
+
+### RAID - Redundant Array of Inexpensive Disks
+
+- **RAID 0**:  Striping across 2 disks.
+- **RAID 1**:  Bitwise mirroring across 2 disks.
+- **RAID 2**:  Striping over multiple disks with added hamming codes.
+- **RAID 3**:  Striping on a byte/word-evel with interleaved parity.
+- **RAID 4**:  Block-interleaved parity. Compute parity for a small block of data and put it on a specially choosen parity disk.
+- **RAID 5**:  block-level distributed parity. Same as Raid 4 but with distributed parity to reduce load on the parity disk.
+- **RAID 10**: Mirroring and then striping. Fails if 2 drives in the same group fail (good).
+- **RAID 01**: Striping and then mirroring. Fails if 2 drives in 2 stripes fail (bad).
+

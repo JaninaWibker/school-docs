@@ -71,7 +71,7 @@ For each thread a **Thread Control Block** (**TCB**) exists which houses the fol
 
 Threads are sometimes called lightweight processes.
 
-There is a distinction to be made between **kernel level threads** (KLTs; one-to-one) and user level threads** (ULTs; many-to-one).
+There is a distinction to be made between **kernel level threads** (KLTs; one-to-one) and **user level threads** (ULTs; many-to-one).
 These are both called thread models.
 Certain more complex models also sometimes exist where both is done at the same time; this is then called many-to-many or hybrid thread model.
 
