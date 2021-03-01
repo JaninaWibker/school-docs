@@ -18,7 +18,7 @@ The PCB contains:
 
 ## Concurrency vs. Parallelism
 
-Concurrency / Pseudoparallelism: Multiple processes on the same CPU
+Concurrency / Pseudoparallelism: Multiple processes on the same CPU<br />
 Parallelism: Processes truly running at the same time with mulitple CPUs
 
 
@@ -34,23 +34,26 @@ The OS implements the construct of processes on it's own, this means it also pos
 
 Halting and stopping is done through interrupts
 
-The OS can create processes, transform control to their starting point, stop them (requires interrupts), ...
+The OS can create processes, transfer control to their starting point, stop them (requires interrupts), ...
 When doing a system call (trap instruction) you change privilege level for a short period of time and run kernel code.
 
 Each user process has it's own virtual memory address space.
-Kernel memory is protected from the user mode accesses.
+Kernel memory is protected from user mode accesses.
+
+The kernel memory is however usually mapped into every address space as you don't want to change the address space with every syscall.
+This memory is however only usable from kernel mode as a page fault is generated otherwise (because the memory is neither readable nor writable in user space).
 
 ## ELF - Executable Linkable Format
 
 An ELF file is a executable file, at least on unix based systems.
 The file contains multiple sections, each with a different purpose:
 
-- .bss (Block Started by Symbol): not actually included in the file on disk but generated on execution.
+- **.bss** (Block Started by Symbol): not actually included in the file on disk but generated on execution.
   The size of this segment is encoded in the file however.
   It is meant to be used for zero-initialized variables once execution has begun.
-- .data: Also used for data but unlike the .bss segment the variables aren't zero-initialized and therefore it must appear in the ELF file.
-- .rodata: read only data ()
-- .text : actual program code
+- **.data**: Also used for data but unlike the .bss segment the variables aren't zero-initialized and therefore it must appear in the ELF file.
+- **.rodata**: read only data (string literals, `const`) 
+- **.text**: actual program code
 
 There are potentially many more segments (based on what the linker does) but these are the most important ones.
 
@@ -58,6 +61,7 @@ When execution begins each of these is mapped into the virtual address space of 
 
 ![Memory layout](../assets/os/address_space.svg)
 
+> Reserved for OS is what was previously mentioned as the kernel memory.
 
 ## Threads
 
@@ -66,7 +70,7 @@ For each thread a **Thread Control Block** (**TCB**) exists which houses the fol
 - Instruction Pointer (IP)
 - Stack Pointer (SP; multiple stacks exist in the address space of the process; one for each thread)
 - Program status word (PSW)
-- Registers, ...
+- General purpose registers, ...
 - State (either "new", "ready", "running", "waiting" or "terminated")
 
 Threads are sometimes called lightweight processes.
@@ -97,6 +101,10 @@ User level threads have the following advantages and disadvantages:
 | Can be used even if the OS does not support threads   |                                                       |
 
 
+Kernel mode threads also exist but these are distinctly different than what was previously mentioned.
+Kernel mode threads are kernel-level-threads that run with kernel privileges.
+This allows certain tasks such as disk write back to be seperated into it's own thread.
+
 ## OS Invocation
 
 The kernel is **not** running in the background all the time waiting for things to happen; it is invoked using syscalls, interrupts or exceptions.
@@ -113,10 +121,19 @@ Which exact "request" (or rather system call) is triggered is specified using a 
 
 The kernel code is executed at a higher privilege level than the normal user code so this code can do far more than could be done in usermode.
 
-Before executing something critical in kernel mode the kernel first checks wether or not all conditions for this call are met:
-- Process is allowed to make this call (sometimes partially implemented through pledges)
-- Passed data is valid
-- ...
+General timeline of events:
+- arguments and syscall number set (registers most of the time)
+- trap instruction fires
+  - CPU emits a synchronous interrupt (/ exception / software interrupt / internal interrupt) 
+  - interrupt vector for syscalls is fired
+- syscall dispatcher is called
+- registers are saved and stack is switched to kernel stack
+- **arguments of syscall are validated**
+  - correct amount, pointers point to memory accessible by the caller, caller is allowed to make this call (might involve pledges; might involve msyscall pages for mitigating ROP-chains in the kernel), ...
+- actual syscall code runs
+- return value saved
+- registers are reinstated
+- kernel mode is dropped and execution of user code is resumed
 
 There are many types of syscalls:
 - Process control
@@ -127,15 +144,6 @@ There are many types of syscalls:
 - Information maintenance
 - System management
 
-The system call handler does the following:
-
-- Saves the registers that it taints
-- Reads the parameters that were passed by the caller
-- **Sanitizes / checks the parameters for correctness**
-- Checks if the process has permission to perform the requested action (pledges, ...)
-- Performs the requested service on behalf of the process
-- Returns to the caller with a success or error code
-
 Detecting invalid data is crucial as kernel mode access could otherwise be gained through ROP-chains, ... which is bad.
 
 ## Interrupts
@@ -143,7 +151,7 @@ Detecting invalid data is crucial as kernel mode access could otherwise be gaine
 Interrupts are either software or hardware based.
 Often only hardware-invoked interrupts are ment when talking about interrupts (especially when comparing interrupts with exceptions which are just software-invoked interrupts).
 
-Hardware interrupts are interrupts which originate *from the outside* like I/O devices or timers triggering something.
+Hardware interrupts are interrupts which originate *from the outside* like I/O devices or timers triggering something and are therefore asynchronous (meaning they don't perfectly align with the certain steps in the instruction pipeline).
 
 When an interrupt happens, the CPU
 - looks up the **interrupt vector**, a table that is pinned in memory and contains the addresses of all service routines (set up by the OS).
@@ -165,7 +173,11 @@ These usually indicate hardware errors.
 
 Exceptions are software-invoked interrupts which are fired by the processor itself if something *bad* happens.
 
+They are synchronous meaning that they are aligned with the instruction pipeline in some way, they don't just randomly come in but appear at predictable times.
+
 *Bad* includes things like invalid memory accesses, division by zero and invalid opcodes.
+
+> The trap instruction is also an exception.
 
 The kernel is now tasked with handling this problem:
 - if the kernel can resolve the problem the process resumes
@@ -174,6 +186,4 @@ The kernel is now tasked with handling this problem:
 A difference between (hardware-based) interrupts and exceptions is that:
 - Interrupts can happen in any context
 - Exceptions always occur synchronous to and in the context of a process or the kernel.
-  So basically there is no further difference
-
 
