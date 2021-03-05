@@ -22,7 +22,7 @@ The general idea is to express a number $x$ as the following $x = (-1)^s \cdot m
 
 Basically all components for this representation of the number $x$ already exist in the binary representation but some modifications are made to them:
 
-The exponent $e$ is offset using a bias (127 in the case of 32 bit): $E - 127$ unless $E=0$ or $E=127$.
+The exponent $e$ is offset using a bias (127 in the case of 32 bit): $e = E - 127$ unless $E=0$ or $E=127$.
 If $E=0$ then the denormalized form is used and $e$ is set to $126$.
 $E=127$ is used to represent special values such as infinity.
 
