@@ -30,7 +30,7 @@ Each category is meant for a different type of system. Real-time systems compare
 **All systems**
 - **Fairness**: give each process a fair share of CPU
 - **Resource utilization**: keep expensive devices busy
-- **OS overhead**: reducce number of context switches, ...
+- **OS overhead**: reduce number of context switches, ...
 
 **Batch scheduling**
 - **Throughput**: # of processes that complete per time unit
@@ -39,7 +39,7 @@ Each category is meant for a different type of system. Real-time systems compare
 
 **Interactive Scheduling**
 - **Waiting time**: time each process waits in *ready queue*
-- **Response time**: tiem from request to first response
+- **Response time**: time from request to first response
   - For a job: e.g. key press to echo
   - For a scheduler: submission of a job to the first time it is dispatched
 
@@ -108,7 +108,7 @@ This can result in starvation where only high priority processes are run and the
 A possible solution is aging: the priority of a process gradually increases the longer it hasn't been executed.
 
 
-### MLFB - Multi-Level Feedback Queue
+### MLFQ - Multi-Level Feedback Queue
 
 **Goals**:
 - Give higher priority to I/O-bound jobs (won't use up their slice but deserve a fair share of the CPU)

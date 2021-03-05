@@ -200,6 +200,12 @@
   * [Filesystems](/os/filesystems.md)
 <!-- /// [os-os] -->
 
+<!-- /// [dt-dt] -->
+* [Digitaltechnik](/dt/dt)
+  * [Floating point numbers](/dt/floats.md)
+  * [Flip flops](/dt/flipflops.md)
+<!-- /// [dt-dt] -->
+
 <!-- /// [etk-etk] -->
 * [Elektrotechnik](/etk/etk)
   * [Gleichrichterschaltungen](etk/gleichrichterschaltungen.md)

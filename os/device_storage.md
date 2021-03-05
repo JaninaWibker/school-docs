@@ -10,7 +10,7 @@ The general objectives of device management are:
 - **protection** of standard devices against unauthorized accesses
 - **buffering**, if data from/to a device cannot be stored in the final destination
 - **error handling** of sporadic device errors
-- **virtualizating** physical devices via memory and time multiplexing (e.g., pty, RAM disk)
+- **virtualizing** physical devices via memory and time multiplexing (e.g., pty, RAM disk)
   - **spooling**, **uniform api**, **request scheduling**
 
 ### Types of I/O devices
@@ -105,7 +105,7 @@ This has to be initiated by the operating system using the trim command which te
 - **RAID 0**:  Striping across 2 disks.
 - **RAID 1**:  Bitwise mirroring across 2 disks.
 - **RAID 2**:  Striping over multiple disks with added hamming codes.
-- **RAID 3**:  Striping on a byte/word-evel with interleaved parity.
+- **RAID 3**:  Striping on a byte/word-level with interleaved parity.
 - **RAID 4**:  Block-interleaved parity. Compute parity for a small block of data and put it on a specially choosen parity disk.
 - **RAID 5**:  block-level distributed parity. Same as Raid 4 but with distributed parity to reduce load on the parity disk.
 - **RAID 10**: Mirroring and then striping. Fails if 2 drives in the same group fail (good).

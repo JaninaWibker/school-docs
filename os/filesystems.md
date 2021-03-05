@@ -18,7 +18,7 @@ This is an int which corresponds to a *file description*.
 Each process has a list of open files identified by file descriptors (*process table*).
 The whole system has a list called the *openfile table* which stores all opened files globally.
 The list each process has has references to this openfile table.
-The openfile table then has pointers to the *vnode table* which then contains the inode for each file as well as other useful information such as the refcount.
+The openfile table has pointers to the *vnode table* which then contains the inode for each file as well as other useful information such as the refcount.
 The distinction between openfile table and vnode table is that the openfile table would have 2 entries for hardlinked (and opened) files while the vnode table uses the inode as it's primary key you could say.
 
 
