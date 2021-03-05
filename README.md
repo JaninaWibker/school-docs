@@ -7,5 +7,6 @@
 * [Mathe](mathe/mathe)
 * [Softwaretechnik](swt/swt)
 * [Operating Systems](os/os)
+* [Digitaltechnik](/dt/dt)
 * [Elektrotechnik](/etk/etk)
 * [Französisch](/französisch/französisch)
