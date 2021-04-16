@@ -200,8 +200,15 @@
   * [Filesystems](/os/filesystems.md)
 <!-- /// [os-os] -->
 
+<!-- /// [algo-algo] -->
+* [Algorithmen](/algorithmen/algorithmen)
+  * [O-Notation, Mastertheorem](/algorithmen/o_notation_mastertheorem.md)
+  * [Datenstrukturen](/algorithmen/datenstrukturen.md)
+<!-- /// [algo-algo] -->
+
 <!-- /// [dt-dt] -->
 * [Digitaltechnik](/dt/dt)
+  * [Grundlagen](/dt/grundlagen.md)
   * [Floating point numbers](/dt/floats.md)
   * [Flip flops](/dt/flipflops.md)
 <!-- /// [dt-dt] -->

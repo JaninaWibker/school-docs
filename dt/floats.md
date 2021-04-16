@@ -22,16 +22,16 @@ The general idea is to express a number $x$ as the following $x = (-1)^s \cdot m
 
 Basically all components for this representation of the number $x$ already exist in the binary representation but some modifications are made to them:
 
-The exponent $e$ is offset using a bias (127 in the case of 32 bit): $e = E - 127$ unless $E=0$ or $E=127$.
+The exponent $e$ is offset using a bias (127 in the case of 32 bit): $e = E - 127$ unless $E=0$ or $E=255$.
 If $E=0$ then the denormalized form is used and $e$ is set to $126$.
-$E=127$ is used to represent special values such as infinity.
+$E=255$ is used to represent special values such as infinity.
 
 If the denormalized form is not used (most cases) then $m = 1.M$ (this is basically like calculating $1 + M^{-23}$).
 If the denormalized form is used then $m = 0.M$ instead.
 
 > The denormalized form makes it easier to represent numbers close to zero.
 
-The special values ($E=127$) are the following:
+The special values ($E=255$) are the following:
 
 | Mantissa | Value                                                   |
 | -------- | ------------------------------------------------------- |
