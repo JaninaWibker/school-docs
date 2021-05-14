@@ -62,7 +62,7 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
   .qr-wrapper{display:none;}
   /*.markdown-section code{filter:grayscale(1)}*/
   .markdown-section pre>code{white-space:pre-wrap;}
-  div.copyright {position:fixed;bottom:8px;}
+  /*div.copyright {position:fixed;bottom:8px;}*/
   .dark img:not([class~=medium-zoom-image--open]){filter: none;}
   section.content { overflow-x: unset }
   body.dark .anchor span, body.light .anchor span, body, body.dark {
@@ -259,7 +259,7 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
         }
       },
       plugins: [
-        hook => hook.afterEach((html, next) => next(html + '<div class="copyright">Copyright © 2017-' + new Date().getFullYear() + ' Jannik Wibker, Lennard Kittner. All rights reserved.</div>')),
+        hook => hook.afterEach((html, next) => next(html + '<div class="copyright">Copyright © 2017-' + new Date().getFullYear() + ' Jannik Wibker, Lennard Kittner.</div>')),
         hook => hook.mounted(() => {
           const themeChooser = document.createElement('div')
           themeChooser.classList.add('theme-chooser')
