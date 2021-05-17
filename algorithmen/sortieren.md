@@ -154,3 +154,60 @@ Wenn man **Merge Sort** mit **Quicksort** vergleicht kommt man zu folgenden Pros
 - inplace
 - eventuell etwas schneller im Durchschnitt
 
+## Bucketsort
+
+Falls man relativ viele Informationen über die Daten die man sortieren will hat kann man auch einen bucket sort nutzen.
+
+Wenn man sich sicher ist, dass Daten immer ganzzahlig sind und nur innerhalb eines bestimmten relativ kleinen Intervals kommen bietet es sich an die Elemente grob in buckets zu sortieren.
+
+```c
+proc bucket_sort(k, s: [Element, n]) {
+  b : [[Element, n], k]
+
+  for(e : s) {
+    b[key(e)].pushBack(e)
+  }
+
+  s := []
+    .concat(b[0])
+    ...
+    .concat(b[k-1]
+}
+```
+
+Die Laufzeit ist hierbei einfach $O(n + K)$.
+
+
+## Auswahl / Selection
+
+Bei der Selection will man nicht ein Array sortieren, sondern einmalig den **Rang** $k$ eines Elementes $e$ für ein Array finden.
+
+Dies bedeutet, dass man für ein Element wissen will an welcher Stelle es in der sortierten Version des Arrays auftreten würde.
+
+Falls es mehrere Elemente gibt die den gleichen Wert wie $e$ haben ist $k$ nicht eindeutig.
+
+Der Rang eines bestimmten Elementes ist leicht herauszufinden indem man einfach die Anzahl an kleineren Elementen zählt.
+Für einen gegebenen Rang aber das passende Element zu finden ist schwieriger, dazu gibt es den **Quickselect** welcher auf dem *Quicksort* aufbaut.
+
+### Quickselect
+
+```c
+function select(s: [Element, n], k): Element {
+  pick p in s uniformly at random // pivot element
+
+  a := [e in s: e < p]
+  // got the |a| first elements of the sorted array; the k's element is part of this
+  if a.length >= k { select(a, k) }
+
+  b := [e in s: e = p]
+  // the pivot element has exactly the rank k
+  if a.length + b.length >= k { return p }
+
+  c := [e in s: e > p]
+  // k wasn't in the first (|a| + |b|) elements so it must be in c
+  return select(c, k - a.length - b.length)
+}
+```
+
+Quickselect hat erwartete Laufzeit $O(\vert s \vert)$.
+
