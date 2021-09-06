@@ -188,7 +188,6 @@
   * [**Abnahme, Wartung und Pflege**](/swt/abnahme_wartung_und_pflege.md)
 <!-- /// [swt-testen-wartung-pflege] -->
 <!-- /// [swt-swt] -->
-
 <!-- /// [os-os] -->
 * [Operating Systems](/os/os)
   * [Processes & Threads](/os/process_thread.md)
@@ -199,7 +198,6 @@
   * [Device Management & Storage devices](/os/device_storage.md)
   * [Filesystems](/os/filesystems.md)
 <!-- /// [os-os] -->
-
 <!-- /// [algo-algo] -->
 * [Algorithmen](/algorithmen/algorithmen)
   * [O-Notation, Mastertheorem](/algorithmen/o_notation_mastertheorem.md)
@@ -207,14 +205,18 @@
   * [Sortieren](/algorithmen/sortieren.md)
   * [Graphen](/algorithmen/graphen.md)
 <!-- /// [algo-algo] -->
-
+<!-- /// [sicherheit-sicherheit] -->
+* [Sicherheit](/sicherheit/sicherheit)
+  * [CIA](/sicherheit/cia.md)
+  * [IND-CPA](/sicherheit/ind-cpa.md)
+  * [EUF-CMA](/sicherheit/euf-cma.md)
+<!-- /// [sicherheit-sicherheit] -->
 <!-- /// [dt-dt] -->
 * [Digitaltechnik](/dt/dt)
   * [Grundlagen](/dt/grundlagen.md)
   * [Floating point numbers](/dt/floats.md)
   * [Flip flops](/dt/flipflops.md)
 <!-- /// [dt-dt] -->
-
 <!-- /// [etk-etk] -->
 * [Elektrotechnik](/etk/etk)
   * [Gleichrichterschaltungen](etk/gleichrichterschaltungen.md)

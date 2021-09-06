@@ -1,6 +1,6 @@
 # Verteilungen
 
-## diskrete Verteilungen
+## Diskrete Verteilungen
 
 ### Gleichverteilung
 
@@ -15,7 +15,15 @@ $$f(t) := \begin{cases}
    0 &,\\; \text{sonst}
 \end{cases}$$
 
-**Faltung / Addition**: TODO
+**Faltung / Addition**: Für $X \thicksim U(a, b)$ und $Y \thicksim U(c, d)$ gilt:
+
+$$f_{X+Y}(t) := \begin{cases}
+  0                               &\text{ if } t \le \min(a, c) \\\\
+  \dfrac{1}{b-a}                  &\text{ if } a < t < b \wedge \overline{c < t < d} \\\\
+  \dfrac{1}{b-a} + \dfrac{1}{d-c} &\text{ if } a < t < b \wedge c < t < d \\\\
+  \dfrac{1}{d-c}                  &\text{ if } \overline{a < t < b} \wedge c < t < d \\\\
+  0                               &\text{ if } t \ge \max(b, d)
+\end{cases}$$
 
 **Erwartungswert**: Für $X \thicksim \text{U}(a, b)$ ist $\E(X) = \dfrac{a+b}{2}$.
 
@@ -24,6 +32,8 @@ $$f(t) := \begin{cases}
 ### Binomialverteilung
 
 Die Binomialverteilung $\text{Bin}(n, p)$ hat die Parameter $n, p$ mit $n \in \N$ und $0 \le p \le 1$.
+
+Die Binomialverteilung wird benutzt, wenn man mehrere Zufallsexperimente "ohne Zurücklegen" macht und die Wahrscheinlichkeit braucht, dass eine gewisse Anzahl an Ereignissen eintritt.
 
 Die Dichte ist wie folgt definiert:
 
@@ -110,7 +120,7 @@ $$k \mapsto f(k) = p(1-p)^k, \\; k \in \N_0$$
 
 **Varianz**: Für $X \thicksim \text{G}(r, p)$ ist $\V(X) = \dfrac{1-p}{p^2}$.
 
-## stetige Verteilungen
+## Stetige Verteilungen
 
 ### (stetige) Gleichverteilung
 

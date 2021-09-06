@@ -8,6 +8,7 @@
 * [Softwaretechnik](swt/swt)
 * [Operating Systems](os/os)
 * [Algorithmen](algorithmen/algorithmen)
+* [Sicherheit](sicherheit/sicherheit)
 * [Digitaltechnik](/dt/dt)
 * [Elektrotechnik](/etk/etk)
 * [Französisch](/französisch/französisch)
