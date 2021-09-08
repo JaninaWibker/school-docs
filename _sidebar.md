@@ -211,6 +211,7 @@
   * [IND-CPA](/sicherheit/ind-cpa.md)
   * [EUF-CMA](/sicherheit/euf-cma.md)
   * [ElGamal](/sicherheit/elgamal.md)
+  * [Gruppen](/sicherheit/gruppen.md)
 <!-- /// [sicherheit-sicherheit] -->
 <!-- /// [dt-dt] -->
 * [Digitaltechnik](/dt/dt)
