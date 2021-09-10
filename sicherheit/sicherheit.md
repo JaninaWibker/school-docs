@@ -5,3 +5,5 @@
 * [EUF-CMA](/sicherheit/euf-cma.md)
 * [ElGamal](/sicherheit/elgamal.md)
 * [Gruppen](/sicherheit/gruppen.md)
+* [Hashfunktionen](/sicherheit/hashfunktionen.md)
+* [Signaturen](/sicherheit/signaturen.md)
