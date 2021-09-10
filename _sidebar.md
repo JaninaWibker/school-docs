@@ -207,6 +207,7 @@
 <!-- /// [algo-algo] -->
 <!-- /// [sicherheit-sicherheit] -->
 * [Sicherheit](/sicherheit/sicherheit)
+  * [Blockchiffren](/sicherheit/blockchiffren.md)
   * [CIA](/sicherheit/cia.md)
   * [IND-CPA](/sicherheit/ind-cpa.md)
   * [EUF-CMA](/sicherheit/euf-cma.md)
