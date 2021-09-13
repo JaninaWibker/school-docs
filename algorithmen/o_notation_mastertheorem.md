@@ -35,7 +35,7 @@ Die folgenden Fälle gibt es (und sollten **nacheinander** überprüft werden; d
 
 |                  | Erster Fall | Zweiter Fall | Dritter Fall |
 | ---------------- | ----------- | ------------ | ------------ |
-| Bedingung        | $f(n) \in O(n^{\log_b(a-)\epsilon})$ für ein $\epsilon > 0$ | $f \in \Theta(n^{\log_b(a)})$ | $f(n) \in \Omega(n^{\log_b(a)+\epsilon})$ für ein $\epsilon > 0$ und<br /> ebenfalls für ein $c$ mit $c \in (0; 1)$ und<br /> für alle hinreichend großen $n$ gilt: $af(\tfrac{n}{b}) \le cf(n)$ |
+| Bedingung        | $f(n) \in O(n^{\log_b(a)-\epsilon})$ für ein $\epsilon > 0$ | $f \in \Theta(n^{\log_b(a)})$ | $f(n) \in \Omega(n^{\log_b(a)+\epsilon})$ für ein $\epsilon > 0$ und<br /> ebenfalls für ein $c$ mit $c \in (0; 1)$ und<br /> für alle hinreichend großen $n$ gilt: $af(\tfrac{n}{b}) \le cf(n)$ |
 | Schlussfolgerung | $T(n) \in \Theta(n^{\log_b(a)})$ | $T(n) \in \Theta(n^{\log_b(a)} \cdot \log(n))$ | $T(n) \in \Theta(f(n))$ |
 
 Falls keiner der Fälle anwendbar ist, ist auch das Mastertheorem nicht anwendbar und kann keine Aussage liefern.

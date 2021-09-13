@@ -12,7 +12,7 @@ $M := M_1 \Vert \dots \Vert M_n$ mit $M_i = D(K, C_i)$
 ## CBC - Cipher block chaining mode
 
 Setze $C_0 := \text{IV}$<br />
-Setze $C_i := E(K, M_i \oplus C_{i-1}$
+Setze $C_i := E(K, M_i \oplus C_{i-1})$
 
 Somit wäre dann $M_i := D(K, C_i) \oplus C_{i-1}$
 

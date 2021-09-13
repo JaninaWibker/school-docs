@@ -215,6 +215,7 @@
   * [Gruppen](/sicherheit/gruppen.md)
   * [Hashfunktionen](/sicherheit/hashfunktionen.md)
   * [Signaturen](/sicherheit/signaturen.md)
+  * [Zero Knowledge](/sicherheit/zero-knowledge.md)
 <!-- /// [sicherheit-sicherheit] -->
 <!-- /// [dt-dt] -->
 * [Digitaltechnik](/dt/dt)
