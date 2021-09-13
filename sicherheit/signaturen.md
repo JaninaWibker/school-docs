@@ -91,3 +91,25 @@ ElGamal-Signaturen sind wie RSA auch nicht EUF-CMA sicher, da man für unsinnige
 Dies kann durch **hash-then-sign** mitigiert werden, da man dadurch um EUF-CMA zu brechen erst mal die Hashfunktion invertieren müsste.
 Verwende also einfach $H(M)$ anstatt $M$ bei ElGamal-Signaturen, dies nennt sich dann **Digital Signature Algorithm** oder auch **DSA**.
 
+### DSA - Digital Signature Algorithm
+
+Es wird eine Primzahl $q$ gewählt und eine weitere Primzahl $p$ passend dazu, sodass $p-1$ ein vielfaches von $q$ ist.
+Wähle ein $h$ zufällig aus $\lbrace 2, \dots, p-2 \rbrace$ und berechne $g = h^{(p-1)/q} \mod p$ (falls $g=1$ mit anderem $h$ nochmal; oft wird $h=2$ verwendet)
+
+$(p, q, g, x)$ ist der private key, welcher zum Signieren benutzt wird, $(p, q, g, y)$ mit $y = g^x \mod p$ ist der public key der zum Verifizieren benutzt wird.
+
+**Vorgehen** beim Signieren:
+- Wähle $e$ zufällig aus $\lbrace 1, \dots, q-1 \rbrace$
+- Berechne $r := (g^k \mod p) \mod q$
+- Berechne $s := (k^{-1} \cdot (H(m) + x \cdot r)) \mod q$
+- Gebe $(r, s)$ als Signatur aus
+
+**Vorgehen** beim Verifizieren:
+- Berechne $w := s^{-1} \mod q$
+- Berechne $u_1 := H(m) \cdot w \mod q$
+- Berechne $u_2 := r \cdot w \mod q$
+- Berechne $v := (g^{u_1} \cdot y^{u_2} \mod p) \mod q$
+- Die Signatur ist valide, falls $v = r$ gilt
+
+> Die [EUF-CMA](/sicherheit/euf-cma.md)-sicherheit von DSA ist unklar.
+
