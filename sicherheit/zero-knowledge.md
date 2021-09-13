@@ -1,6 +1,16 @@
 # Zero-Knowledge
 
-## Definition
+## Ununterscheidbarkeit
+
+zwei (möglicherweise vom Sicherheitsparameter $k$ abhängige) Verteilungen $X$, $Y$ sind *ununterscheidbar* (geschrieben \stackrel{c}{\approx}), wenn für alle PPT-Algorithmen $A$ die Differenz
+
+$\P(A(1^k, x) = 1 \vert x \leftarrow X) - \P(A(1^k, y) = 1 \vert y \leftarrow Y)$
+
+vernachlässigbar in $k$ ist.
+
+**Intuitiv**: $X$ und $Y$ sind nicht (effizient) unterscheidbar
+
+## Zero-Knowledge Definition 
 
 Ein PK-Identifikationsprotokoll $(\text{Gen}, P, V)$ ist *Zero-Knowledge* (ZK), falls für jeden PPT-Algorithmus $A$ (Angreifer) ein PPT-Algorithmus $S$ (Simulator) existiert, so dass die folgenden Verteilungen ununterscheidbar sind (wobei $(pk, sk) \leftarrow \text{Gen}(1^k)$):
 
