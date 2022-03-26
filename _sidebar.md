@@ -217,6 +217,10 @@
   * [Signaturen](/sicherheit/signaturen.md)
   * [Zero Knowledge](/sicherheit/zero-knowledge.md)
 <!-- /// [sicherheit-sicherheit] -->
+<!-- /// [propa-propa] -->
+* [Programmierparadigmen](/propa/propa)
+  * [MPI](/propa/mpi.md)
+<!-- /// [propa-propa] -->
 <!-- /// [dt-dt] -->
 * [Digitaltechnik](/dt/dt)
   * [Grundlagen](/dt/grundlagen.md)

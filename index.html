@@ -199,6 +199,8 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
         '/algorithmen/': '/algorithmen/algorithmen',
         '/sicherheit':  '/sicherheit/sicherheit',
         '/sicherheit/': '/sicherheit/sicherheit',
+        '/propa':  '/propa/propa',
+        '/propa/': '/propa/propa',
         '/etk':  '/etk/etk',
         '/etk/': '/etk/etk',
         '/französisch':  '/französisch/französisch',
@@ -265,7 +267,7 @@ body.dark .theme-chooser .enable-dark-theme-a{display:none;}
         }
       },
       plugins: [
-        hook => hook.afterEach((html, next) => next(html + '<div class="copyright">Copyright © 2017-' + new Date().getFullYear() + ' Jannik Wibker, Lennard Kittner.</div>')),
+        // hook => hook.afterEach((html, next) => next(html + '<div class="copyright">Copyright © 2017-' + new Date().getFullYear() + ' Jannik Wibker, Lennard Kittner.</div>')),
         hook => hook.mounted(() => {
           const themeChooser = document.createElement('div')
           themeChooser.classList.add('theme-chooser')

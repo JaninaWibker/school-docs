@@ -9,6 +9,7 @@
 * [Operating Systems](os/os)
 * [Algorithmen](algorithmen/algorithmen)
 * [Sicherheit](sicherheit/sicherheit)
+* [Programmierparadigmen](propa/propa)
 * [Digitaltechnik](/dt/dt)
 * [Elektrotechnik](/etk/etk)
 * [Französisch](/französisch/französisch)
