@@ -220,6 +220,7 @@
 <!-- /// [propa-propa] -->
 * [Programmierparadigmen](/propa/propa)
   * [MPI](/propa/mpi.md)
+  * [Compiler](/propa/compiler.md)
 <!-- /// [propa-propa] -->
 <!-- /// [dt-dt] -->
 * [Digitaltechnik](/dt/dt)
