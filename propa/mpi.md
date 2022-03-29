@@ -63,6 +63,10 @@ MPI_Bcast(
 );
 ```
 
+Broadcast ist eine kollektive Operation, es muss nicht extra mit `MPI_Recv` empfangen werden.
+
+Bei den Empfängern wird `buf` als `recvbuf` benutzt, beim Sender als `sendbuf`.
+
 ![MPI bcast](../assets/propa/mpi_bcast.svg)
 
 ## Scatter
