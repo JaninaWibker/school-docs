@@ -1,6 +1,15 @@
-# MPI Send und Receive
+# MPI
 
-## Blocking send and receive
+## Kommunikationsmodi
+
+- **Synchronous**: Kein Buffer, Synchronisierung beider Seiten
+- **Buffered**: Explizites buffering, keine Synchronisierung
+- **Ready**: Kein Buffer, es wird erwartet, dass der Empfänger schon wartet
+- **Standard**: Kann buffern, oder auch nicht, kann blocken oder auch nicht (Implementierungsabhängig)
+
+## MPI Send und Receive
+
+### Blocking send and receive
 
 Ein Receive für alle Arten von blocking send:
 
@@ -27,7 +36,7 @@ MPI_[ε|B|S|R]send(
 
 > Man kann `MPI_ANY_TAG` und `MPI_ANY_SOURCE` anstelle von `tag` bzw. `source` bei receive verwenden.
 
-## Non-blocking send and receive
+### Non-blocking send and receive
 
 ```c
 MPI_Isend(
@@ -43,7 +52,7 @@ MPI_Irecv(
 
 > Man kann `MPI_ANY_TAG` und `MPI_ANY_SOURCE` anstelle von `tag` bzw. `source` bei receive verwenden.
 
-## Check/Warten für Übertragung
+### Check/Warten für Übertragung
 
 Non-blocking: `MPI_Test(MPI_Request* request, int* flag, MPI_Status* status);`<br />
 => flag == 0, noch nicht abgeschlossen<br />
@@ -52,9 +61,9 @@ Non-blocking: `MPI_Test(MPI_Request* request, int* flag, MPI_Status* status);`<b
 Blocking: `MPI_Wait(MPI_Request* request, MPI_Status* status)`<br />
 => blockiert bis fertig
 
-# MPI Global Collective Operations
+## MPI Global Collective Operations
 
-## Broadcast
+### Broadcast
 
 ```c
 MPI_Bcast(
@@ -69,7 +78,7 @@ Bei den Empfängern wird `buf` als `recvbuf` benutzt, beim Sender als `sendbuf`.
 
 ![MPI bcast](../assets/propa/mpi_bcast.svg)
 
-## Scatter
+### Scatter
 
 Sendet Daten eines Prozesses zu allen Prozessen (inkl. Sender selber), hierbei werden die Daten auf die einzelnen Prozesse aufgeteilt in Abhängigkeit von `recvcount`.
 
@@ -85,7 +94,7 @@ MPI_Scatter(
 
 ![MPI scatter/gather](../assets/propa/mpi_scatter_gather.svg)
 
-## Gather
+### Gather
 
 Sammelt Daten von allen Prozessen und speichert sie beim `receiver`.
 
@@ -110,7 +119,7 @@ Das folgende ist äquivalent zu MPI_Gather:
 
 ![MPI scatter/gather](../assets/propa/mpi_scatter_gather.svg)
 
-## Allgather
+### Allgather
 
 Sammelt alle Daten von allen Prozessen und distributiert die kombinierten Daten dann wieder auf alle Prozesse, quasi ein Gather gefolgt von einem Broadcast.
 
@@ -128,7 +137,7 @@ MPI_Allgather(
 
 ![MPI allgather](../assets/propa/mpi_allgather.svg)
 
-## AllToAll
+### AllToAll
 
 Transponiert quasi eine Matrix.
 
@@ -144,7 +153,7 @@ MPI_AlltoAll(
 
 ![MPI alltoall](../assets/propa/mpi_alltoall.svg)
 
-## Reduce
+### Reduce
 
 Wendet eine kommutative Operation auf die Daten an und speichert das Ergebnis im `root` Prozess.
 
@@ -173,7 +182,7 @@ Die möglichen Operationen (per Default) sind:
 ![MPI reduce](../assets/propa/mpi_reduce.svg)
 
 
-## AllReduce
+### AllReduce
 
 Ein Reduce gefolgt von einem Broadcast.
 
@@ -188,7 +197,7 @@ MPI_Allreduce(
 ![MPI allreduce](../assets/propa/mpi_allreduce.svg)
 
 
-## ReduceScatter
+### ReduceScatter
 
 Ein Reduce gefolgt von einem Scatter (mit `sendcount = 1`).
 
@@ -202,7 +211,7 @@ MPI_Reduce_scatter(
 
 ![MPI reducescatter](../assets/propa/mpi_reducescatter.svg)
 
-## Scan
+### Scan
 
 ```c
 MPI_Scan(
@@ -214,7 +223,7 @@ MPI_Scan(
 
 ![MPI scan](../assets/propa/mpi_scan.svg)
 
-# Sonstige MPI Funktionen
+## Sonstige MPI Funktionen
 
 `MPI_Comm_size(MPI_Comm comm, int* num_procs);`
 
