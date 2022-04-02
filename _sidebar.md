@@ -220,6 +220,7 @@
 <!-- /// [propa-propa] -->
 * [Programmierparadigmen](/propa/propa)
   * [MPI](/propa/mpi.md)
+  * [Lambda Typisierung](/propa/lambda-typisierung.md)
   * [Compiler](/propa/compiler.md)
 <!-- /// [propa-propa] -->
 <!-- /// [dt-dt] -->
