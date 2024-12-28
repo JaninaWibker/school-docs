@@ -98,16 +98,6 @@ Wir müssen also einen 16-Bit(**65 536**) Timer nehmen da ein 8-bit(**256**) zu 
 
 Als letztes berechnet man den Startwert der oberen 8-bit(`TH0/1`), damit nach **9216** Inkrementierungen ein Überlauf stattfindet. Hierzu rechnet man $65.536-9216=56.320$, da die oberen 8-Bit(TH0/1) nur inkrementiert werden, wenn ein Überlauf in den unteren 8-Bit(TL0/1) statt findet. Man muss $\frac{56.320}{256}=220$ rechnen und die oberen 8-bit(`TH0/1`) somit am Start auf **220** setzen.
 
-## Excel Tabelle
-
-| Spaltenname  | Bedeutung                                                   |
-| ------------ | ----------------------------------------------------------- |
-| Teiler(TH0)  | Startwert in TH0(siehe oben)                                |
-| Fmod[N] (Hz) | Benötigte Hz bis Timer abläuft bei M = N (siehe oben)       |
-| Tmod[N] (s)  | Benötigte Sekunden bis Timer abläuft bei M = N (siehe oben) |
-
-> [Link zur Excel Tabelle](https://cdn.jannik.ml/Microcontroller-Timer-Frequenzen.xls)
-
 ## Interrupt in C
 
 Der Header der Methode, die bei einem Timerinterrupt aufgerufen wird sieht beispielsweise folgendermaßen aus:

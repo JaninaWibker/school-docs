@@ -77,5 +77,3 @@ const inverse_matrix = (matrix) => {
     .map((line, i) => line.map((element, j) => element * (1/det)))
 }
 ```
-
-> [Codepen](https://codepen.io/jannikwibker/pen/yQbygE)
